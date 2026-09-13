@@ -20,7 +20,7 @@ void fragment() {
 	for (int iter = 0; iter < layers; iter++){
 		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), pivot);
 		vec2 adjusted_vector = adjusted_uv - UV;
-		vec2 pivot_vector = 1.0 / (UV - pivot);
+		vec2 pivot_vector = (UV - pivot);
 		vec2 normalized_vector = normalize(pivot_vector) * float(iter) * normalization_scale;
 		pivot_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, pivot_vector + UV);
