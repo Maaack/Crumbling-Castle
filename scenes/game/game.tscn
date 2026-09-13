@@ -24,6 +24,8 @@ shader_parameter/pivot = Vector2(0.5, 0.5)
 shader_parameter/zoom = 0.25
 shader_parameter/layer_zoom_mod = 1.0
 shader_parameter/layers = 5
+shader_parameter/normalization = 1.0
+shader_parameter/normalization_scale = -0.01
 shader_parameter/opacity = 0.5
 
 [node name="Game" type="Node" unique_id=1262092417]
@@ -61,8 +63,11 @@ files = Array[String](["res://scenes/game/levels/level_1.tscn", "res://scenes/ga
 directory = "res://scenes/game/levels"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1547293762]
-offset_right = 1280.0
-offset_bottom = 720.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="LevelContainer" type="SubViewport" parent="SubViewportContainer" unique_id=1262569776]
 transparent_bg = true
