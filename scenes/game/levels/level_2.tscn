@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://danrqx83o0lal"]
 
-[ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2.gd" id="1_x2ody"]
+[ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x2ody"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="3_s3pix"]
 [ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="4_4awcv"]
 [ext_resource type="Script" uid="uid://srbcehia73r5" path="res://scenes/game/levels/character_body_2d.gd" id="5_ik6v6"]
@@ -19,15 +19,14 @@ size = Vector2(32, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eom8k"]
 size = Vector2(80, 240)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
-size = Vector2(80, 240)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12bjt"]
+size = Vector2(1280, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3pix"]
 size = Vector2(24, 64)
 
 [node name="Level2" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x2ody")
-next_level_path = "res://scenes/game/levels/level_3.tscn"
 
 [node name="TutorialManager" type="Node" parent="." unique_id=927712379]
 unique_name_in_owner = true
@@ -179,29 +178,29 @@ To Win"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LoseArea2D" type="Area2D" parent="World" unique_id=2042256546]
-position = Vector2(-480, 0)
+[node name="LoseArea2D" type="Area2D" parent="World" unique_id=669588990]
+unique_name_in_owner = true
+position = Vector2(0, 264)
 collision_layer = 2
 collision_mask = 2
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/LoseArea2D" unique_id=2131972517]
-shape = SubResource("RectangleShape2D_x2ody")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/LoseArea2D" unique_id=489350465]
+shape = SubResource("RectangleShape2D_12bjt")
 
-[node name="Label" type="Label" parent="World/LoseArea2D" unique_id=1423956754]
+[node name="Label" type="Label" parent="World/LoseArea2D" unique_id=298756164]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.0
+offset_left = -700.0
 offset_top = -24.5
-offset_right = 42.0
+offset_right = 700.0
 offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Enter
-To Lose"
+text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -235,4 +234,3 @@ vertical_alignment = 1
 position = Vector2(0, -23)
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
-[connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
