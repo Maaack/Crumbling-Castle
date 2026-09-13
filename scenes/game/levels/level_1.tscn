@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://da00hutaakwk6"]
 
-[ext_resource type="Script" path="res://scenes/game/levels/level_1.gd" id="1_kdlgo"]
-[ext_resource type="Script" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="2_1bryu"]
-[ext_resource type="Script" path="res://scenes/game/scripts/input_display_label.gd" id="3_dxp7b"]
-[ext_resource type="Script" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
-[ext_resource type="PackedScene" path="res://scenes/game/tutorials/tutorial_1.tscn" id="5_2u4xi"]
+[ext_resource type="Script" uid="uid://cqgy54x46h6tu" path="res://scenes/game/levels/level_1.gd" id="1_kdlgo"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="2_1bryu"]
+[ext_resource type="Script" uid="uid://ch8aaykixbwn5" path="res://scenes/game/scripts/input_display_label.gd" id="3_dxp7b"]
+[ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
+[ext_resource type="PackedScene" uid="uid://ks83y4cfd5a5" path="res://scenes/game/tutorials/tutorial_1.tscn" id="5_2u4xi"]
 
 [node name="Level1" type="Control" unique_id=235822082]
 layout_mode = 3
@@ -15,16 +15,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kdlgo")
 next_level_path = "res://scenes/game/levels/level_2.tscn"
-
-[node name="BackgroundColor" type="ColorRect" parent="." unique_id=1389548597]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1051608179]
 layout_mode = 1

@@ -21,7 +21,10 @@ shader = ExtResource("11_kp23o")
 shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
 shader_parameter/speed = 1.0
 shader_parameter/pivot = Vector2(0.5, 0.5)
-shader_parameter/boarder_zoom = 0.91
+shader_parameter/zoom = 0.25
+shader_parameter/layer_zoom_mod = 1.0
+shader_parameter/layers = 5
+shader_parameter/opacity = 0.5
 
 [node name="Game" type="Node" unique_id=1262092417]
 
@@ -37,10 +40,11 @@ script = ExtResource("1_4j704")
 script = ExtResource("3_vvut4")
 pause_menu_packed = ExtResource("3_kp23o")
 
-[node name="LevelLoader" type="Node" parent="." unique_id=1364778615 node_paths=PackedStringArray("level_container", "level_loading_screen")]
+[node name="LevelLoader" type="Node" parent="." unique_id=1364778615 node_paths=PackedStringArray("level_container", "level_loading_screen", "current_level")]
 script = ExtResource("5_4ybgr")
 level_container = NodePath("../SubViewportContainer/LevelContainer")
 level_loading_screen = NodePath("../LevelLoadingScreen")
+current_level = NodePath("../SubViewportContainer/LevelContainer/Control")
 
 [node name="LevelManager" type="Node" parent="." unique_id=1350972375 node_paths=PackedStringArray("level_loader", "scene_lister")]
 script = ExtResource("5_5jirj")
@@ -66,27 +70,38 @@ handle_input_locally = false
 size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
-[node name="Label" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=1861201704]
+[node name="Control" type="Control" parent="SubViewportContainer/LevelContainer" unique_id=1381581510]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SubViewportContainer/LevelContainer/Control" unique_id=1861201704]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -57.0
-offset_top = -11.5
+offset_top = -24.5
 offset_right = 57.0
-offset_bottom = 11.5
+offset_bottom = 24.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Center 
 Center"
 
-[node name="Label2" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=1073033929]
+[node name="Label2" type="Label" parent="SubViewportContainer/LevelContainer/Control" unique_id=1073033929]
+layout_mode = 0
 offset_right = 114.0
 offset_bottom = 23.0
 text = "Top Left"
 
-[node name="Label3" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=497485042]
+[node name="Label3" type="Label" parent="SubViewportContainer/LevelContainer/Control" unique_id=497485042]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -95,7 +110,8 @@ offset_bottom = 23.0
 grow_horizontal = 0
 text = "Top Right"
 
-[node name="Label4" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=2095114185]
+[node name="Label4" type="Label" parent="SubViewportContainer/LevelContainer/Control" unique_id=2095114185]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -107,7 +123,8 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Bottom Right"
 
-[node name="Label5" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=831278508]
+[node name="Label5" type="Label" parent="SubViewportContainer/LevelContainer/Control" unique_id=831278508]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -115,6 +132,13 @@ offset_top = -23.0
 offset_right = 114.0
 grow_vertical = 0
 text = "Bottom Left"
+
+[node name="ColorRect" type="ColorRect" parent="SubViewportContainer/LevelContainer/Control" unique_id=359632456]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 420.0
+offset_right = 492.0
+offset_bottom = 460.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=141458699]
 
@@ -126,6 +150,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+color = Color(1, 1, 1, 0)
 
 [node name="LevelLoadingScreen" parent="." unique_id=816430938 instance=ExtResource("10_3xj4h")]
 visible = false
