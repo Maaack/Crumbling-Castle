@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://dw8qysr1hx66l"]
+
+[ext_resource type="Script" uid="uid://bmcttnpvsi36l" path="res://scenes/game/scripts/game_timer.gd" id="1_4j704"]
+[ext_resource type="PackedScene" uid="uid://b0x8acab1b4oe" path="res://scenes/windows/pause_menu.tscn" id="3_kp23o"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="3_vvut4"]
+[ext_resource type="Script" uid="uid://bbymrin0cm704" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="5_4ybgr"]
+[ext_resource type="Script" uid="uid://xo4s7jr6h54w" path="res://scripts/level_and_state_manager.gd" id="5_5jirj"]
+[ext_resource type="PackedScene" uid="uid://ba11po12cvait" path="res://scenes/windows/game_won_window.tscn" id="6_vaxfo"]
+[ext_resource type="PackedScene" uid="uid://bx7s80d8smic4" path="res://scenes/windows/level_lost_window.tscn" id="7_ftsea"]
+[ext_resource type="PackedScene" uid="uid://cc0d45hr46e5m" path="res://scenes/windows/level_won_window.tscn" id="8_otnwt"]
+[ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
+[ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
+[ext_resource type="Shader" uid="uid://bjgw5vgtlon0e" path="res://scenes/game/levels/zoom_2.gdshader" id="11_kp23o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vaxfo"]
+viewport_path = NodePath("SubViewportContainer/LevelContainer")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4j704"]
+resource_local_to_scene = true
+shader = ExtResource("11_kp23o")
+shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
+shader_parameter/speed = 1.0
+shader_parameter/pivot = Vector2(0.5, 0.5)
+shader_parameter/boarder_zoom = 0.91
+
+[node name="Game" type="Node" unique_id=1262092417]
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=986713811]
+process_mode = 3
+autoplay = true
+bus = &"Music"
+
+[node name="GameTimer" type="Node" parent="." unique_id=116840261]
+script = ExtResource("1_4j704")
+
+[node name="PauseMenuController" type="Node" parent="." unique_id=1685173287]
+script = ExtResource("3_vvut4")
+pause_menu_packed = ExtResource("3_kp23o")
+
+[node name="LevelLoader" type="Node" parent="." unique_id=1364778615 node_paths=PackedStringArray("level_container", "level_loading_screen")]
+script = ExtResource("5_4ybgr")
+level_container = NodePath("../SubViewportContainer/LevelContainer")
+level_loading_screen = NodePath("../LevelLoadingScreen")
+
+[node name="LevelManager" type="Node" parent="." unique_id=1350972375 node_paths=PackedStringArray("level_loader", "scene_lister")]
+script = ExtResource("5_5jirj")
+level_loader = NodePath("../LevelLoader")
+starting_level_path = "res://scenes/game/levels/level_1.tscn"
+scene_lister = NodePath("SceneLister")
+game_won_scene = ExtResource("6_vaxfo")
+level_lost_scene = ExtResource("7_ftsea")
+level_won_scene = ExtResource("8_otnwt")
+
+[node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
+script = ExtResource("10_h5e52")
+files = Array[String](["res://scenes/game/levels/level_1.tscn", "res://scenes/game/levels/level_2.tscn", "res://scenes/game/levels/level_3.tscn"])
+directory = "res://scenes/game/levels"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1547293762]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="LevelContainer" type="SubViewport" parent="SubViewportContainer" unique_id=1262569776]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Label" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=1861201704]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -11.5
+offset_right = 57.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Center 
+Center"
+
+[node name="Label2" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=1073033929]
+offset_right = 114.0
+offset_bottom = 23.0
+text = "Top Left"
+
+[node name="Label3" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=497485042]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -114.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "Top Right"
+
+[node name="Label4" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=2095114185]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -114.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Bottom Right"
+
+[node name="Label5" type="Label" parent="SubViewportContainer/LevelContainer" unique_id=831278508]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 114.0
+grow_vertical = 0
+text = "Bottom Left"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=141458699]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=91803096]
+material = SubResource("ShaderMaterial_4j704")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LevelLoadingScreen" parent="." unique_id=816430938 instance=ExtResource("10_3xj4h")]
+visible = false
