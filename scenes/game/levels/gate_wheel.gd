@@ -7,12 +7,14 @@ enum WheelState{
 	DIAGONAL
 }
 
+@export var max_turns : int = 24
 @onready var animation_player = %AnimationPlayer
 
 var wheel_state : WheelState = WheelState.CARDINAL
 var can_interact : bool = false
+var turns : int = 0
 
-func turn_wheel() -> void:
+func _turn_wheel() -> void:
 	match wheel_state:
 		WheelState.CARDINAL:
 			wheel_state = WheelState.DIAGONAL
@@ -21,6 +23,12 @@ func turn_wheel() -> void:
 			wheel_state = WheelState.CARDINAL
 			animation_player.play(&"cardinal")
 	wheel_turned.emit()
+
+func turn_wheel() -> void:
+	if turns >= max_turns:
+		return
+	turns += 1
+	_turn_wheel()
 
 func _on_area_2d_body_entered(body : Node2D) -> void:
 	if body.is_in_group(&"player"):
