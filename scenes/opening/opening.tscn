@@ -2,9 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://sikc02ddepyt" path="res://addons/maaacks_game_template/base/nodes/opening/opening.tscn" id="1_ke3tw"]
 [ext_resource type="Texture2D" uid="uid://7fpbknl5sesd" path="res://assets/godot_engine_logo/logo_vertical_color_dark.png" id="2_ke3tw"]
+[ext_resource type="Texture2D" uid="uid://bkyhqgnkp3djl" path="res://assets/polygondwanaland/kglw_album_opening.png" id="3_yhkvs"]
+[ext_resource type="AudioStream" uid="uid://bpn46r2fqyhfu" path="res://assets/polygondwanaland/Crumbling_Castle.ogg" id="4_u6ao7"]
 
 [node name="Opening" unique_id=1930105641 instance=ExtResource("1_ke3tw")]
-images = Array[Texture2D]([ExtResource("2_ke3tw")])
+images = Array[Texture2D]([ExtResource("2_ke3tw"), ExtResource("3_yhkvs")])
+
+[node name="BackgroundMusicPlayer" parent="." index="1" unique_id=1317385298]
+stream = ExtResource("4_u6ao7")
 
 [node name="ImagesContainer" parent="." index="2" unique_id=1471559661]
 theme_override_constants/margin_left = 64
