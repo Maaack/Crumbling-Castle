@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cc0d45hr46e5m" path="res://scenes/windows/level_won_window.tscn" id="8_dh7ef"]
 [ext_resource type="Script" uid="uid://bnhmjy582mlax" path="res://scenes/game/scripts/configurable_sub_viewport.gd" id="10_c3obe"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_g6ih3"]
-[ext_resource type="Shader" uid="uid://bylij2b8dat1x" path="res://scenes/game/levels/zoom_mirror.gdshader" id="10_w6dhj"]
+[ext_resource type="Shader" uid="uid://bylij2b8dat1x" path="res://scenes/game/levels/zoom_tint.gdshader" id="10_w6dhj"]
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="11_oftkb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qaipj"]
