@@ -679,6 +679,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
+unique_name_in_owner = true
 position = Vector2(0, 272)
 
 [node name="Staircase" parent="World" unique_id=639177241 instance=ExtResource("5_dxp7b")]
@@ -786,3 +787,4 @@ theme_override_font_sizes/font_size = 32
 text = "Closed Gate"
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
+[connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
