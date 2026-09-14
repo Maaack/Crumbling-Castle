@@ -751,20 +751,20 @@ offset_top = -1208.0
 offset_right = 213.0
 offset_bottom = -1163.0
 theme_override_font_sizes/font_size = 32
-text = "Simple jump"
+text = "Simple jump w/ 1-story fall"
 
 [node name="Label3" type="Label" parent="." unique_id=929708901]
-offset_left = 264.0
-offset_top = -1456.0
-offset_right = 731.0
-offset_bottom = -1411.0
+offset_left = 160.0
+offset_top = -1448.0
+offset_right = 846.0
+offset_bottom = -1403.0
 theme_override_font_sizes/font_size = 32
-text = "Combo jumpies and platforms"
+text = "Combo jumpies and platforms w/ 1-story fall"
 
 [node name="Label5" type="Label" parent="." unique_id=1344339152]
-offset_left = -272.0
+offset_left = -632.0
 offset_top = -1696.0
-offset_right = 307.0
+offset_right = 8.0
 offset_bottom = -1651.0
 theme_override_font_sizes/font_size = 32
 text = "Last jumpies and platforms w/ 2-story fall"
