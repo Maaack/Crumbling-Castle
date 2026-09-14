@@ -64,5 +64,8 @@ text = "_o_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1242659405]
+[node name="CameraPivot" type="Node2D" parent="." unique_id=1308506195]
 position = Vector2(0, -23)
+
+[node name="Camera2D" type="Camera2D" parent="CameraPivot" unique_id=1242659405]
+unique_name_in_owner = true

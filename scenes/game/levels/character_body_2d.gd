@@ -10,7 +10,8 @@ const COYOTE_FRAMES = 8
 # Frames since last on floor (start w/ none)
 var coyote_countdown: int = 0
 
-@onready var camera_2d: Camera2D = $Camera2D
+@onready var camera_2d: Camera2D = %Camera2D
+@onready var camera_pivot = $CameraPivot
 
 
 func _ready() -> void:
@@ -20,7 +21,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if use_camera_smoothing:
-		camera_2d.global_position = lerp(camera_2d.global_position, global_position, delta * 10)
+		camera_2d.global_position = lerp(camera_2d.global_position, camera_pivot.global_position, delta * 10)
 
 
 func _physics_process(delta):
