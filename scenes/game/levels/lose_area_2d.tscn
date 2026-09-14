@@ -8,14 +8,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/HBoxContainer/Label:position")
+tracks/0/path = NodePath("Control/HBoxContainer/Label:offset_transform_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-700, -24.5)]
+"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4n4rd"]
@@ -26,14 +26,14 @@ step = 0.333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control/HBoxContainer/Label:position")
+tracks/0/path = NodePath("Control/HBoxContainer/Label:offset_transform_position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.33333334, 0.6666667, 1),
+"times": PackedFloat32Array(0, 0.33, 0.6666667, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(-700, -24.5), Vector2(-708, -24.5), Vector2(-700, -24.5), Vector2(-692, -24.5)]
+"values": [Vector2(0, 0), Vector2(8, 0), Vector2(0, 0), Vector2(-8, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8y6f6"]
@@ -44,7 +44,7 @@ _data = {
 
 [node name="LoseArea2D" type="Area2D" unique_id=1096114870]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 3
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890496495]
@@ -81,6 +81,7 @@ alignment = 1
 [node name="Label" type="Label" parent="Control/HBoxContainer" unique_id=823341873]
 custom_minimum_size = Vector2(2800, 0)
 layout_mode = 2
+offset_transform_enabled = true
 text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
 horizontal_alignment = 1
 vertical_alignment = 1
