@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/character_body_2d.tscn" id="4_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/lose_area_2d.tscn" id="5_1bryu"]
 [ext_resource type="PackedScene" uid="uid://cdnodbwgoohtm" path="res://scenes/game/levels/staircase.tscn" id="5_dxp7b"]
+[ext_resource type="PackedScene" uid="uid://y2n55sbmx5ss" path="res://scenes/game/levels/gate_wheel.tscn" id="7_dxp7b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0gu67"]
 
@@ -728,7 +729,11 @@ scale = Vector2(-1, 1)
 position = Vector2(-968, -1928)
 scale = Vector2(-1, 1)
 
+[node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
+position = Vector2(-544, -2096)
+
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
+position = Vector2(0, 80)
 
 [node name="Label" type="Label" parent="." unique_id=1570496927]
 offset_left = -72.0
