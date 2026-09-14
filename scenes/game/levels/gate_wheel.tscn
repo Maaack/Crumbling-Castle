@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://y2n55sbmx5ss"]
+
+[sub_resource type="Animation" id="Animation_y1nfv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["_________
+|     |     |
+| -  O  - |
+|     |     |
+|            |"]
+}
+
+[sub_resource type="Animation" id="Animation_e33i6"]
+resource_name = "cardinal"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["_________
+|     |     |
+| -  O  - |
+|     |     |
+|            |"]
+}
+
+[sub_resource type="Animation" id="Animation_xvflu"]
+resource_name = "diagonal"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["_________
+| \\       / |
+|    O    |
+| /       \\ |
+|            |"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1nfv"]
+_data = {
+&"RESET": SubResource("Animation_y1nfv"),
+&"cardinal": SubResource("Animation_e33i6"),
+&"diagonal": SubResource("Animation_xvflu")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
+size = Vector2(128, 128)
+
+[node name="GateWheel" type="Node2D" unique_id=1996126225]
+
+[node name="Label" type="Label" parent="." unique_id=850822556]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -63.5
+offset_right = 34.0
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "_________
+|     |     |
+| -  O  - |
+|     |     |
+|            |"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=360449661]
+libraries/ = SubResource("AnimationLibrary_y1nfv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=789091341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2081607449]
+shape = SubResource("RectangleShape2D_0gu67")
