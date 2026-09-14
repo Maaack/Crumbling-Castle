@@ -157,7 +157,7 @@ func _on_removed_music_player(node: Node) -> void:
 	if music_stream_player == node:
 		var playback_position := music_stream_player.get_playback_position() + AudioServer.get_time_since_last_mix()
 		music_stream_player = cloned_stream_player
-		music_stream_player.play.call_deferred(playback_position)
+		play(playback_position)
 		if node.tree_exiting.is_connected(_on_removed_music_player.bind(node)):
 			node.tree_exiting.disconnect(_on_removed_music_player.bind(node))
 

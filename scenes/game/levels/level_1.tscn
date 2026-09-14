@@ -709,7 +709,7 @@ scale = Vector2(-1, 1)
 
 [node name="Staircase8" parent="World" unique_id=944536873 instance=ExtResource("5_dxp7b")]
 position = Vector2(240, -728)
-scale = Vector2(1, -1)
+scale = Vector2(-1, 1)
 
 [node name="Staircase9" parent="World" unique_id=1643870936 instance=ExtResource("5_dxp7b")]
 position = Vector2(-976, -968)
