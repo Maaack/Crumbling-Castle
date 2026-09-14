@@ -2,22 +2,28 @@
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="3_kdlgo"]
-[ext_resource type="PackedScene" uid="uid://j74cxk815ob4" path="res://scenes/game/levels/stairs.tscn" id="4_kdlgo"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
 [ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/character_body_2d.tscn" id="4_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/lose_area_2d.tscn" id="5_1bryu"]
+[ext_resource type="PackedScene" uid="uid://cdnodbwgoohtm" path="res://scenes/game/levels/staircase.tscn" id="5_dxp7b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0gu67"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_n4y2n"]
-a = Vector2(-640, 0)
-b = Vector2(640, 0)
+a = Vector2(-1280, 0)
+b = Vector2(1280, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
 size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2md0"]
 size = Vector2(32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
+size = Vector2(20, 3200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
+size = Vector2(20, 1016)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eom8k"]
 size = Vector2(80, 240)
@@ -32,14 +38,15 @@ tutorial_scenes = Array[PackedScene]([ExtResource("3_kdlgo")])
 
 [node name="World" type="Node2D" parent="." unique_id=660390528]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="World" unique_id=271684871]
+[node name="Tower" type="StaticBody2D" parent="World" unique_id=271684871]
 position = Vector2(1, 120)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=1511380734]
+[node name="GroundFloor" type="CollisionShape2D" parent="World/Tower" unique_id=1511380734]
 shape = SubResource("WorldBoundaryShape2D_0gu67")
 one_way_collision = true
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D" unique_id=51872343]
+[node name="Label" type="Label" parent="World/Tower/GroundFloor" unique_id=51872343]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -51,16 +58,17 @@ offset_right = 627.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "========================================================================================================================================="
+text = "==============================================================================================================================================================================================================================================================================================================================================================================================================================================="
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=1715809157]
+[node name="Floor1" type="CollisionShape2D" parent="World/Tower" unique_id=1715809157]
 position = Vector2(0, -240)
 shape = SubResource("SegmentShape2D_n4y2n")
 one_way_collision = true
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D4" unique_id=575027556]
+[node name="Label" type="Label" parent="World/Tower/Floor1" unique_id=575027556]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -72,16 +80,17 @@ offset_right = 627.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "========================================================================================================================================="
+text = "======================================================================================================================================================================================================================================================================================="
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=707826464]
+[node name="Floor2" type="CollisionShape2D" parent="World/Tower" unique_id=707826464]
 position = Vector2(0, -480)
 shape = SubResource("SegmentShape2D_n4y2n")
 one_way_collision = true
+metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D6" unique_id=786625346]
+[node name="Label" type="Label" parent="World/Tower/Floor2" unique_id=786625346]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -93,16 +102,170 @@ offset_right = 627.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "========================================================================================================================================="
+text = "======================================================================================================================================================================================================================================================================================="
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=529887626]
-position = Vector2(270, -18)
+[node name="Floor3" type="CollisionShape2D" parent="World/Tower" unique_id=366674495]
+position = Vector2(0, -720)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor3" unique_id=1847163854]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor4" type="CollisionShape2D" parent="World/Tower" unique_id=739456433]
+position = Vector2(0, -960)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor4" unique_id=2083722964]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor5" type="CollisionShape2D" parent="World/Tower" unique_id=2075963391]
+position = Vector2(0, -1208)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor5" unique_id=503102198]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor6" type="CollisionShape2D" parent="World/Tower" unique_id=1557370478]
+position = Vector2(0, -1448)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor6" unique_id=363742973]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor7" type="CollisionShape2D" parent="World/Tower" unique_id=1531630805]
+position = Vector2(0, -1688)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor7" unique_id=646246120]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor9" type="CollisionShape2D" parent="World/Tower" unique_id=152274063]
+position = Vector2(8, -2168)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor9" unique_id=1288500221]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor8" type="CollisionShape2D" parent="World/Tower" unique_id=1610116068]
+position = Vector2(0, -1928)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/Floor8" unique_id=1352466787]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "======================================================================================================================================================================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Tower" unique_id=529887626]
+position = Vector2(903, -16)
 shape = SubResource("RectangleShape2D_0gu67")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D2" unique_id=824983436]
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D2" unique_id=824983436]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -118,13 +281,14 @@ theme_override_constants/line_spacing = -7
 text = "[_][_]
 [_][_]"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=1716948064]
-position = Vector2(305, -34)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Tower" unique_id=1716948064]
+position = Vector2(938, -32)
 shape = SubResource("RectangleShape2D_w2md0")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D3" unique_id=332016273]
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D3" unique_id=332016273]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -143,12 +307,12 @@ text = "[_][_]
 [_][_]"
 horizontal_alignment = 1
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=1473707772]
-position = Vector2(454, -18)
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="World/Tower" unique_id=1473707772]
+position = Vector2(1087, -16)
 shape = SubResource("RectangleShape2D_0gu67")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D5" unique_id=1227609483]
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D5" unique_id=1227609483]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -165,21 +329,331 @@ text = "[_][_]
 [_][_]"
 horizontal_alignment = 1
 
-[node name="Stairs" parent="World/StaticBody2D" unique_id=1578475103 instance=ExtResource("4_kdlgo")]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower" unique_id=392074359]
+position = Vector2(-1289, -1560)
+shape = SubResource("RectangleShape2D_1cqto")
+metadata/_edit_group_ = true
 
-[node name="Stairs2" parent="World/StaticBody2D" unique_id=1339358060 instance=ExtResource("4_kdlgo")]
-position = Vector2(175, -112)
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D" unique_id=1284391385]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -1116.5
+offset_right = 20.0
+offset_bottom = 1116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Stairs3" parent="World/StaticBody2D" unique_id=356372767 instance=ExtResource("4_kdlgo")]
-position = Vector2(-9, -240)
-scale = Vector2(-1, 1)
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World/Tower" unique_id=1984046539]
+position = Vector2(1287, -496)
+shape = SubResource("RectangleShape2D_1bryu")
+metadata/_edit_group_ = true
 
-[node name="Stairs4" parent="World/StaticBody2D" unique_id=1225740242 instance=ExtResource("4_kdlgo")]
-position = Vector2(-185, -352)
-scale = Vector2(-1, 1)
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D4" unique_id=657473880]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -1116.5
+offset_right = 20.0
+offset_bottom = 1116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="World/Tower" unique_id=2055733793]
+position = Vector2(1287, -1704)
+shape = SubResource("RectangleShape2D_1bryu")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D6" unique_id=372177876]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -1116.5
+offset_right = 20.0
+offset_bottom = 1116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
+position = Vector2(-1, -2872)
+shape = SubResource("RectangleShape2D_1bryu")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="World/Tower/CollisionShape2D7" unique_id=1200467458]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -1116.5
+offset_right = 20.0
+offset_bottom = 1116.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="WinArea2D" type="Area2D" parent="World" unique_id=1429975498]
-position = Vector2(480, -480)
+position = Vector2(1120, -2176)
 collision_layer = 2
 collision_mask = 2
 metadata/_edit_group_ = true
@@ -205,10 +679,110 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
-unique_name_in_owner = true
-position = Vector2(0, 264)
+position = Vector2(0, 272)
+
+[node name="Staircase" parent="World" unique_id=639177241 instance=ExtResource("5_dxp7b")]
+position = Vector2(976, -8)
+
+[node name="Staircase2" parent="World" unique_id=2026593375 instance=ExtResource("5_dxp7b")]
+position = Vector2(-240, -248)
+
+[node name="Staircase3" parent="World" unique_id=630399102 instance=ExtResource("5_dxp7b")]
+position = Vector2(976, -488)
+
+[node name="Staircase10" parent="World" unique_id=1435930404 instance=ExtResource("5_dxp7b")]
+position = Vector2(976, -1216)
+
+[node name="Staircase4" parent="World" unique_id=1581149233 instance=ExtResource("5_dxp7b")]
+position = Vector2(-240, -728)
+
+[node name="Staircase5" parent="World" unique_id=977947716 instance=ExtResource("5_dxp7b")]
+position = Vector2(-976, -8)
+scale = Vector2(-1, 1)
+
+[node name="Staircase6" parent="World" unique_id=270370764 instance=ExtResource("5_dxp7b")]
+position = Vector2(240, -248)
+scale = Vector2(-1, 1)
+
+[node name="Staircase7" parent="World" unique_id=1978876335 instance=ExtResource("5_dxp7b")]
+position = Vector2(-976, -488)
+scale = Vector2(-1, 1)
+
+[node name="Staircase9" parent="World" unique_id=1643870936 instance=ExtResource("5_dxp7b")]
+position = Vector2(-976, -976)
+scale = Vector2(-1, 1)
+
+[node name="Staircase11" parent="World" unique_id=1867616661 instance=ExtResource("5_dxp7b")]
+position = Vector2(976, -1696)
+
+[node name="Staircase12" parent="World" unique_id=930341651 instance=ExtResource("5_dxp7b")]
+position = Vector2(-976, -1456)
+scale = Vector2(-1, 1)
+
+[node name="Staircase13" parent="World" unique_id=434981855 instance=ExtResource("5_dxp7b")]
+position = Vector2(-968, -1936)
+scale = Vector2(-1, 1)
+
+[node name="Staircase8" parent="World" unique_id=944536873 instance=ExtResource("5_dxp7b")]
+position = Vector2(240, -728)
+scale = Vector2(-1, 1)
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 
+[node name="Label" type="Label" parent="." unique_id=1570496927]
+offset_left = -72.0
+offset_top = -984.0
+offset_right = 101.0
+offset_bottom = -939.0
+theme_override_font_sizes/font_size = 32
+text = "Decide Left"
+
+[node name="Label4" type="Label" parent="." unique_id=1589557229]
+offset_left = 1344.0
+offset_top = -976.0
+offset_right = 1618.0
+offset_bottom = -931.0
+theme_override_font_sizes/font_size = 32
+text = "Jump out Window"
+
+[node name="Label2" type="Label" parent="." unique_id=1213752438]
+offset_left = -136.0
+offset_top = -1208.0
+offset_right = 213.0
+offset_bottom = -1163.0
+theme_override_font_sizes/font_size = 32
+text = "Simple jump"
+
+[node name="Label3" type="Label" parent="." unique_id=929708901]
+offset_left = 264.0
+offset_top = -1456.0
+offset_right = 731.0
+offset_bottom = -1411.0
+theme_override_font_sizes/font_size = 32
+text = "Combo jumpies and platforms"
+
+[node name="Label5" type="Label" parent="." unique_id=1344339152]
+offset_left = -272.0
+offset_top = -1696.0
+offset_right = 307.0
+offset_bottom = -1651.0
+theme_override_font_sizes/font_size = 32
+text = "Last jumpies and platforms w/ 2-story fall"
+
+[node name="Label6" type="Label" parent="." unique_id=418150411]
+offset_left = -848.0
+offset_top = -2168.0
+offset_right = -269.0
+offset_bottom = -2123.0
+theme_override_font_sizes/font_size = 32
+text = "Gate Wheel (Interact multiple times)"
+
+[node name="Label7" type="Label" parent="." unique_id=876763735]
+offset_left = -80.0
+offset_top = -2160.0
+offset_right = 104.0
+offset_bottom = -2115.0
+theme_override_font_sizes/font_size = 32
+text = "Closed Gate"
+
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
-[connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
