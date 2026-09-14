@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://ccrc5f1tvcbuo"]
+
+[ext_resource type="Script" uid="uid://srbcehia73r5" path="res://scenes/game/levels/character_body_2d.gd" id="1_q6ssg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
+size = Vector2(24, 45)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_eom8k"]
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_q6ssg"]
+length = 16.0
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_8d8v1"]
+length = 8.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1297156709]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_q6ssg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1569570653]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_x2ody")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1553608426]
+position = Vector2(1, 13)
+shape = SubResource("SeparationRayShape2D_eom8k")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=885764356]
+position = Vector2(-1, 13)
+shape = SubResource("SeparationRayShape2D_eom8k")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=355364510]
+position = Vector2(5, 13)
+shape = SubResource("SeparationRayShape2D_q6ssg")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=120811927]
+position = Vector2(-5, 13)
+shape = SubResource("SeparationRayShape2D_q6ssg")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=137578966]
+position = Vector2(9, 13)
+shape = SubResource("SeparationRayShape2D_8d8v1")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=158600197]
+position = Vector2(-9, 13)
+shape = SubResource("SeparationRayShape2D_8d8v1")
+
+[node name="Label" type="Label" parent="." unique_id=321062841]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -37.5
+offset_right = 42.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "_o_
+|
+/ \\"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1242659405]
+position = Vector2(0, -23)
