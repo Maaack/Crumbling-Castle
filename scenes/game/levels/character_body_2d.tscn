@@ -13,7 +13,7 @@ length = 16.0
 [sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_8d8v1"]
 length = 8.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1297156709]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1297156709 groups=["player"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_q6ssg")
