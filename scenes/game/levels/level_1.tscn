@@ -733,7 +733,7 @@ scale = Vector2(-1, 1)
 position = Vector2(-544, -2096)
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
-position = Vector2(-800, -2120)
+position = Vector2(0, 80)
 
 [node name="Label" type="Label" parent="." unique_id=1570496927]
 offset_left = -72.0
