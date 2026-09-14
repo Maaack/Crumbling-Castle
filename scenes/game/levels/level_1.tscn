@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="3_kdlgo"]
+[ext_resource type="PackedScene" uid="uid://bk3j8a2koun2i" path="res://scenes/game/levels/gate.tscn" id="4_2u4xi"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
 [ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/character_body_2d.tscn" id="4_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/lose_area_2d.tscn" id="5_1bryu"]
@@ -594,7 +595,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
-position = Vector2(-1, -2872)
+position = Vector2(-1, -2816)
 shape = SubResource("RectangleShape2D_1bryu")
 metadata/_edit_group_ = true
 
@@ -652,6 +653,10 @@ text = "||
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Gate" parent="World/Tower" unique_id=1474410729 instance=ExtResource("4_2u4xi")]
+unique_name_in_owner = true
+position = Vector2(-1, -2240)
 
 [node name="WinArea2D" type="Area2D" parent="World" unique_id=1429975498]
 position = Vector2(1120, -2176)
@@ -775,21 +780,6 @@ offset_bottom = -1643.0
 theme_override_font_sizes/font_size = 32
 text = "Last jumpies and platforms w/ 2-story fall"
 
-[node name="Label6" type="Label" parent="." unique_id=418150411]
-offset_left = -848.0
-offset_top = -2168.0
-offset_right = -269.0
-offset_bottom = -2123.0
-theme_override_font_sizes/font_size = 32
-text = "Gate Wheel (Interact multiple times)"
-
-[node name="Label7" type="Label" parent="." unique_id=876763735]
-offset_left = -80.0
-offset_top = -2160.0
-offset_right = 104.0
-offset_bottom = -2115.0
-theme_override_font_sizes/font_size = 32
-text = "Closed Gate"
-
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
+[connection signal="wheel_turned" from="World/GateWheel" to="." method="_on_gate_wheel_wheel_turned"]
