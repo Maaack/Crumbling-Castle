@@ -91,6 +91,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=360449661]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_y1nfv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=789091341]
@@ -103,3 +104,4 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_0gu67")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
