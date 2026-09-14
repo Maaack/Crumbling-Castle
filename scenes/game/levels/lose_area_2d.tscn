@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bovk5qn7y0cb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
+size = Vector2(1280, 16)
+
+[sub_resource type="Animation" id="Animation_d4qq1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-700, -24.5)]
+}
+
+[sub_resource type="Animation" id="Animation_4n4rd"]
+resource_name = "grind"
+length = 1.333
+loop_mode = 1
+step = 0.333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 0.6666667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-700, -24.5), Vector2(-708, -24.5), Vector2(-700, -24.5), Vector2(-692, -24.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8y6f6"]
+_data = {
+&"RESET": SubResource("Animation_d4qq1"),
+&"grind": SubResource("Animation_4n4rd")
+}
+
+[node name="LoseArea2D" type="Area2D" unique_id=1096114870]
+collision_layer = 2
+collision_mask = 2
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890496495]
+shape = SubResource("RectangleShape2D_x2ody")
+
+[node name="Label" type="Label" parent="." unique_id=823341873]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -700.0
+offset_top = -24.5
+offset_right = 700.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2076409471]
+libraries/ = SubResource("AnimationLibrary_8y6f6")
+autoplay = &"grind"

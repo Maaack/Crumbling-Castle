@@ -2,10 +2,16 @@
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="3_kdlgo"]
+[ext_resource type="PackedScene" uid="uid://j74cxk815ob4" path="res://scenes/game/levels/stairs.tscn" id="4_kdlgo"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
 [ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/character_body_2d.tscn" id="4_x1c7m"]
+[ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/lose_area_2d.tscn" id="5_1bryu"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0gu67"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n4y2n"]
+a = Vector2(-640, 0)
+b = Vector2(640, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
 size = Vector2(32, 32)
@@ -15,9 +21,6 @@ size = Vector2(32, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eom8k"]
 size = Vector2(80, 240)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
-size = Vector2(1280, 16)
 
 [node name="Level1" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x1c7m")
@@ -37,6 +40,48 @@ shape = SubResource("WorldBoundaryShape2D_0gu67")
 one_way_collision = true
 
 [node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D" unique_id=51872343]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "========================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=1715809157]
+position = Vector2(0, -240)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+
+[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D4" unique_id=575027556]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.5
+offset_top = -37.5
+offset_right = 627.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "========================================================================================================================================="
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="World/StaticBody2D" unique_id=707826464]
+position = Vector2(0, -480)
+shape = SubResource("SegmentShape2D_n4y2n")
+one_way_collision = true
+
+[node name="Label" type="Label" parent="World/StaticBody2D/CollisionShape2D6" unique_id=786625346]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -120,33 +165,21 @@ text = "[_][_]
 [_][_]"
 horizontal_alignment = 1
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/StaticBody2D" unique_id=1086492789]
-polygon = PackedVector2Array(95, 0, 95, -16, 119, -16, 119, -32, 143, -32, 143, -48, 167, -48, 167, -64, 191, -64, 191, -80, 215, -80, 215, -96, 239, -96, 239, -112, 263, -112, 263, -128, 271, -128, 271, 0)
+[node name="Stairs" parent="World/StaticBody2D" unique_id=1578475103 instance=ExtResource("4_kdlgo")]
 
-[node name="Label" type="Label" parent="World/StaticBody2D/CollisionPolygon2D" unique_id=727609267]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 87.5
-offset_top = -131.5
-offset_right = 270.5
-offset_bottom = 3.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_spacing = -7
-text = "                                     ___|
-                               ___|
-                         ___|
-                   ___|
-             ___|
-       ___|
- ___|
-|"
+[node name="Stairs2" parent="World/StaticBody2D" unique_id=1339358060 instance=ExtResource("4_kdlgo")]
+position = Vector2(175, -112)
+
+[node name="Stairs3" parent="World/StaticBody2D" unique_id=356372767 instance=ExtResource("4_kdlgo")]
+position = Vector2(-5.200012, -241.6)
+scale = Vector2(-1, 1)
+
+[node name="Stairs4" parent="World/StaticBody2D" unique_id=1225740242 instance=ExtResource("4_kdlgo")]
+position = Vector2(-181.20001, -353.6)
+scale = Vector2(-1, 1)
 
 [node name="WinArea2D" type="Area2D" parent="World" unique_id=1429975498]
-position = Vector2(480, 0)
+position = Vector2(480, -480)
 collision_layer = 2
 collision_mask = 2
 metadata/_edit_group_ = true
@@ -171,31 +204,9 @@ To Win"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="LoseArea2D" type="Area2D" parent="World" unique_id=2042256546]
+[node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
 unique_name_in_owner = true
 position = Vector2(0, 264)
-collision_layer = 2
-collision_mask = 2
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/LoseArea2D" unique_id=2131972517]
-shape = SubResource("RectangleShape2D_x2ody")
-
-[node name="Label" type="Label" parent="World/LoseArea2D" unique_id=1423956754]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -700.0
-offset_top = -24.5
-offset_right = 700.0
-offset_bottom = 24.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 

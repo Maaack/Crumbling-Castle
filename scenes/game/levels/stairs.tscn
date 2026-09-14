@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://j74cxk815ob4"]
+
+[node name="Stairs" type="CollisionPolygon2D" unique_id=1578475103]
+polygon = PackedVector2Array(95, 0, 95, -16, 119, -16, 119, -32, 143, -32, 143, -48, 167, -48, 167, -64, 191, -64, 191, -80, 215, -80, 215, -96, 239, -96, 239, -112, 263, -112, 263, -128, 271, -128, 271, 0)
+
+[node name="Label" type="Label" parent="." unique_id=1462282630]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 87.5
+offset_top = -131.5
+offset_right = 270.5
+offset_bottom = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = -7
+text = "                                     ___|
+                               ___|
+                         ___|
+                   ___|
+             ___|
+       ___|
+ ___|
+|"
