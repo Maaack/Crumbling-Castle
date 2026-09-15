@@ -1,11 +1,18 @@
 shader_type canvas_item;
 
+// The texture to receive the effect.
 uniform sampler2D input_texture: hint_default_black, filter_linear_mipmap, repeat_enable;
+// Defines the origin point of the zoom effect relative to the texture size.
 uniform vec2 zoom_center = vec2(0.5, 0.5);
+// Adjusts the number of times the texture should get mirrored.
 uniform int layers = 5;
+// Adjusts the alpha/transparency of each layer relative to the last.
 uniform float opacity = 0.5;
+// Adjusts the magnification of each layer relative to the last.
 uniform float zoom = 0.25;
+// Range between 0 and 1 of how much to use a normalized vector from the zoom origin.
 uniform float normalization: hint_range(0.0, 1.0) = 1.0;
+// Range between -1 and 1 of how much to zoom the normalized vector relative to the texture size.
 uniform float normalized_scale: hint_range(-1.0, 1.0) = 0.01;
 
 // Adjust UV per new scale and pivot
