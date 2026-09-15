@@ -1,13 +1,20 @@
 import wave
 import numpy as np
 import sys
+import math
 
 wave_file_path = ""
+downsample = 0
 try:
     wave_file_path = sys.argv[1]
 except IndexError:
     print('Must include a file path as argument.')
     exit(1)
+
+try:
+    downsample = int(sys.argv[2])
+except IndexError:
+    pass
 
 with wave.open(wave_file_path, "rb") as wf:
     nchannels = wf.getnchannels()    # Number of channels (1=mono, 2=stereo)  
@@ -36,3 +43,9 @@ with wave.open(wave_file_path, "rb") as wf:
         # 16/32-bit signed: Divide by max integer value  
         max_val = np.iinfo(dtype).max  # e.g., 32767 for int16  
         audio_float = audio_int.astype(np.float32) / max_val
+
+    if downsample > 0:
+        pad_size = math.ceil(float(audio_float.size)/downsample)*downsample - audio_float.size
+        audio_float = np.append(audio_float, np.zeros(pad_size))
+        audio_float = audio_float.reshape(-1, downsample)
+        audio_float = audio_float.reshape(-1, downsample).mean(axis=1)
