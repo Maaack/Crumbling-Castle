@@ -1,3 +1,13 @@
+"""
+Converts WAV file into an array of floats (-1.0, 1.0) and writes them to a file.
+
+Based on the tutorial:
+https://www.w3reference.com/blog/python-write-a-wav-file-into-numpy-float-array/
+
+Modified to also include downsampling, as referenced:
+https://stackoverflow.com/a/20322495
+
+"""
 import wave
 import numpy as np
 import sys
