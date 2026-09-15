@@ -45,7 +45,8 @@ void fragment() {
 		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
-		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
+		float not_first = clamp(float(iter), 0.0, 1.0);
+		sample_color = mix(sample_color, sample_color * mix(prior_color, next_color, f_remainder), not_first);
 		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)));
 	}
 }
