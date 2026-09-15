@@ -4,8 +4,8 @@ extends "level.gd"
 @onready var lose_area_2d = %LoseArea2D
 @onready var gate = %Gate
 
-func _on_lose_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group(&"player"):
+func _on_lose_area_2d_body_entered(_node: Node2D) -> void:
+	if _node.is_in_group("Player"):
 		level_lost.emit()
 
 func _on_win_area_2d_body_entered(body: Node2D) -> void:
