@@ -66,5 +66,5 @@ with wave.open(wave_file_path, "rb") as wf:
         audio_float = np.append(audio_float, np.zeros(pad_size))
         audio_float = audio_float.reshape(-1, downsample)
         audio_float = audio_float.reshape(-1, downsample).mean(axis=1)
-
+    print("Writing ", audio_float.size, " entries.")
     np.save(target_file_path, audio_float)
