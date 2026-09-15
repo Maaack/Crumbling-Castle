@@ -45,6 +45,7 @@ player=""
 
 [gui]
 
+theme/custom="res://resources/themes/steal_this_theme.tres"
 common/drop_mouse_on_gui_input_disabled=true
 
 [input]

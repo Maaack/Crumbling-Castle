@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://j74cxk815ob4"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0gu67"]
-a = Vector2(-12, 0)
-b = Vector2(12, 0)
+a = Vector2(-20, 0)
+b = Vector2(20, 0)
 
 [node name="Stairs" type="StaticBody2D" unique_id=658927817]
 
@@ -12,52 +12,53 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -91.5
-offset_top = -67.5
-offset_right = 91.5
-offset_bottom = 67.5
+offset_left = -139.5
+offset_top = -63.5
+offset_right = 139.5
+offset_bottom = 71.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/line_spacing = -7
-text = "                                     ___|
-                               ___|
-                         ___|
-                   ___|
-             ___|
-       ___|
- ___|
+theme_override_constants/line_spacing = -2
+text = "                        ____|
+                    ____|
+                ____|
+            ____|
+        ____|
+    ____|
+____|
 |"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885181592]
+position = Vector2(-2, 0)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=166099952]
-position = Vector2(-25, 16)
+position = Vector2(-40, 16)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=157890994]
-position = Vector2(-50, 32)
+position = Vector2(-78, 32)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=640054858]
-position = Vector2(-75, 48)
+position = Vector2(-117, 48)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1977795998]
-position = Vector2(25, -16)
+position = Vector2(37, -16)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=824441120]
-position = Vector2(50, -32)
+position = Vector2(75, -32)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=535375051]
-position = Vector2(75, -48)
+position = Vector2(114, -48)
 shape = SubResource("SegmentShape2D_0gu67")
 one_way_collision = true
