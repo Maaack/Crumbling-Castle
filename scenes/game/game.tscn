@@ -25,6 +25,8 @@ shader_parameter/opacity = 0.66
 shader_parameter/zoom = 0.1
 shader_parameter/normalization = 0.75
 shader_parameter/normalized_scale = 0.015
+shader_parameter/color_cycle_time = 3.92
+shader_parameter/colors = PackedColorArray(0.7269431, 0.76186264, 0.18230712, 1, 0.63529414, 0.5568628, 0.7254902, 1, 0.78517145, 0.36306414, 0.5681588, 1, 0.4684419, 0.83082116, 0.7819382, 1, 0.78431374, 0.36078432, 0.5686275, 1, 0.7254902, 0.7607843, 0.18039216, 1)
 
 [node name="Game" type="Node" unique_id=1262092417]
 

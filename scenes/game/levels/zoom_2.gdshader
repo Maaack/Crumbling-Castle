@@ -15,6 +15,9 @@ uniform float normalization: hint_range(0.0, 1.0) = 1.0;
 // Range between -1 and 1 of how much to zoom the normalized vector relative to the texture size.
 uniform float normalized_scale: hint_range(-1.0, 1.0) = 0.01;
 
+uniform float color_cycle_time = 1.0;
+uniform lowp vec4 colors[6]: source_color;
+
 // Adjust UV per new scale and pivot
 vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
 	return a_pivot + (a_uv - a_pivot) * pow(a_scale, -1.0);
@@ -22,6 +25,19 @@ vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
 
 void fragment() {
 	COLOR = texture(input_texture, UV);
+	float time = mod(TIME, color_cycle_time);
+	float time_ratio = time / color_cycle_time;
+	float color_ratio = 1.0 / float(colors.length());
+	float f_index = time_ratio / color_ratio;
+	float f_remainder = mod(f_index, 1.0);
+	vec4 prior_color = colors[int(floor(f_index))];
+	vec4 next_color;
+	next_color = colors[int(ceil(f_index))];
+	if (int(ceil(f_index)) < colors.length()){
+		next_color = colors[int(ceil(f_index))];
+	} else {
+		next_color = colors[0];
+	}
 	for (int iter = 0; iter < layers; iter++){
 		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), zoom_center);
 		vec2 adjusted_vector = adjusted_uv - UV;
@@ -29,6 +45,7 @@ void fragment() {
 		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
+		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
 		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)));
 	}
 }
