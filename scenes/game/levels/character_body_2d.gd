@@ -12,6 +12,8 @@ var coyote_countdown: int = 0
 
 @onready var camera_2d: Camera2D = %Camera2D
 @onready var camera_pivot = $CameraPivot
+@onready var animation_player = %AnimationPlayer
+@onready var graphics = %Graphics
 
 
 func _ready() -> void:
@@ -43,7 +45,6 @@ func _physics_process(delta):
 			velocity.y = JUMP_VELOCITY
 			coyote_countdown = 0  ## prevent double jump in coyote time
 		elif coyote_countdown > 0:
-			print("coyote jump")
 			velocity.y = JUMP_VELOCITY
 			coyote_countdown = 0
 
@@ -54,5 +55,19 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCEL)
 	else:
 		velocity.x = move_toward(velocity.x, 0, ACCEL)
+	if is_on_floor():
+		if direction:
+			animation_player.play(&"run")
+		else:
+			animation_player.play(&"stand")
+	else:
+		if direction:
+			animation_player.play(&"jump")
+		else:
+			animation_player.play(&"jump_up")
+	if velocity.x >= 0:
+		graphics.scale.x = 1
+	else:
+		graphics.scale.x = -1
 
 	move_and_slide()
