@@ -19,14 +19,12 @@ viewport_path = NodePath("SubViewportContainer/LevelContainer")
 resource_local_to_scene = true
 shader = ExtResource("11_kp23o")
 shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
-shader_parameter/speed = 1.0
-shader_parameter/pivot = Vector2(0.5, 0.5)
-shader_parameter/zoom = 0.1
-shader_parameter/layer_zoom_mod = 1.0
+shader_parameter/zoom_center = Vector2(0.5, 0.5)
 shader_parameter/layers = 6
-shader_parameter/normalization = 0.75
-shader_parameter/normalization_scale = -0.015
 shader_parameter/opacity = 0.66
+shader_parameter/zoom = 0.1
+shader_parameter/normalization = 0.75
+shader_parameter/normalized_scale = 0.015
 
 [node name="Game" type="Node" unique_id=1262092417]
 
