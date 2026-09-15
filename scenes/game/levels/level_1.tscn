@@ -279,9 +279,9 @@ offset_right = 11.5
 offset_bottom = 9.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/line_spacing = -7
-text = "[_][_]
-[_][_]"
+theme_override_constants/line_spacing = -3
+text = "[][]
+[][]"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -302,11 +302,11 @@ offset_right = 11.5
 offset_bottom = 9.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/line_spacing = -7
-text = "[_][_]
-[_][_]
-[_][_]
-[_][_]"
+theme_override_constants/line_spacing = -3
+text = "[][]
+[][]
+[][]
+[][]"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="World/Tower" unique_id=1473707772]
@@ -326,9 +326,9 @@ offset_right = 11.5
 offset_bottom = 9.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/line_spacing = -7
-text = "[_][_]
-[_][_]"
+theme_override_constants/line_spacing = -3
+text = "[][]
+[][]"
 horizontal_alignment = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower" unique_id=392074359]
@@ -349,6 +349,33 @@ offset_bottom = 1116.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
 ||
 ||
 ||
@@ -530,12 +557,21 @@ text = "||
 ||
 ||
 ||
+||
+||
+||
+||
+||
+||
+||
+||
+||
 "
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="World/Tower" unique_id=2055733793]
-position = Vector2(1287, -1704)
+position = Vector2(1287, -1696)
 shape = SubResource("RectangleShape2D_1bryu")
 metadata/_edit_group_ = true
 
@@ -552,6 +588,15 @@ offset_bottom = 1116.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "||
+||
+||
+||
+||
+||
+||
+||
+||
+||
 ||
 ||
 ||
@@ -650,6 +695,16 @@ text = "||
 ||
 ||
 ||
+||
+||
+||
+||
+||
+||
+||
+||
+||
+||
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -689,49 +744,49 @@ unique_name_in_owner = true
 position = Vector2(0, 272)
 
 [node name="Staircase" parent="World" unique_id=639177241 instance=ExtResource("5_dxp7b")]
-position = Vector2(976, -8)
+position = Vector2(880, -8)
 
 [node name="Staircase2" parent="World" unique_id=2026593375 instance=ExtResource("5_dxp7b")]
-position = Vector2(-240, -248)
+position = Vector2(-336, -248)
 
 [node name="Staircase3" parent="World" unique_id=630399102 instance=ExtResource("5_dxp7b")]
-position = Vector2(976, -488)
+position = Vector2(880, -488)
 
 [node name="Staircase4" parent="World" unique_id=1581149233 instance=ExtResource("5_dxp7b")]
-position = Vector2(-240, -728)
+position = Vector2(-336, -728)
 
 [node name="Staircase5" parent="World" unique_id=977947716 instance=ExtResource("5_dxp7b")]
-position = Vector2(-976, -8)
+position = Vector2(-880, -8)
 scale = Vector2(-1, 1)
 
 [node name="Staircase6" parent="World" unique_id=270370764 instance=ExtResource("5_dxp7b")]
-position = Vector2(240, -248)
+position = Vector2(336, -248)
 scale = Vector2(-1, 1)
 
 [node name="Staircase7" parent="World" unique_id=1978876335 instance=ExtResource("5_dxp7b")]
-position = Vector2(-976, -488)
+position = Vector2(-880, -488)
 scale = Vector2(-1, 1)
 
 [node name="Staircase8" parent="World" unique_id=944536873 instance=ExtResource("5_dxp7b")]
-position = Vector2(240, -728)
+position = Vector2(336, -728)
 scale = Vector2(-1, 1)
 
 [node name="Staircase9" parent="World" unique_id=1643870936 instance=ExtResource("5_dxp7b")]
-position = Vector2(-976, -968)
+position = Vector2(-880, -968)
 scale = Vector2(-1, 1)
 
 [node name="Staircase10" parent="World" unique_id=1435930404 instance=ExtResource("5_dxp7b")]
-position = Vector2(976, -1208)
+position = Vector2(880, -1208)
 
 [node name="Staircase11" parent="World" unique_id=1867616661 instance=ExtResource("5_dxp7b")]
-position = Vector2(976, -1688)
+position = Vector2(880, -1688)
 
 [node name="Staircase12" parent="World" unique_id=930341651 instance=ExtResource("5_dxp7b")]
-position = Vector2(-976, -1448)
+position = Vector2(-880, -1448)
 scale = Vector2(-1, 1)
 
 [node name="Staircase13" parent="World" unique_id=434981855 instance=ExtResource("5_dxp7b")]
-position = Vector2(-968, -1928)
+position = Vector2(-880, -1928)
 scale = Vector2(-1, 1)
 
 [node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]

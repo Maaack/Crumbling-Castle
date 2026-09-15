@@ -5,7 +5,7 @@
 [node name="Staircase" type="Node2D" unique_id=639177241]
 
 [node name="Stairs" parent="." unique_id=658927817 instance=ExtResource("1_p10dv")]
-position = Vector2(-87, 64)
+position = Vector2(-134, 64)
 
 [node name="Stairs2" parent="." unique_id=1118678265 instance=ExtResource("1_p10dv")]
-position = Vector2(87, -48)
+position = Vector2(134, -48)
