@@ -21,12 +21,13 @@ shader = ExtResource("11_kp23o")
 shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
 shader_parameter/zoom_center = Vector2(0.5, 0.5)
 shader_parameter/layers = 6
-shader_parameter/opacity = 0.66
+shader_parameter/opacity = 0.95
 shader_parameter/zoom = 0.1
 shader_parameter/normalization = 0.75
 shader_parameter/normalized_scale = 0.015
 shader_parameter/color_cycle_time = 3.92
-shader_parameter/colors = PackedColorArray(0.7269431, 0.76186264, 0.18230712, 1, 0.63529414, 0.5568628, 0.7254902, 1, 0.78517145, 0.36306414, 0.5681588, 1, 0.4684419, 0.83082116, 0.7819382, 1, 0.78431374, 0.36078432, 0.5686275, 1, 0.7254902, 0.7607843, 0.18039216, 1)
+shader_parameter/colors = PackedColorArray(0.8096762, 0.72849953, 3.85046e-07, 1, 8.1822276e-07, 0.7168618, 0.34733137, 1, 0.2466355, 0.49731976, 1, 1, 0.76732856, 0.3066105, 0.99999934, 1, 1, 0.2952697, 0.57162875, 1, 0.99999994, 0.47800076, 0.17780825, 1)
+shader_parameter/color_layer_gap = 0.1
 
 [node name="Game" type="Node" unique_id=1262092417]
 
