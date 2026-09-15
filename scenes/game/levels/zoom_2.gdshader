@@ -17,6 +17,7 @@ uniform float normalized_scale: hint_range(-1.0, 1.0) = 0.01;
 
 uniform float color_cycle_time = 1.0;
 uniform lowp vec4 colors[6]: source_color;
+uniform float color_layer_gap: hint_range(0.0, 1.0) = 0.0;
 
 // Adjust UV per new scale and pivot
 vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
@@ -28,17 +29,17 @@ void fragment() {
 	float time = mod(TIME, color_cycle_time);
 	float time_ratio = time / color_cycle_time;
 	float color_ratio = 1.0 / float(colors.length());
-	float f_index = time_ratio / color_ratio;
-	float f_remainder = mod(f_index, 1.0);
-	vec4 prior_color = colors[int(floor(f_index))];
-	vec4 next_color;
-	next_color = colors[int(ceil(f_index))];
-	if (int(ceil(f_index)) < colors.length()){
-		next_color = colors[int(ceil(f_index))];
-	} else {
-		next_color = colors[0];
-	}
 	for (int iter = 0; iter < layers; iter++){
+		float f_index = mod(time_ratio + (color_layer_gap * float(iter)), 1.0) / color_ratio;
+		float f_remainder = mod(f_index, 1.0);
+		vec4 prior_color = colors[int(floor(f_index))];
+		vec4 next_color;
+		next_color = colors[int(ceil(f_index))];
+		if (int(ceil(f_index)) < colors.length()){
+			next_color = colors[int(ceil(f_index))];
+		} else {
+			next_color = colors[0];
+		}
 		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), zoom_center);
 		vec2 adjusted_vector = adjusted_uv - UV;
 		vec2 zoom_vector = (zoom_center - UV);
