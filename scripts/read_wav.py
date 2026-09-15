@@ -1,5 +1,5 @@
 """
-Converts WAV file into an array of floats (-1.0, 1.0) and writes them to a file.
+Converts WAV file into an array of floats (-1.0, 1.0) and writes them to a binary file.
 
 Based on the tutorial:
 https://www.w3reference.com/blog/python-write-a-wav-file-into-numpy-float-array/
@@ -14,15 +14,22 @@ import sys
 import math
 
 wave_file_path = ""
+target_file_path = ""
 downsample = 0
 try:
     wave_file_path = sys.argv[1]
 except IndexError:
-    print('Must include a file path as argument.')
+    print('Must include a wave file path as argument.')
     exit(1)
 
 try:
-    downsample = int(sys.argv[2])
+    target_file_path = sys.argv[2]
+except IndexError:
+    print('Must include a target file path as argument.')
+    exit(1)
+
+try:
+    downsample = int(sys.argv[3])
 except IndexError:
     pass
 
@@ -59,3 +66,5 @@ with wave.open(wave_file_path, "rb") as wf:
         audio_float = np.append(audio_float, np.zeros(pad_size))
         audio_float = audio_float.reshape(-1, downsample)
         audio_float = audio_float.reshape(-1, downsample).mean(axis=1)
+
+    np.save(target_file_path, audio_float)
