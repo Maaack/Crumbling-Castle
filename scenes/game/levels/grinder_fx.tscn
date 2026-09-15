@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cyjqni3ia0dmb"]
+
+[ext_resource type="Script" uid="uid://bxj44gk3kuits" path="res://scenes/game/levels/grinder_fx.gd" id="1_dkoao"]
+[ext_resource type="Texture2D" uid="uid://cmkps6he6sm4q" path="res://assets/font_textures/courier-prime-sans-equal-sign.png" id="1_dphgu"]
+
+[sub_resource type="Curve" id="Curve_4awcv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
+curve = SubResource("Curve_4awcv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kmflf"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1280, 4, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 90.0
+initial_velocity_max = 100.0
+angular_velocity_min = -90.000015
+angular_velocity_max = 89.999985
+gravity = Vector3(0, 98, 0)
+scale_min = 0.5
+scale_max = 0.5
+alpha_curve = SubResource("CurveTexture_s3pix")
+
+[node name="GrinderFx" type="GPUParticles2D" unique_id=1393526113]
+emitting = false
+amount = 1000
+texture = ExtResource("1_dphgu")
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.75
+randomness = 0.6
+visibility_rect = Rect2(-1280, -2500, 2560, 2800)
+process_material = SubResource("ParticleProcessMaterial_kmflf")
+script = ExtResource("1_dkoao")
