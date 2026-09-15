@@ -12,6 +12,7 @@ var coyote_countdown: int = 0
 
 @onready var camera_2d: Camera2D = %Camera2D
 @onready var camera_pivot = $CameraPivot
+@onready var animation_player = %AnimationPlayer
 
 
 func _ready() -> void:
@@ -52,7 +53,9 @@ func _physics_process(delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = move_toward(velocity.x, direction * SPEED, ACCEL)
+		animation_player.play(&"run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, ACCEL)
+		animation_player.play(&"stand")
 
 	move_and_slide()
