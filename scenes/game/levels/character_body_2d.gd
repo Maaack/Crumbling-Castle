@@ -61,7 +61,10 @@ func _physics_process(delta):
 		else:
 			animation_player.play(&"stand")
 	else:
-		animation_player.play(&"jump")
+		if direction:
+			animation_player.play(&"jump")
+		else:
+			animation_player.play(&"jump_up")
 	if velocity.x >= 0:
 		graphics.scale.x = 1
 	else:
