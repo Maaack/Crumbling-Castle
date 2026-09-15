@@ -1045,48 +1045,174 @@ position = Vector2(880, -2168)
 [node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
 position = Vector2(-544, -2096)
 
+[node name="CloudLabel" type="Label" parent="World" unique_id=246261936]
+offset_left = 1384.0
+offset_top = -2176.0
+offset_right = 1548.0
+offset_bottom = -2116.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel2" type="Label" parent="World" unique_id=1631212246]
+offset_left = 1760.0
+offset_top = -2520.0
+offset_right = 1924.0
+offset_bottom = -2460.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel3" type="Label" parent="World" unique_id=1028798087]
+offset_left = 1760.0
+offset_top = -2272.0
+offset_right = 1924.0
+offset_bottom = -2212.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel4" type="Label" parent="World" unique_id=1003855585]
+offset_left = 1376.0
+offset_top = -2568.0
+offset_right = 1540.0
+offset_bottom = -2508.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel5" type="Label" parent="World" unique_id=873101846]
+offset_left = 1712.0
+offset_top = -2688.0
+offset_right = 1876.0
+offset_bottom = -2628.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel6" type="Label" parent="World" unique_id=1848833829]
+offset_left = 1624.0
+offset_top = -2616.0
+offset_right = 1788.0
+offset_bottom = -2556.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel7" type="Label" parent="World" unique_id=330530046]
+offset_left = 1288.0
+offset_top = -2656.0
+offset_right = 1452.0
+offset_bottom = -2596.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel8" type="Label" parent="World" unique_id=1780836371]
+offset_left = 1544.0
+offset_top = -2688.0
+offset_right = 1708.0
+offset_bottom = -2628.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel9" type="Label" parent="World" unique_id=1082928358]
+offset_left = 1912.0
+offset_top = -2592.0
+offset_right = 2076.0
+offset_bottom = -2532.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel10" type="Label" parent="World" unique_id=847103447]
+offset_left = 1592.0
+offset_top = -2408.0
+offset_right = 1756.0
+offset_bottom = -2327.0
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel11" type="Label" parent="World" unique_id=1610179656]
+offset_left = 1096.0
+offset_top = -2520.0
+offset_right = 1260.0
+offset_bottom = -2460.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel12" type="Label" parent="World" unique_id=1057777048]
+offset_left = 624.0
+offset_top = -2504.0
+offset_right = 788.0
+offset_bottom = -2444.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel13" type="Label" parent="World" unique_id=491932638]
+offset_left = 784.0
+offset_top = -2560.0
+offset_right = 948.0
+offset_bottom = -2500.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel14" type="Label" parent="World" unique_id=1947484053]
+offset_left = 760.0
+offset_top = -2696.0
+offset_right = 924.0
+offset_bottom = -2636.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel15" type="Label" parent="World" unique_id=2117174738]
+offset_left = 968.0
+offset_top = -2600.0
+offset_right = 1132.0
+offset_bottom = -2540.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel16" type="Label" parent="World" unique_id=617460340]
+offset_left = 1344.0
+offset_top = -2360.0
+offset_right = 1508.0
+offset_bottom = -2300.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 position = Vector2(0, 80)
-
-[node name="Label" type="Label" parent="." unique_id=1570496927]
-offset_left = -72.0
-offset_top = -984.0
-offset_right = 101.0
-offset_bottom = -939.0
-theme_override_font_sizes/font_size = 32
-text = "Decide Left"
-
-[node name="Label4" type="Label" parent="." unique_id=1589557229]
-offset_left = 1344.0
-offset_top = -976.0
-offset_right = 1618.0
-offset_bottom = -931.0
-theme_override_font_sizes/font_size = 32
-text = "Jump out Window"
-
-[node name="Label2" type="Label" parent="." unique_id=1213752438]
-offset_left = -136.0
-offset_top = -1200.0
-offset_right = 275.0
-offset_bottom = -1155.0
-theme_override_font_sizes/font_size = 32
-text = "Simple jump w/ 1-story fall"
-
-[node name="Label3" type="Label" parent="." unique_id=929708901]
-offset_left = 160.0
-offset_top = -1440.0
-offset_right = 846.0
-offset_bottom = -1395.0
-theme_override_font_sizes/font_size = 32
-text = "Combo jumpies and platforms w/ 1-story fall"
-
-[node name="Label5" type="Label" parent="." unique_id=1344339152]
-offset_left = -632.0
-offset_top = -1688.0
-offset_right = 8.0
-offset_bottom = -1643.0
-theme_override_font_sizes/font_size = 32
-text = "Last jumpies and platforms w/ 2-story fall"
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
