@@ -40,14 +40,13 @@ void fragment() {
 		} else {
 			next_color = colors[0];
 		}
-		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), zoom_center);
+		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter + 1)), zoom_center);
 		vec2 adjusted_vector = adjusted_uv - UV;
 		vec2 zoom_vector = (zoom_center - UV);
-		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
+		vec2 normalized_vector = normalize(zoom_vector) * float(iter + 1) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
-		float not_first = clamp(float(iter), 0.0, 1.0);
-		sample_color = mix(sample_color, sample_color * mix(prior_color, next_color, f_remainder), not_first);
+		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
 		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)));
 	}
 }
