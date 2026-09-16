@@ -8,6 +8,8 @@ uniform vec2 zoom_center = vec2(0.5, 0.5);
 uniform int layers = 5;
 // Adjusts the alpha/transparency of each layer relative to the last.
 uniform float opacity = 0.5;
+// Adjusts the boost given to the colors of the input texture.
+uniform float original_opacity_mod: hint_range(0.0, 1.0) = 0.0;
 // Adjusts the magnification of each layer relative to the last.
 uniform float zoom = 0.25;
 // Range between 0 and 1 of how much to use a normalized vector from the zoom origin.
@@ -25,7 +27,8 @@ vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
 }
 
 void fragment() {
-	COLOR = texture(input_texture, UV);
+	vec4 original_color = texture(input_texture, UV);
+	COLOR = original_color;
 	float time = mod(TIME, color_cycle_time);
 	float time_ratio = time / color_cycle_time;
 	float color_ratio = 1.0 / float(colors.length());
@@ -47,6 +50,7 @@ void fragment() {
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
 		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
-		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)));
+		float opacity_mod = 1.0 - (original_color.a * original_opacity_mod);
+		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)) * opacity_mod);
 	}
 }
