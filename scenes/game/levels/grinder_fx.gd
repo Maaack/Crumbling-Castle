@@ -24,6 +24,13 @@ func _on_lose_area_body_shape_entered(_body_rid: RID, body: Node2D, body_shape_i
 	var labels: Array[Node] = body_shape_node.find_children("*", "Label")
 
 	var rect: Rect2
+	if body_shape_node.shape is RectangleShape2D \
+		and "Wall" in body_shape_node.name \
+		and body_shape_node.has_method("destroy_bottom_row"):
+			print("call wall destroy_bottom_row")
+			body_shape_node.destroy_bottom_row()
+
+
 	if body_shape_node.shape is SegmentShape2D:
 		if "Floor" not in body_shape_node.name:
 			return

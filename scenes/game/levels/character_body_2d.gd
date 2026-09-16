@@ -17,10 +17,9 @@ var coyote_countdown: int = 0
 
 
 func _ready() -> void:
-	add_to_group("Player")
 	if use_camera_smoothing:
 		camera_2d.top_level = true
-	#camera_2d.zoom = Vector2.ONE * 0.25
+	#camera_2d.zoom = Vector2.ONE * 0.5
 
 func _process(delta: float) -> void:
 	if use_camera_smoothing:
