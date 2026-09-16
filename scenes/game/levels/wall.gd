@@ -58,9 +58,12 @@ func destroy_bottom_row() -> void:
 	while label.get_minimum_size().y == label_height:
 		label.visible_characters -= 1
 		# print(label.visible_characters)
+		_resize_reposition.call_deferred()
 		await get_tree().process_frame  ## allow time for resize calc
+		# prints("old height", label_height, "new height", label.get_minimum_size().y)
 
-	# prints("old height", label_height, "new height", label.get_minimum_size().y)
+
+func _resize_reposition() -> void:
 	shape.size.y = label.get_minimum_size().y
 
 	# reposition so new top matches original _top
