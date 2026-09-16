@@ -151,6 +151,7 @@ offset_right = 492.0
 offset_bottom = 460.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=141458699]
+process_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=91803096]
 material = SubResource("ShaderMaterial_4j704")
@@ -167,6 +168,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="MusicVisualizer" parent="." unique_id=1893913173 node_paths=PackedStringArray("canvas") instance=ExtResource("12_5jirj")]
+process_mode = 3
 canvas = NodePath("../CanvasLayer/ColorRect")
 mod_parameters = Array[StringName]([&"normalized_scale"])
 mod_amount = 0.5
