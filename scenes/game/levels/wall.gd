@@ -30,7 +30,7 @@ func _ready() -> void:
 
 	_top = position.y - shape.size.y / 2.0
 	_grinder_pool = find_children("GrinderFx*", "GPUParticles2D")
-	prints(_grinder_pool)
+	# prints(_grinder_pool)
 
 
 
@@ -57,10 +57,10 @@ func destroy_bottom_row() -> void:
 	# remove chars
 	while label.get_minimum_size().y == label_height:
 		label.visible_characters -= 1
-		print(label.visible_characters)
+		# print(label.visible_characters)
 		await get_tree().process_frame  ## allow time for resize calc
 
-	prints("old height", label_height, "new height", label.get_minimum_size().y)
+	# prints("old height", label_height, "new height", label.get_minimum_size().y)
 	shape.size.y = label.get_minimum_size().y
 
 	# reposition so new top matches original _top
