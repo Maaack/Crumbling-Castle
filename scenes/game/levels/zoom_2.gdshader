@@ -33,7 +33,7 @@ void fragment() {
 	float time_ratio = time / color_cycle_time;
 	float color_ratio = 1.0 / float(colors.length());
 	for (int iter = 0; iter < layers; iter++){
-		float f_index = mod(time_ratio + (color_layer_gap * float(iter)), 1.0) / color_ratio;
+		float f_index = mod(time_ratio - (color_layer_gap * float(iter)), 1.0) / color_ratio;
 		float f_remainder = mod(f_index, 1.0);
 		vec4 prior_color = colors[int(floor(f_index))];
 		vec4 next_color;
