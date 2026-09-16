@@ -4,11 +4,13 @@ const SPEED = 300.0
 const ACCEL = 250.0
 const JUMP_VELOCITY = -500.0
 const COYOTE_FRAMES = 8
+const BUFFERED_JUMP_FRAMES = 6
 
 @export var use_camera_smoothing: bool = true
 
 # Frames since last on floor (start w/ none)
 var coyote_countdown: int = 0
+var buffer_countdown: int = 0
 
 @onready var camera_2d: Camera2D = %Camera2D
 @onready var camera_pivot = $CameraPivot
@@ -39,13 +41,15 @@ func _physics_process(delta):
 		velocity += get_gravity() * delta * 2
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			velocity.y = JUMP_VELOCITY
-			coyote_countdown = 0  ## prevent double jump in coyote time
-		elif coyote_countdown > 0:
+	if (buffer_countdown > 0 and is_on_floor()) \
+		or (Input.is_action_just_pressed("jump") and coyote_countdown > 0):
 			velocity.y = JUMP_VELOCITY
 			coyote_countdown = 0
+			buffer_countdown = 0
+	elif Input.is_action_just_pressed("jump"):
+		buffer_countdown = BUFFERED_JUMP_FRAMES
+	else:
+		buffer_countdown = max(buffer_countdown - 1, 0)
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
