@@ -102,9 +102,12 @@ func _connect_stream_on_tree_exiting(stream_player : AudioStreamPlayer) -> void:
 func _blend_and_remove_stream_player(stream_player : AudioStreamPlayer) -> void:
 	var playback_position := music_stream_player.get_playback_position() + AudioServer.get_time_since_last_mix()
 	var old_stream_player = music_stream_player
+	var new_stream_volume = stream_player.volume_db
 	music_stream_player = stream_player
 	music_stream_player.bus = blend_audio_bus
+	music_stream_player.volume_db = old_stream_player.volume_db
 	play(playback_position)
+	blend_to(new_stream_volume, max(fade_in_duration, fade_out_duration))
 	old_stream_player.stop()
 	old_stream_player.queue_free()
 	_clone_music_player(music_stream_player)
