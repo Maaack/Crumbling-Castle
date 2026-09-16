@@ -52,7 +52,14 @@ with wave.open(wave_file_path, "rb") as wf:
         raise ValueError(f"Unsupported sample width: {sampwidth} bytes")  
     
     audio_int = np.frombuffer(raw_data, dtype=dtype)  # Integer array  
-    audio_int = audio_int.reshape(-1, nchannels)  # Shape: (nframes, nchannels) 
+    match nchannels:
+        case 1:
+            print("mono")
+        case 2:
+            print("stereo")
+        case _:
+            print("unknown")
+    audio_int = audio_int.reshape(-1, nchannels).mean(axis=1)  # Shape: (nframes, nchannels) 
     if sampwidth == 1:  
         # 8-bit unsigned: [0, 255] → [-1.0, 1.0]  
         audio_float = (audio_int - 128) / 128.0  
@@ -64,7 +71,7 @@ with wave.open(wave_file_path, "rb") as wf:
     if downsample > 0:
         pad_size = math.ceil(float(audio_float.size)/downsample)*downsample - audio_float.size
         audio_float = np.append(audio_float, np.zeros(pad_size))
-        audio_float = audio_float.reshape(-1, downsample)
         audio_float = audio_float.reshape(-1, downsample).mean(axis=1)
+        audio_float = audio_float.astype(np.float32)
     print("Writing ", audio_float.size, " entries.")
     np.save(target_file_path, audio_float)

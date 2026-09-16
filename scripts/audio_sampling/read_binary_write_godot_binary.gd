@@ -4,6 +4,7 @@ extends Node
 @export_file_path() var read_path : String
 @export_file_path() var target_path : String
 @export var ignore_first_bytes : int = 128
+@export var print_out_first_floats : int = 100
 @export_tool_button("Read & Write") var read_file_action = read_file
 
 func read_file() -> void:
@@ -15,8 +16,11 @@ func read_file() -> void:
 		var next_amplitude := _read_file.get_float()
 		amplitude_data.append(next_amplitude)
 		_read_count += 1
-		if _read_count < 100:
+		if _read_count < print_out_first_floats:
 			print(next_amplitude)
+		elif target_path.is_empty():
+			break
 	_read_file.close()
 	print("Read %d entries" % _read_count)
-	ResourceSaver.save(amplitude_data, target_path)
+	if not target_path.is_empty():
+		ResourceSaver.save(amplitude_data, target_path)
