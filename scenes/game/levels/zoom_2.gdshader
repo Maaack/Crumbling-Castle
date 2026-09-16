@@ -8,6 +8,8 @@ uniform vec2 zoom_center = vec2(0.5, 0.5);
 uniform int layers = 5;
 // Adjusts the alpha/transparency of each layer relative to the last.
 uniform float opacity = 0.5;
+// Adjusts the boost given to the colors of the input texture.
+uniform float original_opacity_mod: hint_range(0.0, 1.0) = 0.0;
 // Adjusts the magnification of each layer relative to the last.
 uniform float zoom = 0.25;
 // Range between 0 and 1 of how much to use a normalized vector from the zoom origin.
@@ -25,12 +27,13 @@ vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
 }
 
 void fragment() {
-	COLOR = texture(input_texture, UV);
+	vec4 original_color = texture(input_texture, UV);
+	COLOR = original_color;
 	float time = mod(TIME, color_cycle_time);
 	float time_ratio = time / color_cycle_time;
 	float color_ratio = 1.0 / float(colors.length());
 	for (int iter = 0; iter < layers; iter++){
-		float f_index = mod(time_ratio + (color_layer_gap * float(iter)), 1.0) / color_ratio;
+		float f_index = mod(time_ratio - (color_layer_gap * float(iter)), 1.0) / color_ratio;
 		float f_remainder = mod(f_index, 1.0);
 		vec4 prior_color = colors[int(floor(f_index))];
 		vec4 next_color;
@@ -40,14 +43,14 @@ void fragment() {
 		} else {
 			next_color = colors[0];
 		}
-		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), zoom_center);
+		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter + 1)), zoom_center);
 		vec2 adjusted_vector = adjusted_uv - UV;
 		vec2 zoom_vector = (zoom_center - UV);
-		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
+		vec2 normalized_vector = normalize(zoom_vector) * float(iter + 1) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
-		float not_first = clamp(float(iter), 0.0, 1.0);
-		sample_color = mix(sample_color, sample_color * mix(prior_color, next_color, f_remainder), not_first);
-		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)));
+		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
+		float opacity_mod = 1.0 - (original_color.a * original_opacity_mod);
+		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)) * opacity_mod);
 	}
 }

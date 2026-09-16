@@ -11,25 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://cc0d45hr46e5m" path="res://scenes/windows/level_won_window.tscn" id="8_otnwt"]
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
-[ext_resource type="Shader" uid="uid://bjgw5vgtlon0e" path="res://scenes/game/levels/zoom_2.gdshader" id="11_kp23o"]
+[ext_resource type="Material" uid="uid://b61nmsmfhhiru" path="res://scenes/game/levels/game_zoom_shader_material.tres" id="11_vaxfo"]
 [ext_resource type="PackedScene" uid="uid://cqpl3pq0chs6t" path="res://scenes/game/scripts/music_visualizer.tscn" id="12_5jirj"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_vaxfo"]
-viewport_path = NodePath("SubViewportContainer/LevelContainer")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_4j704"]
-resource_local_to_scene = true
-shader = ExtResource("11_kp23o")
-shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
-shader_parameter/zoom_center = Vector2(0.5, 0.5)
-shader_parameter/layers = 6
-shader_parameter/opacity = 0.9
-shader_parameter/zoom = 0.1
-shader_parameter/normalization = 0.75
-shader_parameter/normalized_scale = 0.015
-shader_parameter/color_cycle_time = 3.92
-shader_parameter/colors = PackedColorArray(0.8096762, 0.72849953, 3.85046e-07, 1, 8.1822276e-07, 0.7168618, 0.34733137, 1, 0.2466355, 0.49731976, 1, 1, 0.76732856, 0.3066105, 0.99999934, 1, 1, 0.2952697, 0.57162875, 1, 0.99999994, 0.47800076, 0.17780825, 1)
-shader_parameter/color_layer_gap = 0.1
 
 [node name="Game" type="Node" unique_id=1262092417]
 
@@ -154,7 +137,7 @@ offset_bottom = 460.0
 process_mode = 3
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=91803096]
-material = SubResource("ShaderMaterial_4j704")
+material = ExtResource("11_vaxfo")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
