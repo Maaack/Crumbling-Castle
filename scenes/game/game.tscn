@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dw8qysr1hx66l"]
 
 [ext_resource type="Script" uid="uid://bmcttnpvsi36l" path="res://scenes/game/scripts/game_timer.gd" id="1_4j704"]
+[ext_resource type="AudioStream" uid="uid://bpn46r2fqyhfu" path="res://assets/polygondwanaland/Crumbling_Castle.ogg" id="1_vaxfo"]
 [ext_resource type="PackedScene" uid="uid://b0x8acab1b4oe" path="res://scenes/windows/pause_menu.tscn" id="3_kp23o"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="3_vvut4"]
 [ext_resource type="Script" uid="uid://bbymrin0cm704" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="5_4ybgr"]
@@ -11,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
 [ext_resource type="Shader" uid="uid://bjgw5vgtlon0e" path="res://scenes/game/levels/zoom_2.gdshader" id="11_kp23o"]
+[ext_resource type="PackedScene" uid="uid://cqpl3pq0chs6t" path="res://scenes/game/scripts/music_visualizer.tscn" id="12_5jirj"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_vaxfo"]
 viewport_path = NodePath("SubViewportContainer/LevelContainer")
@@ -33,6 +35,7 @@ shader_parameter/color_layer_gap = 0.1
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=986713811]
 process_mode = 3
+stream = ExtResource("1_vaxfo")
 autoplay = true
 bus = &"Music"
 
@@ -158,6 +161,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="LevelLoadingScreen" parent="." unique_id=816430938 instance=ExtResource("10_3xj4h")]
 visible = false
+
+[node name="MusicVisualizer" parent="." unique_id=1893913173 node_paths=PackedStringArray("canvas") instance=ExtResource("12_5jirj")]
+canvas = NodePath("../CanvasLayer/ColorRect")
+mod_parameters = Array[StringName]([&"normalized_scale"])
+mod_amount = 0.5
