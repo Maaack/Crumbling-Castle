@@ -24,6 +24,7 @@ shader_parameter/input_texture = SubResource("ViewportTexture_vaxfo")
 shader_parameter/zoom_center = Vector2(0.5, 0.5)
 shader_parameter/layers = 6
 shader_parameter/opacity = 0.9
+shader_parameter/original_opacity_mod = 0.666
 shader_parameter/zoom = 0.1
 shader_parameter/normalization = 0.75
 shader_parameter/normalized_scale = 0.015
