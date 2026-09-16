@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://y2n55sbmx5ss" path="res://scenes/game/levels/gate_wheel.tscn" id="7_dxp7b"]
 [ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/win_area_2d.tscn" id="7_nnhhk"]
 [ext_resource type="PackedScene" uid="uid://bhxwipjdymkyk" path="res://scenes/game/levels/torch_label.tscn" id="11_scglh"]
+[ext_resource type="PackedScene" uid="uid://c2hxlk50vgymi" path="res://scenes/game/levels/window_label.tscn" id="12_x4fdv"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -1058,18 +1059,6 @@ offset_top = -728.0
 offset_right = 920.0
 offset_bottom = -668.0
 
-[node name="TorchLabel47" parent="World" unique_id=408758747 instance=ExtResource("11_scglh")]
-offset_left = 1136.0
-offset_top = -968.0
-offset_right = 1176.0
-offset_bottom = -908.0
-
-[node name="TorchLabel48" parent="World" unique_id=1372128242 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -968.0
-offset_right = 920.0
-offset_bottom = -908.0
-
 [node name="TorchLabel25" parent="World" unique_id=1422408948 instance=ExtResource("11_scglh")]
 offset_left = 112.0
 offset_top = -968.0
@@ -1118,35 +1107,11 @@ offset_top = -968.0
 offset_right = -368.0
 offset_bottom = -929.0
 
-[node name="TorchLabel37" parent="World" unique_id=1117018120 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -1208.0
-offset_right = -112.0
-offset_bottom = -1169.0
-
 [node name="TorchLabel38" parent="World" unique_id=1653410406 instance=ExtResource("11_scglh")]
 offset_left = -408.0
 offset_top = -1208.0
 offset_right = -368.0
 offset_bottom = -1169.0
-
-[node name="TorchLabel33" parent="World" unique_id=1887965960 instance=ExtResource("11_scglh")]
-offset_left = 112.0
-offset_top = -1207.0
-offset_right = 152.0
-offset_bottom = -1147.0
-
-[node name="TorchLabel34" parent="World" unique_id=127032857 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -968.0
-offset_right = 408.0
-offset_bottom = -929.0
-
-[node name="TorchLabel35" parent="World" unique_id=251890498 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -968.0
-offset_right = 664.0
-offset_bottom = -929.0
 
 [node name="TorchLabel36" parent="World" unique_id=1939071405 instance=ExtResource("11_scglh")]
 offset_left = 368.0
@@ -1166,30 +1131,6 @@ offset_top = -1455.0
 offset_right = 1176.0
 offset_bottom = -1395.0
 
-[node name="TorchLabel41" parent="World" unique_id=2119082815 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -1456.0
-offset_right = -368.0
-offset_bottom = -1396.0
-
-[node name="TorchLabel42" parent="World" unique_id=1780500590 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -1456.0
-offset_right = -112.0
-offset_bottom = -1396.0
-
-[node name="TorchLabel43" parent="World" unique_id=1668526175 instance=ExtResource("11_scglh")]
-offset_left = 360.0
-offset_top = -1456.0
-offset_right = 400.0
-offset_bottom = -1417.0
-
-[node name="TorchLabel44" parent="World" unique_id=453588754 instance=ExtResource("11_scglh")]
-offset_left = 104.0
-offset_top = -1456.0
-offset_right = 144.0
-offset_bottom = -1417.0
-
 [node name="TorchLabel45" parent="World" unique_id=1509663937 instance=ExtResource("11_scglh")]
 offset_left = 624.0
 offset_top = -1455.0
@@ -1201,6 +1142,12 @@ offset_left = 880.0
 offset_top = -1455.0
 offset_right = 920.0
 offset_bottom = -1395.0
+
+[node name="TorchLabel47" parent="World" unique_id=15231871 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -1928.0
+offset_right = 920.0
+offset_bottom = -1868.0
 
 [node name="TorchLabel57" parent="World" unique_id=1065461267 instance=ExtResource("11_scglh")]
 offset_left = -664.0
@@ -1214,23 +1161,11 @@ offset_top = -1927.0
 offset_right = 1176.0
 offset_bottom = -1867.0
 
-[node name="TorchLabel59" parent="World" unique_id=1822880377 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -1928.0
-offset_right = -368.0
-offset_bottom = -1868.0
-
 [node name="TorchLabel60" parent="World" unique_id=1871460521 instance=ExtResource("11_scglh")]
 offset_left = -152.0
 offset_top = -1928.0
 offset_right = -112.0
 offset_bottom = -1868.0
-
-[node name="TorchLabel61" parent="World" unique_id=1644109069 instance=ExtResource("11_scglh")]
-offset_left = 360.0
-offset_top = -1928.0
-offset_right = 400.0
-offset_bottom = -1889.0
 
 [node name="TorchLabel62" parent="World" unique_id=1177577977 instance=ExtResource("11_scglh")]
 offset_left = 104.0
@@ -1244,23 +1179,11 @@ offset_top = -1927.0
 offset_right = 664.0
 offset_bottom = -1867.0
 
-[node name="TorchLabel64" parent="World" unique_id=971703990 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -1927.0
-offset_right = 920.0
-offset_bottom = -1867.0
-
 [node name="TorchLabel49" parent="World" unique_id=2045648383 instance=ExtResource("11_scglh")]
 offset_left = -1176.0
 offset_top = -1688.0
 offset_right = -1136.0
 offset_bottom = -1628.0
-
-[node name="TorchLabel50" parent="World" unique_id=1909836246 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -1687.0
-offset_right = 664.0
-offset_bottom = -1627.0
 
 [node name="TorchLabel51" parent="World" unique_id=279641111 instance=ExtResource("11_scglh")]
 offset_left = -920.0
@@ -1268,35 +1191,113 @@ offset_top = -1688.0
 offset_right = -880.0
 offset_bottom = -1628.0
 
-[node name="TorchLabel52" parent="World" unique_id=1558722587 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -1688.0
-offset_right = -624.0
-offset_bottom = -1628.0
-
-[node name="TorchLabel53" parent="World" unique_id=1704930419 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -1688.0
-offset_right = -112.0
-offset_bottom = -1649.0
-
-[node name="TorchLabel54" parent="World" unique_id=1173270731 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -1688.0
-offset_right = -368.0
-offset_bottom = -1649.0
-
-[node name="TorchLabel55" parent="World" unique_id=1320975195 instance=ExtResource("11_scglh")]
-offset_left = 112.0
-offset_top = -1687.0
+[node name="WindowLabel" parent="World" unique_id=1271239108 instance=ExtResource("12_x4fdv")]
+offset_left = 104.0
+offset_top = -1272.0
 offset_right = 152.0
-offset_bottom = -1627.0
+offset_bottom = -1146.0
 
-[node name="TorchLabel56" parent="World" unique_id=1624349249 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -1687.0
+[node name="WindowLabel2" parent="World" unique_id=746128718 instance=ExtResource("12_x4fdv")]
+offset_left = -152.0
+offset_top = -1272.0
+offset_right = -104.0
+offset_bottom = -1146.0
+
+[node name="WindowLabel3" parent="World" unique_id=452386662 instance=ExtResource("12_x4fdv")]
+offset_left = 616.0
+offset_top = -1032.0
+offset_right = 664.0
+offset_bottom = -906.0
+
+[node name="WindowLabel4" parent="World" unique_id=1034477960 instance=ExtResource("12_x4fdv")]
+offset_left = 360.0
+offset_top = -1032.0
 offset_right = 408.0
-offset_bottom = -1627.0
+offset_bottom = -906.0
+
+[node name="WindowLabel5" parent="World" unique_id=1459814210 instance=ExtResource("12_x4fdv")]
+offset_left = 1128.0
+offset_top = -1032.0
+offset_right = 1176.0
+offset_bottom = -906.0
+
+[node name="WindowLabel6" parent="World" unique_id=664014907 instance=ExtResource("12_x4fdv")]
+offset_left = 872.0
+offset_top = -1032.0
+offset_right = 920.0
+offset_bottom = -906.0
+
+[node name="WindowLabel7" parent="World" unique_id=492878010 instance=ExtResource("12_x4fdv")]
+offset_left = -152.0
+offset_top = -1512.0
+offset_right = -104.0
+offset_bottom = -1386.0
+
+[node name="WindowLabel8" parent="World" unique_id=1191837544 instance=ExtResource("12_x4fdv")]
+offset_left = -408.0
+offset_top = -1512.0
+offset_right = -360.0
+offset_bottom = -1386.0
+
+[node name="WindowLabel9" parent="World" unique_id=2030869616 instance=ExtResource("12_x4fdv")]
+offset_left = 360.0
+offset_top = -1512.0
+offset_right = 408.0
+offset_bottom = -1386.0
+
+[node name="WindowLabel10" parent="World" unique_id=1899811177 instance=ExtResource("12_x4fdv")]
+offset_left = 104.0
+offset_top = -1512.0
+offset_right = 152.0
+offset_bottom = -1386.0
+
+[node name="WindowLabel11" parent="World" unique_id=863726555 instance=ExtResource("12_x4fdv")]
+offset_left = -152.0
+offset_top = -1744.0
+offset_right = -104.0
+offset_bottom = -1618.0
+
+[node name="WindowLabel12" parent="World" unique_id=1958640233 instance=ExtResource("12_x4fdv")]
+offset_left = -408.0
+offset_top = -1744.0
+offset_right = -360.0
+offset_bottom = -1618.0
+
+[node name="WindowLabel15" parent="World" unique_id=1613085290 instance=ExtResource("12_x4fdv")]
+offset_left = -664.0
+offset_top = -1744.0
+offset_right = -616.0
+offset_bottom = -1618.0
+
+[node name="WindowLabel13" parent="World" unique_id=931787274 instance=ExtResource("12_x4fdv")]
+offset_left = 360.0
+offset_top = -1744.0
+offset_right = 408.0
+offset_bottom = -1618.0
+
+[node name="WindowLabel17" parent="World" unique_id=1060634672 instance=ExtResource("12_x4fdv")]
+offset_left = -408.0
+offset_top = -1992.0
+offset_right = -360.0
+offset_bottom = -1866.0
+
+[node name="WindowLabel18" parent="World" unique_id=434220504 instance=ExtResource("12_x4fdv")]
+offset_left = 360.0
+offset_top = -1992.0
+offset_right = 408.0
+offset_bottom = -1866.0
+
+[node name="WindowLabel16" parent="World" unique_id=1493476665 instance=ExtResource("12_x4fdv")]
+offset_left = 616.0
+offset_top = -1744.0
+offset_right = 664.0
+offset_bottom = -1618.0
+
+[node name="WindowLabel14" parent="World" unique_id=885260544 instance=ExtResource("12_x4fdv")]
+offset_left = 104.0
+offset_top = -1744.0
+offset_right = 152.0
+offset_bottom = -1618.0
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 position = Vector2(0, 80)
