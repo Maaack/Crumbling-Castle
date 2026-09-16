@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://bkuqksnvyimtc"]
+
+[ext_resource type="Script" uid="uid://28ils4ky1s7l" path="res://scenes/game/levels/wall.gd" id="1_4pn45"]
+[ext_resource type="Texture2D" uid="uid://cmkps6he6sm4q" path="res://assets/font_textures/courier-prime-sans-equal-sign.png" id="2_k2v0o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
+resource_local_to_scene = true
+size = Vector2(20, 18)
+
+[sub_resource type="Curve" id="Curve_4awcv"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
+curve = SubResource("Curve_4awcv")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_kmflf"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20, 20, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 90.0
+initial_velocity_max = 100.0
+angular_velocity_min = -90.000015
+angular_velocity_max = 89.999985
+gravity = Vector3(0, 98, 0)
+color = Color(0.6, 0.6, 0.6, 1)
+alpha_curve = SubResource("CurveTexture_s3pix")
+
+[node name="Wall" type="CollisionShape2D" unique_id=1962192153]
+shape = SubResource("RectangleShape2D_1cqto")
+script = ExtResource("1_4pn45")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="." unique_id=464379256]
+custom_minimum_size = Vector2(20, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -9.0
+offset_right = 10.0
+offset_bottom = 2004.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+autowrap_trim_flags = 0
+justification_flags = 0
+visible_characters = 0
+visible_ratio = 0.999
+
+[node name="GrinderFx1" type="GPUParticles2D" parent="." unique_id=1393526113]
+emitting = false
+amount = 12
+texture = ExtResource("2_k2v0o")
+one_shot = true
+explosiveness = 0.75
+randomness = 0.6
+visibility_rect = Rect2(-100, -100, 200, 400)
+process_material = SubResource("ParticleProcessMaterial_kmflf")
+
+[node name="GrinderFx2" type="GPUParticles2D" parent="." unique_id=1802441193]
+emitting = false
+amount = 12
+texture = ExtResource("2_k2v0o")
+one_shot = true
+explosiveness = 0.75
+randomness = 0.6
+visibility_rect = Rect2(-100, -100, 200, 400)
+process_material = SubResource("ParticleProcessMaterial_kmflf")
+
+[node name="GrinderFx3" type="GPUParticles2D" parent="." unique_id=580213771]
+emitting = false
+amount = 12
+texture = ExtResource("2_k2v0o")
+one_shot = true
+explosiveness = 0.75
+randomness = 0.6
+visibility_rect = Rect2(-100, -100, 200, 400)
+process_material = SubResource("ParticleProcessMaterial_kmflf")
+
+[node name="GrinderFx4" type="GPUParticles2D" parent="." unique_id=918282854]
+emitting = false
+amount = 12
+texture = ExtResource("2_k2v0o")
+one_shot = true
+explosiveness = 0.75
+randomness = 0.6
+visibility_rect = Rect2(-100, -100, 200, 400)
+process_material = SubResource("ParticleProcessMaterial_kmflf")
