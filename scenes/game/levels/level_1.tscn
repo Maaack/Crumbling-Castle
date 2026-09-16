@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bkuqksnvyimtc" path="res://scenes/game/levels/wall.tscn" id="5_o1xna"]
 [ext_resource type="PackedScene" uid="uid://y2n55sbmx5ss" path="res://scenes/game/levels/gate_wheel.tscn" id="7_dxp7b"]
 [ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/win_area_2d.tscn" id="7_nnhhk"]
+[ext_resource type="PackedScene" uid="uid://bhxwipjdymkyk" path="res://scenes/game/levels/torch_label.tscn" id="11_scglh"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -19,7 +20,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
 curve = SubResource("Curve_4awcv")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o1xna"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_scglh"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -75,23 +76,20 @@ size = Vector2(32, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2md0"]
 size = Vector2(32, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nnhhk"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4fdv"]
 resource_local_to_scene = true
 size = Vector2(20, 2811)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_scglh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vanb6"]
 resource_local_to_scene = true
-size = Vector2(20, 1278)
+size = Vector2(20, 1257)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4fdv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmp7y"]
 resource_local_to_scene = true
-size = Vector2(20, 1026)
+size = Vector2(20, 1047)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
 size = Vector2(20, 1016)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eom8k"]
-size = Vector2(80, 240)
 
 [node name="Level1" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x1c7m")
@@ -105,7 +103,7 @@ tutorial_scenes = Array[PackedScene]([ExtResource("3_kdlgo")])
 
 [node name="GrinderFx" parent="World" unique_id=1393526113 node_paths=PackedStringArray("lose_area") instance=ExtResource("4_dxp7b")]
 position = Vector2(1, 120)
-process_material = SubResource("ParticleProcessMaterial_o1xna")
+process_material = SubResource("ParticleProcessMaterial_scglh")
 lose_area = NodePath("../LoseArea2D")
 
 [node name="Tower" type="StaticBody2D" parent="World" unique_id=271684871]
@@ -604,17 +602,17 @@ horizontal_alignment = 1
 
 [node name="Wall" parent="World/Tower" unique_id=1962192153 instance=ExtResource("5_o1xna")]
 position = Vector2(-1285, -1400)
-shape = SubResource("RectangleShape2D_nnhhk")
+shape = SubResource("RectangleShape2D_x4fdv")
 height = 2800
 
 [node name="Wall2" parent="World/Tower" unique_id=1806221840 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -1816)
-shape = SubResource("RectangleShape2D_scglh")
+shape = SubResource("RectangleShape2D_vanb6")
 height = 1240
 
 [node name="Wall3" parent="World/Tower" unique_id=941711111 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
-shape = SubResource("RectangleShape2D_x4fdv")
+shape = SubResource("RectangleShape2D_dmp7y")
 height = 1016
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
@@ -915,6 +913,390 @@ __/          )_
 /_______________)"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TorchLabel" parent="World" unique_id=490910673 instance=ExtResource("11_scglh")]
+offset_left = 112.0
+offset_top = -8.0
+offset_right = 152.0
+offset_bottom = 31.0
+
+[node name="TorchLabel4" parent="World" unique_id=1607917610 instance=ExtResource("11_scglh")]
+offset_left = -1176.0
+offset_top = -248.0
+offset_right = -1136.0
+offset_bottom = -188.0
+
+[node name="TorchLabel2" parent="World" unique_id=342309051 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -8.0
+offset_right = -112.0
+offset_bottom = 31.0
+
+[node name="TorchLabel3" parent="World" unique_id=1983199464 instance=ExtResource("11_scglh")]
+offset_left = 1136.0
+offset_top = -248.0
+offset_right = 1176.0
+offset_bottom = -188.0
+
+[node name="TorchLabel5" parent="World" unique_id=2130200516 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -8.0
+offset_right = -624.0
+offset_bottom = 31.0
+
+[node name="TorchLabel6" parent="World" unique_id=1391542673 instance=ExtResource("11_scglh")]
+offset_left = -920.0
+offset_top = -248.0
+offset_right = -880.0
+offset_bottom = -188.0
+
+[node name="TorchLabel7" parent="World" unique_id=512266932 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -248.0
+offset_right = -624.0
+offset_bottom = -188.0
+
+[node name="TorchLabel8" parent="World" unique_id=564977571 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -8.0
+offset_right = -368.0
+offset_bottom = 31.0
+
+[node name="TorchLabel9" parent="World" unique_id=1576127427 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -248.0
+offset_right = 664.0
+offset_bottom = -188.0
+
+[node name="TorchLabel10" parent="World" unique_id=2104516077 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -8.0
+offset_right = 408.0
+offset_bottom = 31.0
+
+[node name="TorchLabel11" parent="World" unique_id=906802362 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -8.0
+offset_right = 664.0
+offset_bottom = 31.0
+
+[node name="TorchLabel12" parent="World" unique_id=1191697260 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -248.0
+offset_right = 920.0
+offset_bottom = -188.0
+
+[node name="TorchLabel13" parent="World" unique_id=1715296412 instance=ExtResource("11_scglh")]
+offset_left = 112.0
+offset_top = -488.0
+offset_right = 152.0
+offset_bottom = -449.0
+
+[node name="TorchLabel14" parent="World" unique_id=1068247459 instance=ExtResource("11_scglh")]
+offset_left = -1176.0
+offset_top = -728.0
+offset_right = -1136.0
+offset_bottom = -668.0
+
+[node name="TorchLabel15" parent="World" unique_id=269595024 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -488.0
+offset_right = -112.0
+offset_bottom = -449.0
+
+[node name="TorchLabel16" parent="World" unique_id=1218902656 instance=ExtResource("11_scglh")]
+offset_left = 1136.0
+offset_top = -728.0
+offset_right = 1176.0
+offset_bottom = -668.0
+
+[node name="TorchLabel17" parent="World" unique_id=275217535 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -488.0
+offset_right = -624.0
+offset_bottom = -449.0
+
+[node name="TorchLabel18" parent="World" unique_id=190137867 instance=ExtResource("11_scglh")]
+offset_left = -920.0
+offset_top = -728.0
+offset_right = -880.0
+offset_bottom = -668.0
+
+[node name="TorchLabel19" parent="World" unique_id=120057859 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -728.0
+offset_right = -624.0
+offset_bottom = -668.0
+
+[node name="TorchLabel20" parent="World" unique_id=1319177191 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -488.0
+offset_right = -368.0
+offset_bottom = -449.0
+
+[node name="TorchLabel21" parent="World" unique_id=1868574786 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -728.0
+offset_right = 664.0
+offset_bottom = -668.0
+
+[node name="TorchLabel22" parent="World" unique_id=1822335863 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -488.0
+offset_right = 408.0
+offset_bottom = -449.0
+
+[node name="TorchLabel23" parent="World" unique_id=577943636 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -488.0
+offset_right = 664.0
+offset_bottom = -449.0
+
+[node name="TorchLabel24" parent="World" unique_id=760167485 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -728.0
+offset_right = 920.0
+offset_bottom = -668.0
+
+[node name="TorchLabel47" parent="World" unique_id=408758747 instance=ExtResource("11_scglh")]
+offset_left = 1136.0
+offset_top = -968.0
+offset_right = 1176.0
+offset_bottom = -908.0
+
+[node name="TorchLabel48" parent="World" unique_id=1372128242 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -968.0
+offset_right = 920.0
+offset_bottom = -908.0
+
+[node name="TorchLabel25" parent="World" unique_id=1422408948 instance=ExtResource("11_scglh")]
+offset_left = 112.0
+offset_top = -968.0
+offset_right = 152.0
+offset_bottom = -929.0
+
+[node name="TorchLabel26" parent="World" unique_id=1759839160 instance=ExtResource("11_scglh")]
+offset_left = -1176.0
+offset_top = -1208.0
+offset_right = -1136.0
+offset_bottom = -1148.0
+
+[node name="TorchLabel27" parent="World" unique_id=918632055 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -968.0
+offset_right = -112.0
+offset_bottom = -929.0
+
+[node name="TorchLabel28" parent="World" unique_id=1129931490 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -1207.0
+offset_right = 664.0
+offset_bottom = -1147.0
+
+[node name="TorchLabel29" parent="World" unique_id=1667000917 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -968.0
+offset_right = -624.0
+offset_bottom = -929.0
+
+[node name="TorchLabel30" parent="World" unique_id=1806639509 instance=ExtResource("11_scglh")]
+offset_left = -920.0
+offset_top = -1208.0
+offset_right = -880.0
+offset_bottom = -1148.0
+
+[node name="TorchLabel31" parent="World" unique_id=696745221 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -1208.0
+offset_right = -624.0
+offset_bottom = -1148.0
+
+[node name="TorchLabel32" parent="World" unique_id=990863122 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -968.0
+offset_right = -368.0
+offset_bottom = -929.0
+
+[node name="TorchLabel37" parent="World" unique_id=1117018120 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -1208.0
+offset_right = -112.0
+offset_bottom = -1169.0
+
+[node name="TorchLabel38" parent="World" unique_id=1653410406 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -1208.0
+offset_right = -368.0
+offset_bottom = -1169.0
+
+[node name="TorchLabel33" parent="World" unique_id=1887965960 instance=ExtResource("11_scglh")]
+offset_left = 112.0
+offset_top = -1207.0
+offset_right = 152.0
+offset_bottom = -1147.0
+
+[node name="TorchLabel34" parent="World" unique_id=127032857 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -968.0
+offset_right = 408.0
+offset_bottom = -929.0
+
+[node name="TorchLabel35" parent="World" unique_id=251890498 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -968.0
+offset_right = 664.0
+offset_bottom = -929.0
+
+[node name="TorchLabel36" parent="World" unique_id=1939071405 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -1207.0
+offset_right = 408.0
+offset_bottom = -1147.0
+
+[node name="TorchLabel39" parent="World" unique_id=1023360798 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -1456.0
+offset_right = -624.0
+offset_bottom = -1396.0
+
+[node name="TorchLabel40" parent="World" unique_id=2027588907 instance=ExtResource("11_scglh")]
+offset_left = 1136.0
+offset_top = -1455.0
+offset_right = 1176.0
+offset_bottom = -1395.0
+
+[node name="TorchLabel41" parent="World" unique_id=2119082815 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -1456.0
+offset_right = -368.0
+offset_bottom = -1396.0
+
+[node name="TorchLabel42" parent="World" unique_id=1780500590 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -1456.0
+offset_right = -112.0
+offset_bottom = -1396.0
+
+[node name="TorchLabel43" parent="World" unique_id=1668526175 instance=ExtResource("11_scglh")]
+offset_left = 360.0
+offset_top = -1456.0
+offset_right = 400.0
+offset_bottom = -1417.0
+
+[node name="TorchLabel44" parent="World" unique_id=453588754 instance=ExtResource("11_scglh")]
+offset_left = 104.0
+offset_top = -1456.0
+offset_right = 144.0
+offset_bottom = -1417.0
+
+[node name="TorchLabel45" parent="World" unique_id=1509663937 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -1455.0
+offset_right = 664.0
+offset_bottom = -1395.0
+
+[node name="TorchLabel46" parent="World" unique_id=1138903237 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -1455.0
+offset_right = 920.0
+offset_bottom = -1395.0
+
+[node name="TorchLabel57" parent="World" unique_id=1065461267 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -1928.0
+offset_right = -624.0
+offset_bottom = -1868.0
+
+[node name="TorchLabel58" parent="World" unique_id=1350768995 instance=ExtResource("11_scglh")]
+offset_left = 1136.0
+offset_top = -1927.0
+offset_right = 1176.0
+offset_bottom = -1867.0
+
+[node name="TorchLabel59" parent="World" unique_id=1822880377 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -1928.0
+offset_right = -368.0
+offset_bottom = -1868.0
+
+[node name="TorchLabel60" parent="World" unique_id=1871460521 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -1928.0
+offset_right = -112.0
+offset_bottom = -1868.0
+
+[node name="TorchLabel61" parent="World" unique_id=1644109069 instance=ExtResource("11_scglh")]
+offset_left = 360.0
+offset_top = -1928.0
+offset_right = 400.0
+offset_bottom = -1889.0
+
+[node name="TorchLabel62" parent="World" unique_id=1177577977 instance=ExtResource("11_scglh")]
+offset_left = 104.0
+offset_top = -1928.0
+offset_right = 144.0
+offset_bottom = -1889.0
+
+[node name="TorchLabel63" parent="World" unique_id=863582185 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -1927.0
+offset_right = 664.0
+offset_bottom = -1867.0
+
+[node name="TorchLabel64" parent="World" unique_id=971703990 instance=ExtResource("11_scglh")]
+offset_left = 880.0
+offset_top = -1927.0
+offset_right = 920.0
+offset_bottom = -1867.0
+
+[node name="TorchLabel49" parent="World" unique_id=2045648383 instance=ExtResource("11_scglh")]
+offset_left = -1176.0
+offset_top = -1688.0
+offset_right = -1136.0
+offset_bottom = -1628.0
+
+[node name="TorchLabel50" parent="World" unique_id=1909836246 instance=ExtResource("11_scglh")]
+offset_left = 624.0
+offset_top = -1687.0
+offset_right = 664.0
+offset_bottom = -1627.0
+
+[node name="TorchLabel51" parent="World" unique_id=279641111 instance=ExtResource("11_scglh")]
+offset_left = -920.0
+offset_top = -1688.0
+offset_right = -880.0
+offset_bottom = -1628.0
+
+[node name="TorchLabel52" parent="World" unique_id=1558722587 instance=ExtResource("11_scglh")]
+offset_left = -664.0
+offset_top = -1688.0
+offset_right = -624.0
+offset_bottom = -1628.0
+
+[node name="TorchLabel53" parent="World" unique_id=1704930419 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -1688.0
+offset_right = -112.0
+offset_bottom = -1649.0
+
+[node name="TorchLabel54" parent="World" unique_id=1173270731 instance=ExtResource("11_scglh")]
+offset_left = -408.0
+offset_top = -1688.0
+offset_right = -368.0
+offset_bottom = -1649.0
+
+[node name="TorchLabel55" parent="World" unique_id=1320975195 instance=ExtResource("11_scglh")]
+offset_left = 112.0
+offset_top = -1687.0
+offset_right = 152.0
+offset_bottom = -1627.0
+
+[node name="TorchLabel56" parent="World" unique_id=1624349249 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -1687.0
+offset_right = 408.0
+offset_bottom = -1627.0
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 position = Vector2(0, 80)
