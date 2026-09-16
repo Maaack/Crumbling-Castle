@@ -4,4 +4,5 @@
 
 [node name="MusicVisualizer" type="Node" unique_id=1893913173]
 script = ExtResource("1_4p278")
-data_file_path = "res://scripts/audio_sampling/data.npy"
+data_file_path = "res://scripts/audio_sampling/Crumbling_Castle_32KHz_down_32.npy"
+data_sample_rate = 1000
