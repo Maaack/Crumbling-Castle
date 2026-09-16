@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/win_area_2d.tscn" id="7_nnhhk"]
 [ext_resource type="PackedScene" uid="uid://bhxwipjdymkyk" path="res://scenes/game/levels/torch_label.tscn" id="11_scglh"]
 [ext_resource type="PackedScene" uid="uid://c2hxlk50vgymi" path="res://scenes/game/levels/window_label.tscn" id="12_x4fdv"]
+[ext_resource type="PackedScene" uid="uid://c65nuwsa3dpmk" path="res://scenes/game/levels/boxes_label.tscn" id="13_vanb6"]
+[ext_resource type="PackedScene" uid="uid://b4wwjkyaojudq" path="res://scenes/game/levels/table_label.tscn" id="15_dmp7y"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -21,7 +23,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
 curve = SubResource("Curve_4awcv")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_scglh"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dmp7y"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -71,23 +73,23 @@ b = Vector2(32, 0)
 a = Vector2(-416, 0)
 b = Vector2(416, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
-size = Vector2(32, 32)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2md0"]
 size = Vector2(32, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4fdv"]
-resource_local_to_scene = true
-size = Vector2(20, 2811)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
+size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vanb6"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8fp6"]
 resource_local_to_scene = true
-size = Vector2(20, 1257)
+size = Vector2(20, 2832)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dmp7y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4pql"]
 resource_local_to_scene = true
-size = Vector2(20, 1047)
+size = Vector2(20, 1278)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jnwb"]
+resource_local_to_scene = true
+size = Vector2(20, 1026)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
 size = Vector2(20, 1016)
@@ -104,7 +106,7 @@ tutorial_scenes = Array[PackedScene]([ExtResource("3_kdlgo")])
 
 [node name="GrinderFx" parent="World" unique_id=1393526113 node_paths=PackedStringArray("lose_area") instance=ExtResource("4_dxp7b")]
 position = Vector2(1, 120)
-process_material = SubResource("ParticleProcessMaterial_scglh")
+process_material = SubResource("ParticleProcessMaterial_dmp7y")
 lose_area = NodePath("../LoseArea2D")
 
 [node name="Tower" type="StaticBody2D" parent="World" unique_id=271684871]
@@ -532,29 +534,6 @@ text = "==========================="
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="World/Tower" unique_id=529887626]
-position = Vector2(903, -16)
-shape = SubResource("RectangleShape2D_0gu67")
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="World/Tower/CollisionShape2D2" unique_id=824983436]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.5
-offset_top = -13.5
-offset_right = 11.5
-offset_bottom = 9.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_spacing = -3
-text = "[][]
-[][]"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Tower" unique_id=1716948064]
 position = Vector2(938, -32)
 shape = SubResource("RectangleShape2D_w2md0")
@@ -603,17 +582,17 @@ horizontal_alignment = 1
 
 [node name="Wall" parent="World/Tower" unique_id=1962192153 instance=ExtResource("5_o1xna")]
 position = Vector2(-1285, -1400)
-shape = SubResource("RectangleShape2D_x4fdv")
+shape = SubResource("RectangleShape2D_d8fp6")
 height = 2800
 
 [node name="Wall2" parent="World/Tower" unique_id=1806221840 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -1816)
-shape = SubResource("RectangleShape2D_vanb6")
+shape = SubResource("RectangleShape2D_u4pql")
 height = 1240
 
 [node name="Wall3" parent="World/Tower" unique_id=941711111 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
-shape = SubResource("RectangleShape2D_dmp7y")
+shape = SubResource("RectangleShape2D_8jnwb")
 height = 1016
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
@@ -1299,8 +1278,158 @@ offset_top = -1744.0
 offset_right = 152.0
 offset_bottom = -1618.0
 
+[node name="BoxesLabel" parent="World" unique_id=268311858 instance=ExtResource("13_vanb6")]
+offset_left = 192.0
+offset_top = 80.0
+offset_right = 231.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel13" parent="World" unique_id=818786511 instance=ExtResource("13_vanb6")]
+offset_left = 920.0
+offset_top = -160.0
+offset_right = 959.0
+offset_bottom = -127.0
+
+[node name="BoxesLabel14" parent="World" unique_id=1915227209 instance=ExtResource("13_vanb6")]
+offset_left = 1176.0
+offset_top = -160.0
+offset_right = 1215.0
+offset_bottom = -127.0
+
+[node name="BoxesLabel2" parent="World" unique_id=1086814260 instance=ExtResource("13_vanb6")]
+offset_left = 304.0
+offset_top = 80.0
+offset_right = 343.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel3" parent="World" unique_id=112449178 instance=ExtResource("13_vanb6")]
+offset_left = 352.0
+offset_top = 80.0
+offset_right = 391.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel4" parent="World" unique_id=1689186788 instance=ExtResource("13_vanb6")]
+offset_left = 328.0
+offset_top = 48.0
+offset_right = 367.0
+offset_bottom = 81.0
+
+[node name="BoxesLabel10" parent="World" unique_id=1321471694 instance=ExtResource("13_vanb6")]
+offset_left = -864.0
+offset_top = -160.0
+offset_right = -825.0
+offset_bottom = -127.0
+
+[node name="BoxesLabel11" parent="World" unique_id=940099078 instance=ExtResource("13_vanb6")]
+offset_left = -816.0
+offset_top = -160.0
+offset_right = -777.0
+offset_bottom = -127.0
+
+[node name="BoxesLabel12" parent="World" unique_id=28376959 instance=ExtResource("13_vanb6")]
+offset_left = -840.0
+offset_top = -192.0
+offset_right = -801.0
+offset_bottom = -159.0
+
+[node name="BoxesLabel5" parent="World" unique_id=392828382 instance=ExtResource("13_vanb6")]
+offset_left = -104.0
+offset_top = 80.0
+offset_right = -65.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel6" parent="World" unique_id=1680916121 instance=ExtResource("13_vanb6")]
+offset_left = -248.0
+offset_top = 80.0
+offset_right = -209.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel7" parent="World" unique_id=1130605760 instance=ExtResource("13_vanb6")]
+offset_left = -256.0
+offset_top = 48.0
+offset_right = -217.0
+offset_bottom = 81.0
+
+[node name="BoxesLabel8" parent="World" unique_id=1115617846 instance=ExtResource("13_vanb6")]
+offset_left = -264.0
+offset_top = 16.0
+offset_right = -225.0
+offset_bottom = 49.0
+
+[node name="BoxesLabel9" parent="World" unique_id=2055295910 instance=ExtResource("13_vanb6")]
+offset_left = -288.0
+offset_top = 80.0
+offset_right = -249.0
+offset_bottom = 113.0
+
+[node name="BoxesLabel15" parent="World" unique_id=231915167 instance=ExtResource("13_vanb6")]
+offset_left = 24.0
+offset_top = -400.0
+offset_right = 63.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel16" parent="World" unique_id=2119869667 instance=ExtResource("13_vanb6")]
+offset_left = 8.0
+offset_top = -432.0
+offset_right = 47.0
+offset_bottom = -399.0
+
+[node name="BoxesLabel20" parent="World" unique_id=492095746 instance=ExtResource("13_vanb6")]
+offset_left = -40.0
+offset_top = -432.0
+offset_right = -1.0
+offset_bottom = -399.0
+
+[node name="BoxesLabel17" parent="World" unique_id=174461288 instance=ExtResource("13_vanb6")]
+offset_left = -16.0
+offset_top = -464.0
+offset_right = 23.0
+offset_bottom = -431.0
+
+[node name="BoxesLabel18" parent="World" unique_id=907321428 instance=ExtResource("13_vanb6")]
+offset_left = -16.0
+offset_top = -400.0
+offset_right = 23.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel19" parent="World" unique_id=679258793 instance=ExtResource("13_vanb6")]
+offset_left = -56.0
+offset_top = -400.0
+offset_right = -17.0
+offset_bottom = -367.0
+
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 position = Vector2(0, 80)
+
+[node name="TableLabel" parent="." unique_id=432673667 instance=ExtResource("15_dmp7y")]
+offset_left = 592.0
+offset_top = -880.0
+offset_right = 688.0
+offset_bottom = -847.0
+
+[node name="TableLabel2" parent="." unique_id=919246289 instance=ExtResource("15_dmp7y")]
+offset_left = 1104.0
+offset_top = -880.0
+offset_right = 1200.0
+offset_bottom = -847.0
+
+[node name="TableLabel3" parent="." unique_id=1192662953 instance=ExtResource("15_dmp7y")]
+offset_left = 848.0
+offset_top = -880.0
+offset_right = 944.0
+offset_bottom = -847.0
+
+[node name="TableLabel4" parent="." unique_id=1321423216 instance=ExtResource("15_dmp7y")]
+offset_left = -944.0
+offset_top = -1120.0
+offset_right = -848.0
+offset_bottom = -1087.0
+
+[node name="TableLabel5" parent="." unique_id=1718716028 instance=ExtResource("15_dmp7y")]
+offset_left = -688.0
+offset_top = -1120.0
+offset_right = -592.0
+offset_bottom = -1087.0
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
