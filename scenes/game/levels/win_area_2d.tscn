@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bumhv7pttsj0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eom8k"]
+size = Vector2(80, 80)
+
+[sub_resource type="Gradient" id="Gradient_glaqk"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eror1"]
+gradient = SubResource("Gradient_glaqk")
+
+[sub_resource type="Animation" id="Animation_i68ud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glaqk"]
+resource_name = "jitter"
+length = 2.0
+loop_mode = 1
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.6, 0.6333334, 0.6666667, 0.7, 0.8, 0.8333333, 0.8666667, 1.2, 1.2333333, 1.2666667, 1.3, 1.3333333, 1.3666667, 1.4, 1.4333333, 1.9333333, 1.9666667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(0.6, 1.5), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(0.6, 0.6), Vector2(0.9, 0.9), Vector2(1.75, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0.2, 2), Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(0.6, 1.5), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1), Vector2(0.4, 0.4), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333334, 0.6666667, 0.7, 0.8, 0.8333333, 0.8666667, 1.2, 1.2333333, 1.2666667, 1.3, 1.3333333, 1.3666667, 1.4, 1.4333333, 1.9333333, 1.9666667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.9, 0.9), Vector2(0.95359945, 0.95359945), Vector2(1, 1), Vector2(1, 1), Vector2(0.6, 1.1), Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1), Vector2(0.4, 0.4), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i68ud"]
+_data = {
+&"RESET": SubResource("Animation_i68ud"),
+&"jitter": SubResource("Animation_glaqk")
+}
+
+[node name="WinArea2D" type="Area2D" unique_id=1669638238]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1828023657]
+shape = SubResource("RectangleShape2D_eom8k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=799575297]
+texture = SubResource("GradientTexture2D_eror1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1393441148]
+texture = SubResource("GradientTexture2D_eror1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1543050522]
+libraries/ = SubResource("AnimationLibrary_i68ud")
+autoplay = &"jitter"

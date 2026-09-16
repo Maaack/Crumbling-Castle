@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cdnodbwgoohtm" path="res://scenes/game/levels/staircase.tscn" id="5_dxp7b"]
 [ext_resource type="PackedScene" uid="uid://bkuqksnvyimtc" path="res://scenes/game/levels/wall.tscn" id="5_o1xna"]
 [ext_resource type="PackedScene" uid="uid://y2n55sbmx5ss" path="res://scenes/game/levels/gate_wheel.tscn" id="7_dxp7b"]
+[ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/win_area_2d.tscn" id="7_nnhhk"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -690,31 +691,8 @@ vertical_alignment = 1
 unique_name_in_owner = true
 position = Vector2(-1, -2240)
 
-[node name="WinArea2D" type="Area2D" parent="World" unique_id=1429975498]
-position = Vector2(1320, -2440)
-collision_layer = 2
-collision_mask = 2
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/WinArea2D" unique_id=851865462]
-shape = SubResource("RectangleShape2D_eom8k")
-
-[node name="Label" type="Label" parent="World/WinArea2D" unique_id=1741988595]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -42.0
-offset_top = -24.5
-offset_right = 42.0
-offset_bottom = 24.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Enter
-To Win"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="WinArea2D" parent="World" unique_id=1669638238 instance=ExtResource("7_nnhhk")]
+position = Vector2(1336, -2416)
 
 [node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
 unique_name_in_owner = true
