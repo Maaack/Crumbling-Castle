@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cqpl3pq0chs6t"]
+
+[ext_resource type="Script" uid="uid://bum2uvsy3qy6l" path="res://scenes/game/scripts/music_visualizer.gd" id="1_4p278"]
+
+[node name="MusicVisualizer" type="Node" unique_id=1893913173]
+script = ExtResource("1_4p278")
+data_file_path = "res://scripts/audio_sampling/data.npy"

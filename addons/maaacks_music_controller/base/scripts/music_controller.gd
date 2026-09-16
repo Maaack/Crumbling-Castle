@@ -134,6 +134,11 @@ func get_stream_player(audio_stream : AudioStream) -> AudioStreamPlayer:
 	add_child(stream_player)
 	return stream_player
 
+func get_playback_position() -> float:
+	if not is_instance_valid(music_stream_player):
+		return 0.0
+	return music_stream_player.get_playback_position()
+
 func play_stream(audio_stream : AudioStream) -> AudioStreamPlayer:
 	var stream_player := get_stream_player(audio_stream)
 	stream_player.play.call_deferred()
