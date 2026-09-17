@@ -56,11 +56,13 @@ func _process(delta : float):
 	current_position += AudioServer.get_time_since_last_mix()
 	var byte_offset := int(data_sample_rate * current_position)
 	var byte_range := byte_offset - last_byte_offset
-	if byte_range == 0:
+	if byte_range < 1:
 		return
 	var next_floats : Array[float] = []
 	for iter in range(byte_range):
 		next_floats.append(data_file.get_float())
+	if next_floats.is_empty():
+		return
 	var max_value : float = max(next_floats.max(), abs(float(next_floats.min())))
 	#var max_value : float = next_floats.max()
 	for mod_parameter in mod_parameters:
