@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://j74cxk815ob4"]
 
-[ext_resource type="PackedScene" uid="uid://cmn2dhqm1qo07" path="res://scenes/game/levels/stair_step.tscn" id="1_h45u3"]
+[ext_resource type="PackedScene" uid="uid://cmn2dhqm1qo07" path="res://scenes/game/levels/level_2d/stair_step.tscn" id="1_h45u3"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0gu67"]
 a = Vector2(-20, 0)

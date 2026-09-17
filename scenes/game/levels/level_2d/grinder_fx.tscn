@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://cyjqni3ia0dmb"]
+[gd_scene format=3 uid="uid://ccf0rsfl4bbj0"]
 
-[ext_resource type="Script" uid="uid://bxj44gk3kuits" path="res://scenes/game/levels/grinder_fx.gd" id="1_dkoao"]
 [ext_resource type="Texture2D" uid="uid://cmkps6he6sm4q" path="res://assets/font_textures/courier-prime-sans-equal-sign.png" id="1_dphgu"]
+[ext_resource type="Script" uid="uid://dnrdxxr2crpt" path="res://scenes/game/levels/level_2d/lose_area_2d.gd" id="2_tb2kl"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -36,4 +36,4 @@ explosiveness = 0.75
 randomness = 0.6
 visibility_rect = Rect2(-1280, -2500, 2560, 2800)
 process_material = SubResource("ParticleProcessMaterial_kmflf")
-script = ExtResource("1_dkoao")
+script = ExtResource("2_tb2kl")

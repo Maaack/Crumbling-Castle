@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bovk5qn7y0cb8"]
 
+[ext_resource type="Script" uid="uid://dnrdxxr2crpt" path="res://scenes/game/levels/level_2d/lose_area_2d.gd" id="1_5a6hs"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
 size = Vector2(3840, 16)
 
@@ -45,6 +47,7 @@ _data = {
 [node name="LoseArea2D" type="Area2D" unique_id=1096114870]
 collision_layer = 2
 collision_mask = 3
+script = ExtResource("1_5a6hs")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1890496495]
@@ -87,3 +90,5 @@ offset_transform_enabled = true
 text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

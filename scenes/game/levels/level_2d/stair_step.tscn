@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmn2dhqm1qo07"]
 
-[ext_resource type="Script" uid="uid://b674tmwn17ryi" path="res://scenes/game/levels/stair_step.gd" id="1_vtrja"]
+[ext_resource type="Script" uid="uid://b674tmwn17ryi" path="res://scenes/game/levels/level_2d/stair_step.gd" id="1_vtrja"]
 [ext_resource type="Texture2D" uid="uid://d25ta2hfk7a74" path="res://assets/font_textures/courier-prime-sans-hyphen.png" id="2_ccon0"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0gu67"]
