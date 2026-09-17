@@ -728,7 +728,7 @@ scale = Vector2(-1, 1)
 position = Vector2(880, -2168)
 
 [node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
-position = Vector2(-544, -2096)
+position = Vector2(-384, -2096)
 
 [node name="CloudLabel" type="Label" parent="World" unique_id=246261936]
 offset_left = 1384.0
@@ -1100,6 +1100,12 @@ offset_top = -1207.0
 offset_right = 408.0
 offset_bottom = -1147.0
 
+[node name="TorchLabel37" parent="World" unique_id=1119623581 instance=ExtResource("11_scglh")]
+offset_left = 368.0
+offset_top = -968.0
+offset_right = 408.0
+offset_bottom = -908.0
+
 [node name="TorchLabel39" parent="World" unique_id=1023360798 instance=ExtResource("11_scglh")]
 offset_left = -664.0
 offset_top = -1456.0
@@ -1190,12 +1196,6 @@ offset_top = -1032.0
 offset_right = 664.0
 offset_bottom = -906.0
 
-[node name="WindowLabel4" parent="World" unique_id=1034477960 instance=ExtResource("12_x4fdv")]
-offset_left = 360.0
-offset_top = -1032.0
-offset_right = 408.0
-offset_bottom = -906.0
-
 [node name="WindowLabel5" parent="World" unique_id=1459814210 instance=ExtResource("12_x4fdv")]
 offset_left = 1128.0
 offset_top = -1032.0
@@ -1231,6 +1231,10 @@ offset_left = 104.0
 offset_top = -1512.0
 offset_right = 152.0
 offset_bottom = -1386.0
+
+[node name="WindowLabel19" parent="World" unique_id=601891742 instance=ExtResource("12_x4fdv")]
+offset_top = -1032.0
+offset_bottom = -906.0
 
 [node name="WindowLabel11" parent="World" unique_id=863726555 instance=ExtResource("12_x4fdv")]
 offset_left = -152.0
