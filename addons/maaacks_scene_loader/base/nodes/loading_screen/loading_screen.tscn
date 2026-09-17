@@ -16,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="BackPanel" type="Panel" parent="Control" unique_id=332499496]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
