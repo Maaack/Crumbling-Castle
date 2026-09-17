@@ -1,23 +1,30 @@
 [gd_scene format=3 uid="uid://j74cxk815ob4"]
 
+[ext_resource type="PackedScene" uid="uid://cmn2dhqm1qo07" path="res://scenes/game/levels/stair_step.tscn" id="1_h45u3"]
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0gu67"]
 a = Vector2(-20, 0)
 b = Vector2(20, 0)
 
 [node name="Stairs" type="StaticBody2D" unique_id=658927817]
 
-[node name="Label" type="Label" parent="." unique_id=1462282630]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=978518752]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -139.5
-offset_top = -63.5
+offset_top = -65.0
 offset_right = 139.5
-offset_bottom = 71.5
+offset_bottom = 65.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1462282630]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
 theme_override_constants/line_spacing = -2
 text = "                        ____|
                     ____|
@@ -29,36 +36,78 @@ ____|
 |"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1885181592]
+visible = false
 position = Vector2(-2, 0)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=166099952]
+visible = false
 position = Vector2(-40, 16)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=157890994]
+visible = false
 position = Vector2(-78, 32)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="." unique_id=640054858]
+visible = false
 position = Vector2(-117, 48)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1977795998]
+visible = false
 position = Vector2(37, -16)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=824441120]
+visible = false
 position = Vector2(75, -32)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=535375051]
+visible = false
 position = Vector2(114, -48)
 shape = SubResource("SegmentShape2D_0gu67")
+disabled = true
 one_way_collision = true
+debug_color = Color(0.8172749, 0.19550002, 0.85, 0.8862745)
+
+[node name="StairStep" parent="." unique_id=1468455187 instance=ExtResource("1_h45u3")]
+position = Vector2(-119, 48)
+
+[node name="StairStep2" parent="." unique_id=515615502 instance=ExtResource("1_h45u3")]
+position = Vector2(-80, 32)
+
+[node name="StairStep3" parent="." unique_id=987210146 instance=ExtResource("1_h45u3")]
+position = Vector2(-42, 16)
+
+[node name="StairStep4" parent="." unique_id=48707875 instance=ExtResource("1_h45u3")]
+position = Vector2(-4, 0)
+
+[node name="StairStep5" parent="." unique_id=2102422648 instance=ExtResource("1_h45u3")]
+position = Vector2(34, -16)
+
+[node name="StairStep6" parent="." unique_id=1104956156 instance=ExtResource("1_h45u3")]
+position = Vector2(72, -32)
+
+[node name="StairStep7" parent="." unique_id=1907290387 instance=ExtResource("1_h45u3")]
+position = Vector2(111, -48)

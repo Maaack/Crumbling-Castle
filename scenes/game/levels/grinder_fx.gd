@@ -30,11 +30,13 @@ func _on_lose_area_body_shape_entered(_body_rid: RID, body: Node2D, body_shape_i
 			# print("call wall destroy_bottom_row")
 			body_shape_node.destroy_bottom_row()
 
-
 	if body_shape_node.shape is SegmentShape2D:
+		if "StairStep" in body_shape_node.get_parent().name \
+		and body_shape_node.get_parent().has_method("destroy_bottom_row"):
+			body_shape_node.get_parent().destroy_bottom_row()
+
 		if "Floor" not in body_shape_node.name:
 			return
-
 		var shape: SegmentShape2D = body_shape_node.shape
 		var _position: Vector2 = shape.a + body_shape_node.global_position
 		var _size: Vector2 = Vector2(max(8, shape.b.x - shape.a.x), max(8, shape.b.y - shape.a.y))
