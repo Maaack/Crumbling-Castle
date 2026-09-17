@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://boiek1kfyxscd"
+path="res://.godot/imported/companion.dialogue-e7ce01a6171ea3a9506c8555ad337fb9.tres"
+
+[deps]
+
+source_file="res://resources/dialogue/companion.dialogue"
+dest_files=["res://.godot/imported/companion.dialogue-e7ce01a6171ea3a9506c8555ad337fb9.tres"]
+
+[params]
+
+defaults=true
