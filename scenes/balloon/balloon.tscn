@@ -127,13 +127,14 @@ theme = SubResource("Theme_qq3yp")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon" unique_id=1302081376]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -219.0
+anchor_bottom = 0.5
+offset_top = -80.0
+offset_bottom = 80.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer" unique_id=2145270309]
 clip_children = 2
@@ -159,12 +160,14 @@ bbcode_enabled = true
 text = "Character"
 fit_content = true
 scroll_active = false
+horizontal_alignment = 1
 
 [node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
+horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=418507161]
 custom_minimum_size = Vector2(20, 10)
@@ -184,6 +187,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 
