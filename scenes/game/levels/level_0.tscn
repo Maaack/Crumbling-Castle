@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c4ykme4r20rpm"]
+
+[ext_resource type="Script" uid="uid://0fx3rdu5hjch" path="res://scenes/game/levels/level_0.gd" id="1_kimrq"]
+
+[node name="Level0" type="Control" unique_id=315330877]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kimrq")
+dialogue_path = "res://resources/dialogue/companion.dialogue"

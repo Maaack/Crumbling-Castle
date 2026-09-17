@@ -7,12 +7,11 @@
 [ext_resource type="Script" uid="uid://bbymrin0cm704" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="5_4ybgr"]
 [ext_resource type="Script" uid="uid://xo4s7jr6h54w" path="res://scripts/level_and_state_manager.gd" id="5_5jirj"]
 [ext_resource type="PackedScene" uid="uid://ba11po12cvait" path="res://scenes/windows/game_won_window.tscn" id="6_vaxfo"]
-[ext_resource type="PackedScene" uid="uid://bx7s80d8smic4" path="res://scenes/windows/level_lost_window.tscn" id="7_ftsea"]
-[ext_resource type="PackedScene" uid="uid://cc0d45hr46e5m" path="res://scenes/windows/level_won_window.tscn" id="8_otnwt"]
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
 [ext_resource type="Material" uid="uid://b61nmsmfhhiru" path="res://scenes/game/levels/game_zoom_shader_material.tres" id="11_vaxfo"]
 [ext_resource type="PackedScene" uid="uid://cqpl3pq0chs6t" path="res://scenes/game/scripts/music_visualizer.tscn" id="12_5jirj"]
+[ext_resource type="Script" uid="uid://cvkkcoavx3ah5" path="res://scenes/game/scripts/level_shader_controller.gd" id="14_ftsea"]
 
 [node name="Game" type="Node" unique_id=1262092417]
 
@@ -41,12 +40,10 @@ level_loader = NodePath("../LevelLoader")
 starting_level_path = "res://scenes/game/levels/level_1.tscn"
 scene_lister = NodePath("SceneLister")
 game_won_scene = ExtResource("6_vaxfo")
-level_lost_scene = ExtResource("7_ftsea")
-level_won_scene = ExtResource("8_otnwt")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
 script = ExtResource("10_h5e52")
-files = Array[String](["res://scenes/game/levels/level_1.tscn", "res://scenes/game/levels/level_2.tscn", "res://scenes/game/levels/level_3.tscn"])
+files = Array[String](["res://scenes/game/levels/level_0.tscn", "res://scenes/game/levels/level_1.tscn", "res://scenes/game/levels/level_2.tscn", "res://scenes/game/levels/level_3.tscn"])
 directory = "res://scenes/game/levels"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1547293762]
@@ -155,3 +152,8 @@ process_mode = 3
 canvas = NodePath("../CanvasLayer/ColorRect")
 mod_parameters = Array[StringName]([&"normalized_scale"])
 mod_amount = 0.5
+
+[node name="LevelShaderController" type="Node" parent="." unique_id=1221267674 node_paths=PackedStringArray("level_loader", "canvas")]
+script = ExtResource("14_ftsea")
+level_loader = NodePath("../LevelLoader")
+canvas = NodePath("../CanvasLayer/ColorRect")

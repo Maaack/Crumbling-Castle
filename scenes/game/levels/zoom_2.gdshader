@@ -32,7 +32,7 @@ void fragment() {
 	float time = mod(TIME, color_cycle_time);
 	float time_ratio = time / color_cycle_time;
 	float color_ratio = 1.0 / float(colors.length());
-	for (int iter = 0; iter < layers; iter++){
+	for (int iter = 1; iter < layers + 1; iter++){
 		float f_index = mod(time_ratio - (color_layer_gap * float(iter)), 1.0) / color_ratio;
 		float f_remainder = mod(f_index, 1.0);
 		vec4 prior_color = colors[int(floor(f_index))];
@@ -43,10 +43,10 @@ void fragment() {
 		} else {
 			next_color = colors[0];
 		}
-		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter + 1)), zoom_center);
+		vec2 adjusted_uv = adj_uv(UV, 1.0 + (zoom * float(iter)), zoom_center);
 		vec2 adjusted_vector = adjusted_uv - UV;
 		vec2 zoom_vector = (zoom_center - UV);
-		vec2 normalized_vector = normalize(zoom_vector) * float(iter + 1) * normalized_scale;
+		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
 		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
