@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://beb618yoy3dlw"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_scene_loader/base/nodes/loading_screen/loading_screen.tscn" id="1_l7cte"]
-[ext_resource type="Script" path="res://scenes/loading_screens/loading_screen.gd" id="2_l7cte"]
+[ext_resource type="PackedScene" uid="uid://bylvh6psebf7h" path="res://addons/maaacks_scene_loader/base/nodes/loading_screen/loading_screen.tscn" id="1_l7cte"]
+[ext_resource type="Script" uid="uid://bbxoyeagaor6b" path="res://scenes/loading_screens/loading_screen.gd" id="2_l7cte"]
 
 [node name="LevelLoadingScreen" unique_id=1716792690 instance=ExtResource("1_l7cte")]
 script = ExtResource("2_l7cte")
@@ -9,3 +9,15 @@ _in_progress = "Loading Level..."
 _in_progress_waiting = "Still Loading Level..."
 _in_progress_still_waiting = "Still Loading Level... (%d seconds)"
 _complete = "Loading Level Complete!"
+
+[node name="VBoxContainer" parent="Control" parent_id_path=PackedInt32Array(806971123) index="0" unique_id=435288529]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = -118.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
