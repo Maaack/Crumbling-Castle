@@ -150,9 +150,7 @@ func play_stream(audio_stream : AudioStream) -> AudioStreamPlayer:
 	return stream_player
 
 func _clone_music_player(stream_player : AudioStreamPlayer) -> void:
-	if is_instance_valid(cloned_stream_player) and cloned_stream_player != music_stream_player:
-		cloned_stream_player.queue_free()
-		cloned_stream_player = null
+	cloned_stream_player = null
 	var audio_stream := stream_player.stream
 	cloned_stream_player = get_stream_player(audio_stream)
 	cloned_stream_player.volume_db = stream_player.volume_db
