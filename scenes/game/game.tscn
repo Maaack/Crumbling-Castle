@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://bbymrin0cm704" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="5_4ybgr"]
 [ext_resource type="Script" uid="uid://xo4s7jr6h54w" path="res://scripts/level_and_state_manager.gd" id="5_5jirj"]
 [ext_resource type="PackedScene" uid="uid://ba11po12cvait" path="res://scenes/windows/game_won_window.tscn" id="6_vaxfo"]
-[ext_resource type="PackedScene" uid="uid://bx7s80d8smic4" path="res://scenes/windows/level_lost_window.tscn" id="7_ftsea"]
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
 [ext_resource type="Material" uid="uid://b61nmsmfhhiru" path="res://scenes/game/levels/game_zoom_shader_material.tres" id="11_vaxfo"]
@@ -41,7 +40,6 @@ level_loader = NodePath("../LevelLoader")
 starting_level_path = "res://scenes/game/levels/level_1.tscn"
 scene_lister = NodePath("SceneLister")
 game_won_scene = ExtResource("6_vaxfo")
-level_lost_scene = ExtResource("7_ftsea")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
 script = ExtResource("10_h5e52")
