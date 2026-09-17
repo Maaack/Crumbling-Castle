@@ -10,8 +10,8 @@ Death: Yet you invited me in.
   Right inside of you...
 You: No, 
   you are just trying to get into my head.
-You: Those shrooms were fine!-
-Death: They were fine 3 months ago.
+You: Those shrooms were fine...
+Death: They were fine 6 months ago.
   You'd never eat bread that blue.
 You: I've had worse...
 Death: And each time I missed you
@@ -20,11 +20,11 @@ Death: but now you're luck has run out.
 $> start_music()
 Death: ...
 Death: You feel it, don't you?
-Death: You feel me getting closer.
+Death: The End?
 You: This... this is just ego death.
 Death: ...
 Death: For an old friend,
-	I'll grant one little mercy...
+	I'll grant one last mercy...
 Death: I'll meet you at the peak.
 => END
 
@@ -33,9 +33,8 @@ Death: Well, aren't you just a little Schrödinger's cat?
 You?: Did I die?
 Death: Not yet,
   but I've been keeping track of lives.
-You?: I feel... wrong.
-You?: Is this really happening?
-
+You?: Can't I start over?
+Death: You will...
 An entire dimension crumbles.
 => END
 
