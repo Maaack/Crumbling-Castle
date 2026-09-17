@@ -22,7 +22,6 @@ func _process(delta):
 func _on_gate_wheel_wheel_turned():
 	gate.position.y -= gate_speed
 
-
 func _on_gate_wheel_player_entered():
 	interact_input_hint.show()
 
