@@ -1,3 +1,4 @@
+class_name StairStep
 extends StaticBody2D
 
 @onready var label: Label = $Label
@@ -7,7 +8,7 @@ extends StaticBody2D
 
 func destroy_bottom_row() -> void:
 	grinder_fx.emitting = true
-	collision_shape_2d.disabled = true
+	collision_shape_2d.set_deferred("disabled", true)
 
 	var tween: Tween = create_tween()
 	tween.tween_property(label, "modulate", Color.TRANSPARENT, 1.0)
