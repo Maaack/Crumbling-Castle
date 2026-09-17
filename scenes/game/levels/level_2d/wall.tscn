@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bkuqksnvyimtc"]
 
-[ext_resource type="Script" uid="uid://28ils4ky1s7l" path="res://scenes/game/levels/wall.gd" id="1_4pn45"]
+[ext_resource type="Script" uid="uid://28ils4ky1s7l" path="res://scenes/game/levels/level_2d/wall.gd" id="1_4pn45"]
 [ext_resource type="Texture2D" uid="uid://cmkps6he6sm4q" path="res://assets/font_textures/courier-prime-sans-equal-sign.png" id="2_k2v0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]

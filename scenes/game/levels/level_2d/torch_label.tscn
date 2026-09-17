@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bhxwipjdymkyk"]
 
-[ext_resource type="Script" uid="uid://dd0gw6g215d4d" path="res://scenes/game/levels/torch_label.gd" id="1_dimwg"]
+[ext_resource type="Script" uid="uid://dd0gw6g215d4d" path="res://scenes/game/levels/level_2d/torch_label.gd" id="1_dimwg"]
 
 [node name="TorchLabel" type="Label" unique_id=490910673]
 anchors_preset = 8

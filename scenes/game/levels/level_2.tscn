@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x2ody"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="3_s3pix"]
 [ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="4_4awcv"]
-[ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/character_body_2d.tscn" id="4_12bjt"]
+[ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/level_2d/character_body_2d.tscn" id="4_12bjt"]
 [ext_resource type="PackedScene" uid="uid://cyjqni3ia0dmb" path="res://scenes/game/levels/grinder_fx.tscn" id="4_eom8k"]
-[ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/lose_area_2d.tscn" id="5_x2ody"]
+[ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/level_2d/lose_area_2d.tscn" id="5_x2ody"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0gu67"]
 
