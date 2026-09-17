@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cdnodbwgoohtm"]
 
-[ext_resource type="PackedScene" uid="uid://j74cxk815ob4" path="res://scenes/game/levels/stairs.tscn" id="1_p10dv"]
+[ext_resource type="PackedScene" uid="uid://j74cxk815ob4" path="res://scenes/game/levels/level_2d/stairs.tscn" id="1_p10dv"]
 
 [node name="Staircase" type="Node2D" unique_id=639177241]
 

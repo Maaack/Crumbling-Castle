@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://y2n55sbmx5ss"]
 
-[ext_resource type="Script" uid="uid://n441o4diaylg" path="res://scenes/game/levels/gate_wheel.gd" id="1_y1nfv"]
+[ext_resource type="Script" uid="uid://n441o4diaylg" path="res://scenes/game/levels/level_2d/gate_wheel.gd" id="1_y1nfv"]
 
 [sub_resource type="Animation" id="Animation_y1nfv"]
 length = 0.001

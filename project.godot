@@ -42,6 +42,7 @@ enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg", "res:
 [global_group]
 
 player=""
+doom=""
 
 [gui]
 

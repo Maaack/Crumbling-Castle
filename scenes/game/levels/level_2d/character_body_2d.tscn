@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccrc5f1tvcbuo"]
 
-[ext_resource type="Script" uid="uid://srbcehia73r5" path="res://scenes/game/levels/character_body_2d.gd" id="1_q6ssg"]
+[ext_resource type="Script" uid="uid://srbcehia73r5" path="res://scenes/game/levels/level_2d/character_body_2d.gd" id="1_q6ssg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
 size = Vector2(24, 45)
