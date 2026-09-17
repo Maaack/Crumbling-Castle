@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://61s784l0ap2e"]
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
-[ext_resource type="PackedScene" uid="uid://dv5cs1lbxmxva" path="res://scenes/game/tutorials/tutorial_2.tscn" id="3_kdlgo"]
+[ext_resource type="PackedScene" uid="uid://ks83y4cfd5a5" path="res://scenes/game/tutorials/tutorial_1.tscn" id="3_u4pql"]
 [ext_resource type="PackedScene" uid="uid://bk3j8a2koun2i" path="res://scenes/game/levels/level_2d/gate.tscn" id="4_2u4xi"]
 [ext_resource type="PackedScene" uid="uid://cyjqni3ia0dmb" path="res://scenes/game/levels/grinder_fx.tscn" id="4_dxp7b"]
 [ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_unvbt"]
@@ -1651,7 +1651,7 @@ offset_right = 1220.0
 offset_bottom = -1806.0
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
-position = Vector2(0, 80)
+position = Vector2(0, 85)
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
