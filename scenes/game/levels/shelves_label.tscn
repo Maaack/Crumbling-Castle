@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cwud4i4nb0b11"]
+
+[node name="ShelvesLabel" type="Label" unique_id=2135736928]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -41.0
+offset_right = 29.0
+offset_bottom = 41.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+theme_override_constants/line_spacing = -2
+text = "______
+|_____|
+|_____|
+|_____|
+|_____|
+|_____|"
+horizontal_alignment = 1

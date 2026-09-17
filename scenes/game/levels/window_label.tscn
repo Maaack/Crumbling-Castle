@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c2hxlk50vgymi"]
+
+[node name="WindowLabel" type="Label" unique_id=1271239108]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -63.0
+offset_right = 24.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0009650599
+theme_override_colors/font_color = Color(0.25081778, 0.25081825, 0.250818, 1)
+theme_override_constants/line_spacing = 0
+text = "____
+| | |
+| | |
+|_|_|
+| | |
+| | |
+|_|_|"
+horizontal_alignment = 1
