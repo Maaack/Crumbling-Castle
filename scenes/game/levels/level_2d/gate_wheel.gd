@@ -1,6 +1,8 @@
 extends Node2D
 
 signal wheel_turned
+signal player_entered
+signal player_exited
 
 enum WheelState{
 	CARDINAL,
@@ -33,10 +35,12 @@ func turn_wheel() -> void:
 func _on_area_2d_body_entered(body : Node2D) -> void:
 	if body.is_in_group(&"player"):
 		can_interact = true
+		player_entered.emit()
 
 func _on_area_2d_body_exited(body : Node2D) -> void:
 	if body.is_in_group(&"player"):
 		can_interact = false
+		player_exited.emit()
 
 func _input(event : InputEvent) -> void:
 	if not can_interact:

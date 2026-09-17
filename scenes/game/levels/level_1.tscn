@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://61s784l0ap2e"]
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
+[ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="2_0mamm"]
 [ext_resource type="PackedScene" uid="uid://ks83y4cfd5a5" path="res://scenes/game/tutorials/tutorial_1.tscn" id="3_u4pql"]
 [ext_resource type="PackedScene" uid="uid://bk3j8a2koun2i" path="res://scenes/game/levels/level_2d/gate.tscn" id="4_2u4xi"]
 [ext_resource type="PackedScene" uid="uid://cyjqni3ia0dmb" path="res://scenes/game/levels/grinder_fx.tscn" id="4_dxp7b"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://nmvtcte55udh" path="res://scenes/game/levels/level_2d/background/vase_label.tscn" id="15_d8fp6"]
 [ext_resource type="PackedScene" uid="uid://b4wwjkyaojudq" path="res://scenes/game/levels/level_2d/background/table_label.tscn" id="15_dmp7y"]
 [ext_resource type="PackedScene" uid="uid://cwud4i4nb0b11" path="res://scenes/game/levels/level_2d/background/shelves_label.tscn" id="16_u4pql"]
+[ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="18_xr372"]
 
 [sub_resource type="Curve" id="Curve_4awcv"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -25,7 +27,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
 curve = SubResource("Curve_4awcv")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u4pql"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0mamm"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -81,34 +83,39 @@ size = Vector2(32, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jnwb"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xr372"]
 resource_local_to_scene = true
 size = Vector2(20, 2811)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mamm"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dql54"]
 resource_local_to_scene = true
 size = Vector2(20, 1257)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xr372"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qdte1"]
 resource_local_to_scene = true
 size = Vector2(20, 1047)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
 size = Vector2(20, 1016)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
+size = Vector2(1112, 192)
+
 [node name="Level1" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x1c7m")
+
+[node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("2_0mamm")]
 
 [node name="TutorialManager" type="Node" parent="." unique_id=927712379]
 unique_name_in_owner = true
 script = ExtResource("4_unvbt")
-tutorial_scenes = Array[PackedScene]([ExtResource("3_kdlgo")])
+tutorial_scenes = Array[PackedScene]([ExtResource("3_u4pql")])
 
 [node name="World" type="Node2D" parent="." unique_id=660390528]
 
 [node name="GrinderFx" parent="World" unique_id=1393526113 node_paths=PackedStringArray("lose_area") instance=ExtResource("4_dxp7b")]
 position = Vector2(1, 120)
-process_material = SubResource("ParticleProcessMaterial_u4pql")
+process_material = SubResource("ParticleProcessMaterial_0mamm")
 lose_area = NodePath("../LoseArea2D")
 
 [node name="Tower" type="StaticBody2D" parent="World" unique_id=271684871]
@@ -584,17 +591,17 @@ horizontal_alignment = 1
 
 [node name="Wall" parent="World/Tower" unique_id=1962192153 instance=ExtResource("5_o1xna")]
 position = Vector2(-1285, -1400)
-shape = SubResource("RectangleShape2D_8jnwb")
+shape = SubResource("RectangleShape2D_xr372")
 height = 2800
 
 [node name="Wall2" parent="World/Tower" unique_id=1806221840 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -1816)
-shape = SubResource("RectangleShape2D_0mamm")
+shape = SubResource("RectangleShape2D_dql54")
 height = 1240
 
 [node name="Wall3" parent="World/Tower" unique_id=941711111 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
-shape = SubResource("RectangleShape2D_xr372")
+shape = SubResource("RectangleShape2D_qdte1")
 height = 1016
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
@@ -896,23 +903,11 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TorchLabel" parent="World" unique_id=490910673 instance=ExtResource("11_scglh")]
-offset_left = 112.0
-offset_top = -8.0
-offset_right = 152.0
-offset_bottom = 31.0
-
 [node name="TorchLabel4" parent="World" unique_id=1607917610 instance=ExtResource("11_scglh")]
 offset_left = -1176.0
 offset_top = -248.0
 offset_right = -1136.0
 offset_bottom = -188.0
-
-[node name="TorchLabel2" parent="World" unique_id=342309051 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -8.0
-offset_right = -112.0
-offset_bottom = 31.0
 
 [node name="TorchLabel3" parent="World" unique_id=1983199464 instance=ExtResource("11_scglh")]
 offset_left = 1136.0
@@ -1650,9 +1645,72 @@ offset_top = -1904.0
 offset_right = 1220.0
 offset_bottom = -1806.0
 
+[node name="JumpInputHint" parent="World" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+unique_name_in_owner = true
+visible = false
+offset_top = -1233.0
+offset_bottom = -1185.0
+size_flags_horizontal = 3
+action_name = &"jump"
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="InteractInputHint" parent="World" unique_id=1993422584 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+unique_name_in_owner = true
+visible = false
+offset_left = -408.0
+offset_top = -2200.0
+offset_right = -360.0
+offset_bottom = -2152.0
+size_flags_horizontal = 3
+action_name = &"interact"
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="MoveRightInputHint" parent="World" unique_id=1792660303 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+unique_name_in_owner = true
+visible = false
+offset_left = 104.0
+offset_right = 152.0
+size_flags_horizontal = 3
+action_name = &"move_right"
+input_icon_mapper = NodePath("../../InputIconMapper")
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveLeftInputHint" parent="World" unique_id=680314044 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+unique_name_in_owner = true
+visible = false
+offset_left = -152.0
+offset_right = -104.0
+size_flags_horizontal = 3
+action_name = &"move_left"
+input_icon_mapper = NodePath("../../InputIconMapper")
+metadata/_edit_use_anchors_ = true
+
+[node name="StartingArea2D" type="Area2D" parent="World" unique_id=444006209]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/StartingArea2D" unique_id=1397870190]
+shape = SubResource("RectangleShape2D_1cqto")
+
+[node name="FirstJumpArea2D" type="Area2D" parent="World" unique_id=548520782]
+position = Vector2(0, -1200)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/FirstJumpArea2D" unique_id=290872068]
+shape = SubResource("RectangleShape2D_1cqto")
+
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 position = Vector2(0, 85)
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
+[connection signal="player_entered" from="World/GateWheel" to="." method="_on_gate_wheel_player_entered"]
+[connection signal="player_exited" from="World/GateWheel" to="." method="_on_gate_wheel_player_exited"]
 [connection signal="wheel_turned" from="World/GateWheel" to="." method="_on_gate_wheel_wheel_turned"]
+[connection signal="body_entered" from="World/StartingArea2D" to="." method="_on_starting_area_2d_body_entered"]
+[connection signal="body_exited" from="World/StartingArea2D" to="." method="_on_starting_area_2d_body_exited"]
+[connection signal="body_entered" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_entered"]
+[connection signal="body_exited" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_exited"]
