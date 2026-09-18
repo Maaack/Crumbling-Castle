@@ -3,6 +3,17 @@
 [ext_resource type="FontFile" uid="uid://b7hdbm73i18h5" path="res://assets/fonts/courier-prime/Courier Prime/Courier Prime Bold.ttf" id="1_22bfb"]
 [ext_resource type="FontFile" uid="uid://k3yhnj0s30v1" path="res://assets/fonts/courier-prime/Courier Prime/Courier Prime Bold Italic.ttf" id="2_qqtq5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86222"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rtxy"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -443,6 +454,12 @@ corner_radius_bottom_left = 4
 
 [resource]
 default_font = ExtResource("1_22bfb")
+AlmostFlatButton/base_type = &"Button"
+AlmostFlatButton/styles/disabled = SubResource("StyleBoxFlat_86222")
+AlmostFlatButton/styles/hover = SubResource("StyleBoxFlat_86222")
+AlmostFlatButton/styles/hover_pressed = SubResource("StyleBoxFlat_86222")
+AlmostFlatButton/styles/normal = SubResource("StyleBoxFlat_86222")
+AlmostFlatButton/styles/pressed = SubResource("StyleBoxFlat_86222")
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.9843137, 0.6784314, 0.6392157, 1)
 Button/colors/font_focus_color = Color(1, 1, 1, 1)

@@ -21,7 +21,14 @@ extends "level.gd"
 @onready var step_18 = %Step18
 @onready var step_19 = %Step19
 @onready var gate_situation_label = %GateSituationLabel
+@onready var raise_button = %RaiseButton
 @onready var gate_opening_button = %GateOpeningButton
+@onready var step_20 = %Step20
+@onready var step_21 = %Step21
+@onready var final_crumble_button = %FinalCrumbleButton
+@onready var portal_margin_container = %PortalMarginContainer
+@onready var portal_button = %PortalButton
+@onready var portal_situation_label = %PortalSituationLabel
 
 @onready var all_containers : Array[Node] = [
 	step,
@@ -43,6 +50,8 @@ extends "level.gd"
 	step_17,
 	step_18,
 	step_19,
+	step_20,
+	step_21,
 ]
 @onready var step_order : Array[Node] = [
 	step,
@@ -125,6 +134,15 @@ extends "level.gd"
 	step_17,
 	step_18,
 	step_19,
+	step_20,
+	step_3,
+	step_4,
+	step_5,
+	step_5,
+	step_5,
+	step_5,
+	step_5,
+	step_21,
 ]
 
 var current_step = 0
@@ -133,7 +151,8 @@ var level_over : bool = false
 var window_path : bool = false
 var current_height : int = 0
 var current_doom_height : int = -20
-var gate_height : int = 0
+var gate_height : int = -1
+var portal_attempts : int = 0
 
 func _recursive_calls(node: Node) -> void:
 	_connect_button_signals(node)
@@ -147,6 +166,9 @@ func _connect_button_signals(node: Node) -> void:
 			return
 		if node.name.contains("Raise"):
 			node.pressed.connect(_on_raise_button_pressed)
+			return
+		if node.name.contains("Portal"):
+			node.pressed.connect(_on_portal_button_pressed)
 			return
 		if node.name.contains("WindowPath"):
 			node.pressed.connect(_on_window_path_button_pressed)
@@ -184,14 +206,17 @@ func _on_crumble_button_pressed() -> void:
 func _on_raise_button_pressed() -> void:
 	if level_over: return
 	gate_height += 1
-	gate_opening_button.custom_minimum_size.y += 8
-	if gate_height >= 52:
+	if gate_height < 1:
+		raise_button.text = "Lift"
+		return
+	gate_opening_button.custom_minimum_size.y += 4
+	if gate_height >= 70:
 		gate_situation_label.text = ""
-	elif gate_height >= 48:
+	elif gate_height >= 64:
 		gate_situation_label.text = "You can pass under the gate."
 		gate_opening_button.text = "Go under"
 		gate_opening_button.disabled = false
-	elif gate_height >= 32:
+	elif gate_height >= 48:
 		gate_situation_label.text = "You can almost pass under the gate."
 		gate_opening_button.text = "Almost there"
 	elif gate_height >= 16:
@@ -206,3 +231,25 @@ func _ready():
 		container.hide()
 		_recursive_calls(container)
 	_refresh_current_step_container()
+
+func _on_portal_button_pressed():
+	if level_over: return
+	portal_attempts += 1
+	if portal_attempts >= 64:
+		portal_button.text = "There is only down."
+		portal_button.disabled = true
+		final_crumble_button.visible = false
+		return
+	elif portal_attempts >= 48:
+		portal_button.text = "Ascend!!!"
+	elif portal_attempts >= 32:
+		portal_button.text = "Ascend!"
+	elif portal_attempts >= 3:
+		portal_situation_label.visible = false
+	elif portal_attempts >= 2:
+		portal_button.text = "Ascend?"
+	if portal_attempts >= 5:
+		portal_margin_container.add_theme_constant_override("margin_top", portal_attempts * 5)
+		portal_margin_container.add_theme_constant_override("margin_bottom", portal_attempts * 5)
+		portal_margin_container.add_theme_constant_override("margin_left", portal_attempts * 7)
+		portal_margin_container.add_theme_constant_override("margin_right", portal_attempts * 7)
