@@ -237,6 +237,8 @@ func _get_all_action_names(include_built_in : bool = false) -> Array[StringName]
 	if show_all_actions:
 		var all_actions := AppSettings.get_action_names(include_built_in)
 		for action_name in all_actions:
+			if action_name.begins_with("_"):
+				continue
 			if not action_name in action_names:
 				action_names.append(action_name)
 	return action_names

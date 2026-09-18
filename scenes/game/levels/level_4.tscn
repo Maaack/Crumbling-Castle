@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c6e3xvr03x7jw"]
+
+[ext_resource type="Script" uid="uid://dyojixt3hywy2" path="res://scenes/game/levels/level_dialogue.gd" id="1_wi10l"]
+
+[node name="Level4" type="Control" unique_id=315330877]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wi10l")
+dialogue_path = "res://resources/dialogue/companion.dialogue"
+dialogue_cue = "second_collapse"
