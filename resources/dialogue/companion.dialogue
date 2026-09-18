@@ -23,26 +23,44 @@ Death: You feel it, don't you?
 Death: The End?
 You: This... this is just ego death.
 Death: ...
-Death: For an old friend,
+Death: Since you've been good company,
 	I'll grant one last mercy...
 Death: I'll meet you at the peak.
 => END
 
 ~ first_collapse
 Death: Well, aren't you just a little Schrödinger's cat?
-You?: Did I die?
-Death: Not yet,
-  but I've been keeping track of lives.
-You?: Can't I start over?
-Death: You will...
-An entire dimension crumbles.
+You?: Did I die?!
+Death: You're on the death spectrum.
+You?: I can still turn this trip around!
+Death: You can drink some water.
+	You'll want it.
+You?: That's ominous...
+You?: ...
+	Oh no...
+...
+	An entire dimension crumbles.
 => END
 
 ~ second_collapse
-Death: How are you feeling, old friend?
+Death: You're almost there.
+Death: I know you can feel it now.
+You?: Can I just start over?
+	Everything?
+Death: The thing is...
+Death: You will...
+...
+	Another dimension crumbles.
+=> END
+
+~ final_collapse
+Death: I'm here for you, old friend.
 Someone Formerly You: There is no I anymore. 
 We are all one.
 Death: ...
-  We will be soon.
-An entire dimension crumbles.
+	We will be soon.
+...
+...
+...
+	You crumble.
 => END
