@@ -114,10 +114,10 @@ func _on_level_lost() -> void:
 
 func get_checkpoint_level_path() -> String:
 	if checkpoint_level_path.is_empty():
-		if scene_lister:
-			return scene_lister.files.front()
 		if not starting_level_path.is_empty():
 			return starting_level_path
+		if scene_lister:
+			return scene_lister.files.front()
 	return checkpoint_level_path
 
 func load_level(level_path : String) -> void:
