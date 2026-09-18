@@ -139,7 +139,7 @@ locale/translations_pot_files=PackedStringArray("res://resources/dialogue/compan
 copy_path="res://"
 disable_install_wizard=true
 disable_install_audio_busses=true
-main_menu_scene_path="res://scenes/menus/main_menu/main_menu.tscn"
+main_menu_scene_path="res://scenes/menus/main_menu/main_menu_with_animations.tscn"
 game_scene_path="res://scenes/game/game.tscn"
 ending_scene_path="res://scenes/end_credits/end_credits.tscn"
 

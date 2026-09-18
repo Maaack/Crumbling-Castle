@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://cgynfffi2kbwu"]
+
+[ext_resource type="Shader" uid="uid://bkg8nwseokyls" path="res://scenes/menus/main_menu/zoom_1.gdshader" id="1_n4igb"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_e3hyn"]
+viewport_path = NodePath("SubViewportContainer/SubViewport")
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_n4igb")
+shader_parameter/input_texture = SubResource("ViewportTexture_e3hyn")
+shader_parameter/zoom_center = Vector2(0.5, 1)
+shader_parameter/layers = 12
+shader_parameter/opacity = 0.75
+shader_parameter/original_opacity_mod = 0.800000038
+shader_parameter/zoom = 0.01
+shader_parameter/normalization = 1.0
+shader_parameter/normalized_scale = 0.003000047642500059
