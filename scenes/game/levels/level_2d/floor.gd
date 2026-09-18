@@ -39,14 +39,16 @@ func destroy() -> void:
 func _update_width() -> void:
 	# get_node to work at tool time
 	var _label = get_node("Label")
-	while _label.get_minimum_size().x > width:
+	while _label.get_minimum_size().x > width and not _resetting:
 		_label.text = _label.text.trim_suffix(character)
 		await get_tree().process_frame  ## allow time for resize calc
 		#await get_tree().process_frame  ## no, really really allow time
-	while _label.get_minimum_size().x < width:
+	while _label.get_minimum_size().x < width and not _resetting:
 		_label.text += character
 		await get_tree().process_frame  ## allow time for resize calc
 		#await get_tree().process_frame  ## no, really really allow time
+	if _resetting:
+		return
 	shape.a.x = -width / 2.0
 	shape.b.x = width / 2.0
 	# label doesn't resize and reposition on its own
@@ -60,3 +62,7 @@ func _on_reset_floor_pressed() -> void:
 	get_node("Label").text = ""
 	character = "="
 	width = 0
+
+
+func _on_tree_exiting() -> void:
+	_resetting = true
