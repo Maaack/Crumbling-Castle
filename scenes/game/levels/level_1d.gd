@@ -15,6 +15,21 @@ extends "level.gd"
 @onready var step_12 = %Step12
 @onready var step_13 = %Step13
 @onready var step_14 = %Step14
+@onready var step_15 = %Step15
+@onready var step_16 = %Step16
+@onready var step_17 = %Step17
+@onready var step_18 = %Step18
+@onready var step_19 = %Step19
+@onready var gate_situation_label = %GateSituationLabel
+@onready var raise_button = %RaiseButton
+@onready var gate_opening_button = %GateOpeningButton
+@onready var step_20 = %Step20
+@onready var step_21 = %Step21
+@onready var final_button = %FinalButton
+@onready var final_crumble_button = %FinalCrumbleButton
+@onready var portal_margin_container = %PortalMarginContainer
+@onready var portal_button = %PortalButton
+@onready var portal_situation_label = %PortalSituationLabel
 
 @onready var all_containers : Array[Node] = [
 	step,
@@ -31,6 +46,13 @@ extends "level.gd"
 	step_12,
 	step_13,
 	step_14,
+	step_15,
+	step_16,
+	step_17,
+	step_18,
+	step_19,
+	step_20,
+	step_21,
 ]
 @onready var step_order : Array[Node] = [
 	step,
@@ -85,6 +107,43 @@ extends "level.gd"
 	step_4,
 	step_5,
 	step_5,
+	step_6,
+	step_13,
+	step_14,
+	step_13,
+	step_14,
+	step_10,
+	step_11,
+	step_4,
+	step_5,
+	step_5,
+	step_6,
+	step_2,
+	step_3,
+	step_3,
+	step_3,
+	step_3,
+	step_3,
+	step_4,
+	step_5,
+	step_5,
+	step_6,
+	step_2,
+	step_3,
+	step_15,
+	step_16,
+	step_17,
+	step_18,
+	step_19,
+	step_20,
+	step_3,
+	step_4,
+	step_5,
+	step_5,
+	step_5,
+	step_5,
+	step_5,
+	step_21,
 ]
 
 var current_step = 0
@@ -93,6 +152,8 @@ var level_over : bool = false
 var window_path : bool = false
 var current_height : int = 0
 var current_doom_height : int = -20
+var gate_height : int = -1
+var portal_attempts : int = 0
 
 func _recursive_calls(node: Node) -> void:
 	_connect_button_signals(node)
@@ -103,6 +164,12 @@ func _connect_button_signals(node: Node) -> void:
 	if node is Button:
 		if node.name.contains("Crumble"):
 			node.pressed.connect(_on_crumble_button_pressed)
+			return
+		if node.name.contains("Raise"):
+			node.pressed.connect(_on_raise_button_pressed)
+			return
+		if node.name.contains("Portal"):
+			node.pressed.connect(_on_portal_button_pressed)
 			return
 		if node.name.contains("WindowPath"):
 			node.pressed.connect(_on_window_path_button_pressed)
@@ -137,6 +204,26 @@ func _on_crumble_button_pressed() -> void:
 	current_container.show()
 	level_lost.emit()
 
+func _on_raise_button_pressed() -> void:
+	if level_over: return
+	gate_height += 1
+	if gate_height < 1:
+		raise_button.text = "Lift"
+		return
+	gate_opening_button.custom_minimum_size.y += 4
+	if gate_height >= 70:
+		gate_situation_label.text = ""
+	elif gate_height >= 64:
+		gate_situation_label.text = "You can pass under the gate."
+		gate_opening_button.text = "Go under"
+		gate_opening_button.disabled = false
+	elif gate_height >= 48:
+		gate_situation_label.text = "You can almost pass under the gate."
+		gate_opening_button.text = "Almost there"
+	elif gate_height >= 16:
+		gate_situation_label.text = "If you get on your knees now,\nyou might not get back up."
+		gate_opening_button.text = "Still can't fit"
+
 func _on_window_path_button_pressed() -> void:
 	window_path = true
 
@@ -145,3 +232,28 @@ func _ready():
 		container.hide()
 		_recursive_calls(container)
 	_refresh_current_step_container()
+
+func _on_portal_button_pressed():
+	if level_over: return
+	portal_attempts += 1
+	if portal_attempts >= 64:
+		portal_button.text = "There is only down."
+		portal_button.disabled = true
+		final_crumble_button.visible = false
+		final_button.visible = true
+		return
+	elif portal_attempts >= 48:
+		portal_button.text = "Ascend!!!"
+	elif portal_attempts >= 32:
+		portal_button.text = "Ascend!"
+	elif portal_attempts >= 3:
+		portal_situation_label.visible = false
+		portal_button.flat = false
+		final_crumble_button.visible = true
+	elif portal_attempts >= 2:
+		portal_button.text = "Ascend?"
+	if portal_attempts >= 5:
+		portal_margin_container.add_theme_constant_override("margin_top", portal_attempts * 5)
+		portal_margin_container.add_theme_constant_override("margin_bottom", portal_attempts * 5)
+		portal_margin_container.add_theme_constant_override("margin_left", portal_attempts * 7)
+		portal_margin_container.add_theme_constant_override("margin_right", portal_attempts * 7)

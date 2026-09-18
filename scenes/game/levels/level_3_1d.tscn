@@ -298,15 +298,6 @@ size_flags_horizontal = 3
 text = "Ascend"
 flat = true
 
-[node name="SituationLabel2" type="Label" parent="Step9/DefaultPath" unique_id=24437936]
-layout_mode = 0
-offset_right = 1232.0
-offset_bottom = 34.0
-theme_override_constants/line_spacing = 4
-text = "There's an open window."
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="WindowPath" type="Control" parent="Step9" unique_id=37797963]
 visible = false
 layout_mode = 1
@@ -315,6 +306,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SituationLabel2" type="Label" parent="Step9/WindowPath" unique_id=24437936]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "There's an open window."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Step9/WindowPath" unique_id=1750088666]
 layout_mode = 1
@@ -367,7 +367,7 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Crumble"
+text = "Trip"
 flat = true
 
 [node name="Step11" type="Control" parent="." unique_id=1008523767]
@@ -424,9 +424,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="Step12/VBoxContainer" unique_id=1637103946]
-custom_minimum_size = Vector2(0, 192)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Jump
 "
 flat = true
@@ -435,7 +435,14 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Crumble"
+text = "Miss"
+flat = true
+
+[node name="CrumbleButton3" type="Button" parent="Step12/VBoxContainer" unique_id=1293584487]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Trip"
 flat = true
 
 [node name="Step13" type="Control" parent="." unique_id=2026758619]
@@ -463,16 +470,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CrumbleButton3" type="Button" parent="Step13/VBoxContainer" unique_id=460361494]
-custom_minimum_size = Vector2(0, 192)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Crumble"
+size_flags_vertical = 3
+text = "Overshoot"
 flat = true
 
 [node name="Button" type="Button" parent="Step13/VBoxContainer" unique_id=507022475]
-custom_minimum_size = Vector2(0, 192)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Jump
 "
 flat = true
@@ -481,7 +488,14 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Crumble"
+text = "Fall"
+flat = true
+
+[node name="CrumbleButton4" type="Button" parent="Step13/VBoxContainer" unique_id=641481186]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Trip"
 flat = true
 
 [node name="Step14" type="Control" parent="." unique_id=1078493171]
@@ -509,9 +523,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="Step14/VBoxContainer" unique_id=473627437]
-custom_minimum_size = Vector2(0, 192)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Jump
 "
 flat = true
@@ -520,5 +534,511 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Crumble"
+text = "Fall"
 flat = true
+
+[node name="CrumbleButton3" type="Button" parent="Step14/VBoxContainer" unique_id=2089462970]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Fall"
+flat = true
+
+[node name="CrumbleButton4" type="Button" parent="Step14/VBoxContainer" unique_id=2057649139]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Slip"
+flat = true
+
+[node name="Step15" type="Control" parent="." unique_id=840243043]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step15" unique_id=1798090323]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.5
+offset_top = -17.0
+offset_right = 431.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 4
+text = "There is a
+large wheel
+crank."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Step15" unique_id=970141887]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Spacer" type="Control" parent="Step15/GridContainer" unique_id=333109030]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step15/GridContainer" unique_id=153338486]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer2" type="Control" parent="Step15/GridContainer" unique_id=689098879]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Step15/GridContainer" unique_id=664965380]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer3" type="Control" parent="Step15/GridContainer" unique_id=84074393]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="Step15/GridContainer" unique_id=1441026019]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer4" type="Control" parent="Step15/GridContainer" unique_id=1536741196]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="Step15/GridContainer" unique_id=1170011733]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer5" type="Control" parent="Step15/GridContainer" unique_id=605048872]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Step16" type="Control" parent="." unique_id=1078152384]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step16" unique_id=1590732758]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.5
+offset_top = -17.0
+offset_right = 431.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 4
+text = "A handle
+of the wheel
+broke!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Step16" unique_id=1563014837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button" type="Button" parent="Step16/GridContainer" unique_id=1998029714]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer" type="Control" parent="Step16/GridContainer" unique_id=2005239853]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Step16/GridContainer" unique_id=1959628598]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer2" type="Control" parent="Step16/GridContainer" unique_id=179038832]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Spacer3" type="Control" parent="Step16/GridContainer" unique_id=1022831717]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Spacer4" type="Control" parent="Step16/GridContainer" unique_id=1800665155]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="Step16/GridContainer" unique_id=1555759492]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer5" type="Control" parent="Step16/GridContainer" unique_id=1542991157]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="Step16/GridContainer" unique_id=996059774]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Step17" type="Control" parent="." unique_id=1834171273]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step17" unique_id=363493163]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.5
+offset_top = -17.0
+offset_right = 431.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 4
+text = "Another
+handle
+broke!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Step17" unique_id=1263606281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Spacer" type="Control" parent="Step17/GridContainer" unique_id=1776863606]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step17/GridContainer" unique_id=136380892]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer2" type="Control" parent="Step17/GridContainer" unique_id=157319174]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Step17/GridContainer" unique_id=1127915888]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer3" type="Control" parent="Step17/GridContainer" unique_id=626375472]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="Step17/GridContainer" unique_id=1086652050]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer4" type="Control" parent="Step17/GridContainer" unique_id=668332548]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="Step17/GridContainer" unique_id=1601166892]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn"
+flat = true
+
+[node name="Spacer5" type="Control" parent="Step17/GridContainer" unique_id=1919266221]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Step18" type="Control" parent="." unique_id=1773781415]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step18" unique_id=1185789277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.5
+offset_top = -17.0
+offset_right = 431.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_spacing = 4
+text = "The whole
+wheel has
+broken!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Step18" unique_id=249160008]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Button" type="Button" parent="Step18/GridContainer" unique_id=39271668]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer" type="Control" parent="Step18/GridContainer" unique_id=1951570929]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="Step18/GridContainer" unique_id=1161851831]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer2" type="Control" parent="Step18/GridContainer" unique_id=1409131671]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Spacer3" type="Control" parent="Step18/GridContainer" unique_id=1340804182]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button5" type="Button" parent="Step18/GridContainer" unique_id=2142970312]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Keep running"
+flat = true
+
+[node name="Button3" type="Button" parent="Step18/GridContainer" unique_id=1753785438]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Spacer4" type="Control" parent="Step18/GridContainer" unique_id=1123951405]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="Step18/GridContainer" unique_id=2029383241]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Broken"
+flat = true
+
+[node name="Step19" type="Control" parent="." unique_id=937511840]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="GateSituationLabel" type="Label" parent="Step19" unique_id=1138618698]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "A closed gate blocks your path!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Step19" unique_id=979970406]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RaiseButton" type="Button" parent="Step19/VBoxContainer" unique_id=279377951]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Grab"
+flat = true
+
+[node name="GateOpeningButton" type="Button" parent="Step19/VBoxContainer" unique_id=276380988]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+text = "Can't fit"
+flat = true
+
+[node name="Step20" type="Control" parent="." unique_id=385110325]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step20" unique_id=254890225]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "The open air!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step20" unique_id=1131055486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step20/HBoxContainer" unique_id=599960492]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+flat = true
+
+[node name="Step21" type="Control" parent="." unique_id=1909474565]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="FinalButton" type="Button" parent="Step21" unique_id=1829673436]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/line_spacing = -1
+text = "Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble"
+flat = true
+autowrap_mode = 2
+
+[node name="FinalCrumbleButton" type="Button" parent="Step21" unique_id=891228702]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_constants/line_spacing = -1
+text = "Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble Crumble"
+flat = true
+autowrap_mode = 2
+
+[node name="PortalMarginContainer" type="MarginContainer" parent="Step21" unique_id=1036514548]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PortalButton" type="Button" parent="Step21/PortalMarginContainer" unique_id=2098674526]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"AlmostFlatButton"
+text = "Ascend"
+flat = true
+
+[node name="PortalSituationLabel" type="Label" parent="Step21" unique_id=1494257705]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "A beautiful glow radiates in front of you."
+horizontal_alignment = 1
+vertical_alignment = 1
