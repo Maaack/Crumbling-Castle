@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://rpyqx1valdin"]
 
-[ext_resource type="Script" uid="uid://ubeunkq2nobf" path="res://scenes/game/levels/level_3d.gd" id="1_i50ya"]
-[ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="4_hw0gv"]
-[ext_resource type="PackedScene" uid="uid://b444n7xu3j48v" path="res://scenes/game/tutorials/tutorial_3.tscn" id="5_fd5cg"]
-[ext_resource type="Script" uid="uid://cr5ta1wm1rogr" path="res://scenes/game/levels/character_body_3d.gd" id="6_1f0nd"]
-[ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/yaw_control_3d.gd" id="7_wahtw"]
+[ext_resource type="Script" uid="uid://ubeunkq2nobf" path="res://scenes/game/levels/level_3d.gd" id="1_iusjq"]
+[ext_resource type="Script" uid="uid://cel1hwdc232gb" path="res://scenes/game/scripts/tutorial_manager.gd" id="2_ofcco"]
+[ext_resource type="PackedScene" uid="uid://b444n7xu3j48v" path="res://scenes/game/tutorials/tutorial_3.tscn" id="3_uj8iv"]
+[ext_resource type="Script" uid="uid://cr5ta1wm1rogr" path="res://scenes/game/levels/character_body_3d.gd" id="4_eg2i3"]
+[ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/yaw_control_3d.gd" id="5_oxou0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qaipj"]
 
@@ -30,12 +30,12 @@ size = Vector3(256, 8, 512)
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0gu67"]
 
 [node name="Level3D" type="Node3D" unique_id=808041491]
-script = ExtResource("1_i50ya")
+script = ExtResource("1_iusjq")
 
 [node name="TutorialManager" type="Node" parent="." unique_id=18876677]
 unique_name_in_owner = true
-script = ExtResource("4_hw0gv")
-tutorial_scenes = Array[PackedScene]([ExtResource("5_fd5cg")])
+script = ExtResource("2_ofcco")
+tutorial_scenes = Array[PackedScene]([ExtResource("3_uj8iv")])
 
 [node name="World" type="Node3D" parent="." unique_id=1529055841]
 
@@ -139,6 +139,7 @@ shape = SubResource("ConcavePolygonShape3D_gecq0")
 
 [node name="Label3D" type="Label3D" parent="World/StaticBody3D" unique_id=2079143085]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1, 0)
+visible = false
 pixel_size = 0.05
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 text = "__________________________________________________________________
@@ -307,7 +308,7 @@ To Lose"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 40)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("6_1f0nd")
+script = ExtResource("4_eg2i3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/CharacterBody3D" unique_id=517704925]
 shape = SubResource("CapsuleShape3D_0gu67")
@@ -316,7 +317,7 @@ shape = SubResource("CapsuleShape3D_0gu67")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
 [node name="YawControl3D" type="Node3D" parent="World/CharacterBody3D" unique_id=32869769]
-script = ExtResource("7_wahtw")
+script = ExtResource("5_oxou0")
 
 [connection signal="body_entered" from="World/WinArea3D" to="." method="_on_win_area_3d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea3D" to="." method="_on_lose_area_3d_body_entered"]
