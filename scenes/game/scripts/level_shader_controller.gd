@@ -34,7 +34,10 @@ func _on_level_loaded() -> void:
 	else:
 		shader_material.set_shader_parameter(&"layers", 6)
 		shader_material.set_shader_parameter(&"opacity", 0.75)
-		shader_material.set_shader_parameter(&"original_opacity_mod", 0.666)
+		if level_loader.current_level_path.contains("3d.tscn"):
+			shader_material.set_shader_parameter(&"original_opacity_mod", 0.875)
+		else:
+			shader_material.set_shader_parameter(&"original_opacity_mod", 0.666)
 
 func _on_trip_started() -> void:
 	var tween = create_tween()
