@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bk3j8a2koun2i"]
 
+[ext_resource type="Script" uid="uid://c484it5f03aaf" path="res://scenes/game/levels/level_2d/gate.gd" id="1_y14yj"]
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_0gu67"]
 a = Vector2(0, -80)
 b = Vector2(0, 80)
 
 [node name="Gate" type="AnimatableBody2D" unique_id=1474410729]
+script = ExtResource("1_y14yj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=82644400]
 shape = SubResource("SegmentShape2D_0gu67")
@@ -21,6 +24,7 @@ offset_right = 20.0
 offset_bottom = 87.5
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 theme_override_constants/line_spacing = 1
 text = "|
 |
