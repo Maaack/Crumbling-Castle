@@ -306,6 +306,17 @@ text = "Stairs lead up."
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="Step9/DefaultPath" unique_id=1666672978]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+text = "Ascend"
+flat = true
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Step9/DefaultPath" unique_id=1511658982]
 layout_mode = 1
 anchors_preset = 15
@@ -314,12 +325,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-
-[node name="Button" type="Button" parent="Step9/DefaultPath/HBoxContainer" unique_id=1666672978]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Ascend"
-flat = true
 
 [node name="WindowPath" type="Control" parent="Step9" unique_id=37797963]
 visible = false
@@ -339,17 +344,13 @@ text = "There's an open window."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Step9/WindowPath" unique_id=1750088666]
+[node name="CrumbleButton" type="Button" parent="Step9/WindowPath" unique_id=475229580]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 3
-
-[node name="CrumbleButton" type="Button" parent="Step9/WindowPath/HBoxContainer" unique_id=475229580]
-layout_mode = 2
 size_flags_horizontal = 3
 text = "Jump"
 flat = true
@@ -432,6 +433,7 @@ visible = false
 layout_mode = 2
 script = ExtResource("2_albdk")
 search_depth = 2
+skip_matches = 1
 
 [node name="SituationLabel" type="Label" parent="Step12" unique_id=120504995]
 layout_mode = 1
@@ -480,6 +482,7 @@ visible = false
 layout_mode = 2
 script = ExtResource("2_albdk")
 search_depth = 2
+skip_matches = 2
 
 [node name="SituationLabel" type="Label" parent="Step13" unique_id=1252744049]
 layout_mode = 1
@@ -519,7 +522,7 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Fall"
+text = "Miss"
 flat = true
 
 [node name="CrumbleButton4" type="Button" parent="Step13/VBoxContainer" unique_id=641481186]
@@ -531,10 +534,10 @@ flat = true
 
 [node name="Step14" type="Control" parent="." unique_id=1078493171]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 script = ExtResource("2_albdk")
 search_depth = 2
+skip_matches = 1
 
 [node name="SituationLabel" type="Label" parent="Step14" unique_id=1846803574]
 layout_mode = 1
@@ -567,14 +570,14 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Fall"
+text = "Miss"
 flat = true
 
 [node name="CrumbleButton3" type="Button" parent="Step14/VBoxContainer" unique_id=2089462970]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Fall"
+text = "Miss"
 flat = true
 
 [node name="CrumbleButton4" type="Button" parent="Step14/VBoxContainer" unique_id=2057649139]
