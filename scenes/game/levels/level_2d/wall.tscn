@@ -93,3 +93,5 @@ explosiveness = 0.75
 randomness = 0.6
 visibility_rect = Rect2(-100, -100, 200, 400)
 process_material = SubResource("ParticleProcessMaterial_kmflf")
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -71,11 +71,11 @@ func _resize_reposition() -> void:
 func _update_height() -> void:
 	# get_node to work at tool time
 	var _label = get_node("Label")
-	while shape.size.y > height:
+	while shape.size.y > height and not _resetting:
 		_label.text = _label.text.trim_suffix("\n" + character_row)
 		await get_tree().process_frame  ## allow time for resize calc
 		#await get_tree().process_frame  ## no, really really allow time
-	while shape.size.y < height:
+	while shape.size.y < height and not _resetting:
 		if _label.text == "":
 			_label.text += character_row
 		else:
@@ -89,3 +89,7 @@ func _on_reset_wall_pressed() -> void:
 	get_node("Label").text = ""
 	character_row = "||"
 	height = 0
+
+
+func _on_tree_exiting() -> void:
+	_resetting = true
