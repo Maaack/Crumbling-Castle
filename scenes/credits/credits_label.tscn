@@ -11,38 +11,81 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 bbcode_enabled = true
-text = "[font_size=48]Collaborators[/font_size]
+text = "[font_size=48]A Game By[/font_size]
+
+[url=https://maaack.itch.io/]Maaack[/url]  
+
+&  
+
+[url=https://hatmix.itch.io/]hatmix[/url]  
+
 
 [font_size=48]Sourced[/font_size]
+
 [font_size=32]Music[/font_size]
+
+[font_size=24]Polygondwanaland[/font_size]
+Author: [url=https://kinggizzardandthelizardwizard.com/]King Gizzard & the Lizard Wizard[/url]  
+Source: [url=https://commons.wikimedia.org/wiki/Category:Polygondwanaland]wikimedia.org : Polygondwanaland[/url]  
+License: [url=https://creativecommons.org/licenses/by-nd/4.0/]CC BY-ND 4.0 International[/url]
+
+
 [font_size=24]Crumbling Castle[/font_size]
 Author: [url=https://kinggizzardandthelizardwizard.com/]King Gizzard & the Lizard Wizard[/url]  
 Source: [url=https://commons.wikimedia.org/wiki/Category:Polygondwanaland]wikimedia.org : Polygondwanaland[/url]  
 License: [url=https://creativecommons.org/licenses/by-nd/4.0/]CC BY-ND 4.0 International[/url]
 
+
 [font_size=32]Opening Graphics[/font_size]
-[font_size=24]Godot Engine Logo[/font_size]
-Author: Andrea Calabró  
-Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
+
+[font_size=24]Godot Wild Jam Logo & Theme[/font_size]
+Author: [url=https://coreyaroberts.com/]Dawk[/url]  
+Source: [url=https://godotwildjam.com/branding/]godotwildjam.com[/url]  
+License: Copyrighted
+
+
+[font_size=24]Godot Wild Jam Wildcards[/font_size]
+Author: [url=https://linktr.ee/JonathanSilvestre]Jonibigood[/url]  
+Source: [url=https://itch.io/jam/godot-wild-jam-97]itch.io:godot-wild-jam-97[/url]  
+License: Copyrighted
+
 
 [font_size=24]Polygondwanaland Album Cover[/font_size]
 Author: [url=https://jasongalea.com/]Jason Galea[/url]  
 Source: [url=https://commons.wikimedia.org/wiki/Category:Polygondwanaland]wikimedia.org : Polygondwanaland[/url]  
 License: [url=https://web.archive.org/web/20171124195530/http://kinggizzardandthelizardwizard.com/]Public Domain[/url]
 
+
+[font_size=32]Fonts[/font_size]
+
+[font_size=24]Courier Prime[/font_size]
+Author: Alan Dague-Greene  
+Source: [url=https://quoteunquoteapps.com/courierprime/]quoteunquoteapps.com : courierprime[/url]  
+License: [url=https://openfontlicense.org/]OFL[/url]
+
+
 [font_size=48]Tools[/font_size]
+
 [font_size=24]Godot[/font_size]
 [img=80]res:///assets/godot_engine_logo/logo_vertical_color_dark.png[/img]  
 Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
 Source: [url=https://godotengine.org/]godotengine.org[/url]  
 License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url] 
 
+
+[font_size=24]Dialogue Manager[/font_size]
+[img=80]res:///addons/dialogue_manager/assets/logo.svg[/img]
+Author: [url=https://nathanhoad.itch.io/]Nathan Hoad[/url]  
+Source: [url=https://nathanhoad.itch.io/godot-dialogue-manager]itch.io: godot-dialogue-manager[/url]  
+License: [url=https://github.com/nathanhoad/godot_dialogue_manager/blob/main/LICENSE]MIT License[/url] 
+
+
 [font_size=24]Godot Game Template[/font_size]
 [img=80]res:///assets/plugin_logo/logo.png[/img]  
 Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
 Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
 License: [url=LICENSE.txt]MIT License[/url]  
+
 
 [font_size=24]Git[/font_size]
 [img=80]res:///assets/git_logo/Git-Logo-2Color.png[/img]  
