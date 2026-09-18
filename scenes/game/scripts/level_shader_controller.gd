@@ -15,7 +15,7 @@ func _update_shader_parameter(value : Variant, key : StringName) -> void:
 	shader_material.set_shader_parameter(key, value)
 
 func _on_level_loaded() -> void:
-	if level_loader.current_level_path.contains("level_0"):
+	if level_loader.current_level_path.contains("level_0.tscn") or level_loader.current_level_path.contains("level_2.tscn"):
 		shader_material.set_shader_parameter(&"opacity", 0.0)
 		shader_material.set_shader_parameter(&"original_opacity_mod", 0.95)
 		if level_loader.current_level.has_signal(&"trip_started"):

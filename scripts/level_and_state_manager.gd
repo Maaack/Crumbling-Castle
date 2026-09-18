@@ -13,3 +13,7 @@ func get_checkpoint_level_path() -> String:
 	if not state_level_path.is_empty():
 		return state_level_path
 	return super.get_checkpoint_level_path()
+
+func _unhandled_input(event):
+	if event.is_action(&"_skip_level"):
+		_on_level_won()
