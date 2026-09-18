@@ -8,6 +8,15 @@ extends "level.gd"
 @onready var move_right_input_hint = %MoveRightInputHint
 @onready var move_left_input_hint = %MoveLeftInputHint
 
+func open_tutorials() -> void:
+	%TutorialManager.open_tutorials()
+	level_state.tutorial_read = true
+	GlobalState.save()
+
+func _ready() -> void:
+	super._ready()
+	open_tutorials()
+
 func _on_lose_area_2d_body_entered(_node: Node2D) -> void:
 	if _node.is_in_group(&"player"):
 		level_lost.emit()

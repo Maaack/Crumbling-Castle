@@ -1,0 +1,209 @@
+[gd_scene format=3 uid="uid://c41aw8g4mqx06"]
+
+[ext_resource type="Script" uid="uid://buy7oevmcdctx" path="res://scenes/game/levels/level_1d.gd" id="1_s3ggc"]
+
+[sub_resource type="Theme" id="Theme_s3ggc"]
+Button/font_sizes/font_size = 32
+Label/constants/line_spacing = 4
+Label/font_sizes/font_size = 32
+
+[node name="Level1D" type="MarginContainer" unique_id=1199971618]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_s3ggc")
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+script = ExtResource("1_s3ggc")
+
+[node name="Step" type="Control" parent="." unique_id=1129148904]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step" unique_id=1186819312]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 72.0
+theme_override_constants/line_spacing = 4
+text = "The hall goes to your
+left and right."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step" unique_id=1627141517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step/HBoxContainer" unique_id=1153761179]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Left"
+flat = true
+
+[node name="Button2" type="Button" parent="Step/HBoxContainer" unique_id=462812666]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Right"
+flat = true
+
+[node name="Step2" type="Control" parent="." unique_id=916383468]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step2" unique_id=1583158486]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "The hall continues."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step2" unique_id=2090511755]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step2/HBoxContainer" unique_id=1126440069]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+flat = true
+
+[node name="Step3" type="Control" parent="." unique_id=1939735221]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Step3" unique_id=525331208]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Run"
+flat = true
+
+[node name="Step4" type="Control" parent="." unique_id=1937368863]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step4" unique_id=1005705907]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "Stairs lead up."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step4" unique_id=1089223698]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step4/HBoxContainer" unique_id=1083721495]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ascend"
+flat = true
+
+[node name="Step5" type="Control" parent="." unique_id=1997407848]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Step5" unique_id=1757328187]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 672.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Ascend"
+flat = true
+
+[node name="Step6" type="Control" parent="." unique_id=1327600823]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step6" unique_id=1711921798]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 72.0
+theme_override_constants/line_spacing = 4
+text = "You reach the top of the stairs
+and come to the end of a hall."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step6" unique_id=1138461163]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step6/HBoxContainer" unique_id=791146900]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Turn and Run"
+flat = true
+
+[node name="Step7" type="Control" parent="." unique_id=1394178585]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step7" unique_id=771031283]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 72.0
+theme_override_constants/line_spacing = 4
+text = "You reach the top of the stairs
+and come to the center of a hall."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step7" unique_id=243733591]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step7/HBoxContainer" unique_id=1849318595]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Left"
+flat = true
+
+[node name="Button2" type="Button" parent="Step7/HBoxContainer" unique_id=1288291003]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Right"
+flat = true
