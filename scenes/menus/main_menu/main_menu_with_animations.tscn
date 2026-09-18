@@ -6,7 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_popup_window_panel.tscn" id="5_6xh1d"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="5_vsp5b"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_game_template/base/nodes/labels/config_version_label.gd" id="6_6xh1d"]
+[ext_resource type="Texture2D" uid="uid://dlrywwtx2vhie" path="res://assets/game-icons/gamepad.png" id="6_vsp5b"]
 [ext_resource type="Material" uid="uid://cgynfffi2kbwu" path="res://scenes/menus/main_menu/main_menu_shader_material.tres" id="7_2k5l7"]
+[ext_resource type="Texture2D" uid="uid://cv3mqrhxfx147" path="res://assets/game-icons/headphones.png" id="7_dhrx6"]
+[ext_resource type="Texture2D" uid="uid://cga3nopaxv5op" path="res://assets/game-icons/mushrooms.png" id="8_xkrf4"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -473,6 +476,75 @@ text = "Credits"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Exit"
+
+[node name="Control" type="Control" parent="MenuButtonsMargin/MenuButtonsContainer" unique_id=141840702]
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 576.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuButtonsMargin/MenuButtonsContainer/Control" unique_id=1660460712]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = -8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer" unique_id=1397871441]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/HBoxContainer" unique_id=28949861]
+layout_mode = 2
+texture = ExtResource("6_vsp5b")
+
+[node name="Label" type="Label" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/HBoxContainer" unique_id=284238513]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Gamepad supported"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer" unique_id=387903991]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/HBoxContainer2" unique_id=2054927190]
+layout_mode = 2
+texture = ExtResource("7_dhrx6")
+
+[node name="Label" type="Label" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/HBoxContainer2" unique_id=1708865804]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Headphones recommended"
+vertical_alignment = 1
+
+[node name="DrugsDiscouragedContainer" type="HBoxContainer" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer" unique_id=1637444292]
+visible = false
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/DrugsDiscouragedContainer" unique_id=756864225]
+layout_mode = 2
+texture = ExtResource("8_xkrf4")
+
+[node name="Label" type="Label" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer/DrugsDiscouragedContainer" unique_id=1501972097]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Drugs discouraged"
+vertical_alignment = 1
 
 [node name="VersionMargin" type="MarginContainer" parent="." unique_id=1732528471]
 layout_mode = 1
