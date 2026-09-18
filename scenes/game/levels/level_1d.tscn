@@ -133,7 +133,7 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Step5" unique_id=1757328187]
+[node name="AscendButton" type="Button" parent="Step5" unique_id=1757328187]
 layout_mode = 0
 offset_right = 1232.0
 offset_bottom = 672.0
@@ -206,4 +206,319 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Go Right"
+flat = true
+
+[node name="Step8" type="Control" parent="." unique_id=628327615]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step8" unique_id=2006786800]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 72.0
+theme_override_constants/line_spacing = 4
+text = "You reach the top of the stairs
+and come to the center of a hall."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SituationLabel2" type="Label" parent="Step8" unique_id=1055392666]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/line_spacing = 4
+text = "Bookshelves to the left.
+Windows to the right."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step8" unique_id=941710729]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step8/HBoxContainer" unique_id=739793351]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Left"
+flat = true
+
+[node name="WindowPathButton" type="Button" parent="Step8/HBoxContainer" unique_id=237608250]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go Right"
+flat = true
+
+[node name="Step9" type="Control" parent="." unique_id=694637557]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="DefaultPath" type="Control" parent="Step9" unique_id=1924538507]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SituationLabel" type="Label" parent="Step9/DefaultPath" unique_id=1282724688]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "Stairs lead up."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step9/DefaultPath" unique_id=1511658982]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step9/DefaultPath/HBoxContainer" unique_id=1666672978]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ascend"
+flat = true
+
+[node name="SituationLabel2" type="Label" parent="Step9/DefaultPath" unique_id=24437936]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "There's an open window."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowPath" type="Control" parent="Step9" unique_id=37797963]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step9/WindowPath" unique_id=1750088666]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="CrumbleButton" type="Button" parent="Step9/WindowPath/HBoxContainer" unique_id=475229580]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jump"
+flat = true
+
+[node name="Step10" type="Control" parent="." unique_id=1352675386]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step10" unique_id=2030726465]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "There's a short gap in the floor ahead."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Step10" unique_id=501274440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Step10/VBoxContainer" unique_id=1464085527]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Jump
+"
+flat = true
+
+[node name="CrumbleButton2" type="Button" parent="Step10/VBoxContainer" unique_id=1355609411]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Crumble"
+flat = true
+
+[node name="Step11" type="Control" parent="." unique_id=1008523767]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step11" unique_id=1655640350]
+layout_mode = 0
+offset_right = 1232.0
+offset_bottom = 34.0
+theme_override_constants/line_spacing = 4
+text = "You land on the hallway floor."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Step11" unique_id=260481878]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Step11/HBoxContainer" unique_id=582404535]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Keep Running"
+flat = true
+
+[node name="Step12" type="Control" parent="." unique_id=634390166]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step12" unique_id=120504995]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "There's a long gap in the floor ahead."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Step12" unique_id=1141269257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Step12/VBoxContainer" unique_id=1637103946]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jump
+"
+flat = true
+
+[node name="CrumbleButton2" type="Button" parent="Step12/VBoxContainer" unique_id=418365720]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Crumble"
+flat = true
+
+[node name="Step13" type="Control" parent="." unique_id=2026758619]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step13" unique_id=1252744049]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "There's a short gap to a short platform ahead."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Step13" unique_id=1621974562]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CrumbleButton3" type="Button" parent="Step13/VBoxContainer" unique_id=460361494]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Crumble"
+flat = true
+
+[node name="Button" type="Button" parent="Step13/VBoxContainer" unique_id=507022475]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jump
+"
+flat = true
+
+[node name="CrumbleButton2" type="Button" parent="Step13/VBoxContainer" unique_id=898956279]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Crumble"
+flat = true
+
+[node name="Step14" type="Control" parent="." unique_id=1078493171]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="SituationLabel" type="Label" parent="Step14" unique_id=1846803574]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_constants/line_spacing = 4
+text = "There's a long gap to a short platform ahead."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Step14" unique_id=1801999884]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Step14/VBoxContainer" unique_id=473627437]
+custom_minimum_size = Vector2(0, 192)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jump
+"
+flat = true
+
+[node name="CrumbleButton2" type="Button" parent="Step14/VBoxContainer" unique_id=1352725713]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Crumble"
 flat = true
