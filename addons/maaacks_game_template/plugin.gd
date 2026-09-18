@@ -186,8 +186,8 @@ func is_partially_installed() -> bool:
 		return true
 	if not are_examples_deleted():
 		return true
-	if not are_project_paths_updated():
-		return true
+	#if not are_project_paths_updated():
+		#return true
 	return false
 
 func open_input_icons_dialog() -> void:
