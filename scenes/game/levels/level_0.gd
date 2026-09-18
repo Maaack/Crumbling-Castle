@@ -4,10 +4,11 @@ signal level_won(level_path : String)
 signal trip_started
 
 @export_file_path("*.dialogue") var dialogue_path : String
+@export var dialogue_cue : String = "start"
 
 func _ready() -> void:
 	ProjectMusicController.music_stream_player.stop()
-	var dialogue_scene := DialogueManager.show_dialogue_balloon(load(dialogue_path), "start", [self])
+	var dialogue_scene := DialogueManager.show_dialogue_balloon(load(dialogue_path), dialogue_cue, [self])
 	await dialogue_scene.ready
 	dialogue_scene.reparent(self)
 	await DialogueManager.dialogue_ended

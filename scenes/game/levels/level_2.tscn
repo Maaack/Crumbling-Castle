@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0fx3rdu5hjch" path="res://scenes/game/levels/level_0.gd" id="1_g462d"]
 
-[node name="Level0" type="Control" unique_id=315330877]
+[node name="Level2" type="Control" unique_id=315330877]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,3 +11,4 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g462d")
 dialogue_path = "res://resources/dialogue/companion.dialogue"
+dialogue_cue = "first_collapse"
