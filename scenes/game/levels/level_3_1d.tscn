@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://c41aw8g4mqx06"]
 
 [ext_resource type="Script" uid="uid://buy7oevmcdctx" path="res://scenes/game/levels/level_1d.gd" id="1_s3ggc"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="2_albdk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooua1"]
 
 [sub_resource type="Theme" id="Theme_s3ggc"]
+Button/colors/font_focus_color = Color(0.972549, 0.92941177, 0.6117647, 1)
 Button/font_sizes/font_size = 32
+Button/styles/focus = SubResource("StyleBoxEmpty_ooua1")
 Label/constants/line_spacing = 4
 Label/font_sizes/font_size = 32
 
@@ -24,6 +29,8 @@ script = ExtResource("1_s3ggc")
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step" unique_id=1186819312]
 layout_mode = 0
@@ -60,6 +67,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step2" unique_id=1583158486]
 layout_mode = 0
@@ -89,6 +98,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="Button" type="Button" parent="Step3" unique_id=525331208]
 layout_mode = 0
@@ -103,6 +114,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step4" unique_id=1005705907]
 layout_mode = 0
@@ -132,6 +145,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="AscendButton" type="Button" parent="Step5" unique_id=1757328187]
 layout_mode = 0
@@ -146,6 +161,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step6" unique_id=1711921798]
 layout_mode = 0
@@ -176,6 +193,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step7" unique_id=771031283]
 layout_mode = 0
@@ -212,6 +231,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step8" unique_id=2006786800]
 layout_mode = 0
@@ -263,6 +284,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="DefaultPath" type="Control" parent="Step9" unique_id=1924538507]
 layout_mode = 1
@@ -335,6 +358,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step10" unique_id=2030726465]
 layout_mode = 1
@@ -374,6 +399,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step11" unique_id=1655640350]
 layout_mode = 0
@@ -403,6 +430,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step12" unique_id=120504995]
 layout_mode = 1
@@ -449,6 +478,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step13" unique_id=1252744049]
 layout_mode = 1
@@ -502,6 +533,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step14" unique_id=1846803574]
 layout_mode = 1
@@ -555,6 +588,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step15" unique_id=1798090323]
 layout_mode = 1
@@ -642,6 +677,8 @@ size_flags_vertical = 3
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step16" unique_id=1590732758]
 layout_mode = 1
@@ -730,6 +767,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step17" unique_id=363493163]
 layout_mode = 1
@@ -819,6 +858,8 @@ size_flags_vertical = 3
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step18" unique_id=1185789277]
 layout_mode = 1
@@ -912,6 +953,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="GateSituationLabel" type="Label" parent="Step19" unique_id=1138618698]
 unique_name_in_owner = true
@@ -954,6 +997,8 @@ flat = true
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="SituationLabel" type="Label" parent="Step20" unique_id=254890225]
 layout_mode = 0
@@ -981,7 +1026,10 @@ flat = true
 
 [node name="Step21" type="Control" parent="." unique_id=1909474565]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
+script = ExtResource("2_albdk")
+search_depth = 2
 
 [node name="FinalButton" type="Button" parent="Step21" unique_id=1829673436]
 unique_name_in_owner = true
