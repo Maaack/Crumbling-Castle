@@ -324,10 +324,12 @@ size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="MenuAnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport" unique_id=1492532975]
+unique_name_in_owner = true
 root_node = NodePath("../../..")
 libraries/ = SubResource("AnimationLibrary_2kqig")
 
 [node name="MenuAnimationTree" type="AnimationTree" parent="SubViewportContainer/SubViewport" unique_id=1630488919]
+unique_name_in_owner = true
 root_node = NodePath("../../..")
 tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
