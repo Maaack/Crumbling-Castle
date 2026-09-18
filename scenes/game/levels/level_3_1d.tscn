@@ -984,6 +984,8 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="FinalButton" type="Button" parent="Step21" unique_id=1829673436]
+unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -998,6 +1000,7 @@ autowrap_mode = 2
 
 [node name="FinalCrumbleButton" type="Button" parent="Step21" unique_id=891228702]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1026,6 +1029,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"AlmostFlatButton"
 text = "Ascend"
+flat = true
 
 [node name="PortalSituationLabel" type="Label" parent="Step21" unique_id=1494257705]
 unique_name_in_owner = true

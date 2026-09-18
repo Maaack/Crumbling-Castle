@@ -25,6 +25,7 @@ extends "level.gd"
 @onready var gate_opening_button = %GateOpeningButton
 @onready var step_20 = %Step20
 @onready var step_21 = %Step21
+@onready var final_button = %FinalButton
 @onready var final_crumble_button = %FinalCrumbleButton
 @onready var portal_margin_container = %PortalMarginContainer
 @onready var portal_button = %PortalButton
@@ -239,6 +240,7 @@ func _on_portal_button_pressed():
 		portal_button.text = "There is only down."
 		portal_button.disabled = true
 		final_crumble_button.visible = false
+		final_button.visible = true
 		return
 	elif portal_attempts >= 48:
 		portal_button.text = "Ascend!!!"
@@ -246,6 +248,8 @@ func _on_portal_button_pressed():
 		portal_button.text = "Ascend!"
 	elif portal_attempts >= 3:
 		portal_situation_label.visible = false
+		portal_button.flat = false
+		final_crumble_button.visible = true
 	elif portal_attempts >= 2:
 		portal_button.text = "Ascend?"
 	if portal_attempts >= 5:

@@ -36,7 +36,6 @@ current_level = NodePath("../SubViewportContainer/LevelContainer/Control")
 [node name="LevelManager" type="Node" parent="." unique_id=1350972375 node_paths=PackedStringArray("level_loader", "scene_lister")]
 script = ExtResource("5_5jirj")
 level_loader = NodePath("../LevelLoader")
-starting_level_path = "res://scenes/game/levels/level_1.tscn"
 scene_lister = NodePath("SceneLister")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
