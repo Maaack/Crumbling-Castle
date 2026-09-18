@@ -15,4 +15,4 @@ shader_parameter/opacity = 0.75
 shader_parameter/original_opacity_mod = 0.800000038
 shader_parameter/zoom = 0.01
 shader_parameter/normalization = 1.0
-shader_parameter/normalized_scale = 0.003000047642500059
+shader_parameter/normalized_scale = 0.00300004764250005
