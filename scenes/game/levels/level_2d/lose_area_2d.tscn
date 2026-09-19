@@ -44,6 +44,14 @@ _data = {
 &"grind": SubResource("Animation_4n4rd")
 }
 
+[sub_resource type="Gradient" id="Gradient_5a6hs"]
+offsets = PackedFloat32Array(0, 0.13109426)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1cqto"]
+gradient = SubResource("Gradient_5a6hs")
+fill_to = Vector2(0.008547009, 0.991453)
+
 [node name="LoseArea2D" type="Area2D" unique_id=1096114870]
 collision_layer = 2
 collision_mask = 3
@@ -58,7 +66,7 @@ libraries/ = SubResource("AnimationLibrary_8y6f6")
 autoplay = &"grind"
 
 [node name="Control" type="Control" parent="." unique_id=1863510183]
-custom_minimum_size = Vector2(3200, 0)
+custom_minimum_size = Vector2(4874, 0)
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -73,7 +81,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="Control" unique_id=823341873]
-custom_minimum_size = Vector2(2800, 0)
+custom_minimum_size = Vector2(4874, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -90,6 +98,14 @@ offset_transform_enabled = true
 text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1771738202]
+custom_minimum_size = Vector2(0, 1000)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+texture = SubResource("GradientTexture2D_1cqto")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=846429315]
 rect = Rect2(-1280, -7, 2560, 14)
