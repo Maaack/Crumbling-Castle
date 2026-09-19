@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ccrc5f1tvcbuo"]
 
 [ext_resource type="Script" uid="uid://srbcehia73r5" path="res://scenes/game/levels/level_2d/character_body_2d.gd" id="1_q6ssg"]
+[ext_resource type="PackedScene" uid="uid://ijkwj6o5a35" path="res://scenes/game/levels/level_2d/dust_cloud.tscn" id="2_326fm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x2ody"]
 size = Vector2(24, 45)
@@ -638,3 +639,7 @@ vertical_alignment = 1
 unique_name_in_owner = true
 root_node = NodePath("../Graphics/Label")
 libraries/ = SubResource("AnimationLibrary_8hq6w")
+
+[node name="DustCloud" parent="." unique_id=80069791 instance=ExtResource("2_326fm")]
+unique_name_in_owner = true
+position = Vector2(0, 28)

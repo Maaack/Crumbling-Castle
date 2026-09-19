@@ -16,6 +16,7 @@ var buffer_countdown: int = 0
 @onready var camera_pivot = $CameraPivot
 @onready var animation_player = %AnimationPlayer
 @onready var graphics = %Graphics
+@onready var dust_cloud: Node2D = %DustCloud
 
 
 func _ready() -> void:
@@ -32,6 +33,9 @@ func _physics_process(delta):
 	# Add the gravity.
 	if is_on_floor():
 		coyote_countdown = COYOTE_FRAMES
+		if animation_player.current_animation in [&"jump", &"jump_up"]:
+			# should hand landed this frame
+			dust_cloud.emit()
 	elif coyote_countdown > 0:
 		coyote_countdown -= 1
 		# apply gravity if fall is immediate, but can still jump
