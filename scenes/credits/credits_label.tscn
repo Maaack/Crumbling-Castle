@@ -13,11 +13,11 @@ size_flags_vertical = 5
 bbcode_enabled = true
 text = "[font_size=48]A Game By[/font_size]
 
-[url=https://maaack.itch.io/]Maaack[/url]  
+[font_size=32][url=https://maaack.itch.io/]Maaack[/url][/font_size]
 
-&  
+&
 
-[url=https://hatmix.itch.io/]hatmix[/url]  
+[font_size=32][url=https://hatmix.itch.io/]hatmix[/url][/font_size]
 
 
 [font_size=48]Sourced[/font_size]
@@ -62,6 +62,14 @@ License: [url=https://web.archive.org/web/20171124195530/http://kinggizzardandth
 Author: Alan Dague-Greene  
 Source: [url=https://quoteunquoteapps.com/courierprime/]quoteunquoteapps.com : courierprime[/url]  
 License: [url=https://openfontlicense.org/]OFL[/url]
+
+
+[font_size=32]Icons[/font_size]
+
+[font_size=24]Gamepad, Headphones, Grim Reaper, Person, and Mushrooms[/font_size]
+Author: [url=https://game-icons.net/about.html#authors]Lorc, Delapouite, and contributors[/url]  
+Source: [url=https://game-icons.net/]Game-icons.net[/url]  
+License: [url=https://creativecommons.org/licenses/by/3.0/]Attribution 3.0 Unported (CC BY 3.0)[/url]  
 
 
 [font_size=48]Tools[/font_size]
