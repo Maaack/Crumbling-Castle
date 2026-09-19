@@ -1,9 +1,25 @@
-[gd_scene format=3 uid="uid://d3pab64tttpqw"]
+[gd_scene format=4 uid="uid://d3pab64tttpqw"]
 
 [ext_resource type="PackedScene" uid="uid://citqp5jyt0fad" path="res://scenes/game/levels/level_3d/grinder_part.tscn" id="1_561c2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gecq0"]
 size = Vector3(256, 8, 512)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gu67"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_561c2"]
+_surfaces = [{
+"aabb": AABB(-640, -0.5, -640, 1280, 1, 1280),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"material": SubResource("StandardMaterial3D_0gu67"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AAAgxAAAAL8AACBEAAAgxAAAAL8AACDEAAAgxAAAAD8AACDEAAAgRAAAAL8AACDEAAAgxAAAAL8AACDEAAAgxAAAAL8AACBEAAAgxAAAAD8AACDEAAAgxAAAAL8AACDEAAAgRAAAAL8AACDEAAAgxAAAAD8AACDEAAAgxAAAAD8AACBEAAAgxAAAAL8AACBEAAAgxAAAAL8AACBEAAAgxAAAAD8AACBEAAAgRAAAAD8AACBEAAAgRAAAAD8AACBEAAAgxAAAAD8AACBEAAAgxAAAAD8AACDEAAAgxAAAAL8AACBEAAAgRAAAAL8AACBEAAAgRAAAAL8AACDEAAAgRAAAAD8AACBEAAAgRAAAAL8AACBEAAAgxAAAAL8AACBEAAAgRAAAAL8AACDEAAAgRAAAAL8AACBEAAAgRAAAAD8AACBEAAAgRAAAAL8AACDEAAAgRAAAAD8AACDEAAAgxAAAAD8AACDEAAAgxAAAAD8AACDEAAAgRAAAAD8AACDEAAAgRAAAAD8AACBEAAAgRAAAAD8AACBEAAAgRAAAAD8AACDEAAAgRAAAAL8AACDEAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
 
 [node name="LoseArea3D" type="Area3D" unique_id=624041860]
 collision_layer = 2
@@ -15,3 +31,7 @@ shape = SubResource("BoxShape3D_gecq0")
 
 [node name="GrinderPart" parent="." unique_id=1077460698 instance=ExtResource("1_561c2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -320)
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="." unique_id=1603981306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
+mesh = SubResource("ArrayMesh_561c2")
