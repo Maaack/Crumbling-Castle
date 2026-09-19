@@ -2,11 +2,14 @@
 
 [ext_resource type="Script" uid="uid://buy7oevmcdctx" path="res://scenes/game/levels/level_1d.gd" id="1_o30bt"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="2_mxmax"]
+[ext_resource type="Texture2D" uid="uid://cjsksqdia5cb7" path="res://assets/game-icons/grim-reaper.png" id="3_3r21o"]
+[ext_resource type="Texture2D" uid="uid://c0grsckg5abe3" path="res://assets/game-icons/run.png" id="4_7wjxx"]
+[ext_resource type="Texture2D" uid="uid://bp855dni5gt4f" path="res://assets/game-icons/polar-star.png" id="5_7wjxx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooua1"]
 
 [sub_resource type="Theme" id="Theme_s3ggc"]
-Button/colors/font_focus_color = Color(0.972549, 0.92941177, 0.6117647, 1)
+Button/colors/font_focus_color = Color(0.7411765, 1, 0.7058824, 1)
 Button/font_sizes/font_size = 32
 Button/styles/focus = SubResource("StyleBoxEmpty_ooua1")
 Label/constants/line_spacing = 4
@@ -24,6 +27,7 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 script = ExtResource("1_o30bt")
+doom_speed = 6.0
 
 [node name="Step" type="Control" parent="." unique_id=1129148904]
 unique_name_in_owner = true
@@ -135,7 +139,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="Step4/HBoxContainer" unique_id=1083721495]
+[node name="AscendButton" type="Button" parent="Step4/HBoxContainer" unique_id=1083721495]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Ascend"
@@ -229,7 +233,6 @@ flat = true
 
 [node name="Step8" type="Control" parent="." unique_id=628327615]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 script = ExtResource("2_mxmax")
 search_depth = 2
@@ -250,7 +253,8 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -72.0
+offset_top = -136.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/line_spacing = 4
@@ -306,7 +310,7 @@ text = "Stairs lead up."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Step9/DefaultPath" unique_id=1666672978]
+[node name="AscendButton" type="Button" parent="Step9/DefaultPath" unique_id=1666672978]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -525,6 +529,7 @@ flat = true
 
 [node name="Step14" type="Control" parent="." unique_id=1078493171]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 script = ExtResource("2_mxmax")
 search_depth = 2
@@ -1084,3 +1089,48 @@ theme_override_constants/line_spacing = 4
 text = "A beautiful glow radiates in front of you."
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ProgressLabel" type="Label" parent="." unique_id=207691651]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "-----------------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeathTextureRect" type="TextureRect" parent="ProgressLabel" unique_id=657189706]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 189.0
+offset_top = -47.0
+offset_right = 236.0
+grow_vertical = 0
+texture = ExtResource("3_3r21o")
+
+[node name="PlayerTextureRect" type="TextureRect" parent="ProgressLabel" unique_id=1628684692]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 323.0
+offset_top = -47.0
+offset_right = 370.0
+grow_vertical = 0
+texture = ExtResource("4_7wjxx")
+
+[node name="PortalTextureRect" type="TextureRect" parent="ProgressLabel" unique_id=1045407806]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 979.0
+offset_top = -47.0
+offset_right = 1026.0
+grow_vertical = 0
+texture = ExtResource("5_7wjxx")
