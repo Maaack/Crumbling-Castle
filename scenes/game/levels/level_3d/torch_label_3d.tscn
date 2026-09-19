@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dbmos8x2bv6bu"]
+
+[ext_resource type="Script" uid="uid://bjd5ww0mahery" path="res://scenes/game/levels/level_3d/torch_label_3d.gd" id="1_g4lrh"]
+
+[node name="TorchLabel3D" type="Label3D" unique_id=1178983464]
+pixel_size = 0.05
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "\\^/
+I"
+script = ExtResource("1_g4lrh")

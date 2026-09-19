@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="5_iusjq"]
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="6_ofcco"]
+[ext_resource type="PackedScene" uid="uid://dbmos8x2bv6bu" path="res://scenes/game/levels/level_3d/torch_label_3d.tscn" id="6_uj8iv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qaipj"]
 
@@ -145,13 +146,13 @@ _data = {
 }
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1cqto"]
-viewport_path = NodePath("Sprite3D/SubViewport")
+viewport_path = NodePath("World/Sprite3D/SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_iusjq"]
-viewport_path = NodePath("Sprite3D2/SubViewport")
+viewport_path = NodePath("World/Sprite3D2/SubViewport")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_ofcco"]
-viewport_path = NodePath("Sprite3D3/SubViewport")
+viewport_path = NodePath("World/Sprite3D3/SubViewport")
 
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
@@ -267,6 +268,16 @@ transform = Transform3D(1, 0, 0, 0, 0.49999997, 0.86602545, 0, -0.86602545, 0.49
 size = Vector3(16, 64, 1)
 material = SubResource("StandardMaterial3D_n4y2n")
 
+[node name="Label3D3" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D6" unique_id=640592891]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -1.7763568e-15, 1, 7.5, 0, 0)
+pixel_size = 0.05
+text = "__________________________________________________________________"
+
+[node name="Label3D4" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D6" unique_id=272289779]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -7.5, 0, 0)
+pixel_size = 0.05
+text = "__________________________________________________________________"
+
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D" unique_id=1399745103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0035037994, -0.088783264, 0.4782257)
 shape = SubResource("ConcavePolygonShape3D_iusjq")
@@ -322,6 +333,8 @@ transform = Transform3D(1, 0, 0, 0, 0.49999988, 0.8660254, 0, -0.8660254, 0.4999
 pixel_size = 0.06
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 text = "______________
+______________
+______________
 ______________
 ______________
 ______________
@@ -522,44 +535,68 @@ material = SubResource("StandardMaterial3D_0gu67")
 libraries/ = SubResource("AnimationLibrary_uj8iv")
 autoplay = &"pulsing"
 
-[node name="Sprite3D" type="Sprite3D" parent="." unique_id=868742333]
+[node name="Sprite3D" type="Sprite3D" parent="World" unique_id=868742333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 12, 0)
 pixel_size = 0.14
 double_sided = false
 texture = SubResource("ViewportTexture_1cqto")
 
-[node name="SubViewport" type="SubViewport" parent="Sprite3D" unique_id=805416109]
+[node name="SubViewport" type="SubViewport" parent="World/Sprite3D" unique_id=805416109]
 size = Vector2i(48, 48)
 
-[node name="InputHint" parent="Sprite3D/SubViewport" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
+[node name="InputHint" parent="World/Sprite3D/SubViewport" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
 action_name = &"move_left"
-input_icon_mapper = NodePath("../../../InputIconMapper")
+input_icon_mapper = NodePath("../../../../InputIconMapper")
 
-[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=1750285051]
+[node name="Sprite3D2" type="Sprite3D" parent="World" unique_id=1750285051]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 12, 0)
 pixel_size = 0.14
 double_sided = false
 texture = SubResource("ViewportTexture_iusjq")
 
-[node name="SubViewport" type="SubViewport" parent="Sprite3D2" unique_id=46600784]
+[node name="SubViewport" type="SubViewport" parent="World/Sprite3D2" unique_id=46600784]
 size = Vector2i(48, 48)
 
-[node name="InputHint" parent="Sprite3D2/SubViewport" unique_id=94635898 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
+[node name="InputHint" parent="World/Sprite3D2/SubViewport" unique_id=94635898 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
 action_name = &"move_right"
-input_icon_mapper = NodePath("../../../InputIconMapper")
+input_icon_mapper = NodePath("../../../../InputIconMapper")
 
-[node name="Sprite3D3" type="Sprite3D" parent="." unique_id=1362116053]
+[node name="Sprite3D3" type="Sprite3D" parent="World" unique_id=1362116053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, 0)
 pixel_size = 0.14
 double_sided = false
 texture = SubResource("ViewportTexture_ofcco")
 
-[node name="SubViewport" type="SubViewport" parent="Sprite3D3" unique_id=1997253174]
+[node name="SubViewport" type="SubViewport" parent="World/Sprite3D3" unique_id=1997253174]
 size = Vector2i(48, 48)
 
-[node name="InputHint" parent="Sprite3D3/SubViewport" unique_id=2116592604 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
+[node name="InputHint" parent="World/Sprite3D3/SubViewport" unique_id=2116592604 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
 action_name = &"move_forward"
-input_icon_mapper = NodePath("../../../InputIconMapper")
+input_icon_mapper = NodePath("../../../../InputIconMapper")
+
+[node name="TorchLabel3D" parent="World" unique_id=1178983464 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 3, 1)
+
+[node name="TorchLabel3D2" parent="World" unique_id=19671876 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, 1)
+
+[node name="TorchLabel3D3" parent="World" unique_id=35940363 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 3, 36)
+
+[node name="TorchLabel3D4" parent="World" unique_id=1946023163 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 3, 13)
+
+[node name="TorchLabel3D5" parent="World" unique_id=1139813100 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 3, 36)
+
+[node name="TorchLabel3D6" parent="World" unique_id=359341230 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 3, 13)
+
+[node name="TorchLabel3D7" parent="World" unique_id=1409506660 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 3, 47)
+
+[node name="TorchLabel3D8" parent="World" unique_id=1795581501 instance=ExtResource("6_uj8iv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, 47)
 
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 
