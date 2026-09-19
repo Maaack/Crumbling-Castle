@@ -6,7 +6,7 @@
 [node name="LoadingScreen" unique_id=179842335 instance=ExtResource("1_fhody")]
 script = ExtResource("2_xkw5j")
 
-[node name="VBoxContainer" parent="Control" parent_id_path=PackedInt32Array(806971123) index="0" unique_id=435288529]
+[node name="VBoxContainer" parent="Control" parent_id_path=PackedInt32Array(806971123) index="3" unique_id=435288529]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -17,3 +17,10 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+alignment = 1
+
+[node name="ProgressLabel" parent="Control/VBoxContainer" index="0" unique_id=216311769]
+size_flags_vertical = 8
+
+[node name="ProgressBar" parent="Control/VBoxContainer" index="1" unique_id=345557183]
+visible = false
