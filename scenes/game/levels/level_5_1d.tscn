@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cjsksqdia5cb7" path="res://assets/game-icons/grim-reaper.png" id="3_3r21o"]
 [ext_resource type="Texture2D" uid="uid://c0grsckg5abe3" path="res://assets/game-icons/run.png" id="4_7wjxx"]
 [ext_resource type="Texture2D" uid="uid://bp855dni5gt4f" path="res://assets/game-icons/polar-star.png" id="5_7wjxx"]
+[ext_resource type="AudioStream" uid="uid://dofd6ehou8lcm" path="res://assets/sounds/grinder.ogg" id="6_na4gf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooua1"]
 
@@ -1134,3 +1135,9 @@ offset_top = -47.0
 offset_right = 1026.0
 grow_vertical = 0
 texture = ExtResource("5_7wjxx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1339551504]
+stream = ExtResource("6_na4gf")
+volume_db = -80.0
+pitch_scale = 0.86
+autoplay = true
