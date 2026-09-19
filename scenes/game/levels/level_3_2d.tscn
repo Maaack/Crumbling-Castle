@@ -457,12 +457,12 @@ size = Vector2(32, 32)
 resource_local_to_scene = true
 size = Vector2(20, 2811)
 
-[sub_resource type="Curve" id="Curve_td8wa"]
+[sub_resource type="Curve" id="Curve_o7nmf"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
 point_count = 2
 
-[sub_resource type="CurveTexture" id="CurveTexture_bqago"]
-curve = SubResource("Curve_td8wa")
+[sub_resource type="CurveTexture" id="CurveTexture_acbp8"]
+curve = SubResource("Curve_o7nmf")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ebek2"]
 resource_local_to_scene = true
@@ -478,11 +478,18 @@ angular_velocity_min = -90.000015
 angular_velocity_max = 89.999985
 gravity = Vector3(0, 98, 0)
 color = Color(0.6, 0.6, 0.6, 1)
-alpha_curve = SubResource("CurveTexture_bqago")
+alpha_curve = SubResource("CurveTexture_acbp8")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdpj"]
 resource_local_to_scene = true
 size = Vector2(20, 1257)
+
+[sub_resource type="Curve" id="Curve_td8wa"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_bqago"]
+curve = SubResource("Curve_td8wa")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hr7nf"]
 resource_local_to_scene = true
@@ -863,9 +870,10 @@ text = "[][]
 [][]"
 horizontal_alignment = 1
 
-[node name="Wall" parent="World/Tower" unique_id=1252823667 instance=ExtResource("5_o1xna")]
-position = Vector2(-1285, -1400)
+[node name="Wall" parent="World/Tower" unique_id=402760732 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
+position = Vector2(-1290, -1400)
 shape = SubResource("RectangleShape2D_s3opn")
+lose_area = NodePath("../../LoseArea2D")
 height = 2800
 
 [node name="Label" parent="World/Tower/Wall" index="0" unique_id=464379256]
@@ -1019,9 +1027,10 @@ process_material = SubResource("ParticleProcessMaterial_ebek2")
 [node name="GrinderFx4" parent="World/Tower/Wall" index="4" unique_id=918282854]
 process_material = SubResource("ParticleProcessMaterial_ebek2")
 
-[node name="Wall2" parent="World/Tower" unique_id=1806221840 instance=ExtResource("5_o1xna")]
+[node name="Wall2" parent="World/Tower" unique_id=1806221840 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -1816)
 shape = SubResource("RectangleShape2D_ymdpj")
+lose_area = NodePath("../../LoseArea2D")
 height = 1240
 
 [node name="Label" parent="World/Tower/Wall2" index="0" unique_id=464379256]
@@ -1101,9 +1110,10 @@ process_material = SubResource("ParticleProcessMaterial_hr7nf")
 [node name="GrinderFx4" parent="World/Tower/Wall2" index="4" unique_id=918282854]
 process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
-[node name="Wall3" parent="World/Tower" unique_id=941711111 instance=ExtResource("5_o1xna")]
+[node name="Wall3" parent="World/Tower" unique_id=941711111 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
 shape = SubResource("RectangleShape2D_mlaqq")
+lose_area = NodePath("../../LoseArea2D")
 height = 1016
 
 [node name="Label" parent="World/Tower/Wall3" index="0" unique_id=464379256]
