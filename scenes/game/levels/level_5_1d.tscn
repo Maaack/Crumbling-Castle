@@ -1141,3 +1141,4 @@ stream = ExtResource("6_na4gf")
 volume_db = -80.0
 pitch_scale = 0.86
 autoplay = true
+bus = &"SFX"
