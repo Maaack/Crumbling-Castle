@@ -186,6 +186,7 @@ material = SubResource("StandardMaterial3D_n4y2n")
 [node name="CSGBox3D12" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1460588436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36, 24)
 size = Vector3(64, 1, 48)
+material = SubResource("StandardMaterial3D_n4y2n")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=927637598]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.999998, 18, 24)
@@ -765,28 +766,28 @@ action_name = &"move_forward"
 input_icon_mapper = NodePath("../../../../InputIconMapper")
 
 [node name="TorchLabel3D" parent="World" unique_id=1178983464 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 3, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 4.5, 1)
 
 [node name="TorchLabel3D2" parent="World" unique_id=19671876 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 4.5, 1)
 
 [node name="TorchLabel3D3" parent="World" unique_id=35940363 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 3, 36)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 4.5, 36)
 
 [node name="TorchLabel3D4" parent="World" unique_id=1946023163 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 3, 13)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 31, 4.5, 13)
 
 [node name="TorchLabel3D5" parent="World" unique_id=1139813100 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 3, 36)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 4.5, 36)
 
 [node name="TorchLabel3D6" parent="World" unique_id=359341230 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 3, 13)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -31, 4.5, 13)
 
 [node name="TorchLabel3D7" parent="World" unique_id=1409506660 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 3, 47)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 4.5, 47)
 
 [node name="TorchLabel3D8" parent="World" unique_id=1795581501 instance=ExtResource("6_uj8iv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 3, 47)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 4.5, 47)
 
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 

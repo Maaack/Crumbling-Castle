@@ -447,12 +447,6 @@ scale_min = 0.59999996
 scale_max = 0.59999996
 alpha_curve = SubResource("CurveTexture_s3pix")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2md0"]
-size = Vector2(32, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
-size = Vector2(32, 32)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3opn"]
 resource_local_to_scene = true
 size = Vector2(20, 2811)
@@ -823,52 +817,6 @@ visible_characters = 27
 
 [node name="GrinderFx" parent="World/Tower/Floor_10" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_xo4no")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Tower" unique_id=1716948064]
-position = Vector2(938, -32)
-shape = SubResource("RectangleShape2D_w2md0")
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="World/Tower/CollisionShape2D3" unique_id=332016273]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.5
-offset_top = -13.5
-offset_right = 11.5
-offset_bottom = 9.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_spacing = -3
-text = "[][]
-[][]
-[][]
-[][]"
-horizontal_alignment = 1
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="World/Tower" unique_id=1473707772]
-position = Vector2(1087, -16)
-shape = SubResource("RectangleShape2D_0gu67")
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="World/Tower/CollisionShape2D5" unique_id=1227609483]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -11.5
-offset_top = -13.5
-offset_right = 11.5
-offset_bottom = 9.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_spacing = -3
-text = "[][]
-[][]"
-horizontal_alignment = 1
 
 [node name="Wall" parent="World/Tower" unique_id=402760732 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
 position = Vector2(-1290, -1400)
@@ -1322,7 +1270,7 @@ scale = Vector2(-1, 1)
 position = Vector2(880, -2168)
 
 [node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
-position = Vector2(-384, -2096)
+position = Vector2(-224, -2096)
 
 [node name="CloudLabel" type="Label" parent="World" unique_id=246261936]
 offset_left = 1384.0
@@ -1754,6 +1702,18 @@ offset_top = -1688.0
 offset_right = -1136.0
 offset_bottom = -1628.0
 
+[node name="TorchLabel61" parent="World" unique_id=1393543891 instance=ExtResource("11_scglh")]
+offset_left = -152.0
+offset_top = -2168.0
+offset_right = -112.0
+offset_bottom = -2108.0
+
+[node name="TorchLabel50" parent="World" unique_id=836724377 instance=ExtResource("11_scglh")]
+offset_left = -1176.0
+offset_top = -2168.0
+offset_right = -1136.0
+offset_bottom = -2108.0
+
 [node name="TorchLabel51" parent="World" unique_id=279641111 instance=ExtResource("11_scglh")]
 offset_left = -920.0
 offset_top = -1688.0
@@ -1776,6 +1736,12 @@ offset_bottom = -1146.0
 offset_left = 616.0
 offset_top = -1032.0
 offset_right = 664.0
+offset_bottom = -906.0
+
+[node name="WindowLabel4" parent="World" unique_id=700806870 instance=ExtResource("12_x4fdv")]
+offset_left = 231.99994
+offset_top = -1032.0
+offset_right = 279.99994
 offset_bottom = -906.0
 
 [node name="WindowLabel5" parent="World" unique_id=1459814210 instance=ExtResource("12_x4fdv")]
@@ -1920,6 +1886,78 @@ offset_top = -192.0
 offset_right = -801.0
 offset_bottom = -159.0
 
+[node name="BoxesLabel21" parent="World" unique_id=1597879515 instance=ExtResource("13_vanb6")]
+offset_left = -1272.0
+offset_top = -640.0
+offset_right = -1233.0
+offset_bottom = -607.0
+
+[node name="BoxesLabel32" parent="World" unique_id=500820801 instance=ExtResource("13_vanb6")]
+offset_left = -1232.0
+offset_top = -640.0
+offset_right = -1193.0
+offset_bottom = -607.0
+
+[node name="BoxesLabel22" parent="World" unique_id=1890061915 instance=ExtResource("13_vanb6")]
+offset_left = -1272.0
+offset_top = -704.0
+offset_right = -1233.0
+offset_bottom = -671.0
+
+[node name="BoxesLabel24" parent="World" unique_id=139145914 instance=ExtResource("13_vanb6")]
+offset_left = -1232.0
+offset_top = -160.0
+offset_right = -1193.0
+offset_bottom = -127.0
+
+[node name="BoxesLabel25" parent="World" unique_id=1126051850 instance=ExtResource("13_vanb6")]
+offset_left = -376.0
+offset_top = -400.0
+offset_right = -337.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel29" parent="World" unique_id=1563256058 instance=ExtResource("13_vanb6")]
+offset_left = -336.0
+offset_top = -400.0
+offset_right = -297.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel30" parent="World" unique_id=1047901961 instance=ExtResource("13_vanb6")]
+offset_left = -296.0
+offset_top = -400.0
+offset_right = -257.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel31" parent="World" unique_id=861906024 instance=ExtResource("13_vanb6")]
+offset_left = -256.0
+offset_top = -400.0
+offset_right = -217.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel26" parent="World" unique_id=1597032669 instance=ExtResource("13_vanb6")]
+offset_left = 168.0
+offset_top = -400.0
+offset_right = 207.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel27" parent="World" unique_id=1478087219 instance=ExtResource("13_vanb6")]
+offset_left = 296.0
+offset_top = -400.0
+offset_right = 335.0
+offset_bottom = -367.0
+
+[node name="BoxesLabel28" parent="World" unique_id=197894362 instance=ExtResource("13_vanb6")]
+offset_left = 1240.0
+offset_top = -640.0
+offset_right = 1279.0
+offset_bottom = -607.0
+
+[node name="BoxesLabel23" parent="World" unique_id=1137491718 instance=ExtResource("13_vanb6")]
+offset_left = -1264.0
+offset_top = -672.0
+offset_right = -1225.0
+offset_bottom = -639.0
+
 [node name="BoxesLabel5" parent="World" unique_id=392828382 instance=ExtResource("13_vanb6")]
 offset_left = -104.0
 offset_top = 80.0
@@ -1996,12 +2034,6 @@ offset_bottom = -847.0
 offset_left = 1104.0
 offset_top = -880.0
 offset_right = 1200.0
-offset_bottom = -847.0
-
-[node name="TableLabel3" parent="World" unique_id=1192662953 instance=ExtResource("15_dmp7y")]
-offset_left = -304.0
-offset_top = -880.0
-offset_right = -208.0
 offset_bottom = -847.0
 
 [node name="TableLabel4" parent="World" unique_id=1321423216 instance=ExtResource("15_dmp7y")]
@@ -2184,6 +2216,24 @@ offset_top = -944.0
 offset_right = -444.0
 offset_bottom = -846.0
 
+[node name="ShelvesLabel22" parent="World" unique_id=945390479 instance=ExtResource("16_u4pql")]
+offset_left = -288.0
+offset_top = -944.0
+offset_right = -220.0
+offset_bottom = -846.0
+
+[node name="ShelvesLabel23" parent="World" unique_id=435679857 instance=ExtResource("16_u4pql")]
+offset_left = -224.0
+offset_top = -944.0
+offset_right = -156.0
+offset_bottom = -846.0
+
+[node name="ShelvesLabel24" parent="World" unique_id=1529465250 instance=ExtResource("16_u4pql")]
+offset_left = -352.0
+offset_top = -944.0
+offset_right = -284.0
+offset_bottom = -846.0
+
 [node name="ShelvesLabel10" parent="World" unique_id=278750392 instance=ExtResource("16_u4pql")]
 offset_left = -288.0
 offset_top = -1184.0
@@ -2207,6 +2257,36 @@ offset_left = -1280.0
 offset_top = -1184.0
 offset_right = -1212.0
 offset_bottom = -1086.0
+
+[node name="ShelvesLabel25" parent="World" unique_id=1081188625 instance=ExtResource("16_u4pql")]
+offset_left = -1216.0
+offset_top = -1664.0
+offset_right = -1148.0
+offset_bottom = -1566.0
+
+[node name="ShelvesLabel26" parent="World" unique_id=1478083267 instance=ExtResource("16_u4pql")]
+offset_left = -1280.0
+offset_top = -1664.0
+offset_right = -1212.0
+offset_bottom = -1566.0
+
+[node name="ShelvesLabel27" parent="World" unique_id=1631036449 instance=ExtResource("16_u4pql")]
+offset_left = -1088.0
+offset_top = -1664.0
+offset_right = -1020.0
+offset_bottom = -1566.0
+
+[node name="ShelvesLabel28" parent="World" unique_id=345717907 instance=ExtResource("16_u4pql")]
+offset_left = -1152.0
+offset_top = -1664.0
+offset_right = -1084.0
+offset_bottom = -1566.0
+
+[node name="ShelvesLabel30" parent="World" unique_id=1451342815 instance=ExtResource("16_u4pql")]
+offset_left = -1024.0
+offset_top = -1664.0
+offset_right = -956.0
+offset_bottom = -1566.0
 
 [node name="ShelvesLabel12" parent="World" unique_id=16139628 instance=ExtResource("16_u4pql")]
 offset_left = 1216.0
