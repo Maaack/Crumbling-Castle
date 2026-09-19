@@ -1168,371 +1168,83 @@ position = Vector2(12, 400)
 unique_name_in_owner = true
 position = Vector2(-1, -2240)
 
-[node name="WinArea2D" parent="World" unique_id=1669638238 instance=ExtResource("7_nnhhk")]
-position = Vector2(2240, -2552)
+[node name="Staircase" parent="World/Tower" unique_id=639177241 instance=ExtResource("5_dxp7b")]
+position = Vector2(879, -128)
 
-[node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
-unique_name_in_owner = true
-position = Vector2(448, 728)
+[node name="Staircase2" parent="World/Tower" unique_id=2026593375 instance=ExtResource("5_dxp7b")]
+position = Vector2(-337, -368)
 
-[node name="Staircase" parent="World" unique_id=639177241 instance=ExtResource("5_dxp7b")]
-position = Vector2(880, -8)
+[node name="Staircase3" parent="World/Tower" unique_id=630399102 instance=ExtResource("5_dxp7b")]
+position = Vector2(879, -608)
 
-[node name="Staircase2" parent="World" unique_id=2026593375 instance=ExtResource("5_dxp7b")]
-position = Vector2(-336, -248)
+[node name="Staircase4" parent="World/Tower" unique_id=1581149233 instance=ExtResource("5_dxp7b")]
+position = Vector2(-337, -848)
 
-[node name="Staircase3" parent="World" unique_id=630399102 instance=ExtResource("5_dxp7b")]
-position = Vector2(880, -488)
+[node name="Staircase5" parent="World/Tower" unique_id=977947716 instance=ExtResource("5_dxp7b")]
+position = Vector2(-881, -128)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase4" parent="World" unique_id=1581149233 instance=ExtResource("5_dxp7b")]
-position = Vector2(-336, -728)
+[node name="Staircase6" parent="World/Tower" unique_id=270370764 instance=ExtResource("5_dxp7b")]
+position = Vector2(335, -368)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase5" parent="World" unique_id=977947716 instance=ExtResource("5_dxp7b")]
-position = Vector2(-880, -8)
-scale = Vector2(-1, 1)
+[node name="Staircase7" parent="World/Tower" unique_id=1978876335 instance=ExtResource("5_dxp7b")]
+position = Vector2(-881, -608)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase6" parent="World" unique_id=270370764 instance=ExtResource("5_dxp7b")]
-position = Vector2(336, -248)
-scale = Vector2(-1, 1)
+[node name="Staircase8" parent="World/Tower" unique_id=944536873 instance=ExtResource("5_dxp7b")]
+position = Vector2(335, -848)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase7" parent="World" unique_id=1978876335 instance=ExtResource("5_dxp7b")]
-position = Vector2(-880, -488)
-scale = Vector2(-1, 1)
+[node name="Staircase9" parent="World/Tower" unique_id=1643870936 instance=ExtResource("5_dxp7b")]
+position = Vector2(-881, -1088)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase8" parent="World" unique_id=944536873 instance=ExtResource("5_dxp7b")]
-position = Vector2(336, -728)
-scale = Vector2(-1, 1)
+[node name="Staircase10" parent="World/Tower" unique_id=1435930404 instance=ExtResource("5_dxp7b")]
+position = Vector2(879, -1328)
 
-[node name="Staircase9" parent="World" unique_id=1643870936 instance=ExtResource("5_dxp7b")]
-position = Vector2(-880, -968)
-scale = Vector2(-1, 1)
+[node name="Staircase11" parent="World/Tower" unique_id=1867616661 instance=ExtResource("5_dxp7b")]
+position = Vector2(879, -1808)
 
-[node name="Staircase10" parent="World" unique_id=1435930404 instance=ExtResource("5_dxp7b")]
-position = Vector2(880, -1208)
+[node name="Staircase12" parent="World/Tower" unique_id=930341651 instance=ExtResource("5_dxp7b")]
+position = Vector2(-881, -1568)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase11" parent="World" unique_id=1867616661 instance=ExtResource("5_dxp7b")]
-position = Vector2(880, -1688)
+[node name="Staircase13" parent="World/Tower" unique_id=434981855 instance=ExtResource("5_dxp7b")]
+position = Vector2(-881, -2048)
+rotation = 3.1415927
+scale = Vector2(1, -1)
 
-[node name="Staircase12" parent="World" unique_id=930341651 instance=ExtResource("5_dxp7b")]
-position = Vector2(-880, -1448)
-scale = Vector2(-1, 1)
+[node name="Staircase14" parent="World/Tower" unique_id=526602615 instance=ExtResource("5_dxp7b")]
+position = Vector2(1407, -2288)
 
-[node name="Staircase13" parent="World" unique_id=434981855 instance=ExtResource("5_dxp7b")]
-position = Vector2(-880, -1928)
-scale = Vector2(-1, 1)
+[node name="Staircase15" parent="World/Tower" unique_id=1149683698 instance=ExtResource("5_dxp7b")]
+position = Vector2(1943, -2512)
 
-[node name="Staircase14" parent="World" unique_id=526602615 instance=ExtResource("5_dxp7b")]
-position = Vector2(1408, -2168)
+[node name="GateWheel" parent="World/Tower" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
+position = Vector2(-225, -2216)
 
-[node name="Staircase15" parent="World" unique_id=1149683698 instance=ExtResource("5_dxp7b")]
-position = Vector2(1944, -2392)
-
-[node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
-position = Vector2(-224, -2096)
-
-[node name="CloudLabel" type="Label" parent="World" unique_id=246261936]
-offset_left = 2144.0
-offset_top = -2448.0
-offset_right = 2308.0
-offset_bottom = -2388.0
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel2" type="Label" parent="World" unique_id=1631212246]
-offset_left = 2760.0
-offset_top = -2600.0
-offset_right = 2924.0
-offset_bottom = -2540.0
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel3" type="Label" parent="World" unique_id=1028798087]
-offset_left = 2664.0
-offset_top = -2408.0
-offset_right = 2828.0
-offset_bottom = -2348.0
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel4" type="Label" parent="World" unique_id=1003855585]
-offset_left = 2328.0
-offset_top = -2880.0
-offset_right = 2492.0
-offset_bottom = -2820.0
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel5" type="Label" parent="World" unique_id=873101846]
-offset_left = 2688.0
-offset_top = -2848.0
-offset_right = 2852.0
-offset_bottom = -2788.0
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel6" type="Label" parent="World" unique_id=1848833829]
-offset_left = 2384.0
-offset_top = -2464.0
-offset_right = 2548.0
-offset_bottom = -2404.0
-text = "____
-(__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel7" type="Label" parent="World" unique_id=330530046]
-offset_left = 1704.0
-offset_top = -2120.0
-offset_right = 1868.0
-offset_bottom = -2060.0
-text = "____
-(__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel8" type="Label" parent="World" unique_id=1780836371]
-offset_left = 2136.0
-offset_top = -2808.0
-offset_right = 2300.0
-offset_bottom = -2748.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel9" type="Label" parent="World" unique_id=1082928358]
-offset_left = 2816.0
-offset_top = -2728.0
-offset_right = 2980.0
-offset_bottom = -2668.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel10" type="Label" parent="World" unique_id=847103447]
-offset_left = 2448.0
-offset_top = -2736.0
-offset_right = 2612.0
-offset_bottom = -2655.0
-text = " _____
- _/      )_
-__/    )     )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel22" type="Label" parent="World" unique_id=366291281]
-offset_left = 2080.0
-offset_top = -2944.0
-offset_right = 2244.0
-offset_bottom = -2863.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = " _____
- _/      )_
-__/    )     )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel11" type="Label" parent="World" unique_id=1610179656]
-offset_left = 2720.0
-offset_top = -2304.0
-offset_right = 2884.0
-offset_bottom = -2244.0
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel23" type="Label" parent="World" unique_id=100671517]
-offset_left = 1784.0
-offset_top = -2040.0
-offset_right = 1948.0
-offset_bottom = -1980.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel24" type="Label" parent="World" unique_id=1393945650]
-offset_left = 2488.0
-offset_top = -2216.0
-offset_right = 2652.0
-offset_bottom = -2156.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel32" type="Label" parent="World" unique_id=461668529]
-offset_left = 1560.0
-offset_top = -2536.0
-offset_right = 1724.0
-offset_bottom = -2476.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = " _________
-__/          )_
-/_______________)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel12" type="Label" parent="World" unique_id=1057777048]
-offset_left = 1528.0
-offset_top = -2640.0
-offset_right = 1692.0
-offset_bottom = -2580.0
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel13" type="Label" parent="World" unique_id=491932638]
-offset_left = 1792.0
+[node name="CloudLabel" type="Label" parent="World/Tower" unique_id=246261936]
+offset_left = 2143.0
 offset_top = -2568.0
-offset_right = 1956.0
+offset_right = 2307.0
 offset_bottom = -2508.0
-text = "____
-(__)_)"
+text = " _________
+__/          )_
+/_______________)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel14" type="Label" parent="World" unique_id=1947484053]
-offset_left = 1488.0
-offset_top = -2792.0
-offset_right = 1652.0
-offset_bottom = -2732.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel15" type="Label" parent="World" unique_id=2117174738]
-offset_left = 1872.0
-offset_top = -2736.0
-offset_right = 2036.0
-offset_bottom = -2676.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel25" type="Label" parent="World" unique_id=1604668633]
-offset_left = 1544.0
-offset_top = -2400.0
-offset_right = 1708.0
-offset_bottom = -2340.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel31" type="Label" parent="World" unique_id=38072833]
-offset_left = 1032.0
-offset_top = -2416.0
-offset_right = 1196.0
-offset_bottom = -2356.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel26" type="Label" parent="World" unique_id=244108856]
-offset_left = 1904.0
-offset_top = -2328.0
-offset_right = 2068.0
-offset_bottom = -2268.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel27" type="Label" parent="World" unique_id=1478970535]
-offset_left = 1976.0
-offset_top = -2080.0
-offset_right = 2140.0
-offset_bottom = -2020.0
-text = "__
-(__)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel28" type="Label" parent="World" unique_id=1791918065]
-offset_left = 1456.0
-offset_top = -2024.0
-offset_right = 1620.0
-offset_bottom = -1964.0
-text = "____
-(__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel29" type="Label" parent="World" unique_id=1872982994]
-offset_left = 1712.0
-offset_top = -2840.0
-offset_right = 1876.0
-offset_bottom = -2780.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel30" type="Label" parent="World" unique_id=1902478039]
-offset_left = 2104.0
-offset_top = -2352.0
-offset_right = 2268.0
-offset_bottom = -2292.0
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel33" type="Label" parent="World" unique_id=558216183]
-offset_left = 2472.0
-offset_top = -2576.0
-offset_right = 2636.0
-offset_bottom = -2516.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel34" type="Label" parent="World" unique_id=1722406065]
-offset_left = 2528.0
-offset_top = -2904.0
-offset_right = 2692.0
-offset_bottom = -2844.0
-theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "____
-/__)_)"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloudLabel17" type="Label" parent="World" unique_id=148070988]
-offset_left = 1600.0
+[node name="CloudLabel2" type="Label" parent="World/Tower" unique_id=1631212246]
+offset_left = 2759.0
 offset_top = -2720.0
-offset_right = 1764.0
+offset_right = 2923.0
 offset_bottom = -2660.0
 text = " _________
 __/          )_
@@ -1540,1043 +1252,1347 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel18" type="Label" parent="World" unique_id=52295867]
-offset_left = 712.0
-offset_top = -2368.0
-offset_right = 876.0
-offset_bottom = -2308.0
+[node name="CloudLabel3" type="Label" parent="World/Tower" unique_id=1028798087]
+offset_left = 2663.0
+offset_top = -2528.0
+offset_right = 2827.0
+offset_bottom = -2468.0
 text = "__
 (__)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel19" type="Label" parent="World" unique_id=579300457]
-offset_left = 1304.0
-offset_top = -2424.0
-offset_right = 1468.0
-offset_bottom = -2364.0
+[node name="CloudLabel4" type="Label" parent="World/Tower" unique_id=1003855585]
+offset_left = 2327.0
+offset_top = -3000.0
+offset_right = 2491.0
+offset_bottom = -2940.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel5" type="Label" parent="World/Tower" unique_id=873101846]
+offset_left = 2687.0
+offset_top = -2968.0
+offset_right = 2851.0
+offset_bottom = -2908.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel6" type="Label" parent="World/Tower" unique_id=1848833829]
+offset_left = 2383.0
+offset_top = -2584.0
+offset_right = 2547.0
+offset_bottom = -2524.0
 text = "____
 (__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel20" type="Label" parent="World" unique_id=1979588784]
-offset_left = 1088.0
-offset_top = -2592.0
-offset_right = 1252.0
-offset_bottom = -2532.0
+[node name="CloudLabel7" type="Label" parent="World/Tower" unique_id=330530046]
+offset_left = 1703.0
+offset_top = -2240.0
+offset_right = 1867.0
+offset_bottom = -2180.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel8" type="Label" parent="World/Tower" unique_id=1780836371]
+offset_left = 2135.0
+offset_top = -2928.0
+offset_right = 2299.0
+offset_bottom = -2868.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel21" type="Label" parent="World" unique_id=2092574656]
-offset_left = 480.0
-offset_top = -2488.0
-offset_right = 644.0
-offset_bottom = -2428.0
+[node name="CloudLabel9" type="Label" parent="World/Tower" unique_id=1082928358]
+offset_left = 2815.0
+offset_top = -2848.0
+offset_right = 2979.0
+offset_bottom = -2788.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel16" type="Label" parent="World" unique_id=617460340]
-offset_left = 1896.0
-offset_top = -2816.0
-offset_right = 2060.0
-offset_bottom = -2756.0
+[node name="CloudLabel10" type="Label" parent="World/Tower" unique_id=847103447]
+offset_left = 2447.0
+offset_top = -2856.0
+offset_right = 2611.0
+offset_bottom = -2775.0
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel22" type="Label" parent="World/Tower" unique_id=366291281]
+offset_left = 2079.0
+offset_top = -3064.0
+offset_right = 2243.0
+offset_bottom = -2983.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel11" type="Label" parent="World/Tower" unique_id=1610179656]
+offset_left = 2719.0
+offset_top = -2424.0
+offset_right = 2883.0
+offset_bottom = -2364.0
 text = " _________
 __/          )_
 /_______________)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TorchLabel4" parent="World" unique_id=1607917610 instance=ExtResource("11_scglh")]
-offset_left = -1176.0
-offset_top = -248.0
-offset_right = -1136.0
-offset_bottom = -188.0
-
-[node name="TorchLabel3" parent="World" unique_id=1983199464 instance=ExtResource("11_scglh")]
-offset_left = 1136.0
-offset_top = -248.0
-offset_right = 1176.0
-offset_bottom = -188.0
-
-[node name="TorchLabel5" parent="World" unique_id=2130200516 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -8.0
-offset_right = -624.0
-offset_bottom = 31.0
-
-[node name="TorchLabel6" parent="World" unique_id=1391542673 instance=ExtResource("11_scglh")]
-offset_left = -920.0
-offset_top = -248.0
-offset_right = -880.0
-offset_bottom = -188.0
-
-[node name="TorchLabel7" parent="World" unique_id=512266932 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -248.0
-offset_right = -624.0
-offset_bottom = -188.0
-
-[node name="TorchLabel8" parent="World" unique_id=564977571 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -8.0
-offset_right = -368.0
-offset_bottom = 31.0
-
-[node name="TorchLabel9" parent="World" unique_id=1576127427 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -248.0
-offset_right = 664.0
-offset_bottom = -188.0
-
-[node name="TorchLabel10" parent="World" unique_id=2104516077 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -8.0
-offset_right = 408.0
-offset_bottom = 31.0
-
-[node name="TorchLabel11" parent="World" unique_id=906802362 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -8.0
-offset_right = 664.0
-offset_bottom = 31.0
-
-[node name="TorchLabel12" parent="World" unique_id=1191697260 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -248.0
-offset_right = 920.0
-offset_bottom = -188.0
-
-[node name="TorchLabel13" parent="World" unique_id=1715296412 instance=ExtResource("11_scglh")]
-offset_left = 112.0
-offset_top = -488.0
-offset_right = 152.0
-offset_bottom = -449.0
-
-[node name="TorchLabel14" parent="World" unique_id=1068247459 instance=ExtResource("11_scglh")]
-offset_left = -1176.0
-offset_top = -728.0
-offset_right = -1136.0
-offset_bottom = -668.0
-
-[node name="TorchLabel15" parent="World" unique_id=269595024 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -488.0
-offset_right = -112.0
-offset_bottom = -449.0
-
-[node name="TorchLabel16" parent="World" unique_id=1218902656 instance=ExtResource("11_scglh")]
-offset_left = 1136.0
-offset_top = -728.0
-offset_right = 1176.0
-offset_bottom = -668.0
-
-[node name="TorchLabel17" parent="World" unique_id=275217535 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -488.0
-offset_right = -624.0
-offset_bottom = -449.0
-
-[node name="TorchLabel18" parent="World" unique_id=190137867 instance=ExtResource("11_scglh")]
-offset_left = -920.0
-offset_top = -728.0
-offset_right = -880.0
-offset_bottom = -668.0
-
-[node name="TorchLabel19" parent="World" unique_id=120057859 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -728.0
-offset_right = -624.0
-offset_bottom = -668.0
-
-[node name="TorchLabel20" parent="World" unique_id=1319177191 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -488.0
-offset_right = -368.0
-offset_bottom = -449.0
-
-[node name="TorchLabel21" parent="World" unique_id=1868574786 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -728.0
-offset_right = 664.0
-offset_bottom = -668.0
-
-[node name="TorchLabel22" parent="World" unique_id=1822335863 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -488.0
-offset_right = 408.0
-offset_bottom = -449.0
-
-[node name="TorchLabel23" parent="World" unique_id=577943636 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -488.0
-offset_right = 664.0
-offset_bottom = -449.0
-
-[node name="TorchLabel24" parent="World" unique_id=760167485 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -728.0
-offset_right = 920.0
-offset_bottom = -668.0
-
-[node name="TorchLabel25" parent="World" unique_id=1422408948 instance=ExtResource("11_scglh")]
-offset_left = 112.0
-offset_top = -968.0
-offset_right = 152.0
-offset_bottom = -929.0
-
-[node name="TorchLabel26" parent="World" unique_id=1759839160 instance=ExtResource("11_scglh")]
-offset_left = -1176.0
-offset_top = -1208.0
-offset_right = -1136.0
-offset_bottom = -1148.0
-
-[node name="TorchLabel27" parent="World" unique_id=918632055 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -968.0
-offset_right = -112.0
-offset_bottom = -929.0
-
-[node name="TorchLabel28" parent="World" unique_id=1129931490 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -1207.0
-offset_right = 664.0
-offset_bottom = -1147.0
-
-[node name="TorchLabel29" parent="World" unique_id=1667000917 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -968.0
-offset_right = -624.0
-offset_bottom = -929.0
-
-[node name="TorchLabel30" parent="World" unique_id=1806639509 instance=ExtResource("11_scglh")]
-offset_left = -920.0
-offset_top = -1208.0
-offset_right = -880.0
-offset_bottom = -1148.0
-
-[node name="TorchLabel31" parent="World" unique_id=696745221 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -1208.0
-offset_right = -624.0
-offset_bottom = -1148.0
-
-[node name="TorchLabel32" parent="World" unique_id=990863122 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -968.0
-offset_right = -368.0
-offset_bottom = -929.0
-
-[node name="TorchLabel38" parent="World" unique_id=1653410406 instance=ExtResource("11_scglh")]
-offset_left = -408.0
-offset_top = -1208.0
-offset_right = -368.0
-offset_bottom = -1169.0
-
-[node name="TorchLabel36" parent="World" unique_id=1939071405 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -1207.0
-offset_right = 408.0
-offset_bottom = -1147.0
-
-[node name="TorchLabel37" parent="World" unique_id=1119623581 instance=ExtResource("11_scglh")]
-offset_left = 368.0
-offset_top = -968.0
-offset_right = 408.0
-offset_bottom = -908.0
-
-[node name="TorchLabel39" parent="World" unique_id=1023360798 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -1456.0
-offset_right = -624.0
-offset_bottom = -1396.0
-
-[node name="TorchLabel40" parent="World" unique_id=2027588907 instance=ExtResource("11_scglh")]
-offset_left = 1136.0
-offset_top = -1455.0
-offset_right = 1176.0
-offset_bottom = -1395.0
-
-[node name="TorchLabel45" parent="World" unique_id=1509663937 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -1455.0
-offset_right = 664.0
-offset_bottom = -1395.0
-
-[node name="TorchLabel46" parent="World" unique_id=1138903237 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -1455.0
-offset_right = 920.0
-offset_bottom = -1395.0
-
-[node name="TorchLabel47" parent="World" unique_id=15231871 instance=ExtResource("11_scglh")]
-offset_left = 880.0
-offset_top = -1928.0
-offset_right = 920.0
-offset_bottom = -1868.0
-
-[node name="TorchLabel57" parent="World" unique_id=1065461267 instance=ExtResource("11_scglh")]
-offset_left = -664.0
-offset_top = -1928.0
-offset_right = -624.0
-offset_bottom = -1868.0
-
-[node name="TorchLabel58" parent="World" unique_id=1350768995 instance=ExtResource("11_scglh")]
-offset_left = 1136.0
-offset_top = -1927.0
-offset_right = 1176.0
-offset_bottom = -1867.0
-
-[node name="TorchLabel60" parent="World" unique_id=1871460521 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -1928.0
-offset_right = -112.0
-offset_bottom = -1868.0
-
-[node name="TorchLabel62" parent="World" unique_id=1177577977 instance=ExtResource("11_scglh")]
-offset_left = 104.0
-offset_top = -1928.0
-offset_right = 144.0
-offset_bottom = -1889.0
-
-[node name="TorchLabel63" parent="World" unique_id=863582185 instance=ExtResource("11_scglh")]
-offset_left = 624.0
-offset_top = -1927.0
-offset_right = 664.0
-offset_bottom = -1867.0
-
-[node name="TorchLabel49" parent="World" unique_id=2045648383 instance=ExtResource("11_scglh")]
-offset_left = -1176.0
-offset_top = -1688.0
-offset_right = -1136.0
-offset_bottom = -1628.0
-
-[node name="TorchLabel61" parent="World" unique_id=1393543891 instance=ExtResource("11_scglh")]
-offset_left = -152.0
-offset_top = -2168.0
-offset_right = -112.0
-offset_bottom = -2108.0
-
-[node name="TorchLabel50" parent="World" unique_id=836724377 instance=ExtResource("11_scglh")]
-offset_left = -1176.0
-offset_top = -2168.0
-offset_right = -1136.0
-offset_bottom = -2108.0
-
-[node name="TorchLabel51" parent="World" unique_id=279641111 instance=ExtResource("11_scglh")]
-offset_left = -920.0
-offset_top = -1688.0
-offset_right = -880.0
-offset_bottom = -1628.0
-
-[node name="WindowLabel" parent="World" unique_id=1271239108 instance=ExtResource("12_x4fdv")]
-offset_left = 104.0
-offset_top = -1272.0
-offset_right = 152.0
-offset_bottom = -1146.0
-
-[node name="WindowLabel2" parent="World" unique_id=746128718 instance=ExtResource("12_x4fdv")]
-offset_left = -152.0
-offset_top = -1272.0
-offset_right = -104.0
-offset_bottom = -1146.0
-
-[node name="WindowLabel3" parent="World" unique_id=452386662 instance=ExtResource("12_x4fdv")]
-offset_left = 616.0
-offset_top = -1032.0
-offset_right = 664.0
-offset_bottom = -906.0
-
-[node name="WindowLabel4" parent="World" unique_id=700806870 instance=ExtResource("12_x4fdv")]
-offset_left = 231.99994
-offset_top = -1032.0
-offset_right = 279.99994
-offset_bottom = -906.0
-
-[node name="WindowLabel5" parent="World" unique_id=1459814210 instance=ExtResource("12_x4fdv")]
-offset_left = 1128.0
-offset_top = -1032.0
-offset_right = 1176.0
-offset_bottom = -906.0
-
-[node name="WindowLabel6" parent="World" unique_id=664014907 instance=ExtResource("12_x4fdv")]
-offset_left = 872.0
-offset_top = -1032.0
-offset_right = 920.0
-offset_bottom = -906.0
-
-[node name="WindowLabel7" parent="World" unique_id=492878010 instance=ExtResource("12_x4fdv")]
-offset_left = -152.0
-offset_top = -1512.0
-offset_right = -104.0
-offset_bottom = -1386.0
-
-[node name="WindowLabel8" parent="World" unique_id=1191837544 instance=ExtResource("12_x4fdv")]
-offset_left = -408.0
-offset_top = -1512.0
-offset_right = -360.0
-offset_bottom = -1386.0
-
-[node name="WindowLabel9" parent="World" unique_id=2030869616 instance=ExtResource("12_x4fdv")]
-offset_left = 360.0
-offset_top = -1512.0
-offset_right = 408.0
-offset_bottom = -1386.0
-
-[node name="WindowLabel10" parent="World" unique_id=1899811177 instance=ExtResource("12_x4fdv")]
-offset_left = 104.0
-offset_top = -1512.0
-offset_right = 152.0
-offset_bottom = -1386.0
-
-[node name="WindowLabel19" parent="World" unique_id=601891742 instance=ExtResource("12_x4fdv")]
-offset_top = -1032.0
-offset_bottom = -906.0
-
-[node name="WindowLabel11" parent="World" unique_id=863726555 instance=ExtResource("12_x4fdv")]
-offset_left = -152.0
-offset_top = -1744.0
-offset_right = -104.0
-offset_bottom = -1618.0
-
-[node name="WindowLabel12" parent="World" unique_id=1958640233 instance=ExtResource("12_x4fdv")]
-offset_left = -408.0
-offset_top = -1744.0
-offset_right = -360.0
-offset_bottom = -1618.0
-
-[node name="WindowLabel15" parent="World" unique_id=1613085290 instance=ExtResource("12_x4fdv")]
-offset_left = -664.0
-offset_top = -1744.0
-offset_right = -616.0
-offset_bottom = -1618.0
-
-[node name="WindowLabel13" parent="World" unique_id=931787274 instance=ExtResource("12_x4fdv")]
-offset_left = 360.0
-offset_top = -1744.0
-offset_right = 408.0
-offset_bottom = -1618.0
-
-[node name="WindowLabel17" parent="World" unique_id=1060634672 instance=ExtResource("12_x4fdv")]
-offset_left = -408.0
-offset_top = -1992.0
-offset_right = -360.0
-offset_bottom = -1866.0
-
-[node name="WindowLabel18" parent="World" unique_id=434220504 instance=ExtResource("12_x4fdv")]
-offset_left = 360.0
-offset_top = -1992.0
-offset_right = 408.0
-offset_bottom = -1866.0
-
-[node name="WindowLabel16" parent="World" unique_id=1493476665 instance=ExtResource("12_x4fdv")]
-offset_left = 616.0
-offset_top = -1744.0
-offset_right = 664.0
-offset_bottom = -1618.0
-
-[node name="WindowLabel14" parent="World" unique_id=885260544 instance=ExtResource("12_x4fdv")]
-offset_left = 104.0
-offset_top = -1744.0
-offset_right = 152.0
-offset_bottom = -1618.0
-
-[node name="BoxesLabel" parent="World" unique_id=268311858 instance=ExtResource("13_vanb6")]
-offset_left = 192.0
-offset_top = 80.0
-offset_right = 231.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel13" parent="World" unique_id=818786511 instance=ExtResource("13_vanb6")]
-offset_left = 920.0
-offset_top = -160.0
-offset_right = 959.0
-offset_bottom = -127.0
-
-[node name="BoxesLabel14" parent="World" unique_id=1915227209 instance=ExtResource("13_vanb6")]
-offset_left = 1176.0
-offset_top = -160.0
-offset_right = 1215.0
-offset_bottom = -127.0
-
-[node name="BoxesLabel2" parent="World" unique_id=1086814260 instance=ExtResource("13_vanb6")]
-offset_left = 304.0
-offset_top = 80.0
-offset_right = 343.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel3" parent="World" unique_id=112449178 instance=ExtResource("13_vanb6")]
-offset_left = 352.0
-offset_top = 80.0
-offset_right = 391.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel4" parent="World" unique_id=1689186788 instance=ExtResource("13_vanb6")]
-offset_left = 328.0
-offset_top = 48.0
-offset_right = 367.0
-offset_bottom = 81.0
-
-[node name="BoxesLabel10" parent="World" unique_id=1321471694 instance=ExtResource("13_vanb6")]
-offset_left = -864.0
-offset_top = -160.0
-offset_right = -825.0
-offset_bottom = -127.0
-
-[node name="BoxesLabel11" parent="World" unique_id=940099078 instance=ExtResource("13_vanb6")]
-offset_left = -816.0
-offset_top = -160.0
-offset_right = -777.0
-offset_bottom = -127.0
-
-[node name="BoxesLabel12" parent="World" unique_id=28376959 instance=ExtResource("13_vanb6")]
-offset_left = -840.0
-offset_top = -192.0
-offset_right = -801.0
-offset_bottom = -159.0
-
-[node name="BoxesLabel21" parent="World" unique_id=1597879515 instance=ExtResource("13_vanb6")]
-offset_left = -1272.0
-offset_top = -640.0
-offset_right = -1233.0
-offset_bottom = -607.0
-
-[node name="BoxesLabel32" parent="World" unique_id=500820801 instance=ExtResource("13_vanb6")]
-offset_left = -1232.0
-offset_top = -640.0
-offset_right = -1193.0
-offset_bottom = -607.0
-
-[node name="BoxesLabel22" parent="World" unique_id=1890061915 instance=ExtResource("13_vanb6")]
-offset_left = -1272.0
-offset_top = -704.0
-offset_right = -1233.0
-offset_bottom = -671.0
-
-[node name="BoxesLabel24" parent="World" unique_id=139145914 instance=ExtResource("13_vanb6")]
-offset_left = -1232.0
-offset_top = -160.0
-offset_right = -1193.0
-offset_bottom = -127.0
-
-[node name="BoxesLabel25" parent="World" unique_id=1126051850 instance=ExtResource("13_vanb6")]
-offset_left = -376.0
-offset_top = -400.0
-offset_right = -337.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel29" parent="World" unique_id=1563256058 instance=ExtResource("13_vanb6")]
-offset_left = -336.0
-offset_top = -400.0
-offset_right = -297.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel30" parent="World" unique_id=1047901961 instance=ExtResource("13_vanb6")]
-offset_left = -296.0
-offset_top = -400.0
-offset_right = -257.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel31" parent="World" unique_id=861906024 instance=ExtResource("13_vanb6")]
-offset_left = -256.0
-offset_top = -400.0
-offset_right = -217.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel26" parent="World" unique_id=1597032669 instance=ExtResource("13_vanb6")]
-offset_left = 168.0
-offset_top = -400.0
-offset_right = 207.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel27" parent="World" unique_id=1478087219 instance=ExtResource("13_vanb6")]
-offset_left = 296.0
-offset_top = -400.0
-offset_right = 335.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel28" parent="World" unique_id=197894362 instance=ExtResource("13_vanb6")]
-offset_left = 1240.0
-offset_top = -640.0
-offset_right = 1279.0
-offset_bottom = -607.0
-
-[node name="BoxesLabel23" parent="World" unique_id=1137491718 instance=ExtResource("13_vanb6")]
-offset_left = -1264.0
-offset_top = -672.0
-offset_right = -1225.0
-offset_bottom = -639.0
-
-[node name="BoxesLabel5" parent="World" unique_id=392828382 instance=ExtResource("13_vanb6")]
-offset_left = -104.0
-offset_top = 80.0
-offset_right = -65.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel6" parent="World" unique_id=1680916121 instance=ExtResource("13_vanb6")]
-offset_left = -248.0
-offset_top = 80.0
-offset_right = -209.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel7" parent="World" unique_id=1130605760 instance=ExtResource("13_vanb6")]
-offset_left = -256.0
-offset_top = 48.0
-offset_right = -217.0
-offset_bottom = 81.0
-
-[node name="BoxesLabel8" parent="World" unique_id=1115617846 instance=ExtResource("13_vanb6")]
-offset_left = -264.0
-offset_top = 16.0
-offset_right = -225.0
-offset_bottom = 49.0
-
-[node name="BoxesLabel9" parent="World" unique_id=2055295910 instance=ExtResource("13_vanb6")]
-offset_left = -288.0
-offset_top = 80.0
-offset_right = -249.0
-offset_bottom = 113.0
-
-[node name="BoxesLabel15" parent="World" unique_id=231915167 instance=ExtResource("13_vanb6")]
-offset_left = 24.0
-offset_top = -400.0
-offset_right = 63.0
-offset_bottom = -367.0
-
-[node name="BoxesLabel16" parent="World" unique_id=2119869667 instance=ExtResource("13_vanb6")]
-offset_left = 8.0
-offset_top = -432.0
-offset_right = 47.0
-offset_bottom = -399.0
-
-[node name="BoxesLabel20" parent="World" unique_id=492095746 instance=ExtResource("13_vanb6")]
-offset_left = -40.0
-offset_top = -432.0
-offset_right = -1.0
-offset_bottom = -399.0
-
-[node name="BoxesLabel17" parent="World" unique_id=174461288 instance=ExtResource("13_vanb6")]
-offset_left = -16.0
-offset_top = -464.0
+[node name="CloudLabel23" type="Label" parent="World/Tower" unique_id=100671517]
+offset_left = 1783.0
+offset_top = -2160.0
+offset_right = 1947.0
+offset_bottom = -2100.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel24" type="Label" parent="World/Tower" unique_id=1393945650]
+offset_left = 2487.0
+offset_top = -2336.0
+offset_right = 2651.0
+offset_bottom = -2276.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel32" type="Label" parent="World/Tower" unique_id=461668529]
+offset_left = 1559.0
+offset_top = -2656.0
+offset_right = 1723.0
+offset_bottom = -2596.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel12" type="Label" parent="World/Tower" unique_id=1057777048]
+offset_left = 1527.0
+offset_top = -2760.0
+offset_right = 1691.0
+offset_bottom = -2700.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel13" type="Label" parent="World/Tower" unique_id=491932638]
+offset_left = 1791.0
+offset_top = -2688.0
+offset_right = 1955.0
+offset_bottom = -2628.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel14" type="Label" parent="World/Tower" unique_id=1947484053]
+offset_left = 1487.0
+offset_top = -2912.0
+offset_right = 1651.0
+offset_bottom = -2852.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel15" type="Label" parent="World/Tower" unique_id=2117174738]
+offset_left = 1871.0
+offset_top = -2856.0
+offset_right = 2035.0
+offset_bottom = -2796.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel25" type="Label" parent="World/Tower" unique_id=1604668633]
+offset_left = 1543.0
+offset_top = -2520.0
+offset_right = 1707.0
+offset_bottom = -2460.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel31" type="Label" parent="World/Tower" unique_id=38072833]
+offset_left = 1031.0
+offset_top = -2536.0
+offset_right = 1195.0
+offset_bottom = -2476.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel26" type="Label" parent="World/Tower" unique_id=244108856]
+offset_left = 1903.0
+offset_top = -2448.0
+offset_right = 2067.0
+offset_bottom = -2388.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel27" type="Label" parent="World/Tower" unique_id=1478970535]
+offset_left = 1975.0
+offset_top = -2200.0
+offset_right = 2139.0
+offset_bottom = -2140.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel28" type="Label" parent="World/Tower" unique_id=1791918065]
+offset_left = 1455.0
+offset_top = -2144.0
+offset_right = 1619.0
+offset_bottom = -2084.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel29" type="Label" parent="World/Tower" unique_id=1872982994]
+offset_left = 1711.0
+offset_top = -2960.0
+offset_right = 1875.0
+offset_bottom = -2900.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel30" type="Label" parent="World/Tower" unique_id=1902478039]
+offset_left = 2103.0
+offset_top = -2472.0
+offset_right = 2267.0
+offset_bottom = -2412.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel33" type="Label" parent="World/Tower" unique_id=558216183]
+offset_left = 2471.0
+offset_top = -2696.0
+offset_right = 2635.0
+offset_bottom = -2636.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel34" type="Label" parent="World/Tower" unique_id=1722406065]
+offset_left = 2527.0
+offset_top = -3024.0
+offset_right = 2691.0
+offset_bottom = -2964.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel17" type="Label" parent="World/Tower" unique_id=148070988]
+offset_left = 1599.0
+offset_top = -2840.0
+offset_right = 1763.0
+offset_bottom = -2780.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel18" type="Label" parent="World/Tower" unique_id=52295867]
+offset_left = 711.0
+offset_top = -2488.0
+offset_right = 875.0
+offset_bottom = -2428.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel19" type="Label" parent="World/Tower" unique_id=579300457]
+offset_left = 1303.0
+offset_top = -2544.0
+offset_right = 1467.0
+offset_bottom = -2484.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel20" type="Label" parent="World/Tower" unique_id=1979588784]
+offset_left = 1087.0
+offset_top = -2712.0
+offset_right = 1251.0
+offset_bottom = -2652.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel21" type="Label" parent="World/Tower" unique_id=2092574656]
+offset_left = 479.0
+offset_top = -2608.0
+offset_right = 643.0
+offset_bottom = -2548.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel16" type="Label" parent="World/Tower" unique_id=617460340]
+offset_left = 1895.0
+offset_top = -2936.0
+offset_right = 2059.0
+offset_bottom = -2876.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TorchLabel4" parent="World/Tower" unique_id=1607917610 instance=ExtResource("11_scglh")]
+offset_left = -1177.0
+offset_top = -368.0
+offset_right = -1137.0
+offset_bottom = -308.0
+
+[node name="TorchLabel3" parent="World/Tower" unique_id=1983199464 instance=ExtResource("11_scglh")]
+offset_left = 1135.0
+offset_top = -368.0
+offset_right = 1175.0
+offset_bottom = -308.0
+
+[node name="TorchLabel5" parent="World/Tower" unique_id=2130200516 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -128.0
+offset_right = -625.0
+offset_bottom = -89.0
+
+[node name="TorchLabel6" parent="World/Tower" unique_id=1391542673 instance=ExtResource("11_scglh")]
+offset_left = -921.0
+offset_top = -368.0
+offset_right = -881.0
+offset_bottom = -308.0
+
+[node name="TorchLabel7" parent="World/Tower" unique_id=512266932 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -368.0
+offset_right = -625.0
+offset_bottom = -308.0
+
+[node name="TorchLabel8" parent="World/Tower" unique_id=564977571 instance=ExtResource("11_scglh")]
+offset_left = -409.0
+offset_top = -128.0
+offset_right = -369.0
+offset_bottom = -89.0
+
+[node name="TorchLabel9" parent="World/Tower" unique_id=1576127427 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -368.0
+offset_right = 663.0
+offset_bottom = -308.0
+
+[node name="TorchLabel10" parent="World/Tower" unique_id=2104516077 instance=ExtResource("11_scglh")]
+offset_left = 367.0
+offset_top = -128.0
+offset_right = 407.0
+offset_bottom = -89.0
+
+[node name="TorchLabel11" parent="World/Tower" unique_id=906802362 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -128.0
+offset_right = 663.0
+offset_bottom = -89.0
+
+[node name="TorchLabel12" parent="World/Tower" unique_id=1191697260 instance=ExtResource("11_scglh")]
+offset_left = 879.0
+offset_top = -368.0
+offset_right = 919.0
+offset_bottom = -308.0
+
+[node name="TorchLabel13" parent="World/Tower" unique_id=1715296412 instance=ExtResource("11_scglh")]
+offset_left = 111.0
+offset_top = -608.0
+offset_right = 151.0
+offset_bottom = -569.0
+
+[node name="TorchLabel14" parent="World/Tower" unique_id=1068247459 instance=ExtResource("11_scglh")]
+offset_left = -1177.0
+offset_top = -848.0
+offset_right = -1137.0
+offset_bottom = -788.0
+
+[node name="TorchLabel15" parent="World/Tower" unique_id=269595024 instance=ExtResource("11_scglh")]
+offset_left = -153.0
+offset_top = -608.0
+offset_right = -113.0
+offset_bottom = -569.0
+
+[node name="TorchLabel16" parent="World/Tower" unique_id=1218902656 instance=ExtResource("11_scglh")]
+offset_left = 1135.0
+offset_top = -848.0
+offset_right = 1175.0
+offset_bottom = -788.0
+
+[node name="TorchLabel17" parent="World/Tower" unique_id=275217535 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -608.0
+offset_right = -625.0
+offset_bottom = -569.0
+
+[node name="TorchLabel18" parent="World/Tower" unique_id=190137867 instance=ExtResource("11_scglh")]
+offset_left = -921.0
+offset_top = -848.0
+offset_right = -881.0
+offset_bottom = -788.0
+
+[node name="TorchLabel19" parent="World/Tower" unique_id=120057859 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -848.0
+offset_right = -625.0
+offset_bottom = -788.0
+
+[node name="TorchLabel20" parent="World/Tower" unique_id=1319177191 instance=ExtResource("11_scglh")]
+offset_left = -409.0
+offset_top = -608.0
+offset_right = -369.0
+offset_bottom = -569.0
+
+[node name="TorchLabel21" parent="World/Tower" unique_id=1868574786 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -848.0
+offset_right = 663.0
+offset_bottom = -788.0
+
+[node name="TorchLabel22" parent="World/Tower" unique_id=1822335863 instance=ExtResource("11_scglh")]
+offset_left = 367.0
+offset_top = -608.0
+offset_right = 407.0
+offset_bottom = -569.0
+
+[node name="TorchLabel23" parent="World/Tower" unique_id=577943636 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -608.0
+offset_right = 663.0
+offset_bottom = -569.0
+
+[node name="TorchLabel24" parent="World/Tower" unique_id=760167485 instance=ExtResource("11_scglh")]
+offset_left = 879.0
+offset_top = -848.0
+offset_right = 919.0
+offset_bottom = -788.0
+
+[node name="TorchLabel25" parent="World/Tower" unique_id=1422408948 instance=ExtResource("11_scglh")]
+offset_left = 111.0
+offset_top = -1088.0
+offset_right = 151.0
+offset_bottom = -1049.0
+
+[node name="TorchLabel26" parent="World/Tower" unique_id=1759839160 instance=ExtResource("11_scglh")]
+offset_left = -1177.0
+offset_top = -1328.0
+offset_right = -1137.0
+offset_bottom = -1268.0
+
+[node name="TorchLabel27" parent="World/Tower" unique_id=918632055 instance=ExtResource("11_scglh")]
+offset_left = -153.0
+offset_top = -1088.0
+offset_right = -113.0
+offset_bottom = -1049.0
+
+[node name="TorchLabel28" parent="World/Tower" unique_id=1129931490 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -1327.0
+offset_right = 663.0
+offset_bottom = -1267.0
+
+[node name="TorchLabel29" parent="World/Tower" unique_id=1667000917 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -1088.0
+offset_right = -625.0
+offset_bottom = -1049.0
+
+[node name="TorchLabel30" parent="World/Tower" unique_id=1806639509 instance=ExtResource("11_scglh")]
+offset_left = -921.0
+offset_top = -1328.0
+offset_right = -881.0
+offset_bottom = -1268.0
+
+[node name="TorchLabel31" parent="World/Tower" unique_id=696745221 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -1328.0
+offset_right = -625.0
+offset_bottom = -1268.0
+
+[node name="TorchLabel32" parent="World/Tower" unique_id=990863122 instance=ExtResource("11_scglh")]
+offset_left = -409.0
+offset_top = -1088.0
+offset_right = -369.0
+offset_bottom = -1049.0
+
+[node name="TorchLabel38" parent="World/Tower" unique_id=1653410406 instance=ExtResource("11_scglh")]
+offset_left = -409.0
+offset_top = -1328.0
+offset_right = -369.0
+offset_bottom = -1289.0
+
+[node name="TorchLabel36" parent="World/Tower" unique_id=1939071405 instance=ExtResource("11_scglh")]
+offset_left = 367.0
+offset_top = -1327.0
+offset_right = 407.0
+offset_bottom = -1267.0
+
+[node name="TorchLabel37" parent="World/Tower" unique_id=1119623581 instance=ExtResource("11_scglh")]
+offset_left = 367.0
+offset_top = -1088.0
+offset_right = 407.0
+offset_bottom = -1028.0
+
+[node name="TorchLabel39" parent="World/Tower" unique_id=1023360798 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -1576.0
+offset_right = -625.0
+offset_bottom = -1516.0
+
+[node name="TorchLabel40" parent="World/Tower" unique_id=2027588907 instance=ExtResource("11_scglh")]
+offset_left = 1135.0
+offset_top = -1575.0
+offset_right = 1175.0
+offset_bottom = -1515.0
+
+[node name="TorchLabel45" parent="World/Tower" unique_id=1509663937 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -1575.0
+offset_right = 663.0
+offset_bottom = -1515.0
+
+[node name="TorchLabel46" parent="World/Tower" unique_id=1138903237 instance=ExtResource("11_scglh")]
+offset_left = 879.0
+offset_top = -1575.0
+offset_right = 919.0
+offset_bottom = -1515.0
+
+[node name="TorchLabel47" parent="World/Tower" unique_id=15231871 instance=ExtResource("11_scglh")]
+offset_left = 879.0
+offset_top = -2048.0
+offset_right = 919.0
+offset_bottom = -1988.0
+
+[node name="TorchLabel57" parent="World/Tower" unique_id=1065461267 instance=ExtResource("11_scglh")]
+offset_left = -665.0
+offset_top = -2048.0
+offset_right = -625.0
+offset_bottom = -1988.0
+
+[node name="TorchLabel58" parent="World/Tower" unique_id=1350768995 instance=ExtResource("11_scglh")]
+offset_left = 1135.0
+offset_top = -2047.0
+offset_right = 1175.0
+offset_bottom = -1987.0
+
+[node name="TorchLabel60" parent="World/Tower" unique_id=1871460521 instance=ExtResource("11_scglh")]
+offset_left = -153.0
+offset_top = -2048.0
+offset_right = -113.0
+offset_bottom = -1988.0
+
+[node name="TorchLabel62" parent="World/Tower" unique_id=1177577977 instance=ExtResource("11_scglh")]
+offset_left = 103.0
+offset_top = -2048.0
+offset_right = 143.0
+offset_bottom = -2009.0
+
+[node name="TorchLabel63" parent="World/Tower" unique_id=863582185 instance=ExtResource("11_scglh")]
+offset_left = 623.0
+offset_top = -2047.0
+offset_right = 663.0
+offset_bottom = -1987.0
+
+[node name="TorchLabel49" parent="World/Tower" unique_id=2045648383 instance=ExtResource("11_scglh")]
+offset_left = -1177.0
+offset_top = -1808.0
+offset_right = -1137.0
+offset_bottom = -1748.0
+
+[node name="TorchLabel61" parent="World/Tower" unique_id=1393543891 instance=ExtResource("11_scglh")]
+offset_left = -153.0
+offset_top = -2288.0
+offset_right = -113.0
+offset_bottom = -2228.0
+
+[node name="TorchLabel50" parent="World/Tower" unique_id=836724377 instance=ExtResource("11_scglh")]
+offset_left = -1177.0
+offset_top = -2288.0
+offset_right = -1137.0
+offset_bottom = -2228.0
+
+[node name="TorchLabel51" parent="World/Tower" unique_id=279641111 instance=ExtResource("11_scglh")]
+offset_left = -921.0
+offset_top = -1808.0
+offset_right = -881.0
+offset_bottom = -1748.0
+
+[node name="WindowLabel" parent="World/Tower" unique_id=1271239108 instance=ExtResource("12_x4fdv")]
+offset_left = 103.0
+offset_top = -1392.0
+offset_right = 151.0
+offset_bottom = -1266.0
+
+[node name="WindowLabel2" parent="World/Tower" unique_id=746128718 instance=ExtResource("12_x4fdv")]
+offset_left = -153.0
+offset_top = -1392.0
+offset_right = -105.0
+offset_bottom = -1266.0
+
+[node name="WindowLabel3" parent="World/Tower" unique_id=452386662 instance=ExtResource("12_x4fdv")]
+offset_left = 615.0
+offset_top = -1152.0
+offset_right = 663.0
+offset_bottom = -1026.0
+
+[node name="WindowLabel4" parent="World/Tower" unique_id=700806870 instance=ExtResource("12_x4fdv")]
+offset_left = 230.99994
+offset_top = -1152.0
+offset_right = 278.99994
+offset_bottom = -1026.0
+
+[node name="WindowLabel5" parent="World/Tower" unique_id=1459814210 instance=ExtResource("12_x4fdv")]
+offset_left = 1127.0
+offset_top = -1152.0
+offset_right = 1175.0
+offset_bottom = -1026.0
+
+[node name="WindowLabel6" parent="World/Tower" unique_id=664014907 instance=ExtResource("12_x4fdv")]
+offset_left = 871.0
+offset_top = -1152.0
+offset_right = 919.0
+offset_bottom = -1026.0
+
+[node name="WindowLabel7" parent="World/Tower" unique_id=492878010 instance=ExtResource("12_x4fdv")]
+offset_left = -153.0
+offset_top = -1632.0
+offset_right = -105.0
+offset_bottom = -1506.0
+
+[node name="WindowLabel8" parent="World/Tower" unique_id=1191837544 instance=ExtResource("12_x4fdv")]
+offset_left = -409.0
+offset_top = -1632.0
+offset_right = -361.0
+offset_bottom = -1506.0
+
+[node name="WindowLabel9" parent="World/Tower" unique_id=2030869616 instance=ExtResource("12_x4fdv")]
+offset_left = 359.0
+offset_top = -1632.0
+offset_right = 407.0
+offset_bottom = -1506.0
+
+[node name="WindowLabel10" parent="World/Tower" unique_id=1899811177 instance=ExtResource("12_x4fdv")]
+offset_left = 103.0
+offset_top = -1632.0
+offset_right = 151.0
+offset_bottom = -1506.0
+
+[node name="WindowLabel19" parent="World/Tower" unique_id=601891742 instance=ExtResource("12_x4fdv")]
+offset_left = -25.0
+offset_top = -1152.0
 offset_right = 23.0
-offset_bottom = -431.0
+offset_bottom = -1026.0
 
-[node name="BoxesLabel18" parent="World" unique_id=907321428 instance=ExtResource("13_vanb6")]
-offset_left = -16.0
-offset_top = -400.0
+[node name="WindowLabel11" parent="World/Tower" unique_id=863726555 instance=ExtResource("12_x4fdv")]
+offset_left = -153.0
+offset_top = -1864.0
+offset_right = -105.0
+offset_bottom = -1738.0
+
+[node name="WindowLabel12" parent="World/Tower" unique_id=1958640233 instance=ExtResource("12_x4fdv")]
+offset_left = -409.0
+offset_top = -1864.0
+offset_right = -361.0
+offset_bottom = -1738.0
+
+[node name="WindowLabel15" parent="World/Tower" unique_id=1613085290 instance=ExtResource("12_x4fdv")]
+offset_left = -665.0
+offset_top = -1864.0
+offset_right = -617.0
+offset_bottom = -1738.0
+
+[node name="WindowLabel13" parent="World/Tower" unique_id=931787274 instance=ExtResource("12_x4fdv")]
+offset_left = 359.0
+offset_top = -1864.0
+offset_right = 407.0
+offset_bottom = -1738.0
+
+[node name="WindowLabel17" parent="World/Tower" unique_id=1060634672 instance=ExtResource("12_x4fdv")]
+offset_left = -409.0
+offset_top = -2112.0
+offset_right = -361.0
+offset_bottom = -1986.0
+
+[node name="WindowLabel18" parent="World/Tower" unique_id=434220504 instance=ExtResource("12_x4fdv")]
+offset_left = 359.0
+offset_top = -2112.0
+offset_right = 407.0
+offset_bottom = -1986.0
+
+[node name="WindowLabel16" parent="World/Tower" unique_id=1493476665 instance=ExtResource("12_x4fdv")]
+offset_left = 615.0
+offset_top = -1864.0
+offset_right = 663.0
+offset_bottom = -1738.0
+
+[node name="WindowLabel14" parent="World/Tower" unique_id=885260544 instance=ExtResource("12_x4fdv")]
+offset_left = 103.0
+offset_top = -1864.0
+offset_right = 151.0
+offset_bottom = -1738.0
+
+[node name="BoxesLabel" parent="World/Tower" unique_id=268311858 instance=ExtResource("13_vanb6")]
+offset_left = 191.0
+offset_top = -40.0
+offset_right = 230.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel13" parent="World/Tower" unique_id=818786511 instance=ExtResource("13_vanb6")]
+offset_left = 919.0
+offset_top = -280.0
+offset_right = 958.0
+offset_bottom = -247.0
+
+[node name="BoxesLabel14" parent="World/Tower" unique_id=1915227209 instance=ExtResource("13_vanb6")]
+offset_left = 1175.0
+offset_top = -280.0
+offset_right = 1214.0
+offset_bottom = -247.0
+
+[node name="BoxesLabel2" parent="World/Tower" unique_id=1086814260 instance=ExtResource("13_vanb6")]
+offset_left = 303.0
+offset_top = -40.0
+offset_right = 342.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel3" parent="World/Tower" unique_id=112449178 instance=ExtResource("13_vanb6")]
+offset_left = 351.0
+offset_top = -40.0
+offset_right = 390.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel4" parent="World/Tower" unique_id=1689186788 instance=ExtResource("13_vanb6")]
+offset_left = 327.0
+offset_top = -72.0
+offset_right = 366.0
+offset_bottom = -39.0
+
+[node name="BoxesLabel10" parent="World/Tower" unique_id=1321471694 instance=ExtResource("13_vanb6")]
+offset_left = -865.0
+offset_top = -280.0
+offset_right = -826.0
+offset_bottom = -247.0
+
+[node name="BoxesLabel11" parent="World/Tower" unique_id=940099078 instance=ExtResource("13_vanb6")]
+offset_left = -817.0
+offset_top = -280.0
+offset_right = -778.0
+offset_bottom = -247.0
+
+[node name="BoxesLabel12" parent="World/Tower" unique_id=28376959 instance=ExtResource("13_vanb6")]
+offset_left = -841.0
+offset_top = -312.0
+offset_right = -802.0
+offset_bottom = -279.0
+
+[node name="BoxesLabel21" parent="World/Tower" unique_id=1597879515 instance=ExtResource("13_vanb6")]
+offset_left = -1273.0
+offset_top = -760.0
+offset_right = -1234.0
+offset_bottom = -727.0
+
+[node name="BoxesLabel32" parent="World/Tower" unique_id=500820801 instance=ExtResource("13_vanb6")]
+offset_left = -1233.0
+offset_top = -760.0
+offset_right = -1194.0
+offset_bottom = -727.0
+
+[node name="BoxesLabel22" parent="World/Tower" unique_id=1890061915 instance=ExtResource("13_vanb6")]
+offset_left = -1273.0
+offset_top = -824.0
+offset_right = -1234.0
+offset_bottom = -791.0
+
+[node name="BoxesLabel24" parent="World/Tower" unique_id=139145914 instance=ExtResource("13_vanb6")]
+offset_left = -1233.0
+offset_top = -280.0
+offset_right = -1194.0
+offset_bottom = -247.0
+
+[node name="BoxesLabel25" parent="World/Tower" unique_id=1126051850 instance=ExtResource("13_vanb6")]
+offset_left = -377.0
+offset_top = -520.0
+offset_right = -338.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel29" parent="World/Tower" unique_id=1563256058 instance=ExtResource("13_vanb6")]
+offset_left = -337.0
+offset_top = -520.0
+offset_right = -298.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel30" parent="World/Tower" unique_id=1047901961 instance=ExtResource("13_vanb6")]
+offset_left = -297.0
+offset_top = -520.0
+offset_right = -258.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel31" parent="World/Tower" unique_id=861906024 instance=ExtResource("13_vanb6")]
+offset_left = -257.0
+offset_top = -520.0
+offset_right = -218.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel26" parent="World/Tower" unique_id=1597032669 instance=ExtResource("13_vanb6")]
+offset_left = 167.0
+offset_top = -520.0
+offset_right = 206.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel27" parent="World/Tower" unique_id=1478087219 instance=ExtResource("13_vanb6")]
+offset_left = 295.0
+offset_top = -520.0
+offset_right = 334.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel28" parent="World/Tower" unique_id=197894362 instance=ExtResource("13_vanb6")]
+offset_left = 1239.0
+offset_top = -760.0
+offset_right = 1278.0
+offset_bottom = -727.0
+
+[node name="BoxesLabel23" parent="World/Tower" unique_id=1137491718 instance=ExtResource("13_vanb6")]
+offset_left = -1265.0
+offset_top = -792.0
+offset_right = -1226.0
+offset_bottom = -759.0
+
+[node name="BoxesLabel5" parent="World/Tower" unique_id=392828382 instance=ExtResource("13_vanb6")]
+offset_left = -105.0
+offset_top = -40.0
+offset_right = -66.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel6" parent="World/Tower" unique_id=1680916121 instance=ExtResource("13_vanb6")]
+offset_left = -249.0
+offset_top = -40.0
+offset_right = -210.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel7" parent="World/Tower" unique_id=1130605760 instance=ExtResource("13_vanb6")]
+offset_left = -257.0
+offset_top = -72.0
+offset_right = -218.0
+offset_bottom = -39.0
+
+[node name="BoxesLabel8" parent="World/Tower" unique_id=1115617846 instance=ExtResource("13_vanb6")]
+offset_left = -265.0
+offset_top = -104.0
+offset_right = -226.0
+offset_bottom = -71.0
+
+[node name="BoxesLabel9" parent="World/Tower" unique_id=2055295910 instance=ExtResource("13_vanb6")]
+offset_left = -289.0
+offset_top = -40.0
+offset_right = -250.0
+offset_bottom = -7.0
+
+[node name="BoxesLabel15" parent="World/Tower" unique_id=231915167 instance=ExtResource("13_vanb6")]
+offset_left = 23.0
+offset_top = -520.0
+offset_right = 62.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel16" parent="World/Tower" unique_id=2119869667 instance=ExtResource("13_vanb6")]
+offset_left = 7.0
+offset_top = -552.0
+offset_right = 46.0
+offset_bottom = -519.0
+
+[node name="BoxesLabel20" parent="World/Tower" unique_id=492095746 instance=ExtResource("13_vanb6")]
+offset_left = -41.0
+offset_top = -552.0
+offset_right = -2.0
+offset_bottom = -519.0
+
+[node name="BoxesLabel17" parent="World/Tower" unique_id=174461288 instance=ExtResource("13_vanb6")]
+offset_left = -17.0
+offset_top = -584.0
+offset_right = 22.0
+offset_bottom = -551.0
+
+[node name="BoxesLabel18" parent="World/Tower" unique_id=907321428 instance=ExtResource("13_vanb6")]
+offset_left = -17.0
+offset_top = -520.0
+offset_right = 22.0
+offset_bottom = -487.0
+
+[node name="BoxesLabel19" parent="World/Tower" unique_id=679258793 instance=ExtResource("13_vanb6")]
+offset_left = -57.0
+offset_top = -520.0
+offset_right = -18.0
+offset_bottom = -487.0
+
+[node name="TableLabel" parent="World/Tower" unique_id=432673667 instance=ExtResource("15_dmp7y")]
+offset_left = 591.0
+offset_top = -1000.0
+offset_right = 687.0
+offset_bottom = -967.0
+
+[node name="TableLabel2" parent="World/Tower" unique_id=919246289 instance=ExtResource("15_dmp7y")]
+offset_left = 1103.0
+offset_top = -1000.0
+offset_right = 1199.0
+offset_bottom = -967.0
+
+[node name="TableLabel4" parent="World/Tower" unique_id=1321423216 instance=ExtResource("15_dmp7y")]
+offset_left = -945.0
+offset_top = -1240.0
+offset_right = -849.0
+offset_bottom = -1207.0
+
+[node name="TableLabel5" parent="World/Tower" unique_id=1718716028 instance=ExtResource("15_dmp7y")]
+offset_left = -561.0
+offset_top = -1240.0
+offset_right = -465.0
+offset_bottom = -1207.0
+
+[node name="VaseLabel" parent="World/Tower" unique_id=2135736928 instance=ExtResource("15_d8fp6")]
+offset_left = 743.0
+offset_top = -768.0
+offset_right = 783.0
+offset_bottom = -729.0
+
+[node name="VaseLabel2" parent="World/Tower" unique_id=602083209 instance=ExtResource("15_d8fp6")]
+offset_left = -785.0
+offset_top = -768.0
+offset_right = -745.0
+offset_bottom = -729.0
+
+[node name="VaseLabel3" parent="World/Tower" unique_id=1211403480 instance=ExtResource("15_d8fp6")]
+offset_left = 879.0
+offset_top = -1008.0
+offset_right = 919.0
+offset_bottom = -969.0
+
+[node name="VaseLabel4" parent="World/Tower" unique_id=346230094 instance=ExtResource("15_d8fp6")]
+offset_left = 495.0
+offset_top = -1248.0
+offset_right = 535.0
+offset_bottom = -1209.0
+
+[node name="VaseLabel14" parent="World/Tower" unique_id=449348616 instance=ExtResource("15_d8fp6")]
+offset_left = 111.0
+offset_top = -1248.0
+offset_right = 151.0
+offset_bottom = -1209.0
+
+[node name="VaseLabel15" parent="World/Tower" unique_id=1174560050 instance=ExtResource("15_d8fp6")]
+offset_left = -17.0
+offset_top = -1488.0
 offset_right = 23.0
-offset_bottom = -367.0
+offset_bottom = -1449.0
 
-[node name="BoxesLabel19" parent="World" unique_id=679258793 instance=ExtResource("13_vanb6")]
-offset_left = -56.0
-offset_top = -400.0
-offset_right = -17.0
-offset_bottom = -367.0
+[node name="VaseLabel5" parent="World/Tower" unique_id=722151316 instance=ExtResource("15_d8fp6")]
+offset_left = 751.0
+offset_top = -1488.0
+offset_right = 791.0
+offset_bottom = -1449.0
 
-[node name="TableLabel" parent="World" unique_id=432673667 instance=ExtResource("15_dmp7y")]
-offset_left = 592.0
-offset_top = -880.0
-offset_right = 688.0
-offset_bottom = -847.0
+[node name="VaseLabel6" parent="World/Tower" unique_id=16351564 instance=ExtResource("15_d8fp6")]
+offset_left = 783.0
+offset_top = -1488.0
+offset_right = 823.0
+offset_bottom = -1449.0
 
-[node name="TableLabel2" parent="World" unique_id=919246289 instance=ExtResource("15_dmp7y")]
-offset_left = 1104.0
-offset_top = -880.0
-offset_right = 1200.0
-offset_bottom = -847.0
+[node name="VaseLabel7" parent="World/Tower" unique_id=1946837827 instance=ExtResource("15_d8fp6")]
+offset_left = 719.0
+offset_top = -1488.0
+offset_right = 759.0
+offset_bottom = -1449.0
 
-[node name="TableLabel4" parent="World" unique_id=1321423216 instance=ExtResource("15_dmp7y")]
-offset_left = -944.0
-offset_top = -1120.0
-offset_right = -848.0
-offset_bottom = -1087.0
+[node name="VaseLabel8" parent="World/Tower" unique_id=995199903 instance=ExtResource("15_d8fp6")]
+offset_left = -17.0
+offset_top = -1968.0
+offset_right = 23.0
+offset_bottom = -1929.0
 
-[node name="TableLabel5" parent="World" unique_id=1718716028 instance=ExtResource("15_dmp7y")]
-offset_left = -560.0
-offset_top = -1120.0
-offset_right = -464.0
-offset_bottom = -1087.0
+[node name="VaseLabel9" parent="World/Tower" unique_id=1206204302 instance=ExtResource("15_d8fp6")]
+offset_left = 15.0
+offset_top = -1968.0
+offset_right = 55.0
+offset_bottom = -1929.0
 
-[node name="VaseLabel" parent="World" unique_id=2135736928 instance=ExtResource("15_d8fp6")]
-offset_left = 744.0
-offset_top = -648.0
-offset_right = 784.0
-offset_bottom = -609.0
+[node name="VaseLabel10" parent="World/Tower" unique_id=1240489545 instance=ExtResource("15_d8fp6")]
+offset_left = -49.0
+offset_top = -1968.0
+offset_right = -9.0
+offset_bottom = -1929.0
 
-[node name="VaseLabel2" parent="World" unique_id=602083209 instance=ExtResource("15_d8fp6")]
-offset_left = -784.0
-offset_top = -648.0
-offset_right = -744.0
-offset_bottom = -609.0
+[node name="VaseLabel11" parent="World/Tower" unique_id=1049578546 instance=ExtResource("15_d8fp6")]
+offset_left = 751.0
+offset_top = -1968.0
+offset_right = 791.0
+offset_bottom = -1929.0
 
-[node name="VaseLabel3" parent="World" unique_id=1211403480 instance=ExtResource("15_d8fp6")]
-offset_left = 880.0
-offset_top = -888.0
-offset_right = 920.0
-offset_bottom = -849.0
+[node name="VaseLabel12" parent="World/Tower" unique_id=418943420 instance=ExtResource("15_d8fp6")]
+offset_left = 783.0
+offset_top = -1968.0
+offset_right = 823.0
+offset_bottom = -1929.0
 
-[node name="VaseLabel4" parent="World" unique_id=346230094 instance=ExtResource("15_d8fp6")]
-offset_left = 496.0
-offset_top = -1128.0
-offset_right = 536.0
-offset_bottom = -1089.0
+[node name="VaseLabel13" parent="World/Tower" unique_id=294293465 instance=ExtResource("15_d8fp6")]
+offset_left = 719.0
+offset_top = -1968.0
+offset_right = 759.0
+offset_bottom = -1929.0
 
-[node name="VaseLabel14" parent="World" unique_id=449348616 instance=ExtResource("15_d8fp6")]
-offset_left = 112.0
-offset_top = -1128.0
-offset_right = 152.0
-offset_bottom = -1089.0
+[node name="ShelvesLabel" parent="World/Tower" unique_id=2015285181 instance=ExtResource("16_u4pql")]
+offset_left = 479.0
+offset_top = -2024.0
+offset_right = 547.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel15" parent="World" unique_id=1174560050 instance=ExtResource("15_d8fp6")]
-offset_left = -16.0
-offset_top = -1368.0
-offset_right = 24.0
-offset_bottom = -1329.0
+[node name="ShelvesLabel2" parent="World/Tower" unique_id=1524917884 instance=ExtResource("16_u4pql")]
+offset_left = 535.0
+offset_top = -2024.0
+offset_right = 603.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel5" parent="World" unique_id=722151316 instance=ExtResource("15_d8fp6")]
-offset_left = 752.0
-offset_top = -1368.0
-offset_right = 792.0
-offset_bottom = -1329.0
+[node name="ShelvesLabel3" parent="World/Tower" unique_id=631328335 instance=ExtResource("16_u4pql")]
+offset_left = 423.0
+offset_top = -2024.0
+offset_right = 491.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel6" parent="World" unique_id=16351564 instance=ExtResource("15_d8fp6")]
-offset_left = 784.0
-offset_top = -1368.0
-offset_right = 824.0
-offset_bottom = -1329.0
+[node name="ShelvesLabel4" parent="World/Tower" unique_id=2002704772 instance=ExtResource("16_u4pql")]
+offset_left = -289.0
+offset_top = -2024.0
+offset_right = -221.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel7" parent="World" unique_id=1946837827 instance=ExtResource("15_d8fp6")]
-offset_left = 720.0
-offset_top = -1368.0
-offset_right = 760.0
-offset_bottom = -1329.0
+[node name="ShelvesLabel5" parent="World/Tower" unique_id=542468838 instance=ExtResource("16_u4pql")]
+offset_left = -233.0
+offset_top = -2024.0
+offset_right = -165.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel8" parent="World" unique_id=995199903 instance=ExtResource("15_d8fp6")]
-offset_left = -16.0
-offset_top = -1848.0
-offset_right = 24.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel6" parent="World/Tower" unique_id=666296891 instance=ExtResource("16_u4pql")]
+offset_left = -345.0
+offset_top = -2024.0
+offset_right = -277.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel9" parent="World" unique_id=1206204302 instance=ExtResource("15_d8fp6")]
-offset_left = 16.0
-offset_top = -1848.0
-offset_right = 56.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel16" parent="World/Tower" unique_id=454843645 instance=ExtResource("16_u4pql")]
+offset_left = -545.0
+offset_top = -2024.0
+offset_right = -477.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel10" parent="World" unique_id=1240489545 instance=ExtResource("15_d8fp6")]
-offset_left = -48.0
-offset_top = -1848.0
-offset_right = -8.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel17" parent="World/Tower" unique_id=1658026675 instance=ExtResource("16_u4pql")]
+offset_left = -489.0
+offset_top = -2024.0
+offset_right = -421.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel11" parent="World" unique_id=1049578546 instance=ExtResource("15_d8fp6")]
-offset_left = 752.0
-offset_top = -1848.0
-offset_right = 792.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel18" parent="World/Tower" unique_id=1228223771 instance=ExtResource("16_u4pql")]
+offset_left = -601.0
+offset_top = -2024.0
+offset_right = -533.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel12" parent="World" unique_id=418943420 instance=ExtResource("15_d8fp6")]
-offset_left = 784.0
-offset_top = -1848.0
-offset_right = 824.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel19" parent="World/Tower" unique_id=920879924 instance=ExtResource("16_u4pql")]
+offset_left = 223.0
+offset_top = -2024.0
+offset_right = 291.0
+offset_bottom = -1926.0
 
-[node name="VaseLabel13" parent="World" unique_id=294293465 instance=ExtResource("15_d8fp6")]
-offset_left = 720.0
-offset_top = -1848.0
-offset_right = 760.0
-offset_bottom = -1809.0
+[node name="ShelvesLabel20" parent="World/Tower" unique_id=1576509813 instance=ExtResource("16_u4pql")]
+offset_left = 279.0
+offset_top = -2024.0
+offset_right = 347.0
+offset_bottom = -1926.0
 
-[node name="ShelvesLabel" parent="World" unique_id=2015285181 instance=ExtResource("16_u4pql")]
-offset_left = 480.0
-offset_top = -1904.0
-offset_right = 548.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel21" parent="World/Tower" unique_id=1618574849 instance=ExtResource("16_u4pql")]
+offset_left = 167.0
+offset_top = -2024.0
+offset_right = 235.0
+offset_bottom = -1926.0
 
-[node name="ShelvesLabel2" parent="World" unique_id=1524917884 instance=ExtResource("16_u4pql")]
-offset_left = 536.0
-offset_top = -1904.0
-offset_right = 604.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel7" parent="World/Tower" unique_id=986151881 instance=ExtResource("16_u4pql")]
+offset_left = -513.0
+offset_top = -1064.0
+offset_right = -445.0
+offset_bottom = -966.0
 
-[node name="ShelvesLabel3" parent="World" unique_id=631328335 instance=ExtResource("16_u4pql")]
-offset_left = 424.0
-offset_top = -1904.0
-offset_right = 492.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel22" parent="World/Tower" unique_id=945390479 instance=ExtResource("16_u4pql")]
+offset_left = -289.0
+offset_top = -1064.0
+offset_right = -221.0
+offset_bottom = -966.0
 
-[node name="ShelvesLabel4" parent="World" unique_id=2002704772 instance=ExtResource("16_u4pql")]
-offset_left = -288.0
-offset_top = -1904.0
-offset_right = -220.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel23" parent="World/Tower" unique_id=435679857 instance=ExtResource("16_u4pql")]
+offset_left = -225.0
+offset_top = -1064.0
+offset_right = -157.0
+offset_bottom = -966.0
 
-[node name="ShelvesLabel5" parent="World" unique_id=542468838 instance=ExtResource("16_u4pql")]
-offset_left = -232.0
-offset_top = -1904.0
-offset_right = -164.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel24" parent="World/Tower" unique_id=1529465250 instance=ExtResource("16_u4pql")]
+offset_left = -353.0
+offset_top = -1064.0
+offset_right = -285.0
+offset_bottom = -966.0
 
-[node name="ShelvesLabel6" parent="World" unique_id=666296891 instance=ExtResource("16_u4pql")]
-offset_left = -344.0
-offset_top = -1904.0
-offset_right = -276.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel10" parent="World/Tower" unique_id=278750392 instance=ExtResource("16_u4pql")]
+offset_left = -289.0
+offset_top = -1304.0
+offset_right = -221.0
+offset_bottom = -1206.0
 
-[node name="ShelvesLabel16" parent="World" unique_id=454843645 instance=ExtResource("16_u4pql")]
-offset_left = -544.0
-offset_top = -1904.0
-offset_right = -476.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel11" parent="World/Tower" unique_id=1166384394 instance=ExtResource("16_u4pql")]
+offset_left = 223.0
+offset_top = -1304.0
+offset_right = 291.0
+offset_bottom = -1206.0
 
-[node name="ShelvesLabel17" parent="World" unique_id=1658026675 instance=ExtResource("16_u4pql")]
-offset_left = -488.0
-offset_top = -1904.0
-offset_right = -420.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel8" parent="World/Tower" unique_id=2018384321 instance=ExtResource("16_u4pql")]
+offset_left = -1217.0
+offset_top = -1304.0
+offset_right = -1149.0
+offset_bottom = -1206.0
 
-[node name="ShelvesLabel18" parent="World" unique_id=1228223771 instance=ExtResource("16_u4pql")]
-offset_left = -600.0
-offset_top = -1904.0
-offset_right = -532.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel9" parent="World/Tower" unique_id=383523672 instance=ExtResource("16_u4pql")]
+offset_left = -1281.0
+offset_top = -1304.0
+offset_right = -1213.0
+offset_bottom = -1206.0
 
-[node name="ShelvesLabel19" parent="World" unique_id=920879924 instance=ExtResource("16_u4pql")]
-offset_left = 224.0
-offset_top = -1904.0
-offset_right = 292.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel25" parent="World/Tower" unique_id=1081188625 instance=ExtResource("16_u4pql")]
+offset_left = -1217.0
+offset_top = -1784.0
+offset_right = -1149.0
+offset_bottom = -1686.0
 
-[node name="ShelvesLabel20" parent="World" unique_id=1576509813 instance=ExtResource("16_u4pql")]
-offset_left = 280.0
-offset_top = -1904.0
-offset_right = 348.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel26" parent="World/Tower" unique_id=1478083267 instance=ExtResource("16_u4pql")]
+offset_left = -1281.0
+offset_top = -1784.0
+offset_right = -1213.0
+offset_bottom = -1686.0
 
-[node name="ShelvesLabel21" parent="World" unique_id=1618574849 instance=ExtResource("16_u4pql")]
-offset_left = 168.0
-offset_top = -1904.0
-offset_right = 236.0
-offset_bottom = -1806.0
+[node name="ShelvesLabel27" parent="World/Tower" unique_id=1631036449 instance=ExtResource("16_u4pql")]
+offset_left = -1089.0
+offset_top = -1784.0
+offset_right = -1021.0
+offset_bottom = -1686.0
 
-[node name="ShelvesLabel7" parent="World" unique_id=986151881 instance=ExtResource("16_u4pql")]
-offset_left = -512.0
-offset_top = -944.0
-offset_right = -444.0
-offset_bottom = -846.0
+[node name="ShelvesLabel28" parent="World/Tower" unique_id=345717907 instance=ExtResource("16_u4pql")]
+offset_left = -1153.0
+offset_top = -1784.0
+offset_right = -1085.0
+offset_bottom = -1686.0
 
-[node name="ShelvesLabel22" parent="World" unique_id=945390479 instance=ExtResource("16_u4pql")]
-offset_left = -288.0
-offset_top = -944.0
-offset_right = -220.0
-offset_bottom = -846.0
+[node name="ShelvesLabel30" parent="World/Tower" unique_id=1451342815 instance=ExtResource("16_u4pql")]
+offset_left = -1025.0
+offset_top = -1784.0
+offset_right = -957.0
+offset_bottom = -1686.0
 
-[node name="ShelvesLabel23" parent="World" unique_id=435679857 instance=ExtResource("16_u4pql")]
-offset_left = -224.0
-offset_top = -944.0
-offset_right = -156.0
-offset_bottom = -846.0
+[node name="ShelvesLabel12" parent="World/Tower" unique_id=16139628 instance=ExtResource("16_u4pql")]
+offset_left = 1215.0
+offset_top = -1544.0
+offset_right = 1283.0
+offset_bottom = -1446.0
 
-[node name="ShelvesLabel24" parent="World" unique_id=1529465250 instance=ExtResource("16_u4pql")]
-offset_left = -352.0
-offset_top = -944.0
-offset_right = -284.0
-offset_bottom = -846.0
+[node name="ShelvesLabel13" parent="World/Tower" unique_id=119087826 instance=ExtResource("16_u4pql")]
+offset_left = 1151.0
+offset_top = -1544.0
+offset_right = 1219.0
+offset_bottom = -1446.0
 
-[node name="ShelvesLabel10" parent="World" unique_id=278750392 instance=ExtResource("16_u4pql")]
-offset_left = -288.0
-offset_top = -1184.0
-offset_right = -220.0
-offset_bottom = -1086.0
+[node name="ShelvesLabel14" parent="World/Tower" unique_id=683614889 instance=ExtResource("16_u4pql")]
+offset_left = 1215.0
+offset_top = -2024.0
+offset_right = 1283.0
+offset_bottom = -1926.0
 
-[node name="ShelvesLabel11" parent="World" unique_id=1166384394 instance=ExtResource("16_u4pql")]
-offset_left = 224.0
-offset_top = -1184.0
-offset_right = 292.0
-offset_bottom = -1086.0
+[node name="ShelvesLabel15" parent="World/Tower" unique_id=996513407 instance=ExtResource("16_u4pql")]
+offset_left = 1151.0
+offset_top = -2024.0
+offset_right = 1219.0
+offset_bottom = -1926.0
 
-[node name="ShelvesLabel8" parent="World" unique_id=2018384321 instance=ExtResource("16_u4pql")]
-offset_left = -1216.0
-offset_top = -1184.0
-offset_right = -1148.0
-offset_bottom = -1086.0
-
-[node name="ShelvesLabel9" parent="World" unique_id=383523672 instance=ExtResource("16_u4pql")]
-offset_left = -1280.0
-offset_top = -1184.0
-offset_right = -1212.0
-offset_bottom = -1086.0
-
-[node name="ShelvesLabel25" parent="World" unique_id=1081188625 instance=ExtResource("16_u4pql")]
-offset_left = -1216.0
-offset_top = -1664.0
-offset_right = -1148.0
-offset_bottom = -1566.0
-
-[node name="ShelvesLabel26" parent="World" unique_id=1478083267 instance=ExtResource("16_u4pql")]
-offset_left = -1280.0
-offset_top = -1664.0
-offset_right = -1212.0
-offset_bottom = -1566.0
-
-[node name="ShelvesLabel27" parent="World" unique_id=1631036449 instance=ExtResource("16_u4pql")]
-offset_left = -1088.0
-offset_top = -1664.0
-offset_right = -1020.0
-offset_bottom = -1566.0
-
-[node name="ShelvesLabel28" parent="World" unique_id=345717907 instance=ExtResource("16_u4pql")]
-offset_left = -1152.0
-offset_top = -1664.0
-offset_right = -1084.0
-offset_bottom = -1566.0
-
-[node name="ShelvesLabel30" parent="World" unique_id=1451342815 instance=ExtResource("16_u4pql")]
-offset_left = -1024.0
-offset_top = -1664.0
-offset_right = -956.0
-offset_bottom = -1566.0
-
-[node name="ShelvesLabel12" parent="World" unique_id=16139628 instance=ExtResource("16_u4pql")]
-offset_left = 1216.0
-offset_top = -1424.0
-offset_right = 1284.0
-offset_bottom = -1326.0
-
-[node name="ShelvesLabel13" parent="World" unique_id=119087826 instance=ExtResource("16_u4pql")]
-offset_left = 1152.0
-offset_top = -1424.0
-offset_right = 1220.0
-offset_bottom = -1326.0
-
-[node name="ShelvesLabel14" parent="World" unique_id=683614889 instance=ExtResource("16_u4pql")]
-offset_left = 1216.0
-offset_top = -1904.0
-offset_right = 1284.0
-offset_bottom = -1806.0
-
-[node name="ShelvesLabel15" parent="World" unique_id=996513407 instance=ExtResource("16_u4pql")]
-offset_left = 1152.0
-offset_top = -1904.0
-offset_right = 1220.0
-offset_bottom = -1806.0
-
-[node name="JumpInputHint" parent="World" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+[node name="JumpInputHint" parent="World/Tower" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true
 visible = false
-offset_top = -1233.0
-offset_bottom = -1185.0
+offset_left = -25.0
+offset_top = -1353.0
+offset_right = 23.0
+offset_bottom = -1305.0
 size_flags_horizontal = 3
 action_name = &"jump"
-input_icon_mapper = NodePath("../../InputIconMapper")
+input_icon_mapper = NodePath("../../../InputIconMapper")
 
-[node name="InteractInputHint" parent="World" unique_id=1993422584 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+[node name="InteractInputHint" parent="World/Tower" unique_id=1993422584 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true
 visible = false
-offset_left = -248.0
-offset_top = -2200.0
-offset_right = -200.0
-offset_bottom = -2152.0
+offset_left = -249.0
+offset_top = -2320.0
+offset_right = -201.0
+offset_bottom = -2272.0
 size_flags_horizontal = 3
 action_name = &"interact"
-input_icon_mapper = NodePath("../../InputIconMapper")
+input_icon_mapper = NodePath("../../../InputIconMapper")
 
-[node name="MoveRightInputHint" parent="World" unique_id=1792660303 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+[node name="MoveRightInputHint" parent="World/Tower" unique_id=1792660303 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true
 visible = false
-offset_left = 104.0
-offset_right = 152.0
+offset_left = 103.0
+offset_top = -144.0
+offset_right = 151.0
+offset_bottom = -96.0
 size_flags_horizontal = 3
 action_name = &"move_right"
-input_icon_mapper = NodePath("../../InputIconMapper")
+input_icon_mapper = NodePath("../../../InputIconMapper")
 metadata/_edit_use_anchors_ = true
 
-[node name="MoveLeftInputHint" parent="World" unique_id=680314044 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
+[node name="MoveLeftInputHint" parent="World/Tower" unique_id=680314044 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true
 visible = false
-offset_left = -152.0
-offset_right = -104.0
+offset_left = -153.0
+offset_top = -144.0
+offset_right = -105.0
+offset_bottom = -96.0
 size_flags_horizontal = 3
 action_name = &"move_left"
-input_icon_mapper = NodePath("../../InputIconMapper")
+input_icon_mapper = NodePath("../../../InputIconMapper")
 metadata/_edit_use_anchors_ = true
 
-[node name="StartingArea2D" type="Area2D" parent="World" unique_id=444006209]
+[node name="StartingArea2D" type="Area2D" parent="World/Tower" unique_id=444006209]
+position = Vector2(-1, -120)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/StartingArea2D" unique_id=1397870190]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower/StartingArea2D" unique_id=1397870190]
 shape = SubResource("RectangleShape2D_1cqto")
 
-[node name="FirstJumpArea2D" type="Area2D" parent="World" unique_id=548520782]
-position = Vector2(0, -1200)
+[node name="FirstJumpArea2D" type="Area2D" parent="World/Tower" unique_id=548520782]
+position = Vector2(-1, -1320)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/FirstJumpArea2D" unique_id=290872068]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower/FirstJumpArea2D" unique_id=290872068]
 shape = SubResource("RectangleShape2D_1cqto")
 
-[node name="FirstCheckpointArea2D2" type="Area2D" parent="World" unique_id=1464356844]
-position = Vector2(0, -960)
+[node name="FirstCheckpointArea2D2" type="Area2D" parent="World/Tower" unique_id=1464356844]
+position = Vector2(-1, -1080)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/FirstCheckpointArea2D2" unique_id=1064454585]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower/FirstCheckpointArea2D2" unique_id=1064454585]
 shape = SubResource("RectangleShape2D_1cqto")
 
-[node name="FirstCheckpointMarker2D" type="Marker2D" parent="World/FirstCheckpointArea2D2" unique_id=1396458133]
+[node name="FirstCheckpointMarker2D" type="Marker2D" parent="World/Tower/FirstCheckpointArea2D2" unique_id=1396458133]
 unique_name_in_owner = true
 position = Vector2(1, 67)
 
-[node name="SecondCheckpointArea2D" type="Area2D" parent="World" unique_id=1165194653]
-position = Vector2(875, -1437)
+[node name="SecondCheckpointArea2D" type="Area2D" parent="World/Tower" unique_id=1165194653]
+position = Vector2(874, -1557)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/SecondCheckpointArea2D" unique_id=772481990]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower/SecondCheckpointArea2D" unique_id=772481990]
 shape = SubResource("RectangleShape2D_migjm")
 
-[node name="SecondCheckpointMarker2D" type="Marker2D" parent="World/SecondCheckpointArea2D" unique_id=1444854837]
+[node name="SecondCheckpointMarker2D" type="Marker2D" parent="World/Tower/SecondCheckpointArea2D" unique_id=1444854837]
 unique_name_in_owner = true
 position = Vector2(249, 69)
 
-[node name="ThirdCheckpointArea2D" type="Area2D" parent="World" unique_id=1932778533]
-position = Vector2(875, -1917)
+[node name="ThirdCheckpointArea2D" type="Area2D" parent="World/Tower" unique_id=1932778533]
+position = Vector2(874, -2037)
 collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ThirdCheckpointArea2D" unique_id=433974236]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Tower/ThirdCheckpointArea2D" unique_id=433974236]
 shape = SubResource("RectangleShape2D_migjm")
 
-[node name="ThirdCheckpointMarker2D" type="Marker2D" parent="World/ThirdCheckpointArea2D" unique_id=1524508025]
+[node name="ThirdCheckpointMarker2D" type="Marker2D" parent="World/Tower/ThirdCheckpointArea2D" unique_id=1524508025]
 unique_name_in_owner = true
 position = Vector2(249, 69)
+
+[node name="WinArea2D" parent="World" unique_id=1669638238 instance=ExtResource("7_nnhhk")]
+position = Vector2(2240, -2552)
+
+[node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
+unique_name_in_owner = true
+position = Vector2(448, 728)
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 unique_name_in_owner = true
 position = Vector2(0, 80)
 
+[connection signal="player_entered" from="World/Tower/GateWheel" to="." method="_on_gate_wheel_player_entered"]
+[connection signal="player_exited" from="World/Tower/GateWheel" to="." method="_on_gate_wheel_player_exited"]
+[connection signal="wheel_turned" from="World/Tower/GateWheel" to="." method="_on_gate_wheel_wheel_turned"]
+[connection signal="body_entered" from="World/Tower/StartingArea2D" to="." method="_on_starting_area_2d_body_entered"]
+[connection signal="body_exited" from="World/Tower/StartingArea2D" to="." method="_on_starting_area_2d_body_exited"]
+[connection signal="body_entered" from="World/Tower/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_entered"]
+[connection signal="body_exited" from="World/Tower/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_exited"]
+[connection signal="body_entered" from="World/Tower/FirstCheckpointArea2D2" to="." method="_on_first_checkpoint_area_2d_2_body_entered"]
+[connection signal="body_entered" from="World/Tower/SecondCheckpointArea2D" to="." method="_on_second_checkpoint_area_2d_body_entered"]
+[connection signal="body_entered" from="World/Tower/ThirdCheckpointArea2D" to="." method="_on_third_checkpoint_area_2d_body_entered"]
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
-[connection signal="player_entered" from="World/GateWheel" to="." method="_on_gate_wheel_player_entered"]
-[connection signal="player_exited" from="World/GateWheel" to="." method="_on_gate_wheel_player_exited"]
-[connection signal="wheel_turned" from="World/GateWheel" to="." method="_on_gate_wheel_wheel_turned"]
-[connection signal="body_entered" from="World/StartingArea2D" to="." method="_on_starting_area_2d_body_entered"]
-[connection signal="body_exited" from="World/StartingArea2D" to="." method="_on_starting_area_2d_body_exited"]
-[connection signal="body_entered" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_entered"]
-[connection signal="body_exited" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_exited"]
-[connection signal="body_entered" from="World/FirstCheckpointArea2D2" to="." method="_on_first_checkpoint_area_2d_2_body_entered"]
-[connection signal="body_entered" from="World/SecondCheckpointArea2D" to="." method="_on_second_checkpoint_area_2d_body_entered"]
-[connection signal="body_entered" from="World/ThirdCheckpointArea2D" to="." method="_on_third_checkpoint_area_2d_body_entered"]
 
 [editable path="World/Tower/GroundFloor"]
 [editable path="World/Tower/Floor1"]
