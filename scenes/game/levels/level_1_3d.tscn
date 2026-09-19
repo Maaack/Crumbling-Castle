@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ubeunkq2nobf" path="res://scenes/game/levels/level_3d.gd" id="1_iusjq"]
 [ext_resource type="Script" uid="uid://dqdyrkm3jily6" path="res://addons/maaacks_game_template/extras/scripts/capture_mouse.gd" id="2_ofcco"]
+[ext_resource type="PackedScene" uid="uid://d3pab64tttpqw" path="res://scenes/game/levels/level_3d/lose_area_3d.tscn" id="3_eg2i3"]
 [ext_resource type="Script" uid="uid://cr5ta1wm1rogr" path="res://scenes/game/levels/character_body_3d.gd" id="4_eg2i3"]
 [ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="5_iusjq"]
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
@@ -25,9 +26,6 @@ data = PackedVector3Array(-31.499998, -0.5, 0, -8, -0.5, -44.30541, -31.499998, 
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gu67"]
 size = Vector3(32, 8, 16)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gecq0"]
-size = Vector3(256, 8, 512)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0gu67"]
 
@@ -672,19 +670,8 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/WinArea3D" unique_id=116265185]
 shape = SubResource("BoxShape3D_0gu67")
 
-[node name="LoseArea3D" type="Area3D" parent="World" unique_id=1792313799]
+[node name="LoseArea3D" parent="World" unique_id=624041860 instance=ExtResource("3_eg2i3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -22, -72)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/LoseArea3D" unique_id=1030523366]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77)
-shape = SubResource("BoxShape3D_gecq0")
-
-[node name="Label3D" type="Label3D" parent="World/LoseArea3D" unique_id=2067115818]
-pixel_size = 0.1
-text = "Enter
-To Lose"
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="World" unique_id=1772878733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 40)

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://d3pab64tttpqw"]
+
+[ext_resource type="PackedScene" uid="uid://citqp5jyt0fad" path="res://scenes/game/levels/level_3d/grinder_part.tscn" id="1_561c2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gecq0"]
+size = Vector3(256, 8, 512)
+
+[node name="LoseArea3D" type="Area3D" unique_id=624041860]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=630136156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -77)
+shape = SubResource("BoxShape3D_gecq0")
+
+[node name="GrinderPart" parent="." unique_id=584223350 instance=ExtResource("1_561c2")]
+
+[node name="GrinderPart2" parent="." unique_id=883872620 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -64)
+
+[node name="GrinderPart3" parent="." unique_id=978526197 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -128)
+
+[node name="GrinderPart4" parent="." unique_id=1912266840 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -192)
+
+[node name="GrinderPart5" parent="." unique_id=1407173374 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -256)
+
+[node name="GrinderPart6" parent="." unique_id=956381369 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -320)
+
+[node name="GrinderPart7" parent="." unique_id=517989936 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -384)
+
+[node name="GrinderPart8" parent="." unique_id=341177655 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 64)
+
+[node name="GrinderPart9" parent="." unique_id=455917949 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 128)
+
+[node name="GrinderPart10" parent="." unique_id=1292642370 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 192)
+
+[node name="GrinderPart11" parent="." unique_id=1217444900 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 256)
+
+[node name="GrinderPart12" parent="." unique_id=2082149620 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 320)
+
+[node name="GrinderPart13" parent="." unique_id=1187107526 instance=ExtResource("1_561c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 384)
