@@ -190,11 +190,14 @@ func _on_progress_button_pressed() -> void:
 	if level_over: return
 	current_step += 1
 	_refresh_current_step_container()
+	_check_for_checkpoints()
 
 func _on_crumble_button_pressed() -> void:
 	if level_over: return
 	level_over = true
 	current_container.show()
+	level_state.deaths += 1
+	GlobalState.save()
 	level_lost.emit()
 
 func _on_raise_button_pressed() -> void:
@@ -203,14 +206,14 @@ func _on_raise_button_pressed() -> void:
 	if gate_height < 1:
 		raise_button.text = "Lift"
 		return
-	gate_opening_button.custom_minimum_size.y += 4
-	if gate_height >= 70:
+	gate_opening_button.custom_minimum_size.y += 5
+	if gate_height >= 90:
 		gate_situation_label.text = ""
-	elif gate_height >= 64:
+	elif gate_height >= 80:
 		gate_situation_label.text = "You can pass under the gate."
 		gate_opening_button.text = "Go under"
 		gate_opening_button.disabled = false
-	elif gate_height >= 48:
+	elif gate_height >= 64:
 		gate_situation_label.text = "You can almost pass under the gate."
 		gate_opening_button.text = "Almost there"
 	elif gate_height >= 16:
@@ -220,10 +223,26 @@ func _on_raise_button_pressed() -> void:
 func _on_window_path_button_pressed() -> void:
 	window_path = true
 
+func _check_for_checkpoints() -> void:
+	if current_step >= 57:
+		level_state.checkpoints = 3
+	elif current_step >= 38:
+		level_state.checkpoints = 2
+	elif current_step >= 24:
+		level_state.checkpoints = 1
+	GlobalState.save()
+
 func _ready():
+	super._ready()
 	for container in all_containers:
 		container.hide()
 		_recursive_calls(container)
+	if level_state.checkpoints == 1:
+		current_step = 24
+	elif level_state.checkpoints == 2:
+		current_step = 38
+	elif level_state.checkpoints == 3:
+		current_step = 57
 	_refresh_current_step_container()
 
 func _on_portal_button_pressed():
@@ -235,10 +254,14 @@ func _on_portal_button_pressed():
 		final_crumble_button.visible = false
 		final_button.visible = true
 		return
+	elif portal_attempts >= 56:
+		portal_button.text = "Ascend!!!!!!!"
 	elif portal_attempts >= 48:
 		portal_button.text = "Ascend!!!"
 	elif portal_attempts >= 32:
-		portal_button.text = "Ascend!"
+		portal_button.text = "Ascend!!"
+	elif portal_attempts >= 8:
+		portal_button.text = "Ascend?!"
 	elif portal_attempts >= 3:
 		portal_situation_label.visible = false
 		portal_button.flat = false
