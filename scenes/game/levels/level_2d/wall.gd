@@ -2,6 +2,7 @@
 class_name Wall
 extends CollisionShape2D
 
+@export var lose_area: Area2D
 @export var character_row: String = "||"
 @export var height: int:
 	set(v):
@@ -19,6 +20,7 @@ var _top: float
 var _grinder_pool: Array
 var _grinder_index: int = 0
 var _resetting: bool = false
+var _destroying: bool = false
 
 @onready var label: Label = $Label
 
@@ -31,16 +33,19 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	pass
 	shape.size.y = label.get_minimum_size().y
 	# label doesn't reposition on its own
 	label.position.y = -shape.size.y / 2.0
+	if lose_area and not _destroying:
+		if lose_area.global_position.y < global_position.y + (shape.size.y / 2.0):
+			destroy_bottom_row()
 
 
 func destroy_bottom_row() -> void:
 	# Looks better to wait a bit, but I was too lazy to adjust the collider
 	# but it causes the collider to sometimes not resize fast enough
 	#await get_tree().create_timer(0.5).timeout
+	_destroying = true
 	var label_height = label.get_minimum_size().y
 
 	# emit first to help hide the label shrinking
@@ -57,6 +62,7 @@ func destroy_bottom_row() -> void:
 		_resize_reposition.call_deferred()
 		await get_tree().process_frame  ## allow time for resize calc
 		# prints("old height", label_height, "new height", label.get_minimum_size().y)
+	_destroying = false
 
 
 func _resize_reposition() -> void:

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://ijkwj6o5a35"]
+
+[ext_resource type="Texture2D" uid="uid://kjoegj2n3m4q" path="res://assets/font_textures/courier-prime-sans-poof.png" id="1_4slvh"]
+[ext_resource type="Script" uid="uid://5o4sdsoywdbt" path="res://scenes/game/levels/level_2d/dust_cloud.gd" id="1_jxmj6"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4slvh"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_7b3jh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49848944, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.193311, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jxmj6"]
+curve = SubResource("Curve_7b3jh")
+
+[sub_resource type="Curve" id="Curve_4slvh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
+curve = SubResource("Curve_4slvh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3aqem"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(1, 0.01, 1)
+emission_shape = 2
+emission_sphere_radius = 10.0
+spread = 0.0
+flatness = 1.0
+initial_velocity_min = 100.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.0
+damping_max = 3.0000002
+damping_curve = SubResource("CurveTexture_4slvh")
+alpha_curve = SubResource("CurveTexture_jxmj6")
+anim_speed_min = 0.5
+anim_speed_max = 1.0
+
+[node name="DustCloud" type="Node2D" unique_id=80069791]
+script = ExtResource("1_jxmj6")
+
+[node name="PoofRight" type="GPUParticles2D" parent="." unique_id=1896710269]
+modulate = Color(0.6, 0.6, 0.6, 1)
+material = SubResource("CanvasItemMaterial_4slvh")
+amount = 4
+texture = ExtResource("1_4slvh")
+lifetime = 0.75
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_3aqem")
+
+[node name="PoofLeft" type="GPUParticles2D" parent="." unique_id=1597100579]
+modulate = Color(0.6, 0.6, 0.6, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_4slvh")
+scale = Vector2(-1, 1)
+amount = 4
+texture = ExtResource("1_4slvh")
+lifetime = 0.75
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_3aqem")

@@ -91,4 +91,7 @@ text = "/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\/\\
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=846429315]
+rect = Rect2(-1280, -7, 2560, 14)
+
 [connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
