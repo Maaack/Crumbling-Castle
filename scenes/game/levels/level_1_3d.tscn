@@ -672,7 +672,7 @@ shape = SubResource("BoxShape3D_0gu67")
 
 [node name="LoseArea3D" parent="World" unique_id=624041860 instance=ExtResource("3_eg2i3")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -105, -400)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -105, -360)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="World" unique_id=1772878733]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 40)
