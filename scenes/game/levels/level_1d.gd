@@ -1,5 +1,7 @@
 extends "level.gd"
+
 @export var doom_speed = 20.0
+@export var player_speed = 20.0
 
 @onready var step = %Step
 @onready var step_2 = %Step2
@@ -30,6 +32,9 @@ extends "level.gd"
 @onready var portal_margin_container = %PortalMarginContainer
 @onready var portal_button = %PortalButton
 @onready var portal_situation_label = %PortalSituationLabel
+@onready var death_texture_rect = %DeathTextureRect
+@onready var player_texture_rect = %PlayerTextureRect
+@onready var progress_label = %ProgressLabel
 
 @onready var all_containers : Array[Node] = [
 	step,
@@ -143,10 +148,9 @@ var current_step = 0
 var current_container : Node
 var level_over : bool = false
 var window_path : bool = false
-var current_height : int = 0
-var current_doom_height : int = -20
 var gate_height : int = -1
 var portal_attempts : int = 0
+var reached_portal : bool = false
 
 func _recursive_calls(node: Node) -> void:
 	_connect_button_signals(node)
@@ -166,6 +170,8 @@ func _connect_button_signals(node: Node) -> void:
 			return
 		if node.name.contains("WindowPath"):
 			node.pressed.connect(_on_window_path_button_pressed)
+		if node.name.contains("Ascend"):
+			node.pressed.connect(_on_ascend_button_pressed)
 		node.pressed.connect(_on_progress_button_pressed)
 
 func _check_path_for_container() -> void:
@@ -194,13 +200,19 @@ func _on_progress_button_pressed() -> void:
 	_refresh_current_step_container()
 	_check_for_checkpoints()
 
-func _on_crumble_button_pressed() -> void:
+func _on_ascend_button_pressed() -> void:
+	if level_over: return
+	player_texture_rect.position.x += player_speed
+
+func lose() -> void:
 	if level_over: return
 	level_over = true
-	current_container.show()
 	level_state.deaths += 1
 	GlobalState.save()
 	level_lost.emit()
+
+func _on_crumble_button_pressed() -> void:
+	lose()
 
 func _on_raise_button_pressed() -> void:
 	if level_over: return
@@ -241,10 +253,13 @@ func _ready():
 		_recursive_calls(container)
 	if level_state.checkpoints == 1:
 		current_step = 24
+		player_texture_rect.position.x += player_speed * 12
 	elif level_state.checkpoints == 2:
 		current_step = 38
+		player_texture_rect.position.x += player_speed * 18
 	elif level_state.checkpoints == 3:
 		current_step = 57
+		player_texture_rect.position.x += player_speed * 24
 	_refresh_current_step_container()
 
 func _on_portal_button_pressed():
@@ -253,21 +268,23 @@ func _on_portal_button_pressed():
 	if portal_attempts >= 64:
 		portal_button.text = "There is only down."
 		portal_button.disabled = true
-		final_crumble_button.visible = false
-		final_button.visible = true
+		final_crumble_button.hide()
+		final_button.show()
 		return
 	elif portal_attempts >= 56:
 		portal_button.text = "Ascend!!!!!!!"
-	elif portal_attempts >= 48:
+	elif portal_attempts >= 44:
 		portal_button.text = "Ascend!!!"
 	elif portal_attempts >= 32:
 		portal_button.text = "Ascend!!"
 	elif portal_attempts >= 8:
 		portal_button.text = "Ascend?!"
 	elif portal_attempts >= 3:
-		portal_situation_label.visible = false
+		reached_portal = true
 		portal_button.flat = false
-		final_crumble_button.visible = true
+		portal_situation_label.hide()
+		progress_label.hide()
+		final_crumble_button.show()
 	elif portal_attempts >= 2:
 		portal_button.text = "Ascend?"
 	if portal_attempts >= 5:
@@ -275,3 +292,11 @@ func _on_portal_button_pressed():
 		portal_margin_container.add_theme_constant_override("margin_bottom", portal_attempts * 5)
 		portal_margin_container.add_theme_constant_override("margin_left", portal_attempts * 7)
 		portal_margin_container.add_theme_constant_override("margin_right", portal_attempts * 7)
+
+func _process(delta):
+	if level_over or reached_portal:
+		return
+	death_texture_rect.position.x += doom_speed * delta
+	if death_texture_rect.position.x + 10 > player_texture_rect.position.x:
+		lose()
+	
