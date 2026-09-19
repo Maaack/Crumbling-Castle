@@ -17,7 +17,6 @@ func _update_shader_parameter(value : Variant, key : StringName) -> void:
 func _on_level_loaded() -> void:
 	var level_filename = ResourceUID.ensure_path(level_loader.current_level_path)
 	level_filename = level_filename.get_file().get_basename()
-	print(level_loader.current_level_path, "  ", level_filename)
 	match level_filename:
 		"level_0", "level_2", "level_4", "level_6":
 			shader_material.set_shader_parameter(&"original_opacity_mod", 0.95)
