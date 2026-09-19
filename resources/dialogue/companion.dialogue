@@ -1,16 +1,20 @@
 ~ start
 ???: We meet again, old friend.
 You: You? Why are you here? 
-???: That's no way to greet me.
-You: I told you before,
-  I'm not supposed to spend time with you.
+???: I'll get to that, but I've missed you.
+You: I really don't feel the same way.
+???: I understand.
+	You were better off without me around.
+You: Yeah, I've been really trying to avoid you.
+	So, why are you back?
 $> start_tripping()
-Death: Yet you invited me in.
+Death: You invited me in.
 	Right inside of you...
 You: No.
 	You are just trying to get into my head.
-Death: I'm already in your stomach.
-You: What? No.
+Death: I'm already in your stomach,
+	entering your blood, and into your head.
+You: ...
 	Those shrooms were fine...
 Death: They were fine 6 months ago.
 	You'd never eat bread that blue.
@@ -39,6 +43,7 @@ Sounds Like You: I'm going to turn this trip around...
 Death: You can drink some water.
 	You'll want it.
 Losing You: That's ominous...
+$> trip_harder()
 Still Who?: ...
 	Oh no...
 ...
@@ -53,6 +58,7 @@ Death: I know, I'm here.
 Barely You: Can I just go back and... redo?
 	Everything?
 Death: The thing is...
+$> trip_harder()
 Death: You will...
 ...
 	[font_size=48]Another dimension [shake rate=10.0 level=2 connected=1]crumbles[/shake].[/font_size]
@@ -64,6 +70,7 @@ Someone Formerly You: There is no I anymore.
 We are all one.
 Death: ...
 	We will be soon.
+$> trip_harder()
 ...
 	...
 	...
