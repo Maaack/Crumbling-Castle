@@ -2,12 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dnwlviyai28y4" path="res://scenes/game/levels/level_2d.gd" id="1_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="2_0mamm"]
+[ext_resource type="PackedScene" uid="uid://ijkwj6o5a35" path="res://scenes/game/levels/level_2d/dust_cloud.tscn" id="4_1foho"]
 [ext_resource type="PackedScene" uid="uid://bk3j8a2koun2i" path="res://scenes/game/levels/level_2d/gate.tscn" id="4_2u4xi"]
 [ext_resource type="PackedScene" uid="uid://ccrc5f1tvcbuo" path="res://scenes/game/levels/level_2d/character_body_2d.tscn" id="4_x1c7m"]
 [ext_resource type="PackedScene" uid="uid://1m5niobmnso0" path="res://scenes/game/levels/level_2d/floor.tscn" id="5_0mamm"]
 [ext_resource type="PackedScene" uid="uid://bovk5qn7y0cb8" path="res://scenes/game/levels/level_2d/lose_area_2d.tscn" id="5_1bryu"]
 [ext_resource type="PackedScene" uid="uid://cdnodbwgoohtm" path="res://scenes/game/levels/level_2d/staircase.tscn" id="5_dxp7b"]
 [ext_resource type="PackedScene" uid="uid://bkuqksnvyimtc" path="res://scenes/game/levels/level_2d/wall.tscn" id="5_o1xna"]
+[ext_resource type="PackedScene" uid="uid://df5bqrfydgbu7" path="res://scenes/game/levels/level_2d/debris_effect.tscn" id="6_o7nmf"]
 [ext_resource type="PackedScene" uid="uid://y2n55sbmx5ss" path="res://scenes/game/levels/level_2d/gate_wheel.tscn" id="7_dxp7b"]
 [ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/level_2d/win_area_2d.tscn" id="7_nnhhk"]
 [ext_resource type="PackedScene" uid="uid://bhxwipjdymkyk" path="res://scenes/game/levels/level_2d/background/torch_label.tscn" id="11_scglh"]
@@ -20,7 +22,7 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kmflf"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_migjm"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1foho"]
 resource_local_to_scene = true
 a = Vector2(-2000, 0)
 b = Vector2(2000, 0)
@@ -32,33 +34,11 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_s3pix"]
 curve = SubResource("Curve_4awcv")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_34yyp"]
-resource_local_to_scene = true
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(2000, 4, 1)
-angle_min = 1.0728835e-05
-angle_max = 90.000015
-direction = Vector3(0, -1, 0)
-spread = 90.0
-initial_velocity_max = 60.0
-angular_velocity_min = -90.000015
-angular_velocity_max = 89.999985
-gravity = Vector3(0, 98, 0)
-scale_min = 0.59999996
-scale_max = 0.59999996
-alpha_curve = SubResource("CurveTexture_s3pix")
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_1foho"]
-resource_local_to_scene = true
-a = Vector2(-1280, 0)
-b = Vector2(1280, 0)
-
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o7nmf"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(1280, 4, 1)
+emission_box_extents = Vector3(2000, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -139,14 +119,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xo3qo"]
 resource_local_to_scene = true
-a = Vector2(-607.5, 0)
-b = Vector2(607.5, 0)
+a = Vector2(-1280, 0)
+b = Vector2(1280, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ve7qv"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(607.5, 4, 1)
+emission_box_extents = Vector3(1280, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -183,10 +163,32 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hd36h"]
 resource_local_to_scene = true
+a = Vector2(-607.5, 0)
+b = Vector2(607.5, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xsx3c"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(607.5, 4, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 90.0
+initial_velocity_max = 60.0
+angular_velocity_min = -90.000015
+angular_velocity_max = 89.999985
+gravity = Vector3(0, 98, 0)
+scale_min = 0.59999996
+scale_max = 0.59999996
+alpha_curve = SubResource("CurveTexture_s3pix")
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8khpm"]
+resource_local_to_scene = true
 a = Vector2(-480, 0)
 b = Vector2(480, 0)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xsx3c"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vlhkm"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -203,12 +205,12 @@ scale_min = 0.59999996
 scale_max = 0.59999996
 alpha_curve = SubResource("CurveTexture_s3pix")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_8khpm"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e5qku"]
 resource_local_to_scene = true
 a = Vector2(-128, 0)
 b = Vector2(128, 0)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vlhkm"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q7uis"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -225,12 +227,12 @@ scale_min = 0.59999996
 scale_max = 0.59999996
 alpha_curve = SubResource("CurveTexture_s3pix")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_e5qku"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jboqg"]
 resource_local_to_scene = true
 a = Vector2(-480, 0)
 b = Vector2(480, 0)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q7uis"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m6lha"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -247,38 +249,16 @@ scale_min = 0.59999996
 scale_max = 0.59999996
 alpha_curve = SubResource("CurveTexture_s3pix")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_jboqg"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_72p0t"]
 resource_local_to_scene = true
 a = Vector2(-352, 0)
 b = Vector2(352, 0)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m6lha"]
-resource_local_to_scene = true
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(352, 4, 1)
-angle_min = 1.0728835e-05
-angle_max = 90.000015
-direction = Vector3(0, -1, 0)
-spread = 90.0
-initial_velocity_max = 60.0
-angular_velocity_min = -90.000015
-angular_velocity_max = 89.999985
-gravity = Vector3(0, 98, 0)
-scale_min = 0.59999996
-scale_max = 0.59999996
-alpha_curve = SubResource("CurveTexture_s3pix")
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_72p0t"]
-resource_local_to_scene = true
-a = Vector2(-32, 0)
-b = Vector2(32, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5a7fn"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(32, 4, 1)
+emission_box_extents = Vector3(352, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -359,14 +339,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mi3uw"]
 resource_local_to_scene = true
-a = Vector2(-416, 0)
-b = Vector2(416, 0)
+a = Vector2(-32, 0)
+b = Vector2(32, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2i3g5"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(416, 4, 1)
+emission_box_extents = Vector3(32, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -381,14 +361,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1qeb6"]
 resource_local_to_scene = true
-a = Vector2(-1280, 0)
-b = Vector2(1280, 0)
+a = Vector2(-416, 0)
+b = Vector2(416, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ln7ep"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(1280, 4, 1)
+emission_box_extents = Vector3(416, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -425,10 +405,32 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u4rnb"]
 resource_local_to_scene = true
+a = Vector2(-1280, 0)
+b = Vector2(1280, 0)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t0umq"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1280, 4, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 90.0
+initial_velocity_max = 60.0
+angular_velocity_min = -90.000015
+angular_velocity_max = 89.999985
+gravity = Vector3(0, 98, 0)
+scale_min = 0.59999996
+scale_max = 0.59999996
+alpha_curve = SubResource("CurveTexture_s3pix")
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iuon3"]
+resource_local_to_scene = true
 a = Vector2(-128, 0)
 b = Vector2(128, 0)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t0umq"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xo4no"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -451,7 +453,7 @@ size = Vector2(32, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0gu67"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuon3"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3opn"]
 resource_local_to_scene = true
 size = Vector2(20, 2811)
 
@@ -461,26 +463,6 @@ point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_bqago"]
 curve = SubResource("Curve_td8wa")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xo4no"]
-resource_local_to_scene = true
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(20, 20, 1)
-angle_min = 1.0728835e-05
-angle_max = 90.000015
-direction = Vector3(0, -1, 0)
-spread = 90.0
-initial_velocity_max = 100.0
-angular_velocity_min = -90.000015
-angular_velocity_max = 89.999985
-gravity = Vector3(0, 98, 0)
-color = Color(0.6, 0.6, 0.6, 1)
-alpha_curve = SubResource("CurveTexture_bqago")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3opn"]
-resource_local_to_scene = true
-size = Vector2(20, 1257)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ebek2"]
 resource_local_to_scene = true
@@ -500,9 +482,29 @@ alpha_curve = SubResource("CurveTexture_bqago")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdpj"]
 resource_local_to_scene = true
-size = Vector2(20, 1026)
+size = Vector2(20, 1257)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hr7nf"]
+resource_local_to_scene = true
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20, 20, 1)
+angle_min = 1.0728835e-05
+angle_max = 90.000015
+direction = Vector3(0, -1, 0)
+spread = 90.0
+initial_velocity_max = 100.0
+angular_velocity_min = -90.000015
+angular_velocity_max = 89.999985
+gravity = Vector3(0, 98, 0)
+color = Color(0.6, 0.6, 0.6, 1)
+alpha_curve = SubResource("CurveTexture_bqago")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlaqq"]
+resource_local_to_scene = true
+size = Vector2(20, 1026)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0bjrg"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -543,7 +545,7 @@ shape = SubResource("WorldBoundaryShape2D_kmflf")
 one_way_collision = true
 
 [node name="GroundFloor" parent="World/Tower" unique_id=1962192153 instance=ExtResource("5_0mamm")]
-shape = SubResource("SegmentShape2D_migjm")
+shape = SubResource("SegmentShape2D_1foho")
 width = 4000
 
 [node name="Label" parent="World/Tower/GroundFloor" index="0" unique_id=464379256]
@@ -553,11 +555,11 @@ text = "========================================================================
 visible_characters = 417
 
 [node name="GrinderFx" parent="World/Tower/GroundFloor" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_34yyp")
+process_material = SubResource("ParticleProcessMaterial_o7nmf")
 
 [node name="Floor1" parent="World/Tower" unique_id=1067393234 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -240)
-shape = SubResource("SegmentShape2D_1foho")
+shape = SubResource("SegmentShape2D_acbp8")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor1" index="0" unique_id=464379256]
@@ -567,11 +569,11 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor1" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_o7nmf")
+process_material = SubResource("ParticleProcessMaterial_kogy0")
 
 [node name="Floor2" parent="World/Tower" unique_id=747027832 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -480)
-shape = SubResource("SegmentShape2D_acbp8")
+shape = SubResource("SegmentShape2D_ljpdv")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor2" index="0" unique_id=464379256]
@@ -581,11 +583,11 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor2" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_kogy0")
+process_material = SubResource("ParticleProcessMaterial_e6d8g")
 
 [node name="Floor3" parent="World/Tower" unique_id=1331440812 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -720)
-shape = SubResource("SegmentShape2D_ljpdv")
+shape = SubResource("SegmentShape2D_rcy4r")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor3" index="0" unique_id=464379256]
@@ -595,11 +597,11 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor3" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_e6d8g")
+process_material = SubResource("ParticleProcessMaterial_8vgws")
 
 [node name="Floor4" parent="World/Tower" unique_id=1658161757 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -960)
-shape = SubResource("SegmentShape2D_rcy4r")
+shape = SubResource("SegmentShape2D_xo3qo")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor4" index="0" unique_id=464379256]
@@ -609,11 +611,11 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor4" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_8vgws")
+process_material = SubResource("ParticleProcessMaterial_ve7qv")
 
 [node name="Floor5_Left" parent="World/Tower" unique_id=1492653329 instance=ExtResource("5_0mamm")]
 position = Vector2(-673, -1200)
-shape = SubResource("SegmentShape2D_xo3qo")
+shape = SubResource("SegmentShape2D_8yf1i")
 width = 1215
 
 [node name="Label" parent="World/Tower/Floor5_Left" index="0" unique_id=464379256]
@@ -623,11 +625,11 @@ text = "========================================================================
 visible_characters = 127
 
 [node name="GrinderFx" parent="World/Tower/Floor5_Left" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_ve7qv")
+process_material = SubResource("ParticleProcessMaterial_u3nmw")
 
 [node name="Floor5_Right" parent="World/Tower" unique_id=896587790 instance=ExtResource("5_0mamm")]
 position = Vector2(671, -1200)
-shape = SubResource("SegmentShape2D_8yf1i")
+shape = SubResource("SegmentShape2D_hd36h")
 width = 1215
 
 [node name="Label" parent="World/Tower/Floor5_Right" index="0" unique_id=464379256]
@@ -637,11 +639,11 @@ text = "========================================================================
 visible_characters = 127
 
 [node name="GrinderFx" parent="World/Tower/Floor5_Right" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_u3nmw")
+process_material = SubResource("ParticleProcessMaterial_xsx3c")
 
 [node name="Floor6_Left" parent="World/Tower" unique_id=1540129995 instance=ExtResource("5_0mamm")]
 position = Vector2(-801, -1440)
-shape = SubResource("SegmentShape2D_hd36h")
+shape = SubResource("SegmentShape2D_8khpm")
 width = 960
 
 [node name="Label" parent="World/Tower/Floor6_Left" index="0" unique_id=464379256]
@@ -651,11 +653,11 @@ text = "========================================================================
 visible_characters = 100
 
 [node name="GrinderFx" parent="World/Tower/Floor6_Left" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_xsx3c")
+process_material = SubResource("ParticleProcessMaterial_vlhkm")
 
 [node name="Floor6_Center" parent="World/Tower" unique_id=1283792137 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -1440)
-shape = SubResource("SegmentShape2D_8khpm")
+shape = SubResource("SegmentShape2D_e5qku")
 width = 256
 
 [node name="Label" parent="World/Tower/Floor6_Center" index="0" unique_id=464379256]
@@ -665,11 +667,11 @@ text = "============================"
 visible_characters = 27
 
 [node name="GrinderFx" parent="World/Tower/Floor6_Center" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_vlhkm")
+process_material = SubResource("ParticleProcessMaterial_q7uis")
 
 [node name="Floor6_Right" parent="World/Tower" unique_id=1209522967 instance=ExtResource("5_0mamm")]
 position = Vector2(799, -1440)
-shape = SubResource("SegmentShape2D_e5qku")
+shape = SubResource("SegmentShape2D_jboqg")
 width = 960
 
 [node name="Label" parent="World/Tower/Floor6_Right" index="0" unique_id=464379256]
@@ -679,11 +681,11 @@ text = "========================================================================
 visible_characters = 100
 
 [node name="GrinderFx" parent="World/Tower/Floor6_Right" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_q7uis")
+process_material = SubResource("ParticleProcessMaterial_m6lha")
 
 [node name="Floor7_Platform1" parent="World/Tower" unique_id=565648391 instance=ExtResource("5_0mamm")]
 position = Vector2(-929, -1680)
-shape = SubResource("SegmentShape2D_jboqg")
+shape = SubResource("SegmentShape2D_72p0t")
 width = 704
 
 [node name="Label" parent="World/Tower/Floor7_Platform1" index="0" unique_id=464379256]
@@ -693,11 +695,11 @@ text = "========================================================================
 visible_characters = 74
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform1" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_m6lha")
+process_material = SubResource("ParticleProcessMaterial_5a7fn")
 
 [node name="Floor7_Platform2" parent="World/Tower" unique_id=2064095174 instance=ExtResource("5_0mamm")]
 position = Vector2(-417, -1680)
-shape = SubResource("SegmentShape2D_72p0t")
+shape = SubResource("SegmentShape2D_gk1aw")
 width = 64
 
 [node name="Label" parent="World/Tower/Floor7_Platform2" index="0" unique_id=464379256]
@@ -707,11 +709,11 @@ text = "========"
 visible_characters = 7
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform2" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_5a7fn")
+process_material = SubResource("ParticleProcessMaterial_odf1s")
 
 [node name="Floor7_Platform3" parent="World/Tower" unique_id=725769279 instance=ExtResource("5_0mamm")]
 position = Vector2(-161, -1680)
-shape = SubResource("SegmentShape2D_gk1aw")
+shape = SubResource("SegmentShape2D_7ocvw")
 width = 64
 
 [node name="Label" parent="World/Tower/Floor7_Platform3" index="0" unique_id=464379256]
@@ -721,11 +723,11 @@ text = "========"
 visible_characters = 7
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform3" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_odf1s")
+process_material = SubResource("ParticleProcessMaterial_udeqw")
 
 [node name="Floor7_Platform4" parent="World/Tower" unique_id=1681820167 instance=ExtResource("5_0mamm")]
 position = Vector2(31, -1680)
-shape = SubResource("SegmentShape2D_7ocvw")
+shape = SubResource("SegmentShape2D_4402k")
 width = 64
 
 [node name="Label" parent="World/Tower/Floor7_Platform4" index="0" unique_id=464379256]
@@ -735,11 +737,11 @@ text = "========"
 visible_characters = 7
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform4" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_udeqw")
+process_material = SubResource("ParticleProcessMaterial_6y48p")
 
 [node name="Floor7_Platform5" parent="World/Tower" unique_id=1420176876 instance=ExtResource("5_0mamm")]
 position = Vector2(287, -1680)
-shape = SubResource("SegmentShape2D_4402k")
+shape = SubResource("SegmentShape2D_mi3uw")
 width = 64
 
 [node name="Label" parent="World/Tower/Floor7_Platform5" index="0" unique_id=464379256]
@@ -749,11 +751,11 @@ text = "========"
 visible_characters = 7
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform5" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_6y48p")
+process_material = SubResource("ParticleProcessMaterial_2i3g5")
 
 [node name="Floor7_Platform6" parent="World/Tower" unique_id=743766639 instance=ExtResource("5_0mamm")]
 position = Vector2(863, -1680)
-shape = SubResource("SegmentShape2D_mi3uw")
+shape = SubResource("SegmentShape2D_1qeb6")
 width = 832
 
 [node name="Label" parent="World/Tower/Floor7_Platform6" index="0" unique_id=464379256]
@@ -763,11 +765,11 @@ text = "========================================================================
 visible_characters = 87
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform6" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_2i3g5")
+process_material = SubResource("ParticleProcessMaterial_ln7ep")
 
 [node name="Floor8" parent="World/Tower" unique_id=1365328274 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -1920)
-shape = SubResource("SegmentShape2D_1qeb6")
+shape = SubResource("SegmentShape2D_2vkac")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor8" index="0" unique_id=464379256]
@@ -777,11 +779,11 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor8" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_ln7ep")
+process_material = SubResource("ParticleProcessMaterial_rx8wg")
 
 [node name="Floor9" parent="World/Tower" unique_id=1467746957 instance=ExtResource("5_0mamm")]
 position = Vector2(-1, -2160)
-shape = SubResource("SegmentShape2D_2vkac")
+shape = SubResource("SegmentShape2D_u4rnb")
 width = 2560
 
 [node name="Label" parent="World/Tower/Floor9" index="0" unique_id=464379256]
@@ -791,11 +793,19 @@ text = "========================================================================
 visible_characters = 267
 
 [node name="GrinderFx" parent="World/Tower/Floor9" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_rx8wg")
+process_material = SubResource("ParticleProcessMaterial_t0umq")
+
+[node name="DustCloud" parent="World/Tower/Floor9" unique_id=80069791 instance=ExtResource("4_1foho")]
+unique_name_in_owner = true
+position = Vector2(0, -4)
+
+[node name="DustCloud2" parent="World/Tower/Floor9" unique_id=60824292 instance=ExtResource("4_1foho")]
+unique_name_in_owner = true
+position = Vector2(0, -4)
 
 [node name="Floor_10" parent="World/Tower" unique_id=497684493 instance=ExtResource("5_0mamm")]
 position = Vector2(1151, -2400)
-shape = SubResource("SegmentShape2D_u4rnb")
+shape = SubResource("SegmentShape2D_iuon3")
 width = 256
 
 [node name="Label" parent="World/Tower/Floor_10" index="0" unique_id=464379256]
@@ -805,7 +815,7 @@ text = "============================"
 visible_characters = 27
 
 [node name="GrinderFx" parent="World/Tower/Floor_10" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_t0umq")
+process_material = SubResource("ParticleProcessMaterial_xo4no")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="World/Tower" unique_id=1716948064]
 position = Vector2(938, -32)
@@ -855,7 +865,7 @@ horizontal_alignment = 1
 
 [node name="Wall" parent="World/Tower" unique_id=1252823667 instance=ExtResource("5_o1xna")]
 position = Vector2(-1285, -1400)
-shape = SubResource("RectangleShape2D_iuon3")
+shape = SubResource("RectangleShape2D_s3opn")
 height = 2800
 
 [node name="Label" parent="World/Tower/Wall" index="0" unique_id=464379256]
@@ -998,20 +1008,20 @@ text = "||
 visible_characters = 400
 
 [node name="GrinderFx1" parent="World/Tower/Wall" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_xo4no")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx2" parent="World/Tower/Wall" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_xo4no")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx3" parent="World/Tower/Wall" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_xo4no")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx4" parent="World/Tower/Wall" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_xo4no")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="Wall2" parent="World/Tower" unique_id=1806221840 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -1816)
-shape = SubResource("RectangleShape2D_s3opn")
+shape = SubResource("RectangleShape2D_ymdpj")
 height = 1240
 
 [node name="Label" parent="World/Tower/Wall2" index="0" unique_id=464379256]
@@ -1080,20 +1090,20 @@ text = "||
 visible_characters = 178
 
 [node name="GrinderFx1" parent="World/Tower/Wall2" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx2" parent="World/Tower/Wall2" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx3" parent="World/Tower/Wall2" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx4" parent="World/Tower/Wall2" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="Wall3" parent="World/Tower" unique_id=941711111 instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
-shape = SubResource("RectangleShape2D_ymdpj")
+shape = SubResource("RectangleShape2D_mlaqq")
 height = 1016
 
 [node name="Label" parent="World/Tower/Wall3" index="0" unique_id=464379256]
@@ -1151,23 +1161,23 @@ text = "||
 visible_characters = 145
 
 [node name="GrinderFx1" parent="World/Tower/Wall3" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_0bjrg")
 
 [node name="GrinderFx2" parent="World/Tower/Wall3" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_0bjrg")
 
 [node name="GrinderFx3" parent="World/Tower/Wall3" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_0bjrg")
 
 [node name="GrinderFx4" parent="World/Tower/Wall3" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_0bjrg")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
+[node name="GateWall" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
 position = Vector2(-1, -2816)
 shape = SubResource("RectangleShape2D_1bryu")
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="World/Tower/CollisionShape2D7" unique_id=1200467458]
+[node name="Label" type="Label" parent="World/Tower/GateWall" unique_id=1200467458]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1179,6 +1189,7 @@ offset_right = 20.0
 offset_bottom = 1116.5
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 text = "||
 ||
 ||
@@ -1231,6 +1242,14 @@ text = "||
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DebrisLeft" parent="World/Tower/GateWall" unique_id=1986710238 instance=ExtResource("6_o7nmf")]
+unique_name_in_owner = true
+position = Vector2(-12, 400)
+
+[node name="DebrisRight" parent="World/Tower/GateWall" unique_id=180451823 instance=ExtResource("6_o7nmf")]
+unique_name_in_owner = true
+position = Vector2(12, 400)
 
 [node name="Gate" parent="World/Tower" unique_id=1474410729 instance=ExtResource("4_2u4xi")]
 unique_name_in_owner = true
@@ -2301,7 +2320,7 @@ position = Vector2(249, 69)
 
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
 unique_name_in_owner = true
-position = Vector2(0, 85)
+position = Vector2(0, 80)
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea2D" to="." method="_on_lose_area_2d_body_entered"]
