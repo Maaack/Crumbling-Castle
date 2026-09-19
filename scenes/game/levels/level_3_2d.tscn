@@ -425,29 +425,7 @@ scale_min = 0.59999996
 scale_max = 0.59999996
 alpha_curve = SubResource("CurveTexture_s3pix")
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_iuon3"]
-resource_local_to_scene = true
-a = Vector2(-128, 0)
-b = Vector2(128, 0)
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xo4no"]
-resource_local_to_scene = true
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(128, 4, 1)
-angle_min = 1.0728835e-05
-angle_max = 90.000015
-direction = Vector3(0, -1, 0)
-spread = 90.0
-initial_velocity_max = 60.0
-angular_velocity_min = -90.000015
-angular_velocity_max = 89.999985
-gravity = Vector3(0, 98, 0)
-scale_min = 0.59999996
-scale_max = 0.59999996
-alpha_curve = SubResource("CurveTexture_s3pix")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3opn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iuon3"]
 resource_local_to_scene = true
 size = Vector2(20, 2811)
 
@@ -458,7 +436,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_acbp8"]
 curve = SubResource("Curve_o7nmf")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ebek2"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xo4no"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -474,9 +452,9 @@ gravity = Vector3(0, 98, 0)
 color = Color(0.6, 0.6, 0.6, 1)
 alpha_curve = SubResource("CurveTexture_acbp8")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdpj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3opn"]
 resource_local_to_scene = true
-size = Vector2(20, 1257)
+size = Vector2(20, 1068)
 
 [sub_resource type="Curve" id="Curve_td8wa"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.3314302, 0.0, 0, 0]
@@ -485,7 +463,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_bqago"]
 curve = SubResource("Curve_td8wa")
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hr7nf"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ebek2"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -501,11 +479,11 @@ gravity = Vector3(0, 98, 0)
 color = Color(0.6, 0.6, 0.6, 1)
 alpha_curve = SubResource("CurveTexture_bqago")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlaqq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdpj"]
 resource_local_to_scene = true
 size = Vector2(20, 1026)
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0bjrg"]
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hr7nf"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
@@ -804,23 +782,9 @@ position = Vector2(0, -4)
 unique_name_in_owner = true
 position = Vector2(0, -4)
 
-[node name="Floor_10" parent="World/Tower" unique_id=497684493 instance=ExtResource("5_0mamm")]
-position = Vector2(1151, -2400)
-shape = SubResource("SegmentShape2D_iuon3")
-width = 256
-
-[node name="Label" parent="World/Tower/Floor_10" index="0" unique_id=464379256]
-offset_left = -130.0
-offset_right = 130.0
-text = "============================"
-visible_characters = 27
-
-[node name="GrinderFx" parent="World/Tower/Floor_10" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_xo4no")
-
 [node name="Wall" parent="World/Tower" unique_id=402760732 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
-position = Vector2(-1290, -1400)
-shape = SubResource("RectangleShape2D_s3opn")
+position = Vector2(-1290, -1392)
+shape = SubResource("RectangleShape2D_iuon3")
 lose_area = NodePath("../../LoseArea2D")
 height = 2800
 
@@ -964,26 +928,26 @@ text = "||
 visible_characters = 400
 
 [node name="GrinderFx1" parent="World/Tower/Wall" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_xo4no")
 
 [node name="GrinderFx2" parent="World/Tower/Wall" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_xo4no")
 
 [node name="GrinderFx3" parent="World/Tower/Wall" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_xo4no")
 
 [node name="GrinderFx4" parent="World/Tower/Wall" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_ebek2")
+process_material = SubResource("ParticleProcessMaterial_xo4no")
 
 [node name="Wall2" parent="World/Tower" unique_id=1806221840 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
-position = Vector2(1287, -1816)
-shape = SubResource("RectangleShape2D_ymdpj")
+position = Vector2(1287, -1672)
+shape = SubResource("RectangleShape2D_s3opn")
 lose_area = NodePath("../../LoseArea2D")
-height = 1240
+height = 1048
 
 [node name="Label" parent="World/Tower/Wall2" index="0" unique_id=464379256]
-offset_top = -628.5
-offset_bottom = 1384.5
+offset_top = -534.0
+offset_bottom = 1479.0
 text = "||
 ||
 ||
@@ -1034,33 +998,24 @@ text = "||
 ||
 ||
 ||
-||
-||
-||
-||
-||
-||
-||
-||
-||
 ||"
-visible_characters = 178
+visible_characters = 151
 
 [node name="GrinderFx1" parent="World/Tower/Wall2" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx2" parent="World/Tower/Wall2" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx3" parent="World/Tower/Wall2" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="GrinderFx4" parent="World/Tower/Wall2" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_hr7nf")
+process_material = SubResource("ParticleProcessMaterial_ebek2")
 
 [node name="Wall3" parent="World/Tower" unique_id=941711111 node_paths=PackedStringArray("lose_area") instance=ExtResource("5_o1xna")]
 position = Vector2(1287, -500)
-shape = SubResource("RectangleShape2D_mlaqq")
+shape = SubResource("RectangleShape2D_ymdpj")
 lose_area = NodePath("../../LoseArea2D")
 height = 1016
 
@@ -1119,16 +1074,16 @@ text = "||
 visible_characters = 145
 
 [node name="GrinderFx1" parent="World/Tower/Wall3" index="1" unique_id=1393526113]
-process_material = SubResource("ParticleProcessMaterial_0bjrg")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx2" parent="World/Tower/Wall3" index="2" unique_id=1802441193]
-process_material = SubResource("ParticleProcessMaterial_0bjrg")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx3" parent="World/Tower/Wall3" index="3" unique_id=580213771]
-process_material = SubResource("ParticleProcessMaterial_0bjrg")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GrinderFx4" parent="World/Tower/Wall3" index="4" unique_id=918282854]
-process_material = SubResource("ParticleProcessMaterial_0bjrg")
+process_material = SubResource("ParticleProcessMaterial_hr7nf")
 
 [node name="GateWall" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
 position = Vector2(-1, -2816)
@@ -1214,11 +1169,11 @@ unique_name_in_owner = true
 position = Vector2(-1, -2240)
 
 [node name="WinArea2D" parent="World" unique_id=1669638238 instance=ExtResource("7_nnhhk")]
-position = Vector2(1336, -2416)
+position = Vector2(2240, -2552)
 
 [node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
 unique_name_in_owner = true
-position = Vector2(0, 272)
+position = Vector2(448, 728)
 
 [node name="Staircase" parent="World" unique_id=639177241 instance=ExtResource("5_dxp7b")]
 position = Vector2(880, -8)
@@ -1267,16 +1222,19 @@ position = Vector2(-880, -1928)
 scale = Vector2(-1, 1)
 
 [node name="Staircase14" parent="World" unique_id=526602615 instance=ExtResource("5_dxp7b")]
-position = Vector2(880, -2168)
+position = Vector2(1408, -2168)
+
+[node name="Staircase15" parent="World" unique_id=1149683698 instance=ExtResource("5_dxp7b")]
+position = Vector2(1944, -2392)
 
 [node name="GateWheel" parent="World" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
 position = Vector2(-224, -2096)
 
 [node name="CloudLabel" type="Label" parent="World" unique_id=246261936]
-offset_left = 1384.0
-offset_top = -2176.0
-offset_right = 1548.0
-offset_bottom = -2116.0
+offset_left = 2144.0
+offset_top = -2448.0
+offset_right = 2308.0
+offset_bottom = -2388.0
 text = " _________
 __/          )_
 /_______________)"
@@ -1284,10 +1242,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel2" type="Label" parent="World" unique_id=1631212246]
-offset_left = 1760.0
-offset_top = -2520.0
-offset_right = 1924.0
-offset_bottom = -2460.0
+offset_left = 2760.0
+offset_top = -2600.0
+offset_right = 2924.0
+offset_bottom = -2540.0
 text = " _________
 __/          )_
 /_______________)"
@@ -1295,80 +1253,93 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel3" type="Label" parent="World" unique_id=1028798087]
-offset_left = 1760.0
-offset_top = -2272.0
-offset_right = 1924.0
-offset_bottom = -2212.0
+offset_left = 2664.0
+offset_top = -2408.0
+offset_right = 2828.0
+offset_bottom = -2348.0
 text = "__
 (__)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel4" type="Label" parent="World" unique_id=1003855585]
-offset_left = 1376.0
-offset_top = -2568.0
-offset_right = 1540.0
-offset_bottom = -2508.0
+offset_left = 2328.0
+offset_top = -2880.0
+offset_right = 2492.0
+offset_bottom = -2820.0
 text = "__
 (__)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel5" type="Label" parent="World" unique_id=873101846]
-offset_left = 1712.0
-offset_top = -2688.0
-offset_right = 1876.0
-offset_bottom = -2628.0
+offset_left = 2688.0
+offset_top = -2848.0
+offset_right = 2852.0
+offset_bottom = -2788.0
 text = "__
 (__)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel6" type="Label" parent="World" unique_id=1848833829]
-offset_left = 1624.0
-offset_top = -2616.0
-offset_right = 1788.0
-offset_bottom = -2556.0
+offset_left = 2384.0
+offset_top = -2464.0
+offset_right = 2548.0
+offset_bottom = -2404.0
 text = "____
 (__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel7" type="Label" parent="World" unique_id=330530046]
-offset_left = 1288.0
-offset_top = -2656.0
-offset_right = 1452.0
-offset_bottom = -2596.0
+offset_left = 1704.0
+offset_top = -2120.0
+offset_right = 1868.0
+offset_bottom = -2060.0
 text = "____
 (__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel8" type="Label" parent="World" unique_id=1780836371]
-offset_left = 1544.0
-offset_top = -2688.0
-offset_right = 1708.0
-offset_bottom = -2628.0
+offset_left = 2136.0
+offset_top = -2808.0
+offset_right = 2300.0
+offset_bottom = -2748.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel9" type="Label" parent="World" unique_id=1082928358]
-offset_left = 1912.0
-offset_top = -2592.0
-offset_right = 2076.0
-offset_bottom = -2532.0
+offset_left = 2816.0
+offset_top = -2728.0
+offset_right = 2980.0
+offset_bottom = -2668.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel10" type="Label" parent="World" unique_id=847103447]
-offset_left = 1592.0
-offset_top = -2408.0
-offset_right = 1756.0
-offset_bottom = -2327.0
+offset_left = 2448.0
+offset_top = -2736.0
+offset_right = 2612.0
+offset_bottom = -2655.0
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel22" type="Label" parent="World" unique_id=366291281]
+offset_left = 2080.0
+offset_top = -2944.0
+offset_right = 2244.0
+offset_bottom = -2863.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
 text = " _____
  _/      )_
 __/    )     )_
@@ -1377,10 +1348,46 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel11" type="Label" parent="World" unique_id=1610179656]
-offset_left = 1096.0
-offset_top = -2520.0
-offset_right = 1260.0
-offset_bottom = -2460.0
+offset_left = 2720.0
+offset_top = -2304.0
+offset_right = 2884.0
+offset_bottom = -2244.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel23" type="Label" parent="World" unique_id=100671517]
+offset_left = 1784.0
+offset_top = -2040.0
+offset_right = 1948.0
+offset_bottom = -1980.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel24" type="Label" parent="World" unique_id=1393945650]
+offset_left = 2488.0
+offset_top = -2216.0
+offset_right = 2652.0
+offset_bottom = -2156.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel32" type="Label" parent="World" unique_id=461668529]
+offset_left = 1560.0
+offset_top = -2536.0
+offset_right = 1724.0
+offset_bottom = -2476.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
 text = " _________
 __/          )_
 /_______________)"
@@ -1388,50 +1395,196 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel12" type="Label" parent="World" unique_id=1057777048]
-offset_left = 624.0
-offset_top = -2504.0
-offset_right = 788.0
-offset_bottom = -2444.0
+offset_left = 1528.0
+offset_top = -2640.0
+offset_right = 1692.0
+offset_bottom = -2580.0
 text = "__
 (__)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel13" type="Label" parent="World" unique_id=491932638]
-offset_left = 784.0
-offset_top = -2560.0
-offset_right = 948.0
-offset_bottom = -2500.0
+offset_left = 1792.0
+offset_top = -2568.0
+offset_right = 1956.0
+offset_bottom = -2508.0
 text = "____
 (__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel14" type="Label" parent="World" unique_id=1947484053]
-offset_left = 760.0
-offset_top = -2696.0
-offset_right = 924.0
-offset_bottom = -2636.0
+offset_left = 1488.0
+offset_top = -2792.0
+offset_right = 1652.0
+offset_bottom = -2732.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel15" type="Label" parent="World" unique_id=2117174738]
-offset_left = 968.0
-offset_top = -2600.0
-offset_right = 1132.0
-offset_bottom = -2540.0
+offset_left = 1872.0
+offset_top = -2736.0
+offset_right = 2036.0
+offset_bottom = -2676.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel25" type="Label" parent="World" unique_id=1604668633]
+offset_left = 1544.0
+offset_top = -2400.0
+offset_right = 1708.0
+offset_bottom = -2340.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel31" type="Label" parent="World" unique_id=38072833]
+offset_left = 1032.0
+offset_top = -2416.0
+offset_right = 1196.0
+offset_bottom = -2356.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel26" type="Label" parent="World" unique_id=244108856]
+offset_left = 1904.0
+offset_top = -2328.0
+offset_right = 2068.0
+offset_bottom = -2268.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel27" type="Label" parent="World" unique_id=1478970535]
+offset_left = 1976.0
+offset_top = -2080.0
+offset_right = 2140.0
+offset_bottom = -2020.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel28" type="Label" parent="World" unique_id=1791918065]
+offset_left = 1456.0
+offset_top = -2024.0
+offset_right = 1620.0
+offset_bottom = -1964.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel29" type="Label" parent="World" unique_id=1872982994]
+offset_left = 1712.0
+offset_top = -2840.0
+offset_right = 1876.0
+offset_bottom = -2780.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel30" type="Label" parent="World" unique_id=1902478039]
+offset_left = 2104.0
+offset_top = -2352.0
+offset_right = 2268.0
+offset_bottom = -2292.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel33" type="Label" parent="World" unique_id=558216183]
+offset_left = 2472.0
+offset_top = -2576.0
+offset_right = 2636.0
+offset_bottom = -2516.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel34" type="Label" parent="World" unique_id=1722406065]
+offset_left = 2528.0
+offset_top = -2904.0
+offset_right = 2692.0
+offset_bottom = -2844.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel17" type="Label" parent="World" unique_id=148070988]
+offset_left = 1600.0
+offset_top = -2720.0
+offset_right = 1764.0
+offset_bottom = -2660.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel18" type="Label" parent="World" unique_id=52295867]
+offset_left = 712.0
+offset_top = -2368.0
+offset_right = 876.0
+offset_bottom = -2308.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel19" type="Label" parent="World" unique_id=579300457]
+offset_left = 1304.0
+offset_top = -2424.0
+offset_right = 1468.0
+offset_bottom = -2364.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel20" type="Label" parent="World" unique_id=1979588784]
+offset_left = 1088.0
+offset_top = -2592.0
+offset_right = 1252.0
+offset_bottom = -2532.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel21" type="Label" parent="World" unique_id=2092574656]
+offset_left = 480.0
+offset_top = -2488.0
+offset_right = 644.0
+offset_bottom = -2428.0
 text = "____
 /__)_)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CloudLabel16" type="Label" parent="World" unique_id=617460340]
-offset_left = 1344.0
-offset_top = -2360.0
-offset_right = 1508.0
-offset_bottom = -2300.0
+offset_left = 1896.0
+offset_top = -2816.0
+offset_right = 2060.0
+offset_bottom = -2756.0
 text = " _________
 __/          )_
 /_______________)"
@@ -2324,9 +2477,9 @@ input_icon_mapper = NodePath("../../InputIconMapper")
 [node name="InteractInputHint" parent="World" unique_id=1993422584 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true
 visible = false
-offset_left = -408.0
+offset_left = -248.0
 offset_top = -2200.0
-offset_right = -360.0
+offset_right = -200.0
 offset_bottom = -2152.0
 size_flags_horizontal = 3
 action_name = &"interact"
@@ -2443,7 +2596,6 @@ position = Vector2(0, 80)
 [editable path="World/Tower/Floor7_Platform6"]
 [editable path="World/Tower/Floor8"]
 [editable path="World/Tower/Floor9"]
-[editable path="World/Tower/Floor_10"]
 [editable path="World/Tower/Wall"]
 [editable path="World/Tower/Wall2"]
 [editable path="World/Tower/Wall3"]
