@@ -183,9 +183,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0035037994, -0.088783264, 
 size = Vector3(64, 1, 96)
 material = SubResource("StandardMaterial3D_n4y2n")
 
+[node name="CSGBox3D12" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1460588436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36, 24)
+size = Vector3(64, 1, 48)
+
 [node name="CSGBox3D" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=927637598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.999998, 3, 24)
-size = Vector3(1, 6, 48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.999998, 18, 24)
+size = Vector3(1, 36, 48)
 material = SubResource("StandardMaterial3D_n4y2n")
 
 [node name="Label3D5" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D" unique_id=1208216256]
@@ -194,8 +198,8 @@ pixel_size = 0.05
 text = "__________________________________________________"
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=134137073]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 3, 24)
-size = Vector3(1, 6, 48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 18, 24)
+size = Vector3(1, 36, 48)
 material = SubResource("StandardMaterial3D_n4y2n")
 
 [node name="Label3D4" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D2" unique_id=1354579068]
@@ -223,9 +227,19 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4
 pixel_size = 0.05
 text = "___________________________"
 
+[node name="CSGBox3D10" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1742785429]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -19, 28, -5.9604645e-08)
+size = Vector3(1, 16, 26)
+material = SubResource("StandardMaterial3D_n4y2n")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=441347863]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 19, 28, 2.9802322e-08)
+size = Vector3(1, 16, 26)
+material = SubResource("StandardMaterial3D_n4y2n")
+
 [node name="CSGBox3D4" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1937106653]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.003546e-07, 3, 48)
-size = Vector3(1, 6, 64)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -7.003546e-07, 18, 48)
+size = Vector3(1, 36, 64)
 material = SubResource("StandardMaterial3D_n4y2n")
 
 [node name="Label3D3" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D4" unique_id=1454819319]
@@ -501,6 +515,153 @@ text = "_______"
 transform = Transform3D(-4.371139e-08, 8.742278e-08, 1, 0, -1, 8.742278e-08, 1, 3.821371e-15, 4.371139e-08, 0, 1.5, 0)
 pixel_size = 0.05
 text = "_______"
+
+[node name="Label3D3" type="Label3D" parent="World/StaticBody3D" unique_id=195756299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 152, -421)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+
+[node name="Label3D9" type="Label3D" parent="World/StaticBody3D" unique_id=1127528808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 695, 99, -692)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+
+[node name="Label3D21" type="Label3D" parent="World/StaticBody3D" unique_id=1768693880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 695, -140, -1778)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+
+[node name="Label3D4" type="Label3D" parent="World/StaticBody3D" unique_id=1432888359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -157, 223, -823)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+
+[node name="Label3D10" type="Label3D" parent="World/StaticBody3D" unique_id=2078627068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -530, 153, -362)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+
+[node name="Label3D5" type="Label3D" parent="World/StaticBody3D" unique_id=833339775]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.54007, 52.476364, -614.7424)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+
+[node name="Label3D6" type="Label3D" parent="World/StaticBody3D" unique_id=737398440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.54007, 229.06554, -151.00217)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D18" type="Label3D" parent="World/StaticBody3D" unique_id=312074384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -687.1212, 203.91289, -266.05585)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D11" type="Label3D" parent="World/StaticBody3D" unique_id=2091650869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -330.54007, 139.06554, -512.0022)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D12" type="Label3D" parent="World/StaticBody3D" unique_id=709020145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 456.45993, 139.06554, -677.0022)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D13" type="Label3D" parent="World/StaticBody3D" unique_id=314660173]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 600.45996, 238.06554, -390.0022)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D14" type="Label3D" parent="World/StaticBody3D" unique_id=107398778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -734.7138, 238.06554, -390.0022)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D19" type="Label3D" parent="World/StaticBody3D" unique_id=972162500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 187.48651, -19.82167, -309.5512)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D22" type="Label3D" parent="World/StaticBody3D" unique_id=856541419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98.51349, 481.17834, -562.5512)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D20" type="Label3D" parent="World/StaticBody3D" unique_id=699971398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -296.1194, -49.8338, -309.5512)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D15" type="Label3D" parent="World/StaticBody3D" unique_id=1953235853]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -416.74112, 343.15338, -1108.1415)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D16" type="Label3D" parent="World/StaticBody3D" unique_id=1550039042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 816.3518, 343.15338, -949.9448)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D17" type="Label3D" parent="World/StaticBody3D" unique_id=275162304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 993.897, 226.4697, -599.16943)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+
+[node name="Label3D8" type="Label3D" parent="World/StaticBody3D" unique_id=1961970435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.45993, 319.06555, -381.00217)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
+
+[node name="Label3D7" type="Label3D" parent="World/StaticBody3D" unique_id=854152317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.45993, 217.06554, -470.00217)
+pixel_size = 0.5
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+(__)_)"
 
 [node name="WinArea3D" type="Area3D" parent="World" unique_id=951327815]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.545326, -103.28314)
