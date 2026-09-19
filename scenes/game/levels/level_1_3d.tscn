@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dqdyrkm3jily6" path="res://addons/maaacks_game_template/extras/scripts/capture_mouse.gd" id="2_ofcco"]
 [ext_resource type="Script" uid="uid://cr5ta1wm1rogr" path="res://scenes/game/levels/character_body_3d.gd" id="4_eg2i3"]
 [ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="5_iusjq"]
-[ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/yaw_control_3d.gd" id="5_oxou0"]
+[ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="6_ofcco"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qaipj"]
