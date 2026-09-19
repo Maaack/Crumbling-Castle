@@ -14,6 +14,8 @@ extends "level.gd"
 
 func _on_lose_area_2d_body_entered(_node: Node2D) -> void:
 	if _node.is_in_group(&"player"):
+		level_state.deaths += 1
+		GlobalState.save()
 		level_lost.emit()
 
 func _on_win_area_2d_body_entered(body: Node2D) -> void:
@@ -49,20 +51,17 @@ func _on_first_jump_area_2d_body_exited(_body):
 func _on_first_checkpoint_area_2d_2_body_entered(_body):
 	if level_state.checkpoints < 1:
 		level_state.checkpoints = 1
+		GlobalState.save()
 
 func _on_second_checkpoint_area_2d_body_entered(_body):
 	if level_state.checkpoints < 2:
 		level_state.checkpoints = 2
+		GlobalState.save()
 
 func _on_third_checkpoint_area_2d_body_entered(body):
 	if level_state.checkpoints < 3:
 		level_state.checkpoints = 3
-
-func _on_lose_button_pressed() -> void:
-	level_lost.emit()
-
-func _on_win_button_pressed() -> void:
-	level_won.emit(next_level_path)
+		GlobalState.save()
 
 func _ready() -> void:
 	super._ready()

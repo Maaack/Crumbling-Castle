@@ -180,6 +180,8 @@ func _refresh_current_step_container() -> void:
 		current_container.hide()
 	if current_step >= step_order.size():
 		level_over = true
+		GameState.get_or_create_state().has_crumbled = true
+		GlobalState.save()
 		level_won.emit()
 		return
 	current_container = step_order[current_step]
