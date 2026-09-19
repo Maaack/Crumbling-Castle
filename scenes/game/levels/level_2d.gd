@@ -1,5 +1,4 @@
 extends "level.gd"
-@export var doom_speed = 20.0
 @export var gate_speed = 4.0
 @onready var lose_area_2d = %LoseArea2D
 @onready var gate = %Gate
@@ -30,7 +29,6 @@ func _on_win_area_2d_body_entered(body: Node2D) -> void:
 		level_won.emit(next_level_path)
 
 func _process(delta):
-	lose_area_2d.position.y -= delta * doom_speed
 	var shake: Vector2 = Vector2(randf() - .5, randf() - .5) * _gate_shake_intensity
 	gate.label.offset_transform_position = shake
 	gate_wall_label.offset_transform_position = shake
