@@ -524,6 +524,9 @@ size = Vector2(20, 1016)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
 size = Vector2(1112, 192)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_migjm"]
+size = Vector2(640, 192)
+
 [node name="Level1" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x1c7m")
 
@@ -2257,7 +2260,47 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/FirstJumpArea2D" unique_id=290872068]
 shape = SubResource("RectangleShape2D_1cqto")
 
+[node name="FirstCheckpointArea2D2" type="Area2D" parent="World" unique_id=1464356844]
+position = Vector2(0, -960)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/FirstCheckpointArea2D2" unique_id=1064454585]
+shape = SubResource("RectangleShape2D_1cqto")
+
+[node name="FirstCheckpointMarker2D" type="Marker2D" parent="World/FirstCheckpointArea2D2" unique_id=1396458133]
+unique_name_in_owner = true
+position = Vector2(1, 67)
+
+[node name="SecondCheckpointArea2D" type="Area2D" parent="World" unique_id=1165194653]
+position = Vector2(875, -1437)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/SecondCheckpointArea2D" unique_id=772481990]
+shape = SubResource("RectangleShape2D_migjm")
+
+[node name="SecondCheckpointMarker2D" type="Marker2D" parent="World/SecondCheckpointArea2D" unique_id=1444854837]
+unique_name_in_owner = true
+position = Vector2(249, 69)
+
+[node name="ThirdCheckpointArea2D" type="Area2D" parent="World" unique_id=1932778533]
+position = Vector2(875, -1917)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/ThirdCheckpointArea2D" unique_id=433974236]
+shape = SubResource("RectangleShape2D_migjm")
+
+[node name="ThirdCheckpointMarker2D" type="Marker2D" parent="World/ThirdCheckpointArea2D" unique_id=1524508025]
+unique_name_in_owner = true
+position = Vector2(249, 69)
+
 [node name="CharacterBody2D" parent="." unique_id=1297156709 instance=ExtResource("4_x1c7m")]
+unique_name_in_owner = true
 position = Vector2(0, 85)
 
 [connection signal="body_entered" from="World/WinArea2D" to="." method="_on_win_area_2d_body_entered"]
@@ -2269,6 +2312,9 @@ position = Vector2(0, 85)
 [connection signal="body_exited" from="World/StartingArea2D" to="." method="_on_starting_area_2d_body_exited"]
 [connection signal="body_entered" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_entered"]
 [connection signal="body_exited" from="World/FirstJumpArea2D" to="." method="_on_first_jump_area_2d_body_exited"]
+[connection signal="body_entered" from="World/FirstCheckpointArea2D2" to="." method="_on_first_checkpoint_area_2d_2_body_entered"]
+[connection signal="body_entered" from="World/SecondCheckpointArea2D" to="." method="_on_second_checkpoint_area_2d_body_entered"]
+[connection signal="body_entered" from="World/ThirdCheckpointArea2D" to="." method="_on_third_checkpoint_area_2d_body_entered"]
 
 [editable path="World/Tower/GroundFloor"]
 [editable path="World/Tower/Floor1"]
