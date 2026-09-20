@@ -54,10 +54,18 @@ License: [OFL](https://openfontlicense.org/)
 
 ### Icons
 
-#### Gamepad, Headphones, Grim Reaper, Person, and Mushrooms
+#### Logo, Gamepad, Headphones, Grim Reaper, Person, and Mushrooms
 Author: [Lorc, Delapouite, and contributors](https://game-icons.net/about.html#authors)  
 Source: [Game-icons.net](https://game-icons.net/)  
 License: [Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)  
+
+### Sounds
+
+#### Grinder, Portal, and Gear Crank
+Author: [Ovani Sound](https://ovanisound.com/)  
+Source: [ovanisound.com](https://ovanisound.com/products/environmental-ambiences-sound-fx-pack-vol-2)  
+Source: [ovanisound.com](https://ovanisound.com/products/steampunk-sound-fx-pack-vol-2)  
+License: Commercial, Royalty-Free
 
 
 ## Tools
