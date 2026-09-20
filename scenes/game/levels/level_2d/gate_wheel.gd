@@ -11,6 +11,7 @@ enum WheelState{
 
 @export var max_turns : int = 24
 @onready var animation_player = %AnimationPlayer
+@onready var audio_stream_player_2d = %AudioStreamPlayer2D
 
 var wheel_state : WheelState = WheelState.CARDINAL
 var can_interact : bool = false
@@ -24,6 +25,7 @@ func _turn_wheel() -> void:
 		WheelState.DIAGONAL:
 			wheel_state = WheelState.CARDINAL
 			animation_player.play(&"cardinal")
+	audio_stream_player_2d.play()
 	wheel_turned.emit()
 
 func turn_wheel() -> void:

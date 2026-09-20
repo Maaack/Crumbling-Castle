@@ -13,6 +13,7 @@ signal level_changed(level_path : String)
 var level_state : LevelState
 
 func _ready() -> void:
+	var game_state := GameState.get_or_create_state()
 	level_state = GameState.get_level_state(scene_file_path)
 	level_state.attempts += 1
 	GlobalState.save()
