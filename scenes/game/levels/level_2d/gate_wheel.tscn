@@ -151,6 +151,7 @@ shape = SubResource("RectangleShape2D_0gu67")
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_n4y2n")
 volume_db = -6.0
+max_polyphony = 2
 bus = &"SFX"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1286,4 +1286,5 @@ bus = &"SFX"
 unique_name_in_owner = true
 stream = SubResource("AudioStreamRandomizer_ojdab")
 volume_db = -8.0
+max_polyphony = 2
 bus = &"SFX"
