@@ -6,11 +6,138 @@
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="3_vvut4"]
 [ext_resource type="Script" uid="uid://bbymrin0cm704" path="res://addons/maaacks_game_template/extras/scripts/level_loader.gd" id="5_4ybgr"]
 [ext_resource type="Script" uid="uid://xo4s7jr6h54w" path="res://scripts/level_and_state_manager.gd" id="5_5jirj"]
+[ext_resource type="Shader" uid="uid://cm8f24cnq848q" path="res://scenes/game/vignette.gdshader" id="9_5jirj"]
 [ext_resource type="PackedScene" uid="uid://beb618yoy3dlw" path="res://scenes/loading_screens/level_loading_screen.tscn" id="10_3xj4h"]
 [ext_resource type="Script" uid="uid://wjq7li836lwj" path="res://addons/maaacks_game_template/extras/scripts/scene_lister.gd" id="10_h5e52"]
 [ext_resource type="Material" uid="uid://b61nmsmfhhiru" path="res://scenes/game/levels/game_zoom_shader_material.tres" id="11_vaxfo"]
 [ext_resource type="PackedScene" uid="uid://cqpl3pq0chs6t" path="res://scenes/game/scripts/music_visualizer.tscn" id="12_5jirj"]
 [ext_resource type="Script" uid="uid://cvkkcoavx3ah5" path="res://scenes/game/scripts/level_shader_controller.gd" id="14_ftsea"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4y2n"]
+shader = ExtResource("9_5jirj")
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/vignette_intensity = 16.0
+shader_parameter/vignette_curve = 1.0
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_kp23o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:material:shader_parameter/vignette_intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [16.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_5jirj"]
+resource_name = "lost"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:material:shader_parameter/vignette_intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 16.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.5]
+}
+
+[sub_resource type="Animation" id="Animation_ftsea"]
+resource_name = "start"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:material:shader_parameter/vignette_intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [8.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_vaxfo"]
+resource_name = "won"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect2:material:shader_parameter/vignette_intensity")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 16.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ftsea"]
+_data = {
+&"RESET": SubResource("Animation_kp23o"),
+&"lost": SubResource("Animation_5jirj"),
+&"start": SubResource("Animation_ftsea"),
+&"won": SubResource("Animation_vaxfo")
+}
 
 [node name="Game" type="Node" unique_id=1262092417]
 
@@ -37,6 +164,10 @@ current_level = NodePath("../SubViewportContainer/LevelContainer/Control")
 script = ExtResource("5_5jirj")
 level_loader = NodePath("../LevelLoader")
 scene_lister = NodePath("SceneLister")
+animation_player_node_path = NodePath("../LevelAnimationPlayer")
+level_start_animation = "start"
+level_won_animation = "won"
+level_lost_animation = "lost"
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
 script = ExtResource("10_h5e52")
@@ -54,6 +185,8 @@ grow_vertical = 2
 transparent_bg = true
 handle_input_locally = false
 canvas_item_default_texture_filter = 0
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
 size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
@@ -141,6 +274,17 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 metadata/_edit_use_anchors_ = true
 
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer" unique_id=887917200]
+material = SubResource("ShaderMaterial_n4y2n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
+
 [node name="LevelLoadingScreen" parent="." unique_id=816430938 instance=ExtResource("10_3xj4h")]
 visible = false
 
@@ -154,3 +298,6 @@ mod_amount = 0.5
 script = ExtResource("14_ftsea")
 level_loader = NodePath("../LevelLoader")
 canvas = NodePath("../CanvasLayer/ColorRect")
+
+[node name="LevelAnimationPlayer" type="AnimationPlayer" parent="." unique_id=885331057]
+libraries/ = SubResource("AnimationLibrary_ftsea")

@@ -7,6 +7,7 @@ const COYOTE_FRAMES = 8
 const BUFFERED_JUMP_FRAMES = 6
 
 @export var use_camera_smoothing: bool = true
+@export var world_time : float = 1.0
 
 # Frames since last on floor (start w/ none)
 var coyote_countdown: int = 0
@@ -25,6 +26,7 @@ func _ready() -> void:
 	#camera_2d.zoom = Vector2.ONE * 0.5
 
 func _process(delta: float) -> void:
+	delta *= world_time
 	if use_camera_smoothing:
 		camera_2d.global_position = lerp(camera_2d.global_position, camera_pivot.global_position, delta * 10)
 
@@ -59,9 +61,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
-		velocity.x = move_toward(velocity.x, direction * SPEED, ACCEL)
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCEL * world_time)
 	else:
-		velocity.x = move_toward(velocity.x, 0, ACCEL)
+		velocity.x = move_toward(velocity.x, 0, ACCEL * world_time)
 	if is_on_floor():
 		if direction:
 			animation_player.play(&"run")
@@ -76,5 +78,6 @@ func _physics_process(delta):
 		graphics.scale.x = 1
 	else:
 		graphics.scale.x = -1
+	velocity *= world_time
 
 	move_and_slide()

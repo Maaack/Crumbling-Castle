@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cwud4i4nb0b11" path="res://scenes/game/levels/level_2d/background/shelves_label.tscn" id="16_u4pql"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="18_xr372"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kmflf"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4y2n"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1foho"]
 resource_local_to_scene = true
@@ -519,8 +519,7 @@ script = ExtResource("1_x1c7m")
 position = Vector2(1, 120)
 
 [node name="WorldBoundary" type="CollisionShape2D" parent="World/Tower" unique_id=970615296]
-position = Vector2(0, 200)
-shape = SubResource("WorldBoundaryShape2D_kmflf")
+shape = SubResource("WorldBoundaryShape2D_n4y2n")
 one_way_collision = true
 
 [node name="GroundFloor" parent="World/Tower" unique_id=1962192153 instance=ExtResource("5_0mamm")]

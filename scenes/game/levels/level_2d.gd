@@ -22,10 +22,14 @@ func _on_lose_area_2d_body_entered(_node: Node2D) -> void:
 	if _node.is_in_group(&"player"):
 		level_state.deaths += 1
 		GlobalState.save()
+		var tween = create_tween()
+		tween.tween_property(character_body_2d, ^"world_time", 0.25, 0.5)
 		level_lost.emit()
 
 func _on_win_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group(&"player"):
+		var tween = create_tween()
+		tween.tween_property(character_body_2d, ^"world_time", 0.25, 0.5)
 		level_won.emit(next_level_path)
 
 func _process(delta):
@@ -75,7 +79,7 @@ func _on_second_checkpoint_area_2d_body_entered(_body):
 		level_state.checkpoints = 2
 		GlobalState.save()
 
-func _on_third_checkpoint_area_2d_body_entered(body):
+func _on_third_checkpoint_area_2d_body_entered(_body):
 	if level_state.checkpoints < 3:
 		level_state.checkpoints = 3
 		GlobalState.save()
