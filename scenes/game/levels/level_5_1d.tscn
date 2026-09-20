@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://buy7oevmcdctx" path="res://scenes/game/levels/level_1d.gd" id="1_o30bt"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="2_mxmax"]
+[ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="2_voagi"]
 [ext_resource type="Texture2D" uid="uid://cjsksqdia5cb7" path="res://assets/game-icons/grim-reaper.png" id="3_3r21o"]
 [ext_resource type="Texture2D" uid="uid://c0grsckg5abe3" path="res://assets/game-icons/run.png" id="4_7wjxx"]
+[ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="4_dpc2d"]
 [ext_resource type="Texture2D" uid="uid://bp855dni5gt4f" path="res://assets/game-icons/polar-star.png" id="5_7wjxx"]
 [ext_resource type="AudioStream" uid="uid://dofd6ehou8lcm" path="res://assets/sounds/grinder.ogg" id="6_na4gf"]
 
@@ -29,6 +31,9 @@ theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 script = ExtResource("1_o30bt")
 doom_speed = 6.0
+metadata/_edit_vertical_guides_ = [640.0]
+
+[node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("2_voagi")]
 
 [node name="Step" type="Control" parent="." unique_id=1129148904]
 unique_name_in_owner = true
@@ -67,6 +72,81 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Go Right"
 flat = true
+
+[node name="MoveRightInputHint" parent="Step" unique_id=352483959 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08847403
+anchor_top = -0.02529762
+anchor_right = 0.08847403
+anchor_bottom = -0.02529762
+offset_left = 731.0
+offset_top = 225.0
+offset_right = 779.0
+offset_bottom = 273.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 3
+action_name = &"move_right"
+input_cycle_delay = 1.0
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="MoveLeftInputHint" parent="Step" unique_id=1552725874 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.20698053
+anchor_top = -0.052083332
+anchor_right = -0.20698053
+anchor_bottom = -0.052083332
+offset_left = 463.0
+offset_top = 243.0
+offset_right = 511.0
+offset_bottom = 291.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 3
+action_name = &"move_left"
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="InteractInputHint" parent="Step" unique_id=638425105 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = -272.0
+offset_top = -128.0
+offset_right = -224.0
+offset_bottom = -80.0
+size_flags_horizontal = 3
+action_name = &"interact"
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="InteractInputHint2" parent="Step" unique_id=622795506 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 360.0
+offset_top = -128.0
+offset_right = 408.0
+offset_bottom = -80.0
+size_flags_horizontal = 3
+action_name = &"interact"
+input_icon_mapper = NodePath("../../InputIconMapper")
+
+[node name="Label" type="Label" parent="Step" unique_id=1006524004]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 232.0
+offset_right = 328.0
+offset_bottom = 266.0
+text = ","
+
+[node name="Label2" type="Label" parent="Step" unique_id=1478332333]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 232.0
+offset_right = 960.0
+offset_bottom = 266.0
+text = ","
 
 [node name="Step2" type="Control" parent="." unique_id=916383468]
 unique_name_in_owner = true
@@ -234,6 +314,7 @@ flat = true
 
 [node name="Step8" type="Control" parent="." unique_id=628327615]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 script = ExtResource("2_mxmax")
 search_depth = 2
