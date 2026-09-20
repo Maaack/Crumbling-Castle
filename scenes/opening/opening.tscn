@@ -1,22 +1,53 @@
 [gd_scene format=3 uid="uid://ns1v8wyj2l7g"]
 
 [ext_resource type="PackedScene" uid="uid://sikc02ddepyt" path="res://addons/maaacks_game_template/base/nodes/opening/opening.tscn" id="1_ke3tw"]
+[ext_resource type="Script" uid="uid://dy6kd61bifu26" path="res://scenes/opening/opening.gd" id="2_8wpmx"]
 [ext_resource type="Texture2D" uid="uid://cttljyfu7wdg8" path="res://assets/gwj_logo/GWJ-Full-Logo-tag-Orange2.svg" id="2_t52o3"]
 [ext_resource type="Texture2D" uid="uid://b305n3wsd5ufi" path="res://assets/gwj_logo/Theme.png" id="3_emxwb"]
 [ext_resource type="Texture2D" uid="uid://bkyhqgnkp3djl" path="res://assets/polygondwanaland/kglw_album_opening.png" id="3_yhkvs"]
 [ext_resource type="Texture2D" uid="uid://xm2xneqel1ec" path="res://assets/gwj_logo/Wildcards.png" id="4_t52o3"]
 [ext_resource type="AudioStream" uid="uid://craqoaodmfvk2" path="res://assets/polygondwanaland/Polygondwanaland.ogg" id="4_u6ao7"]
 [ext_resource type="Texture2D" uid="uid://cyjs663tk2dxe" path="res://assets/gwj_logo/content-warning.png" id="6_gnxbj"]
+[ext_resource type="PackedScene" uid="uid://1m5niobmnso0" path="res://scenes/game/levels/level_2d/floor.tscn" id="9_m5aml"]
+[ext_resource type="PackedScene" uid="uid://df5bqrfydgbu7" path="res://scenes/game/levels/level_2d/debris_effect.tscn" id="10_eh1y6"]
+[ext_resource type="PackedScene" uid="uid://ijkwj6o5a35" path="res://scenes/game/levels/level_2d/dust_cloud.tscn" id="11_nxcy4"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8wpmx"]
+resource_local_to_scene = true
+b = Vector2(0, 0)
 
 [node name="Opening" unique_id=1930105641 instance=ExtResource("1_ke3tw")]
+script = ExtResource("2_8wpmx")
 images = Array[Texture2D]([ExtResource("2_t52o3"), ExtResource("3_emxwb"), ExtResource("4_t52o3"), ExtResource("3_yhkvs"), ExtResource("6_gnxbj")])
 visible_times = Array[float]([1.6, 1.6, 3.0, 3.0, 5.0])
 
 [node name="BackgroundMusicPlayer" parent="." index="1" unique_id=1317385298]
 stream = ExtResource("4_u6ao7")
 
-[node name="ImagesContainer" parent="." index="2" unique_id=1471559661]
+[node name="HidingThings" type="ColorRect" parent="." index="2" unique_id=1560865479]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="ImagesContainer" parent="." index="3" unique_id=1471559661]
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 64
 theme_override_constants/margin_bottom = 64
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4" unique_id=1623991018]
+layer = 0
+
+[node name="Floor" parent="CanvasLayer" index="0" unique_id=1962192153 instance=ExtResource("9_m5aml")]
+visible = false
+shape = SubResource("SegmentShape2D_8wpmx")
+
+[node name="Debris" parent="CanvasLayer" index="1" unique_id=1986710238 instance=ExtResource("10_eh1y6")]
+visible = false
+
+[node name="DustCloud" parent="CanvasLayer" index="2" unique_id=80069791 instance=ExtResource("11_nxcy4")]
+visible = false
