@@ -4,6 +4,7 @@ extends CharacterBody3D
 const SPEED = 9.0
 const JUMP_VELOCITY = 5.0
 
+@export var world_time : float = 1.0
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -22,7 +23,7 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+		velocity.x = move_toward(velocity.x, 0, SPEED * world_time)
+		velocity.z = move_toward(velocity.z, 0, SPEED * world_time)
+	velocity *= world_time
 	move_and_slide()
