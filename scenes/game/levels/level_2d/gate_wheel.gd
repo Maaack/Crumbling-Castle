@@ -47,4 +47,8 @@ func _input(event : InputEvent) -> void:
 		return
 	if event.is_action_pressed(&"interact"):
 		turn_wheel()
-		
+	elif event is InputEventMouseButton:
+		if event.is_pressed() and \
+		(event.button_index == MOUSE_BUTTON_WHEEL_UP \
+		or event.button_index == MOUSE_BUTTON_WHEEL_DOWN):
+			turn_wheel()
