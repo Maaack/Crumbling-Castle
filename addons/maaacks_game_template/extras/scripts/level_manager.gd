@@ -34,6 +34,8 @@ extends Node
 @export_group("Animations")
 ## Optional node path to an animation player.
 @export_node_path(&"AnimationPlayer") var animation_player_node_path : NodePath
+## Optional name of an animation to play when the level is started.
+@export var level_start_animation : String
 ## Optional name of an animation to play when the level is won.
 @export var level_won_animation : String
 ## Optional name of an animation to play when the level is lost.
@@ -165,6 +167,13 @@ func _load_level_won_screen_or_checkpoint() -> void:
 	else:
 		_load_checkpoint_level()
 
+func _animate_level_start() -> void:
+	if (not animation_player) or level_start_animation.is_empty() \
+	or (not animation_player.has_animation(level_start_animation)):
+		return
+	animation_player.play(level_start_animation)
+	await animation_player.animation_finished
+
 func _animate_level_won() -> void:
 	if (not animation_player) or level_won_animation.is_empty() \
 	or (not animation_player.has_animation(level_won_animation)):
@@ -206,6 +215,7 @@ func _on_level_loader_level_loaded() -> void:
 	await current_level.ready
 	level_is_over = false
 	_connect_level_signals()
+	await _animate_level_start()
 
 func _on_level_loader_level_load_started() -> void:
 	pass
