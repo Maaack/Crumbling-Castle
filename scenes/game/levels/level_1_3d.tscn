@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="6_ofcco"]
 [ext_resource type="PackedScene" uid="uid://dbmos8x2bv6bu" path="res://scenes/game/levels/level_3d/torch_label_3d.tscn" id="6_uj8iv"]
+[ext_resource type="Texture2D" uid="uid://dk32vuglpbqru" path="res://assets/font_textures/courier-prime-sans-debris.png" id="10_xd4i5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qaipj"]
 
@@ -159,6 +160,28 @@ viewport_path = NodePath("World/InteractInputHint3D/SubViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1cqto"]
 size = Vector3(12, 16, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay5oa"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("10_xd4i5")
+billboard_mode = 3
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_shj2t"]
+emission_shape = 3
+emission_box_extents = Vector3(9, 9, 1)
+angle_min = 1.0728835e-05
+angle_max = 180.00002
+angular_velocity_min = -50.000015
+angular_velocity_max = 49.99998
+anim_offset_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
 
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
@@ -813,6 +836,16 @@ text = "|||||||||||||
 |||||||||||||
 |||||||||||||
 |||||||||||||"
+
+[node name="Debris" type="GPUParticles3D" parent="World/Gate3D" unique_id=52122058]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.688356, 1.99372)
+material_override = SubResource("StandardMaterial3D_ay5oa")
+amount = 50
+lifetime = 2.15
+visibility_aabb = AABB(-20, -20, -20, 40, 40, 40)
+process_material = SubResource("ParticleProcessMaterial_shj2t")
+draw_pass_1 = SubResource("QuadMesh_gdps7")
 
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 
