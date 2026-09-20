@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dvy0ajeivsyqg"
+path="res://.godot/imported/Shifting Terra and Lava Lakes of Mercury Loop.ogg-252844e7173421c2549012def4740dbc.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sounds/Shifting Terra and Lava Lakes of Mercury Loop.ogg"
+dest_files=["res://.godot/imported/Shifting Terra and Lava Lakes of Mercury Loop.ogg-252844e7173421c2549012def4740dbc.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

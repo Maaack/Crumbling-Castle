@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://d3pab64tttpqw"]
 
 [ext_resource type="PackedScene" uid="uid://citqp5jyt0fad" path="res://scenes/game/levels/level_3d/grinder_part.tscn" id="1_561c2"]
-[ext_resource type="AudioStream" uid="uid://dofd6ehou8lcm" path="res://assets/sounds/grinder.ogg" id="2_p15pg"]
+[ext_resource type="AudioStream" uid="uid://dvy0ajeivsyqg" path="res://assets/sounds/Shifting Terra and Lava Lakes of Mercury Loop.ogg" id="2_p15pg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gecq0"]
 size = Vector3(256, 8, 512)
@@ -38,16 +38,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8, 0)
 mesh = SubResource("ArrayMesh_561c2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=461999268]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -64, 480)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 416)
 stream = ExtResource("2_p15pg")
-unit_size = 8.0
+unit_size = 12.0
 autoplay = true
 bus = &"SFX"
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=1858915274]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -128, 256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16, 256)
 stream = ExtResource("2_p15pg")
-unit_size = 8.0
-pitch_scale = 0.8
+unit_size = 12.0
+pitch_scale = 0.9
 autoplay = true
 bus = &"SFX"
