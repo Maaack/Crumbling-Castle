@@ -12,47 +12,23 @@ gradient = SubResource("Gradient_glaqk")
 
 [sub_resource type="Animation" id="Animation_i68ud"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D2:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
 
 [sub_resource type="Animation" id="Animation_glaqk"]
-resource_name = "jitter"
+resource_name = "pulsing"
 length = 2.0
 loop_mode = 1
 step = 0.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/path = NodePath("Sprite2D4:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.6, 0.6333334, 0.6666667, 0.7, 0.8, 0.8333333, 0.8666667, 1.2, 1.2333333, 1.2666667, 1.3, 1.3333333, 1.3666667, 1.4, 1.4333333, 1.9333333, 1.9666667, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.56666666, 1.2333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(0.6, 1.5), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(0.6, 0.6), Vector2(0.9, 0.9), Vector2(1.75, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0.2, 2), Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(0.6, 1.5), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1), Vector2(0.4, 0.4), Vector2(1, 1)]
+"values": [Vector2(0.125, 4), Vector2(0.138, 3.636), Vector2(0.114, 4.4), Vector2(0.125, 4)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -61,16 +37,40 @@ tracks/1/path = NodePath("Sprite2D2:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.33333334, 0.36666667, 0.40000004, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333334, 0.6666667, 0.7, 0.8, 0.8333333, 0.8666667, 1.2, 1.2333333, 1.2666667, 1.3, 1.3333333, 1.3666667, 1.4, 1.4333333, 1.9333333, 1.9666667, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.53333336, 1.2333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(0.6, 0.6), Vector2(0.8, 0.8), Vector2(0.9, 0.9), Vector2(0.95359945, 0.95359945), Vector2(1, 1), Vector2(1, 1), Vector2(0.6, 1.1), Vector2(1, 1), Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1.2), Vector2(1, 1), Vector2(1.2, 1.2), Vector2(0.6, 0.6), Vector2(1.2, 1.2), Vector2(1, 1), Vector2(1, 1), Vector2(0.4, 0.4), Vector2(1, 1)]
+"values": [Vector2(0.75000006, 2.2499998), Vector2(0.825, 2.045), Vector2(0.682, 2.475), Vector2(0.75000006, 2.2499998)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 1.2333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.25, 3.2500002), Vector2(0.275, 2.955), Vector2(0.227, 3.575), Vector2(0.25, 3.2500002)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 1.2333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.909, 1.1), Vector2(1.1, 0.909), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i68ud"]
 _data = {
 &"RESET": SubResource("Animation_i68ud"),
-&"jitter": SubResource("Animation_glaqk")
+&"pulsing": SubResource("Animation_glaqk")
 }
 
 [node name="WinArea2D" type="Area2D" unique_id=1669638238]
@@ -81,11 +81,24 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_eom8k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=799575297]
+scale = Vector2(1.0358275, 0.967397)
 texture = SubResource("GradientTexture2D_eror1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1393441148]
+position = Vector2(1.9073486e-06, -3.8146973e-06)
+scale = Vector2(0.7256373, 2.3306117)
+texture = SubResource("GradientTexture2D_eror1")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=973702668]
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(0.24175967, 3.3664396)
+texture = SubResource("GradientTexture2D_eror1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=250241095]
+position = Vector2(0, 5.722046e-06)
+scale = Vector2(0.12105898, 4.14331)
 texture = SubResource("GradientTexture2D_eror1")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1543050522]
 libraries/ = SubResource("AnimationLibrary_i68ud")
-autoplay = &"jitter"
+autoplay = &"pulsing"
