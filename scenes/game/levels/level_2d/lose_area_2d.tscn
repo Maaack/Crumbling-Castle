@@ -113,6 +113,7 @@ rect = Rect2(-1280, -7, 2560, 14)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1202346368]
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 pitch_scale = 1.05
 autoplay = true
 max_distance = 1000.0
@@ -122,6 +123,7 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=396183194]
 position = Vector2(1280, 0)
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 autoplay = true
 max_distance = 1000.0
 bus = &"SFX"
@@ -130,6 +132,7 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=1750562386]
 position = Vector2(-1280, 0)
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 pitch_scale = 0.95
 autoplay = true
 max_distance = 1000.0
@@ -139,6 +142,7 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="." unique_id=978074563]
 position = Vector2(-640, 0)
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 autoplay = true
 max_distance = 1000.0
 bus = &"SFX"
@@ -147,6 +151,7 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="." unique_id=760193204]
 position = Vector2(640, 0)
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 pitch_scale = 0.95
 autoplay = true
 max_distance = 1000.0
@@ -156,6 +161,7 @@ parameters/looping = true
 [node name="AudioStreamPlayer2D6" type="AudioStreamPlayer2D" parent="." unique_id=1980534116]
 position = Vector2(1800, 0)
 stream = ExtResource("2_6ape3")
+volume_db = -3.0
 pitch_scale = 1.05
 autoplay = true
 max_distance = 1000.0
