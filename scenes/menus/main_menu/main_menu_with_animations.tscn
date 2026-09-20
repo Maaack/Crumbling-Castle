@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://bgxix7esjru83" path="res://scenes/menus/main_menu/main_menu_with_animations.gd" id="2_ixa71"]
 [ext_resource type="PackedScene" uid="uid://mhk7ai1jtttm" path="res://scenes/windows/main_menu_options_window.tscn" id="3_2k5l7"]
 [ext_resource type="PackedScene" uid="uid://dnaejbfe1nvn1" path="res://scenes/windows/main_menu_credits_window.tscn" id="4_vsp5b"]
+[ext_resource type="Texture2D" uid="uid://cucjmnstjxw2t" path="res://assets/game-icons/tower-fall.svg" id="4_x5bcm"]
+[ext_resource type="PackedScene" uid="uid://bumhv7pttsj0f" path="res://scenes/game/levels/level_2d/win_area_2d.tscn" id="4_xkrf4"]
 [ext_resource type="PackedScene" uid="uid://cwt4p3bufkke5" path="res://addons/maaacks_game_template/base/nodes/windows/confirmation_popup_window_panel.tscn" id="5_6xh1d"]
 [ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="5_vsp5b"]
 [ext_resource type="Script" uid="uid://dmkubt2nsnsbn" path="res://addons/maaacks_game_template/base/nodes/labels/config_version_label.gd" id="6_6xh1d"]
@@ -338,14 +340,346 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
-[node name="BackgroundTextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=1940176448]
-visible = false
+[node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1789796632]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-expand_mode = 1
+
+[node name="CloudLabel" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1214510004]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 127.0
+offset_top = 31.0
+offset_right = 291.0
+offset_bottom = 91.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel2" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=681205054]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 1219.0
+offset_top = 269.0
+offset_right = 1383.0
+offset_bottom = 329.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel3" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=332999934]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 647.0
+offset_top = 71.0
+offset_right = 811.0
+offset_bottom = 131.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel4" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1439064613]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 855.0
+offset_top = 47.0
+offset_right = 1019.0
+offset_bottom = 107.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel5" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=145796129]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 1147.0
+offset_top = 21.0
+offset_right = 1311.0
+offset_bottom = 81.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel6" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1732898405]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 367.0
+offset_top = 15.0
+offset_right = 531.0
+offset_bottom = 75.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel8" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=447340704]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 663.0
+offset_top = 119.0
+offset_right = 827.0
+offset_bottom = 179.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel9" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=521958916]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 141.0
+offset_right = 1439.0
+offset_bottom = 201.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel10" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1511698505]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 191.0
+offset_right = 1139.0
+offset_bottom = 272.0
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel22" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1958231319]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 607.0
+offset_top = -17.0
+offset_right = 771.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _____
+ _/      )_
+__/    )     )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel32" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=862890567]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 436.0
+offset_top = 256.0
+offset_right = 600.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel12" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=466996773]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 55.0
+offset_top = 287.0
+offset_right = 219.0
+offset_bottom = 347.0
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel13" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1719175212]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 668.0
+offset_top = 224.0
+offset_right = 832.0
+offset_bottom = 284.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel14" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1811724654]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 135.0
+offset_right = 179.0
+offset_bottom = 195.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel15" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1618018664]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 399.0
+offset_top = 191.0
+offset_right = 563.0
+offset_bottom = 251.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel25" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1842393557]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 420.0
+offset_top = 392.0
+offset_right = 584.0
+offset_bottom = 452.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel26" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=627559079]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 431.0
+offset_top = 599.0
+offset_right = 595.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "__
+(__)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel29" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1201091287]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 239.0
+offset_top = 87.0
+offset_right = 403.0
+offset_bottom = 147.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel30" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1339163007]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 2053.0
+offset_top = -2334.0
+offset_right = 2217.0
+offset_bottom = -2274.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel33" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=7052846]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 2421.0
+offset_top = -2558.0
+offset_right = 2585.0
+offset_bottom = -2498.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel34" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=579832144]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 2477.0
+offset_top = -2886.0
+offset_right = 2641.0
+offset_bottom = -2826.0
+theme_override_colors/font_color = Color(0.2508181, 0.25081813, 0.2508181, 1)
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel17" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=83912965]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 1549.0
+offset_top = -2702.0
+offset_right = 1713.0
+offset_bottom = -2642.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel19" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1745378443]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 1253.0
+offset_top = -2406.0
+offset_right = 1417.0
+offset_bottom = -2346.0
+text = "____
+(__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel20" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1096066546]
+modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
+layout_mode = 0
+offset_left = 1037.0
+offset_top = -2574.0
+offset_right = 1201.0
+offset_bottom = -2514.0
+text = "____
+/__)_)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloudLabel16" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=367900143]
+modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
+layout_mode = 0
+offset_left = 1845.0
+offset_top = -2798.0
+offset_right = 2009.0
+offset_bottom = -2738.0
+text = " _________
+__/          )_
+/_______________)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinArea2D" parent="SubViewportContainer/SubViewport/Control" unique_id=1669638238 instance=ExtResource("4_xkrf4")]
+position = Vector2(1064, 170)
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=1940176448]
+modulate = Color(0.06469653, 0.064696535, 0.0646965, 1)
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -512.0
+offset_right = 272.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("4_x5bcm")
 stretch_mode = 5
 
 [node name="MenuContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport" unique_id=396616752]
@@ -379,7 +713,7 @@ vertical_alignment = 1
 
 [node name="SubTitleMargin" type="MarginContainer" parent="SubViewportContainer/SubViewport/MenuContainer" unique_id=1510335937]
 layout_mode = 2
-theme_override_constants/margin_top = 256
+theme_override_constants/margin_top = 272
 
 [node name="SubTitleContainer" type="Control" parent="SubViewportContainer/SubViewport/MenuContainer/SubTitleMargin" unique_id=930520368]
 modulate = Color(1, 1, 1, 0)
@@ -399,6 +733,7 @@ vertical_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=469747071]
 process_mode = 3
+layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1113717682]
 material = ExtResource("7_2k5l7")
@@ -529,6 +864,7 @@ text = "Headphones recommended"
 vertical_alignment = 1
 
 [node name="DrugsDiscouragedContainer" type="HBoxContainer" parent="MenuButtonsMargin/MenuButtonsContainer/Control/VBoxContainer" unique_id=1637444292]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
@@ -575,7 +911,7 @@ offset_left = -88.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v0.0.0"
+text = "v1.0.0-dev-2"
 horizontal_alignment = 2
 script = ExtResource("6_6xh1d")
 

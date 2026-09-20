@@ -13,6 +13,7 @@ var animation_state_machine : AnimationNodeStateMachinePlayback
 @onready var continue_game_button = %ContinueGameButton
 @onready var level_select_button = %LevelSelectButton
 @onready var new_game_confirmation = %NewGameConfirmation
+@onready var drugs_discouraged_container = %DrugsDiscouragedContainer
 
 func load_game_scene() -> void:
 	GameState.start_game()
@@ -66,6 +67,9 @@ func _ready() -> void:
 	_show_level_select_if_set()
 	_show_continue_if_set()
 	animation_state_machine = %MenuAnimationTree.get("parameters/playback")
+	var game_state := GameState.get_or_create_state()
+	if game_state.has_crumbled:
+		drugs_discouraged_container.show()
 
 func _on_continue_game_button_pressed() -> void:
 	GameState.continue_game()
