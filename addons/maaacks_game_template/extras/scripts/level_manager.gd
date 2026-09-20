@@ -31,7 +31,15 @@ extends Node
 @export var level_lost_scene : PackedScene
 ## Optional screen to be shown after the level is won.
 @export var level_won_scene : PackedScene
+@export_group("Animations")
+## Optional node path to an animation player.
+@export_node_path(&"AnimationPlayer") var animation_player_node_path : NodePath
+## Optional name of an animation to play when the level is won.
+@export var level_won_animation : String
+## Optional name of an animation to play when the level is lost.
+@export var level_lost_animation : String
 
+@onready var animation_player : AnimationPlayer = get_node_or_null(animation_player_node_path)
 ## If Maaack's Scene Loader is installed, then it will be used to change scenes.
 @onready var scene_loader_node = get_tree().root.get_node_or_null(^"SceneLoader")
 
@@ -39,6 +47,7 @@ extends Node
 var current_level : Node
 var current_level_path : String : set = set_current_level_path
 var checkpoint_level_path : String : set = set_checkpoint_level_path
+var level_is_over : bool = false
 
 func set_current_level_path(value : String) -> void:
 	current_level_path = value
@@ -103,6 +112,10 @@ func _load_ending() -> void:
 		_load_main_menu()
 
 func _on_level_lost() -> void:
+	if level_is_over:
+		return
+	level_is_over = true
+	await _animate_level_lost()
 	if level_lost_scene:
 		var instance = level_lost_scene.instantiate()
 		get_tree().current_scene.add_child(instance)
@@ -152,7 +165,25 @@ func _load_level_won_screen_or_checkpoint() -> void:
 	else:
 		_load_checkpoint_level()
 
+func _animate_level_won() -> void:
+	if (not animation_player) or level_won_animation.is_empty() \
+	or (not animation_player.has_animation(level_won_animation)):
+		return
+	animation_player.play(level_won_animation)
+	await animation_player.animation_finished
+
+func _animate_level_lost() -> void:
+	if (not animation_player) or level_lost_animation.is_empty() \
+	or (not animation_player.has_animation(level_lost_animation)):
+		return
+	animation_player.play(level_lost_animation)
+	await animation_player.animation_finished
+
 func _on_level_won(next_level_path : String = ""):
+	if level_is_over:
+		return
+	level_is_over = true
+	await _animate_level_won()
 	if next_level_path.is_empty():
 		next_level_path = get_next_level_path()
 	if next_level_path.is_empty():
@@ -173,6 +204,7 @@ func _connect_level_signals() -> void:
 func _on_level_loader_level_loaded() -> void:
 	current_level = level_loader.current_level
 	await current_level.ready
+	level_is_over = false
 	_connect_level_signals()
 
 func _on_level_loader_level_load_started() -> void:
