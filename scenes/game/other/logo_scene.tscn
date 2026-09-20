@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cs5ave8372yre"]
+
+[ext_resource type="Texture2D" uid="uid://cucjmnstjxw2t" path="res://assets/game-icons/tower-fall.svg" id="1_s56wt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s56wt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.973535, 0.973535, 0.973535, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
+[node name="LogoScene" type="Control" unique_id=805233258]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=449018182]
+custom_minimum_size = Vector2(502, 372)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -186.0
+offset_right = 251.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s56wt")
+
+[node name="TowerFall" type="TextureRect" parent="." unique_id=312860470]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_s56wt")
+expand_mode = 5
