@@ -202,6 +202,9 @@ func _on_level_won(next_level_path : String = ""):
 		_load_level_won_screen_or_checkpoint()
 
 func _on_level_changed(next_level_path : String):
+	if level_is_over:
+		return
+	level_is_over = true
 	checkpoint_level_path = next_level_path
 	_load_checkpoint_level()
 
