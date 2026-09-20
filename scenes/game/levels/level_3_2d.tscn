@@ -207,14 +207,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_e5qku"]
 resource_local_to_scene = true
-a = Vector2(-128, 0)
-b = Vector2(128, 0)
+a = Vector2(-144, 0)
+b = Vector2(144, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q7uis"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(128, 4, 1)
+emission_box_extents = Vector3(144, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -273,14 +273,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gk1aw"]
 resource_local_to_scene = true
-a = Vector2(-32, 0)
-b = Vector2(32, 0)
+a = Vector2(-40, 0)
+b = Vector2(40, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_odf1s"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(32, 4, 1)
+emission_box_extents = Vector3(40, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -295,14 +295,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7ocvw"]
 resource_local_to_scene = true
-a = Vector2(-32, 0)
-b = Vector2(32, 0)
+a = Vector2(-40, 0)
+b = Vector2(40, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_udeqw"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(32, 4, 1)
+emission_box_extents = Vector3(40, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -317,14 +317,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_4402k"]
 resource_local_to_scene = true
-a = Vector2(-32, 0)
-b = Vector2(32, 0)
+a = Vector2(-40, 0)
+b = Vector2(40, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6y48p"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(32, 4, 1)
+emission_box_extents = Vector3(40, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -339,14 +339,14 @@ alpha_curve = SubResource("CurveTexture_s3pix")
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_mi3uw"]
 resource_local_to_scene = true
-a = Vector2(-32, 0)
-b = Vector2(32, 0)
+a = Vector2(-40, 0)
+b = Vector2(40, 0)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2i3g5"]
 resource_local_to_scene = true
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(32, 4, 1)
+emission_box_extents = Vector3(40, 4, 1)
 angle_min = 1.0728835e-05
 angle_max = 90.000015
 direction = Vector3(0, -1, 0)
@@ -636,13 +636,13 @@ process_material = SubResource("ParticleProcessMaterial_vlhkm")
 [node name="Floor6_Center" parent="World/Tower" unique_id=1283792137 instance=ExtResource("5_0mamm")]
 position = Vector2(0, -1440)
 shape = SubResource("SegmentShape2D_e5qku")
-width = 256
+width = 288
 
 [node name="Label" parent="World/Tower/Floor6_Center" index="0" unique_id=464379256]
-offset_left = -130.0
-offset_right = 130.0
-text = "============================"
-visible_characters = 27
+offset_left = -144.0
+offset_right = 144.0
+text = "==============================="
+visible_characters = 30
 
 [node name="GrinderFx" parent="World/Tower/Floor6_Center" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_q7uis")
@@ -678,13 +678,13 @@ process_material = SubResource("ParticleProcessMaterial_5a7fn")
 [node name="Floor7_Platform2" parent="World/Tower" unique_id=2064095174 instance=ExtResource("5_0mamm")]
 position = Vector2(-417, -1680)
 shape = SubResource("SegmentShape2D_gk1aw")
-width = 64
+width = 80
 
 [node name="Label" parent="World/Tower/Floor7_Platform2" index="0" unique_id=464379256]
-offset_left = -34.0
-offset_right = 34.0
-text = "========"
-visible_characters = 7
+offset_left = -43.5
+offset_right = 43.5
+text = "=========="
+visible_characters = 9
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform2" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_odf1s")
@@ -692,13 +692,13 @@ process_material = SubResource("ParticleProcessMaterial_odf1s")
 [node name="Floor7_Platform3" parent="World/Tower" unique_id=725769279 instance=ExtResource("5_0mamm")]
 position = Vector2(-161, -1680)
 shape = SubResource("SegmentShape2D_7ocvw")
-width = 64
+width = 80
 
 [node name="Label" parent="World/Tower/Floor7_Platform3" index="0" unique_id=464379256]
-offset_left = -34.0
-offset_right = 34.0
-text = "========"
-visible_characters = 7
+offset_left = -43.5
+offset_right = 43.5
+text = "=========="
+visible_characters = 9
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform3" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_udeqw")
@@ -706,13 +706,13 @@ process_material = SubResource("ParticleProcessMaterial_udeqw")
 [node name="Floor7_Platform4" parent="World/Tower" unique_id=1681820167 instance=ExtResource("5_0mamm")]
 position = Vector2(31, -1680)
 shape = SubResource("SegmentShape2D_4402k")
-width = 64
+width = 80
 
 [node name="Label" parent="World/Tower/Floor7_Platform4" index="0" unique_id=464379256]
-offset_left = -34.0
-offset_right = 34.0
-text = "========"
-visible_characters = 7
+offset_left = -43.5
+offset_right = 43.5
+text = "=========="
+visible_characters = 9
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform4" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_6y48p")
@@ -720,13 +720,13 @@ process_material = SubResource("ParticleProcessMaterial_6y48p")
 [node name="Floor7_Platform5" parent="World/Tower" unique_id=1420176876 instance=ExtResource("5_0mamm")]
 position = Vector2(287, -1680)
 shape = SubResource("SegmentShape2D_mi3uw")
-width = 64
+width = 80
 
 [node name="Label" parent="World/Tower/Floor7_Platform5" index="0" unique_id=464379256]
-offset_left = -34.0
-offset_right = 34.0
-text = "========"
-visible_characters = 7
+offset_left = -43.5
+offset_right = 43.5
+text = "=========="
+visible_characters = 9
 
 [node name="GrinderFx" parent="World/Tower/Floor7_Platform5" index="1" unique_id=1393526113]
 process_material = SubResource("ParticleProcessMaterial_2i3g5")
