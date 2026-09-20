@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ubeunkq2nobf" path="res://scenes/game/levels/level_3d.gd" id="1_iusjq"]
 [ext_resource type="Script" uid="uid://dqdyrkm3jily6" path="res://addons/maaacks_game_template/extras/scripts/capture_mouse.gd" id="2_ofcco"]
 [ext_resource type="PackedScene" uid="uid://d3pab64tttpqw" path="res://scenes/game/levels/level_3d/lose_area_3d.tscn" id="3_eg2i3"]
+[ext_resource type="PackedScene" uid="uid://bo1d5ftohsh0t" path="res://scenes/game/levels/level_3d/gate_wheel_3d.tscn" id="3_oxou0"]
 [ext_resource type="Script" uid="uid://cr5ta1wm1rogr" path="res://scenes/game/levels/character_body_3d.gd" id="4_eg2i3"]
 [ext_resource type="PackedScene" uid="uid://cul468jd6nxq1" path="res://scenes/menus/options_menu/input/input_icon_mapper.tscn" id="5_iusjq"]
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
@@ -152,6 +153,12 @@ viewport_path = NodePath("World/Sprite3D2/SubViewport")
 [sub_resource type="ViewportTexture" id="ViewportTexture_ofcco"]
 viewport_path = NodePath("World/Sprite3D3/SubViewport")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_qaipj"]
+viewport_path = NodePath("World/InteractInputHint3D/SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1cqto"]
+size = Vector3(12, 16, 1)
+
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
 
@@ -296,29 +303,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, -1.7763568e-15, 1, 0, -4.371
 size = Vector3(4, 4, 2)
 material = SubResource("StandardMaterial3D_n4y2n")
 
-[node name="Label3D" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=1718104071]
-transform = Transform3D(1, 0, 0, 0, 1, 3.3940592e-30, 0, 0, 1, 0, 0.5, -1.1)
-pixel_size = 0.025
-modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "_______
-|      |
-|      |
-|      |
-|      |"
-
-[node name="Label3D3" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=1707439888]
-transform = Transform3D(1, 0, 0, 0, 1, 3.3940592e-30, 0, 0, 1, 0, 0.5, -1.1)
-pixel_size = 0.025
-modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "|
--- --
-|"
-
-[node name="Label3D2" type="Label3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=2108586532]
-transform = Transform3D(1, 0, 0, 0, 1, 3.3940592e-30, 0, 0, 1, 0, 0.5, -1.1)
-pixel_size = 0.025
-modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
-text = "O"
+[node name="GateWheel3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=590591182 instance=ExtResource("3_oxou0")]
 
 [node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="World/StaticBody3D" unique_id=754234851]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0035037994, -0.088783264, 0.4782257)
@@ -670,11 +655,11 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/WinArea3D" unique_id=116265185]
 shape = SubResource("BoxShape3D_0gu67")
 
-[node name="LoseArea3D" parent="World" unique_id=624041860 instance=ExtResource("3_eg2i3")]
+[node name="LoseArea3D" parent="World" unique_id=624041860 groups=["doom"] instance=ExtResource("3_eg2i3")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -105, -360)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="World" unique_id=1772878733]
+[node name="CharacterBody3D" type="CharacterBody3D" parent="World" unique_id=1772878733 groups=["player"]]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 40)
 collision_layer = 3
@@ -682,10 +667,11 @@ collision_mask = 3
 script = ExtResource("4_eg2i3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/CharacterBody3D" unique_id=517704925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_0gu67")
 
 [node name="Camera3D" type="Camera3D" parent="World/CharacterBody3D" unique_id=1650659976]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 
 [node name="YawControl3D" type="Node3D" parent="World/CharacterBody3D" unique_id=32869769]
 script = ExtResource("5_oxou0")
@@ -754,6 +740,21 @@ size = Vector2i(48, 48)
 action_name = &"move_forward"
 input_icon_mapper = NodePath("../../../../InputIconMapper")
 
+[node name="InteractInputHint3D" type="Sprite3D" parent="World" unique_id=233487234]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11, 8, 9)
+visible = false
+pixel_size = 0.14
+double_sided = false
+texture = SubResource("ViewportTexture_qaipj")
+
+[node name="SubViewport" type="SubViewport" parent="World/InteractInputHint3D" unique_id=694193886]
+size = Vector2i(48, 48)
+
+[node name="InputHint" parent="World/InteractInputHint3D/SubViewport" unique_id=1724379252 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("6_ofcco")]
+action_name = &"interact"
+input_icon_mapper = NodePath("../../../../InputIconMapper")
+
 [node name="TorchLabel3D" parent="World" unique_id=1178983464 instance=ExtResource("6_uj8iv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 4.5, 1)
 
@@ -778,7 +779,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 4.5, 47)
 [node name="TorchLabel3D8" parent="World" unique_id=1795581501 instance=ExtResource("6_uj8iv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 4.5, 47)
 
+[node name="Gate3D" type="StaticBody3D" parent="World" unique_id=1177786277]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Gate3D" unique_id=493168417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+shape = SubResource("BoxShape3D_1cqto")
+
+[node name="Label3D" type="Label3D" parent="World/Gate3D" unique_id=34692565]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+pixel_size = 0.05
+text = "|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||
+|||||||||||||"
+
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 
+[connection signal="player_entered" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_entered"]
+[connection signal="player_exited" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_exited"]
+[connection signal="wheel_turned" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_wheel_turned"]
 [connection signal="body_entered" from="World/WinArea3D" to="." method="_on_win_area_3d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea3D" to="." method="_on_lose_area_3d_body_entered"]
