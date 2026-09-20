@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c0grsckg5abe3" path="res://assets/game-icons/run.png" id="4_7wjxx"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="4_dpc2d"]
 [ext_resource type="Texture2D" uid="uid://bp855dni5gt4f" path="res://assets/game-icons/polar-star.png" id="5_7wjxx"]
-[ext_resource type="AudioStream" uid="uid://dofd6ehou8lcm" path="res://assets/sounds/grinder.ogg" id="6_na4gf"]
+[ext_resource type="AudioStream" uid="uid://dvy0ajeivsyqg" path="res://assets/sounds/Shifting Terra and Lava Lakes of Mercury Loop.ogg" id="8_voagi"]
+[ext_resource type="AudioStream" uid="uid://b00htwygrmfcd" path="res://assets/sounds/Floating Behemoths Loop A.ogg" id="9_dpc2d"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooua1"]
 
@@ -37,7 +38,6 @@ metadata/_edit_vertical_guides_ = [640.0]
 
 [node name="Step" type="Control" parent="." unique_id=1129148904]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 script = ExtResource("2_mxmax")
 search_depth = 2
@@ -88,9 +88,10 @@ offset_bottom = 273.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
-action_name = &"move_right"
+action_name = &"ui_right"
 input_cycle_delay = 1.0
 input_icon_mapper = NodePath("../../InputIconMapper")
+icons_only = true
 
 [node name="MoveLeftInputHint" parent="Step" unique_id=1552725874 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
 unique_name_in_owner = true
@@ -107,8 +108,10 @@ offset_bottom = 291.0
 grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 3
-action_name = &"move_left"
+action_name = &"ui_left"
+input_cycle_delay = 1.0
 input_icon_mapper = NodePath("../../InputIconMapper")
+icons_only = true
 
 [node name="InteractInputHint" parent="Step" unique_id=638425105 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
 unique_name_in_owner = true
@@ -118,8 +121,10 @@ offset_top = -128.0
 offset_right = -224.0
 offset_bottom = -80.0
 size_flags_horizontal = 3
-action_name = &"interact"
+action_name = &"ui_accept"
+input_cycle_delay = 1.0
 input_icon_mapper = NodePath("../../InputIconMapper")
+icons_only = true
 
 [node name="InteractInputHint2" parent="Step" unique_id=622795506 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("4_dpc2d")]
 unique_name_in_owner = true
@@ -129,8 +134,10 @@ offset_top = -128.0
 offset_right = 408.0
 offset_bottom = -80.0
 size_flags_horizontal = 3
-action_name = &"interact"
+action_name = &"ui_accept"
+input_cycle_delay = 1.0
 input_icon_mapper = NodePath("../../InputIconMapper")
+icons_only = true
 
 [node name="Label" type="Label" parent="Step" unique_id=1006524004]
 layout_mode = 0
@@ -1217,8 +1224,17 @@ offset_right = 1026.0
 grow_vertical = 0
 texture = ExtResource("5_7wjxx")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1339551504]
-stream = ExtResource("6_na4gf")
+[node name="DeathStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1339551504]
+unique_name_in_owner = true
+stream = ExtResource("8_voagi")
+volume_db = -80.0
+pitch_scale = 0.86
+autoplay = true
+bus = &"SFX"
+
+[node name="PortalStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=394157459]
+unique_name_in_owner = true
+stream = ExtResource("9_dpc2d")
 volume_db = -80.0
 pitch_scale = 0.86
 autoplay = true

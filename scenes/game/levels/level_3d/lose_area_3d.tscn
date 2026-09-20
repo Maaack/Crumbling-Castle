@@ -43,6 +43,7 @@ stream = ExtResource("2_p15pg")
 unit_size = 12.0
 autoplay = true
 bus = &"SFX"
+parameters/looping = true
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="." unique_id=1858915274]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -16, 256)
@@ -51,3 +52,4 @@ unit_size = 12.0
 pitch_scale = 0.9
 autoplay = true
 bus = &"SFX"
+parameters/looping = true

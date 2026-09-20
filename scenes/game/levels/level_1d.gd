@@ -34,8 +34,10 @@ extends "level.gd"
 @onready var portal_situation_label = %PortalSituationLabel
 @onready var death_texture_rect = %DeathTextureRect
 @onready var player_texture_rect = %PlayerTextureRect
+@onready var portal_texture_rect = %PortalTextureRect
 @onready var progress_label = %ProgressLabel
-@onready var audio_stream_player = $AudioStreamPlayer
+@onready var death_stream_player = %DeathStreamPlayer
+@onready var portal_stream_player = %PortalStreamPlayer
 
 @onready var all_containers : Array[Node] = [
 	step,
@@ -204,6 +206,8 @@ func _on_progress_button_pressed() -> void:
 func _on_ascend_button_pressed() -> void:
 	if level_over: return
 	player_texture_rect.position.x += player_speed
+	var _distance_ratio = clamp(abs(player_texture_rect.position.x - portal_texture_rect.position.x), 0.0, 180.0) / 180.0
+	portal_stream_player.volume_linear = (1.0 - _distance_ratio) * 0.25
 
 func lose() -> void:
 	if level_over: return
@@ -301,7 +305,7 @@ func _process(delta):
 	if not reached_portal:
 		death_texture_rect.position.x += doom_speed * delta
 	var _distance_ratio = clamp(abs(death_texture_rect.position.x - player_texture_rect.position.x), 0.0, 360.0) / 360.0
-	audio_stream_player.volume_linear = (1.0 - _distance_ratio) * 0.25
+	death_stream_player.volume_linear = (1.0 - _distance_ratio) * 0.25
 	if death_texture_rect.position.x + 10 > player_texture_rect.position.x:
 		lose()
 	
