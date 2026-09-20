@@ -1,12 +1,6 @@
 ~ start
 ???: We meet again, old friend.
 You: You? Why are you here? 
-???: I'll get to that, but I've missed you.
-You: I really don't feel the same way.
-???: I understand.
-	You were better off without me around.
-You: Yeah, I've been really trying to avoid you.
-	So, why are you back?
 $> start_tripping()
 Death: You invited me in.
 	Right inside of you...
@@ -35,17 +29,17 @@ Death: I'll meet you at the [wave amp=20.0 freq=2.0 connected=1]peak[/wave].
 => END
 
 ~ first_collapse
-Death: Well, aren't you just a little Schrödinger's cat?
-Still You: I'm not dead, yet!
-Death: You're on the dead spectrum.
-Sounds Like You: I'm going to turn this trip around...
-Death: It's not the dehydration that brings me here,
-	but you should drink water.
-Death: Soon.
-Losing You: That's ominous...
+Death: I know you were better off without me.
+Death: Now, I have to take you with me.
+Still You: I'm not dying!
+	I'm just paranoid.
+Death: Paranoia doesn't serve you now.
+	You are past the point that it did.
+Sounds Like You: You said you'd meet me at the peak.
+Death: And I will.
 $> trip_harder()
 Still Who?: ...
-	Oh no...
+	Well I'm climbing one now...
 ...
 	[font_size=48]An entire dimension [shake rate=10.0 level=2 connected=1]crumbles[/shake].[/font_size]
 => END
