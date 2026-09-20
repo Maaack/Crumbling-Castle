@@ -38,6 +38,7 @@ extends "level.gd"
 @onready var progress_label = %ProgressLabel
 @onready var death_stream_player = %DeathStreamPlayer
 @onready var portal_stream_player = %PortalStreamPlayer
+@onready var gate_stream_player = %GateStreamPlayer
 
 @onready var all_containers : Array[Node] = [
 	step,
@@ -171,6 +172,8 @@ func _connect_button_signals(node: Node) -> void:
 		if node.name.contains("Portal"):
 			node.pressed.connect(_on_portal_button_pressed)
 			return
+		if node.name.contains("Wheel"):
+			node.pressed.connect(_on_wheel_button_pressed)
 		if node.name.contains("WindowPath"):
 			node.pressed.connect(_on_window_path_button_pressed)
 		if node.name.contains("Ascend"):
@@ -208,6 +211,10 @@ func _on_ascend_button_pressed() -> void:
 	player_texture_rect.position.x += player_speed
 	var _distance_ratio = clamp(abs(player_texture_rect.position.x - portal_texture_rect.position.x), 0.0, 180.0) / 180.0
 	portal_stream_player.volume_linear = (1.0 - _distance_ratio) * 0.25
+
+func _on_wheel_button_pressed() -> void:
+	if level_over: return
+	gate_stream_player.play()
 
 func lose() -> void:
 	if level_over: return
