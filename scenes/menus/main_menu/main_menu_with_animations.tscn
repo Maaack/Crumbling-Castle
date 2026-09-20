@@ -15,7 +15,7 @@
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
-length = 2.4
+length = 1.7
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,7 +23,7 @@ tracks/0/path = NodePath(".")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(2.4),
+"times": PackedFloat32Array(1.6000001),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -45,11 +45,11 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("SubViewportContainer/SubViewport/MenuContainer/SubTitleMargin/SubTitleContainer:modulate")
+tracks/2/path = NodePath("MenuButtonsMargin/MenuButtonsContainer:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.6),
+"times": PackedFloat32Array(0, 0.8, 1.6000001),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -57,35 +57,23 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("MenuButtonsMargin/MenuButtonsContainer:modulate")
+tracks/3/path = NodePath("MouseFilter:mouse_filter")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 1.6, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("MouseFilter:mouse_filter")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.4),
+"times": PackedFloat32Array(0, 1.6000001),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 2]
 }
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("VersionMargin/VersionContainer:modulate")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.6, 2.4),
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VersionMargin/VersionContainer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6000001),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -297,6 +285,45 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
+[sub_resource type="Animation" id="Animation_x5bcm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CloudControl:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_672y5"]
+resource_name = "sway"
+length = 32.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CloudControl:offset_transform_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8, 24, 32),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(16, 0), Vector2(-16, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8dhfv"]
+_data = {
+&"RESET": SubResource("Animation_x5bcm"),
+&"sway": SubResource("Animation_672y5")
+}
+
 [node name="MainMenu" type="Control" unique_id=589811630]
 layout_mode = 3
 anchors_preset = 15
@@ -340,15 +367,16 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
-[node name="Control" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1789796632]
+[node name="CloudControl" type="Control" parent="SubViewportContainer/SubViewport" unique_id=1789796632]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 
-[node name="CloudLabel" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1214510004]
+[node name="CloudLabel" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1214510004]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 127.0
@@ -361,7 +389,7 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel2" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=681205054]
+[node name="CloudLabel2" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=681205054]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 1219.0
@@ -374,7 +402,7 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel3" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=332999934]
+[node name="CloudLabel3" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=332999934]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 647.0
@@ -386,7 +414,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel4" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1439064613]
+[node name="CloudLabel4" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1439064613]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 855.0
@@ -398,7 +426,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel5" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=145796129]
+[node name="CloudLabel5" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=145796129]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 1147.0
@@ -410,7 +438,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel6" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1732898405]
+[node name="CloudLabel6" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1732898405]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 367.0
@@ -422,7 +450,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel8" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=447340704]
+[node name="CloudLabel8" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=447340704]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 663.0
@@ -434,7 +462,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel9" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=521958916]
+[node name="CloudLabel9" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=521958916]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 1275.0
@@ -446,7 +474,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel10" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1511698505]
+[node name="CloudLabel10" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1511698505]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 975.0
@@ -460,7 +488,7 @@ __/    )     )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel22" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1958231319]
+[node name="CloudLabel22" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1958231319]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 607.0
@@ -475,7 +503,7 @@ __/    )     )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel32" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=862890567]
+[node name="CloudLabel32" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=862890567]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 436.0
@@ -489,7 +517,7 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel12" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=466996773]
+[node name="CloudLabel12" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=466996773]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 55.0
@@ -501,7 +529,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel13" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1719175212]
+[node name="CloudLabel13" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1719175212]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 668.0
@@ -513,7 +541,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel14" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1811724654]
+[node name="CloudLabel14" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1811724654]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 15.0
@@ -525,7 +553,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel15" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1618018664]
+[node name="CloudLabel15" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1618018664]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 399.0
@@ -537,7 +565,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel25" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1842393557]
+[node name="CloudLabel25" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1842393557]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 420.0
@@ -550,7 +578,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel26" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=627559079]
+[node name="CloudLabel26" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=627559079]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 431.0
@@ -563,7 +591,7 @@ text = "__
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel29" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1201091287]
+[node name="CloudLabel29" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1201091287]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 239.0
@@ -575,7 +603,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel30" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1339163007]
+[node name="CloudLabel30" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1339163007]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 2053.0
@@ -587,7 +615,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel33" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=7052846]
+[node name="CloudLabel33" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=7052846]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 2421.0
@@ -600,7 +628,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel34" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=579832144]
+[node name="CloudLabel34" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=579832144]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 2477.0
@@ -613,7 +641,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel17" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=83912965]
+[node name="CloudLabel17" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=83912965]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 1549.0
@@ -626,7 +654,7 @@ __/          )_
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel19" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1745378443]
+[node name="CloudLabel19" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1745378443]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 1253.0
@@ -638,7 +666,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel20" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=1096066546]
+[node name="CloudLabel20" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=1096066546]
 modulate = Color(0.2508181, 0.25081813, 0.2508181, 1)
 layout_mode = 0
 offset_left = 1037.0
@@ -650,7 +678,7 @@ text = "____
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CloudLabel16" type="Label" parent="SubViewportContainer/SubViewport/Control" unique_id=367900143]
+[node name="CloudLabel16" type="Label" parent="SubViewportContainer/SubViewport/CloudControl" unique_id=367900143]
 modulate = Color(0.37665847, 0.3766585, 0.37665835, 1)
 layout_mode = 0
 offset_left = 1845.0
@@ -662,9 +690,6 @@ __/          )_
 /_______________)"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="WinArea2D" parent="SubViewportContainer/SubViewport/Control" unique_id=1669638238 instance=ExtResource("4_xkrf4")]
-position = Vector2(1064, 170)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport" unique_id=1940176448]
 modulate = Color(0.06469653, 0.064696535, 0.0646965, 1)
@@ -682,6 +707,9 @@ grow_vertical = 0
 texture = ExtResource("4_x5bcm")
 stretch_mode = 5
 
+[node name="WinArea2D" parent="SubViewportContainer/SubViewport" unique_id=1669638238 instance=ExtResource("4_xkrf4")]
+position = Vector2(1064, 170)
+
 [node name="MenuContainer" type="MarginContainer" parent="SubViewportContainer/SubViewport" unique_id=396616752]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -692,7 +720,7 @@ grow_vertical = 2
 
 [node name="TitleMargin" type="MarginContainer" parent="SubViewportContainer/SubViewport/MenuContainer" unique_id=2112060331]
 layout_mode = 2
-theme_override_constants/margin_top = 128
+theme_override_constants/margin_top = 112
 
 [node name="TitleContainer" type="Control" parent="SubViewportContainer/SubViewport/MenuContainer/TitleMargin" unique_id=556427956]
 modulate = Color(1, 1, 1, 0)
@@ -712,6 +740,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="SubTitleMargin" type="MarginContainer" parent="SubViewportContainer/SubViewport/MenuContainer" unique_id=1510335937]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_top = 272
 
@@ -730,6 +759,10 @@ theme_override_font_sizes/font_size = 24
 text = "Godot Wild Jam #97"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CloudsAnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport" unique_id=707057677]
+libraries/ = SubResource("AnimationLibrary_8dhfv")
+autoplay = &"sway"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=469747071]
 process_mode = 3
