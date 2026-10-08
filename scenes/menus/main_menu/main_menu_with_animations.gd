@@ -68,8 +68,10 @@ func _ready() -> void:
 	_show_continue_if_set()
 	animation_state_machine = %MenuAnimationTree.get("parameters/playback")
 	var game_state := GameState.get_or_create_state()
+	# Customized
 	if game_state.has_crumbled:
 		drugs_discouraged_container.show()
+	MusicController.tween_pitch_scale(1.0, 0.5)
 
 func _on_continue_game_button_pressed() -> void:
 	GameState.continue_game()
