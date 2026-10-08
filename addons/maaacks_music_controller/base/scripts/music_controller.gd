@@ -16,17 +16,24 @@ const MINIMUM_VOLUME_DB = -80
 @export var audio_bus : StringName = &"Music"
 
 @export_group("Blending")
-@export var fade_out_duration : float = 0.0 :
+@export_range(0, 5.0, 0.01, "or_greater") var fade_out_duration : float = 0.0 :
 	set(value):
 		fade_out_duration = value
 		if fade_out_duration < 0:
 			fade_out_duration = 0
 			
-@export var fade_in_duration : float = 0.0 :
+@export_range(0, 5.0, 0.01, "or_greater") var fade_in_duration : float = 0.0 :
 	set(value):
 		fade_in_duration = value
 		if fade_in_duration < 0:
 			fade_in_duration = 0
+
+			
+@export_range(0, 5.0, 0.01, "or_greater") var pitch_blend_duration : float = 0.0 :
+	set(value):
+		pitch_blend_duration = value
+		if pitch_blend_duration < 0:
+			pitch_blend_duration = 0
 
 ## Matched stream players with no stream set will stop current playback.
 @export var empty_streams_stop_player : bool = true
@@ -54,12 +61,12 @@ func fade_in(duration : float = 0.0) -> Tween:
 	tween.tween_method(_set_sub_audio_volume_db, MINIMUM_VOLUME_DB, 0, duration)
 	return tween
 
-func blend_to(target_volume_db : float, duration : float = 0.0) -> Tween:
+func tween_property(target_property : String, target_value : float, duration : float = 0.0) -> Tween:
 	if not is_zero_approx(duration):
 		var tween = create_tween()
-		tween.tween_property(music_stream_player, "volume_db", target_volume_db, duration)
+		tween.tween_property(music_stream_player, target_property, target_value, duration)
 		return tween
-	music_stream_player.volume_db = target_volume_db
+	music_stream_player.set(target_property, target_value)
 	return
 
 func stop() -> void:
@@ -104,11 +111,14 @@ func _blend_and_remove_stream_player(stream_player : AudioStreamPlayer) -> void:
 	var playback_position := music_stream_player.get_playback_position() + AudioServer.get_time_since_last_mix()
 	var old_stream_player = music_stream_player
 	var new_stream_volume = stream_player.volume_db
+	var new_stream_pitch_scale = stream_player.pitch_scale
 	music_stream_player = stream_player
 	music_stream_player.bus = blend_audio_bus
 	music_stream_player.volume_db = old_stream_player.volume_db
+	music_stream_player.pitch_scale = old_stream_player.pitch_scale
 	play(playback_position)
-	blend_to(new_stream_volume, max(fade_in_duration, fade_out_duration))
+	tween_property("volume_db", new_stream_volume, max(fade_in_duration, fade_out_duration))
+	tween_property("pitch_scale", new_stream_pitch_scale, pitch_blend_duration)
 	old_stream_player.stop()
 	old_stream_player.queue_free()
 	_clone_music_player(music_stream_player)
@@ -154,8 +164,8 @@ func _clone_music_player(stream_player : AudioStreamPlayer) -> void:
 	var audio_stream := stream_player.stream
 	cloned_stream_player = get_stream_player(audio_stream)
 	cloned_stream_player.volume_db = stream_player.volume_db
-	cloned_stream_player.max_polyphony = stream_player.max_polyphony
 	cloned_stream_player.pitch_scale = stream_player.pitch_scale
+	cloned_stream_player.max_polyphony = stream_player.max_polyphony
 
 func _node_matches_checks(node : Node)  -> bool:
 	return node is AudioStreamPlayer and node.autoplay and node.bus == audio_bus
@@ -163,6 +173,9 @@ func _node_matches_checks(node : Node)  -> bool:
 func _on_removed_music_player(node: Node) -> void:
 	if music_stream_player == node:
 		var playback_position := music_stream_player.get_playback_position() + AudioServer.get_time_since_last_mix()
+		cloned_stream_player.volume_db = music_stream_player.volume_db
+		cloned_stream_player.pitch_scale = music_stream_player.pitch_scale
+		cloned_stream_player.max_polyphony = music_stream_player.max_polyphony
 		music_stream_player = cloned_stream_player
 		play(playback_position)
 		if node.tree_exiting.is_connected(_on_removed_music_player.bind(node)):
