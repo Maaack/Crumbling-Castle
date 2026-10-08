@@ -15,6 +15,7 @@ extends "level.gd"
 @onready var debris_left: GPUParticles2D = %DebrisLeft
 @onready var dust_cloud: Node2D = %DustCloud
 @onready var dust_cloud_2: Node2D = %DustCloud2
+@onready var chain_label = %ChainLabel
 
 var _gate_shake_intensity: float = 0
 
@@ -48,6 +49,7 @@ func _on_gate_wheel_wheel_turned():
 	tween.tween_callback(dust_cloud.emit)
 	tween.tween_interval(0.5)
 	tween.tween_callback(dust_cloud_2.emit)
+	chain_label.pull()
 
 func _on_gate_wheel_player_entered():
 	interact_input_hint.show()
