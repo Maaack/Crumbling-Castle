@@ -42,6 +42,8 @@ var music_stream_player : AudioStreamPlayer
 var cloned_stream_player : AudioStreamPlayer
 var blend_audio_bus : StringName
 var blend_audio_bus_idx : int
+var volume_db_tweener : Tween
+var pitch_scale_tweener : Tween
 
 func fade_out(duration : float = 0.0) -> Tween:
 	if is_zero_approx(duration): return
@@ -62,12 +64,26 @@ func fade_in(duration : float = 0.0) -> Tween:
 	return tween
 
 func tween_property(target_property : String, target_value : float, duration : float = 0.0) -> Tween:
-	if not is_zero_approx(duration):
+	if not (is_zero_approx(duration) or music_stream_player.get(target_property) == target_value):
 		var tween = create_tween()
 		tween.tween_property(music_stream_player, target_property, target_value, duration)
 		return tween
 	music_stream_player.set(target_property, target_value)
 	return
+
+func tween_volume_db(target_value : float, duration : float = 0.0) -> Tween:
+	if not is_instance_valid(volume_db_tweener):
+		volume_db_tweener = tween_property("volume_db", target_value, duration)
+		if volume_db_tweener is Tween:
+			volume_db_tweener.finished.connect(func(): volume_db_tweener = null)
+	return volume_db_tweener
+
+func tween_pitch_scale(target_value : float, duration : float = 0.0) -> Tween:
+	if not is_instance_valid(pitch_scale_tweener):
+		pitch_scale_tweener = tween_property("pitch_scale", target_value, duration)
+		if pitch_scale_tweener is Tween:
+			pitch_scale_tweener.finished.connect(func(): pitch_scale_tweener = null)
+	return pitch_scale_tweener
 
 func stop() -> void:
 	if not is_instance_valid(music_stream_player):
@@ -94,7 +110,7 @@ func _fade_out_and_free() -> void:
 
 func _play_and_fade_in() -> void:
 	play()
-	fade_in( fade_in_duration )
+	fade_in(fade_in_duration)
 
 func _is_matching_stream(stream_player : AudioStreamPlayer) -> bool:
 	if stream_player.bus != audio_bus:
@@ -117,8 +133,8 @@ func _blend_and_remove_stream_player(stream_player : AudioStreamPlayer) -> void:
 	music_stream_player.volume_db = old_stream_player.volume_db
 	music_stream_player.pitch_scale = old_stream_player.pitch_scale
 	play(playback_position)
-	tween_property("volume_db", new_stream_volume, max(fade_in_duration, fade_out_duration))
-	tween_property("pitch_scale", new_stream_pitch_scale, pitch_blend_duration)
+	tween_volume_db(new_stream_volume, max(fade_in_duration, fade_out_duration))
+	tween_pitch_scale(new_stream_pitch_scale, pitch_blend_duration)
 	old_stream_player.stop()
 	old_stream_player.queue_free()
 	_clone_music_player(music_stream_player)
@@ -156,7 +172,7 @@ func get_playback_position() -> float:
 func play_stream(audio_stream : AudioStream) -> AudioStreamPlayer:
 	var stream_player := get_stream_player(audio_stream)
 	stream_player.play.call_deferred()
-	play_stream_player( stream_player )
+	play_stream_player(stream_player)
 	return stream_player
 
 func _clone_music_player(stream_player : AudioStreamPlayer) -> void:

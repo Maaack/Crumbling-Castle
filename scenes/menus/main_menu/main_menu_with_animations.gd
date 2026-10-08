@@ -71,7 +71,7 @@ func _ready() -> void:
 	# Customized
 	if game_state.has_crumbled:
 		drugs_discouraged_container.show()
-	ProjectMusicController.tween_property("pitch_scale", 1.0, 0.5)
+	ProjectMusicController.tween_pitch_scale(1.0, 0.5)
 
 func _on_continue_game_button_pressed() -> void:
 	GameState.continue_game()

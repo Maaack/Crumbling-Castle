@@ -15,7 +15,7 @@ func _update_shader_parameter(value : Variant, key : StringName) -> void:
 	shader_material.set_shader_parameter(key, value)
 
 func _on_level_loaded() -> void:
-	ProjectMusicController.tween_property("pitch_scale", 1.0, 0.5)
+	ProjectMusicController.tween_pitch_scale(1.0, 0.5)
 	var level_filename = ResourceUID.ensure_path(level_loader.current_level_path)
 	level_filename = level_filename.get_file().get_basename()
 	match level_filename:
