@@ -1,4 +1,3 @@
-class_name MusicController
 extends Node
 ## Controller for music playback across scenes.
 ##
@@ -21,14 +20,13 @@ const MINIMUM_VOLUME_DB = -80
 		fade_out_duration = value
 		if fade_out_duration < 0:
 			fade_out_duration = 0
-			
+
 @export_range(0, 5.0, 0.01, "or_greater") var fade_in_duration : float = 0.0 :
 	set(value):
 		fade_in_duration = value
 		if fade_in_duration < 0:
 			fade_in_duration = 0
 
-			
 @export_range(0, 5.0, 0.01, "or_greater") var pitch_blend_duration : float = 0.0 :
 	set(value):
 		pitch_blend_duration = value
