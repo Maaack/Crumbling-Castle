@@ -12,7 +12,7 @@ const BYTES_PER_FLOAT := 4
 @export var shader_parameters_refresh_rate : float = 16.0
 @export_tool_button("Verify File") var verify_file_size_action = _verify_file_size
 ## Music Visualizer depends on the MusicController autoload.
-@onready var music_controller_node = get_tree().root.get_node_or_null(^"ProjectMusicController")
+@onready var music_controller_node = get_tree().root.get_node_or_null(^"MusicController")
 
 var data_file : FileAccess
 var last_position : float = 0.0
