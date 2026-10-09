@@ -48,10 +48,10 @@ Death: Even waves crash against the shore.
 Death: You're almost there.
 	You feel it now.
 Barely You: I'm scared.
-Death: I here for you, old friend.
+Death: I'm here for you, old friend.
 Barely You: That's what scares me!
 Death: You don't need to be.
-	You can let your fear go.
+	You can let go.
 Barely You: But I've messed up.
 Barely You: Can I just go back? Can I redo...
 	everything?
@@ -65,7 +65,7 @@ Death: You will...
 ~ final_collapse
 Death: It's time...
 Someone Formerly You: There is no 'I' anymore. 
-Greater Than You: We are all one.
+Something Greater Than You: We are all one.
 Death: ...
 	We will be soon.
 $> trip_harder()
