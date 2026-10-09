@@ -224,6 +224,22 @@ offset_top = 420.0
 offset_right = 492.0
 offset_bottom = 460.0
 
+[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/LevelContainer/Control" unique_id=789933915]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 443.0
+offset_right = 519.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="SubViewportContainer/LevelContainer/Control" unique_id=1219147278]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 387.0
+offset_right = 472.0
+offset_bottom = 427.0
+color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=141458699]
 process_mode = 3
 
