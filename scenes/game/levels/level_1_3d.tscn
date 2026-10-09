@@ -160,7 +160,7 @@ viewport_path = NodePath("World/Sprite3D3/SubViewport")
 viewport_path = NodePath("World/InteractInputHint3D/SubViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1cqto"]
-size = Vector3(12, 16, 1)
+size = Vector3(12, 18, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay5oa"]
 transparency = 2
@@ -186,6 +186,7 @@ anim_offset_max = 1.0
 
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
+gate_speed = 0.333
 
 [node name="CaptureMouse" type="Control" parent="." unique_id=1764466729]
 layout_mode = 3
@@ -323,12 +324,13 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -7.5
 pixel_size = 0.05
 text = "__________________________________________________________________"
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1646272946]
+[node name="GateWheelCSGBox3D" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1646272946]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, -1.7763568e-15, 1, 0, -4.371139e-08, -9, 2, 9)
 size = Vector3(4, 4, 2)
 material = SubResource("StandardMaterial3D_n4y2n")
 
-[node name="GateWheel3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=590591182 instance=ExtResource("3_oxou0")]
+[node name="GateWheel3D" parent="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D" unique_id=590591182 instance=ExtResource("3_oxou0")]
+max_turns = 48
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=646802436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.999998, 2, -27.999998)
@@ -1229,8 +1231,8 @@ draw_pass_1 = SubResource("QuadMesh_gdps7")
 
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 
-[connection signal="player_entered" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_entered"]
-[connection signal="player_exited" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_exited"]
-[connection signal="wheel_turned" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_wheel_turned"]
+[connection signal="player_entered" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_player_entered"]
+[connection signal="player_exited" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_player_exited"]
+[connection signal="wheel_turned" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_wheel_turned"]
 [connection signal="body_entered" from="World/WinArea3D" to="." method="_on_win_area_3d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea3D" to="." method="_on_lose_area_3d_body_entered"]
