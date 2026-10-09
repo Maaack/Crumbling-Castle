@@ -148,7 +148,6 @@ grow_vertical = 2
 [node name="LevelContainer" type="SubViewport" parent="SubViewportContainer" unique_id=1262569776]
 transparent_bg = true
 handle_input_locally = false
-canvas_item_default_texture_filter = 0
 audio_listener_enable_2d = true
 audio_listener_enable_3d = true
 size = Vector2i(1280, 720)
