@@ -1128,7 +1128,7 @@ text = "0
 script = ExtResource("6_acbp8")
 
 [node name="GateWall" type="CollisionShape2D" parent="World/Tower" unique_id=1822815312]
-position = Vector2(-1, -2816)
+position = Vector2(-1, -2672)
 shape = SubResource("RectangleShape2D_1bryu")
 metadata/_edit_group_ = true
 
@@ -1167,48 +1167,21 @@ text = "||
 ||
 ||
 ||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-||
-"
+||"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DebrisLeft" parent="World/Tower/GateWall" unique_id=1986710238 instance=ExtResource("6_o7nmf")]
 unique_name_in_owner = true
-position = Vector2(-12, 400)
+position = Vector2(-12, 200)
 
 [node name="DebrisRight" parent="World/Tower/GateWall" unique_id=180451823 instance=ExtResource("6_o7nmf")]
 unique_name_in_owner = true
-position = Vector2(12, 400)
+position = Vector2(12, 200)
 
 [node name="Gate" parent="World/Tower" unique_id=1474410729 instance=ExtResource("4_2u4xi")]
 unique_name_in_owner = true
-position = Vector2(-1, -2240)
+position = Vector2(-1, -2304)
 
 [node name="Staircase" parent="World/Tower" unique_id=639177241 instance=ExtResource("5_dxp7b")]
 position = Vector2(879, -128)
@@ -1271,6 +1244,7 @@ position = Vector2(1943, -2512)
 
 [node name="GateWheel" parent="World/Tower" unique_id=1996126225 instance=ExtResource("7_dxp7b")]
 position = Vector2(-225, -2216)
+max_turns = 48
 
 [node name="CloudLabel" type="Label" parent="World/Tower" unique_id=246261936]
 offset_left = 2143.0
