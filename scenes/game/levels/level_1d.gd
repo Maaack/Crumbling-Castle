@@ -286,11 +286,9 @@ func _on_portal_button_pressed():
 	elif portal_attempts >= 56:
 		portal_button.text = "Ascend!!!!!!!!!"
 	elif portal_attempts >= 36:
-		portal_button.text = "Ascend!!!!"
+		portal_button.text = "Ascend!!!!!!"
 	elif portal_attempts >= 24:
 		portal_button.text = "Ascend!!!"
-	elif portal_attempts >= 12:
-		portal_button.text = "Ascend!!"
 	elif portal_attempts >= 8:
 		portal_button.text = "Ascend?!"
 	elif portal_attempts >= 3:

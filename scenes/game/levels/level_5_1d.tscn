@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://c3cuo4ftnps3r" path="res://assets/sounds/Gear Pulley.ogg" id="10_ojdab"]
 
 [sub_resource type="Gradient" id="Gradient_dpc2d"]
-offsets = PackedFloat32Array(0, 0.512426)
+offsets = PackedFloat32Array(0.22743683, 0.512426)
 colors = PackedColorArray(1, 1, 1, 0.3764706, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ooua1"]
