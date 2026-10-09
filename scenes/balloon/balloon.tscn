@@ -53,7 +53,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.003921569, 0.003921569, 0.003921569, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
