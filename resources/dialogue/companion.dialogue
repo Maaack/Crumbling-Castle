@@ -29,29 +29,30 @@ Death: I'll meet you at the [wave amp=20.0 freq=2.0 connected=1]peak[/wave].
 => END
 
 ~ first_collapse
-Death: I know you were better off without me.
-Death: Now, I have to take you with me.
-Still You: I'm not dying!
+Death: All things come to an end.
+Still You: This isn't over yet!
+Death: But it won't last forever.
+	And when it ends...
+Definitely You: I'm not dying!
 	I'm just paranoid.
-Death: Paranoia doesn't serve you now.
-	You are past the point that it did.
-Sounds Like You: You said you'd meet me at the peak.
-Death: And I will.
+Death: Paranoia rarely saved you.
+	At this point, it can't.
 $> trip_harder()
-Still Who?: ...
-	Well I'm climbing one now...
+Still Who?: I feel... another wave.
+Death: Even waves crash against the shore.
 ...
 	[font_size=48]An entire dimension [shake rate=10.0 level=2 connected=1]crumbles[/shake].[/font_size]
 => END
 
 ~ second_collapse
 Death: You're almost there.
-Death: I know you can feel it now.
+	You feel it now.
 Barely You: I'm scared.
-Death: I know, I'm close.
+Death: I here for you, old friend.
 Barely You: That's what scares me!
-Death: I'm sorry.
-Barely You: I've messed up.
+Death: You don't need to be.
+	You can let your fear go.
+Barely You: But I've messed up.
 Barely You: Can I just go back? Can I redo...
 	everything?
 Death: The thing is...
@@ -62,9 +63,9 @@ Death: You will...
 => END
 
 ~ final_collapse
-Death: I'm here for you, old friend.
-Someone Formerly You: There is no I anymore. 
-We are all one.
+Death: It's time...
+Someone Formerly You: There is no 'I' anymore. 
+Greater Than You: We are all one.
 Death: ...
 	We will be soon.
 $> trip_harder()
@@ -73,5 +74,5 @@ $> trip_harder()
 	...
 	...
 ...
-	[font_size=32]You [shake rate=10.0 level=2 connected=1]crumble[/shake].[/font_size]
+	[font_size=48]You [shake rate=10.0 level=2 connected=1]crumble[/shake].[/font_size]
 => END
