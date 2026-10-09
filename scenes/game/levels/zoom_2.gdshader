@@ -2,6 +2,10 @@ shader_type canvas_item;
 
 // The texture to receive the effect.
 uniform sampler2D input_texture: hint_default_black, filter_linear_mipmap, repeat_enable;
+// Defines an additional color that should be turned transparent.
+uniform vec4 transparent_color: source_color = vec4(0.0);
+// Defines the distance theshold for the transparent color.
+uniform float transparent_color_threshold: hint_range(0.0, 1.0) = 0.0;
 // Defines the origin point of the zoom effect relative to the texture size.
 uniform vec2 zoom_center = vec2(0.5, 0.5);
 // Adjusts the number of times the texture should get mirrored.
@@ -28,6 +32,8 @@ vec2 adj_uv(vec2 a_uv, float a_scale, vec2 a_pivot){
 
 void fragment() {
 	vec4 original_color = texture(input_texture, UV);
+	float transparent_color_distance = distance(original_color, transparent_color) / 2.0;
+	original_color.a = mix(0.0, original_color.a, float(transparent_color_distance > transparent_color_threshold));
 	COLOR = original_color;
 	float time = mod(TIME, color_cycle_time);
 	float time_ratio = time / color_cycle_time;
@@ -49,6 +55,8 @@ void fragment() {
 		vec2 normalized_vector = normalize(zoom_vector) * float(iter) * normalized_scale;
 		zoom_vector = mix(adjusted_vector, normalized_vector, normalization);
 		vec4 sample_color = texture(input_texture, zoom_vector + UV);
+		float transparent_color_distance = distance(sample_color, transparent_color) / 2.0;
+		sample_color.a = mix(0.0, sample_color.a, float(transparent_color_distance > transparent_color_threshold));
 		sample_color = sample_color * mix(prior_color, next_color, f_remainder);
 		float opacity_mod = 1.0 - (original_color.a * original_opacity_mod);
 		COLOR = mix(COLOR, sample_color, sample_color.a * pow(opacity, float(iter)) * opacity_mod);
