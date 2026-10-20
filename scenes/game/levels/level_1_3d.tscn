@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="6_ofcco"]
 [ext_resource type="PackedScene" uid="uid://dbmos8x2bv6bu" path="res://scenes/game/levels/level_3d/torch_label_3d.tscn" id="6_uj8iv"]
+[ext_resource type="Texture2D" uid="uid://kjoegj2n3m4q" path="res://assets/font_textures/courier-prime-sans-poof.png" id="8_xd4i5"]
 [ext_resource type="Script" uid="uid://c02gpeqmfgcbo" path="res://scenes/game/levels/level_3d/chain_label_3d.gd" id="9_xd4i5"]
 [ext_resource type="Texture2D" uid="uid://dk32vuglpbqru" path="res://assets/font_textures/courier-prime-sans-debris.png" id="10_xd4i5"]
 
@@ -147,6 +148,50 @@ _data = {
 &"pulsing": SubResource("Animation_ofcco")
 }
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd4i5"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("8_xd4i5")
+billboard_mode = 3
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_7b3jh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49848944, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.193311, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jxmj6"]
+curve = SubResource("Curve_7b3jh")
+
+[sub_resource type="Curve" id="Curve_4slvh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
+curve = SubResource("Curve_4slvh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4bmcq"]
+lifetime_randomness = 0.5
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(1, 3, 1)
+emission_shape = 2
+emission_sphere_radius = 2.5
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.4999976
+radial_accel_max = 4.9999976
+damping_min = 2.0
+damping_max = 3.0000002
+damping_curve = SubResource("CurveTexture_4slvh")
+alpha_curve = SubResource("CurveTexture_jxmj6")
+anim_speed_min = 0.5
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_1cqto"]
 viewport_path = NodePath("World/Sprite3D/SubViewport")
 
@@ -181,8 +226,6 @@ angle_max = 180.00002
 angular_velocity_min = -50.000015
 angular_velocity_max = 49.99998
 anim_offset_max = 1.0
-
-[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
 
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
@@ -1076,6 +1119,14 @@ material = SubResource("StandardMaterial3D_0gu67")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="World/PortalCSGBox3D" unique_id=248051632]
 libraries/ = SubResource("AnimationLibrary_uj8iv")
 autoplay = &"pulsing"
+
+[node name="Emitter" type="GPUParticles3D" parent="World/PortalCSGBox3D" unique_id=1804971045]
+material_override = SubResource("StandardMaterial3D_xd4i5")
+amount = 25
+lifetime = 2.15
+visibility_aabb = AABB(-7, -7, -7, 14, 14, 14)
+process_material = SubResource("ParticleProcessMaterial_4bmcq")
+draw_pass_1 = SubResource("QuadMesh_gdps7")
 
 [node name="Sprite3D" type="Sprite3D" parent="World" unique_id=868742333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 12, 0)
