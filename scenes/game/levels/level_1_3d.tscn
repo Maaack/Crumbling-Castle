@@ -32,6 +32,41 @@ data = PackedVector3Array(-31.499998, 0.5, -47.5, -22.499998, 0.5, -47.5, -31.49
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gu67"]
 size = Vector3(16, 8, 16)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd4i5"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("8_xd4i5")
+billboard_mode = 3
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_4slvh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
+curve = SubResource("Curve_4slvh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4bmcq"]
+lifetime_randomness = 0.5
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(1, 3, 1)
+emission_shape = 2
+emission_sphere_radius = 2.5
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.4999976
+radial_accel_max = 4.9999976
+damping_min = 5.0
+damping_max = 10.0
+damping_curve = SubResource("CurveTexture_4slvh")
+anim_speed_min = 0.25
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0gu67"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gu67"]
@@ -147,41 +182,6 @@ _data = {
 &"RESET": SubResource("Animation_iusjq"),
 &"pulsing": SubResource("Animation_ofcco")
 }
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd4i5"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-shading_mode = 0
-albedo_texture = ExtResource("8_xd4i5")
-billboard_mode = 3
-particles_anim_h_frames = 4
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
-[sub_resource type="Curve" id="Curve_4slvh"]
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
-point_count = 2
-
-[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
-curve = SubResource("Curve_4slvh")
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4bmcq"]
-lifetime_randomness = 0.5
-particle_flag_damping_as_friction = true
-emission_shape_scale = Vector3(1, 3, 1)
-emission_shape = 2
-emission_sphere_radius = 2.5
-gravity = Vector3(0, 0, 0)
-radial_accel_min = 2.4999976
-radial_accel_max = 4.9999976
-damping_min = 5.0
-damping_max = 10.0
-damping_curve = SubResource("CurveTexture_4slvh")
-anim_speed_min = 0.25
-anim_speed_max = 1.0
-
-[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_1cqto"]
 viewport_path = NodePath("World/Sprite3D/SubViewport")
@@ -1065,6 +1065,15 @@ autoplay = true
 bus = &"SFX"
 parameters/looping = true
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="World/WinArea3D" unique_id=1804971045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5)
+material_override = SubResource("StandardMaterial3D_xd4i5")
+amount = 25
+lifetime = 2.15
+visibility_aabb = AABB(-7, -14, -7, 14, 28, 14)
+process_material = SubResource("ParticleProcessMaterial_4bmcq")
+draw_pass_1 = SubResource("QuadMesh_gdps7")
+
 [node name="LoseArea3D" parent="World" unique_id=624041860 groups=["doom"] instance=ExtResource("3_eg2i3")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -105, -360)
@@ -1110,14 +1119,6 @@ material = SubResource("StandardMaterial3D_0gu67")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="World/PortalCSGBox3D" unique_id=248051632]
 libraries/ = SubResource("AnimationLibrary_uj8iv")
 autoplay = &"pulsing"
-
-[node name="Emitter" type="GPUParticles3D" parent="World/PortalCSGBox3D" unique_id=1804971045]
-material_override = SubResource("StandardMaterial3D_xd4i5")
-amount = 25
-lifetime = 2.15
-visibility_aabb = AABB(-7, -14, -7, 14, 28, 14)
-process_material = SubResource("ParticleProcessMaterial_4bmcq")
-draw_pass_1 = SubResource("QuadMesh_gdps7")
 
 [node name="Sprite3D" type="Sprite3D" parent="World" unique_id=868742333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 12, 0)
