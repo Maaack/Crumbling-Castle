@@ -528,7 +528,7 @@ color = Color(0.6, 0.6, 0.6, 1)
 alpha_curve = SubResource("CurveTexture_bqago")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
-size = Vector2(20, 1016)
+size = Vector2(20, 512)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
 size = Vector2(1112, 192)
