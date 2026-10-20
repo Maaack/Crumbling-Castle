@@ -32,6 +32,7 @@ func _update_ui() -> void:
 	mute_control.value = AppSettings.is_muted()
 
 func _ready() -> void:
+	AppSettings.set_audio_from_config()
 	_update_ui()
 
 func _on_mute_control_setting_changed(value : bool) -> void:
