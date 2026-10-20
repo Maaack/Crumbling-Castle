@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://cwud4i4nb0b11" path="res://scenes/game/levels/level_2d/background/shelves_label.tscn" id="16_u4pql"]
 [ext_resource type="AudioStream" uid="uid://b00htwygrmfcd" path="res://assets/sounds/Floating Behemoths Loop A.ogg" id="18_o7nmf"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="18_xr372"]
+[ext_resource type="Texture2D" uid="uid://kjoegj2n3m4q" path="res://assets/font_textures/courier-prime-sans-poof.png" id="20_kogy0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4y2n"]
 
@@ -509,6 +510,46 @@ size = Vector2(1112, 192)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_migjm"]
 size = Vector2(640, 192)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kogy0"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_7b3jh"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49848944, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.193311, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_jxmj6"]
+texture_mode = 1
+curve = SubResource("Curve_7b3jh")
+
+[sub_resource type="Curve" id="Curve_4slvh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
+curve = SubResource("Curve_4slvh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ljpdv"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(1, 2, 1)
+emission_shape = 2
+emission_sphere_radius = 50.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 19.999998
+radial_accel_max = 39.999996
+damping_min = 1.0
+damping_max = 2.0
+damping_curve = SubResource("CurveTexture_4slvh")
+scale_min = 0.5
+scale_max = 0.5
+alpha_curve = SubResource("CurveTexture_jxmj6")
+anim_speed_min = 0.25
+anim_speed_max = 1.0
 
 [node name="Level1" type="Node2D" unique_id=1020502710]
 script = ExtResource("1_x1c7m")
@@ -2595,6 +2636,12 @@ autoplay = true
 max_distance = 360.0
 bus = &"SFX"
 parameters/looping = true
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="World/WinArea2D" unique_id=170748590]
+material = SubResource("CanvasItemMaterial_kogy0")
+amount = 15
+texture = ExtResource("20_kogy0")
+process_material = SubResource("ParticleProcessMaterial_ljpdv")
 
 [node name="LoseArea2D" parent="World" unique_id=1096114870 instance=ExtResource("5_1bryu")]
 unique_name_in_owner = true
