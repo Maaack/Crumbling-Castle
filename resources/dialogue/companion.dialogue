@@ -15,6 +15,7 @@ You: ...
 	I've had worse.
 Death: And each time I've missed you
 	by just that much,
+$> stop_ambience()
 Death: but you're luck has run out.
 $> start_music()
 Death: ...
