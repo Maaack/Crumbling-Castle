@@ -33,15 +33,22 @@ data = PackedVector3Array(-31.499998, 0.5, -47.5, -22.499998, 0.5, -47.5, -31.49
 size = Vector3(16, 8, 16)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd4i5"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
+transparency = 1
 shading_mode = 0
+vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("8_xd4i5")
 billboard_mode = 3
 particles_anim_h_frames = 4
 particles_anim_v_frames = 1
 particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_4bmcq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49848944, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.193311, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_eagsg"]
+texture_mode = 1
+curve = SubResource("Curve_4bmcq")
 
 [sub_resource type="Curve" id="Curve_4slvh"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -55,13 +62,14 @@ lifetime_randomness = 0.5
 particle_flag_damping_as_friction = true
 emission_shape_scale = Vector3(1, 3, 1)
 emission_shape = 2
-emission_sphere_radius = 2.5
+emission_sphere_radius = 3.0
 gravity = Vector3(0, 0, 0)
 radial_accel_min = 2.4999976
 radial_accel_max = 4.9999976
 damping_min = 5.0
 damping_max = 10.0
 damping_curve = SubResource("CurveTexture_4slvh")
+alpha_curve = SubResource("CurveTexture_eagsg")
 anim_speed_min = 0.25
 anim_speed_max = 1.0
 
