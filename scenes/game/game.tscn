@@ -34,18 +34,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [16.0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
 
 [sub_resource type="Animation" id="Animation_5jirj"]
 resource_name = "lost"
@@ -90,18 +78,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [8.0, 0.0]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
-}
 
 [sub_resource type="Animation" id="Animation_vaxfo"]
 resource_name = "won"
@@ -117,18 +93,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 16.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("BackgroundMusicPlayer:pitch_scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ftsea"]
@@ -184,7 +148,6 @@ grow_vertical = 2
 [node name="LevelContainer" type="SubViewport" parent="SubViewportContainer" unique_id=1262569776]
 transparent_bg = true
 handle_input_locally = false
-canvas_item_default_texture_filter = 0
 audio_listener_enable_2d = true
 audio_listener_enable_3d = true
 size = Vector2i(1280, 720)
@@ -259,6 +222,22 @@ offset_left = 452.0
 offset_top = 420.0
 offset_right = 492.0
 offset_bottom = 460.0
+
+[node name="ColorRect2" type="ColorRect" parent="SubViewportContainer/LevelContainer/Control" unique_id=789933915]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 443.0
+offset_right = 519.0
+offset_bottom = 483.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="SubViewportContainer/LevelContainer/Control" unique_id=1219147278]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 387.0
+offset_right = 472.0
+offset_bottom = 427.0
+color = Color(0.2509804, 0.2509804, 0.2509804, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=141458699]
 process_mode = 3

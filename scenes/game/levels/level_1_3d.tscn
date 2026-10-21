@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://c0u00tkhyqbtq" path="res://scenes/game/levels/rotation_control_3d.gd" id="5_oxou0"]
 [ext_resource type="PackedScene" uid="uid://bylrfo8w24v0e" path="res://addons/maaacks_game_template/base/nodes/input_hint/input_hint.tscn" id="6_ofcco"]
 [ext_resource type="PackedScene" uid="uid://dbmos8x2bv6bu" path="res://scenes/game/levels/level_3d/torch_label_3d.tscn" id="6_uj8iv"]
+[ext_resource type="Texture2D" uid="uid://kjoegj2n3m4q" path="res://assets/font_textures/courier-prime-sans-poof.png" id="8_xd4i5"]
+[ext_resource type="Script" uid="uid://c02gpeqmfgcbo" path="res://scenes/game/levels/level_3d/chain_label_3d.gd" id="9_xd4i5"]
 [ext_resource type="Texture2D" uid="uid://dk32vuglpbqru" path="res://assets/font_textures/courier-prime-sans-debris.png" id="10_xd4i5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_qaipj"]
@@ -29,6 +31,49 @@ data = PackedVector3Array(-31.499998, 0.5, -47.5, -22.499998, 0.5, -47.5, -31.49
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0gu67"]
 size = Vector3(16, 8, 16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd4i5"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("8_xd4i5")
+billboard_mode = 3
+particles_anim_h_frames = 4
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id="Curve_4bmcq"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.49848944, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.193311, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_eagsg"]
+texture_mode = 1
+curve = SubResource("Curve_4bmcq")
+
+[sub_resource type="Curve" id="Curve_4slvh"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_4slvh"]
+curve = SubResource("Curve_4slvh")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4bmcq"]
+lifetime_randomness = 0.5
+particle_flag_damping_as_friction = true
+emission_shape_scale = Vector3(1, 3, 1)
+emission_shape = 2
+emission_sphere_radius = 3.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 2.4999976
+radial_accel_max = 4.9999976
+damping_min = 5.0
+damping_max = 10.0
+damping_curve = SubResource("CurveTexture_4slvh")
+alpha_curve = SubResource("CurveTexture_eagsg")
+anim_speed_min = 0.25
+anim_speed_max = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0gu67"]
 
@@ -159,7 +204,7 @@ viewport_path = NodePath("World/Sprite3D3/SubViewport")
 viewport_path = NodePath("World/InteractInputHint3D/SubViewport")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_1cqto"]
-size = Vector3(12, 16, 1)
+size = Vector3(12, 18, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ay5oa"]
 transparency = 2
@@ -181,10 +226,9 @@ angular_velocity_min = -50.000015
 angular_velocity_max = 49.99998
 anim_offset_max = 1.0
 
-[sub_resource type="QuadMesh" id="QuadMesh_gdps7"]
-
 [node name="Level3D" type="Node3D" unique_id=808041491]
 script = ExtResource("1_iusjq")
+gate_speed = 0.333
 
 [node name="CaptureMouse" type="Control" parent="." unique_id=1764466729]
 layout_mode = 3
@@ -322,12 +366,13 @@ transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, -7.5
 pixel_size = 0.05
 text = "__________________________________________________________________"
 
-[node name="CSGBox3D17" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1646272946]
+[node name="GateWheelCSGBox3D" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=1646272946]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, -1.7763568e-15, 1, 0, -4.371139e-08, -9, 2, 9)
 size = Vector3(4, 4, 2)
 material = SubResource("StandardMaterial3D_n4y2n")
 
-[node name="GateWheel3D" parent="World/StaticBody3D/CSGBox3D/CSGBox3D17" unique_id=590591182 instance=ExtResource("3_oxou0")]
+[node name="GateWheel3D" parent="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D" unique_id=590591182 instance=ExtResource("3_oxou0")]
+max_turns = 48
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="World/StaticBody3D/CSGBox3D" unique_id=646802436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.999998, 2, -27.999998)
@@ -1028,6 +1073,15 @@ autoplay = true
 bus = &"SFX"
 parameters/looping = true
 
+[node name="GPUParticles3D" type="GPUParticles3D" parent="World/WinArea3D" unique_id=1804971045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5)
+material_override = SubResource("StandardMaterial3D_xd4i5")
+amount = 25
+lifetime = 2.15
+visibility_aabb = AABB(-7, -14, -7, 14, 28, 14)
+process_material = SubResource("ParticleProcessMaterial_4bmcq")
+draw_pass_1 = SubResource("QuadMesh_gdps7")
+
 [node name="LoseArea3D" parent="World" unique_id=624041860 groups=["doom"] instance=ExtResource("3_eg2i3")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -105, -360)
@@ -1128,7 +1182,45 @@ size = Vector2i(48, 48)
 action_name = &"interact"
 input_icon_mapper = NodePath("../../../../InputIconMapper")
 
-[node name="TorchLabel3D" parent="World" unique_id=1178983464 instance=ExtResource("6_uj8iv")]
+[node name="ChainLabel3D" type="Label3D" parent="World" unique_id=1178983464]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, 1, -0.70710677, 0.70710677, -3.090862e-08, -0.70710677, -0.70710677, -3.090862e-08, -9, 8, 5)
+pixel_size = 0.025
+text = "0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+0
+|
+"
+line_spacing = -16.0
+script = ExtResource("9_xd4i5")
+
+[node name="TorchLabel3D" parent="World" unique_id=1176478637 instance=ExtResource("6_uj8iv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 4.5, 1)
 
 [node name="TorchLabel3D2" parent="World" unique_id=19671876 instance=ExtResource("6_uj8iv")]
@@ -1190,8 +1282,8 @@ draw_pass_1 = SubResource("QuadMesh_gdps7")
 
 [node name="InputIconMapper" parent="." unique_id=2136107125 instance=ExtResource("5_iusjq")]
 
-[connection signal="player_entered" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_entered"]
-[connection signal="player_exited" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_player_exited"]
-[connection signal="wheel_turned" from="World/StaticBody3D/CSGBox3D/CSGBox3D17/GateWheel3D" to="." method="_on_gate_wheel_3d_wheel_turned"]
+[connection signal="player_entered" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_player_entered"]
+[connection signal="player_exited" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_player_exited"]
+[connection signal="wheel_turned" from="World/StaticBody3D/CSGBox3D/GateWheelCSGBox3D/GateWheel3D" to="." method="_on_gate_wheel_3d_wheel_turned"]
 [connection signal="body_entered" from="World/WinArea3D" to="." method="_on_win_area_3d_body_entered"]
 [connection signal="body_entered" from="World/LoseArea3D" to="." method="_on_lose_area_3d_body_entered"]

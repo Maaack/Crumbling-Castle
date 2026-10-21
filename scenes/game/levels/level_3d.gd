@@ -10,6 +10,7 @@ var _gate_shake_intensity: float = 0
 @onready var interact_input_hint_3d = %InteractInputHint3D
 @onready var gate_3d = %Gate3D
 @onready var debris: GPUParticles3D = %Debris
+@onready var chain_label_3d = %ChainLabel3D
 
 func _on_lose_area_3d_body_entered(_body: Node3D) -> void:
 	var tween = create_tween()
@@ -36,7 +37,5 @@ func _on_gate_wheel_3d_player_exited():
 func _on_gate_wheel_3d_wheel_turned():
 	gate_3d.position.y += gate_speed
 	_gate_shake_intensity += 2
-	#tween.tween_interval(2.0)
-	#tween.tween_callback(dust_cloud.emit)
-	#tween.tween_interval(0.5)
-	#tween.tween_callback(dust_cloud_2.emit)
+	chain_label_3d.pull()
+	
