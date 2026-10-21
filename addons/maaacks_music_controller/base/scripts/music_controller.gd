@@ -88,10 +88,13 @@ func stop() -> void:
 		return
 	music_stream_player.stop()
 
+func is_playing() -> bool:
+	return music_stream_player != null and music_stream_player.playing
+
 func play(playback_position : float = 0.0) -> void:
 	if not is_instance_valid(music_stream_player):
 		return
-	if is_zero_approx(playback_position) and not music_stream_player.playing:
+	if is_zero_approx(playback_position) and not is_playing():
 		music_stream_player.play()
 	else:
 		music_stream_player.play(playback_position)
