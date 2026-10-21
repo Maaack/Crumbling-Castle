@@ -66,6 +66,7 @@ func _process(delta : float):
 		next_latency_refresh_time = latency_refresh_time
 		_update_output_latency.call_deferred()
 	current_position -= output_latency
+	current_position += PlayerConfig.get_config(AppSettings.VIDEO_SECTION, &"VisualizerDelay", 0.0)
 	var byte_offset := int(data_sample_rate * current_position)
 	var byte_range := byte_offset - last_byte_offset
 	if byte_range < 1:

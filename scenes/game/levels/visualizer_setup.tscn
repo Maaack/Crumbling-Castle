@@ -90,7 +90,6 @@ unique_name_in_owner = true
 canvas = NodePath("../MarginContainer/VBoxContainer/ColorRect")
 mod_parameters = Array[StringName]([&"opacity"])
 mod_amount = 3.0
-shader_parameters_refresh_rate = 32.0
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/DoneButton" to="." method="_on_done_button_pressed"]
 
