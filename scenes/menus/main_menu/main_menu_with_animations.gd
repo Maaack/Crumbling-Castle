@@ -8,6 +8,8 @@ extends MainMenu
 ## If true, have the player confirm before starting a new game if a game is in progress.
 @export var confirm_new_game : bool = true
 
+@export_file("*.tscn") var visualizer_setup_scene_path : String
+
 var animation_state_machine : AnimationNodeStateMachinePlayback
 
 @onready var continue_game_button = %ContinueGameButton
@@ -15,9 +17,18 @@ var animation_state_machine : AnimationNodeStateMachinePlayback
 @onready var new_game_confirmation = %NewGameConfirmation
 @onready var drugs_discouraged_container = %DrugsDiscouragedContainer
 
+func _load_visualizer_setup() -> void:
+	if scene_loader_node:
+		scene_loader_node.load_scene(visualizer_setup_scene_path)
+	else:
+		get_tree().change_scene_to_file(visualizer_setup_scene_path)
+
 func load_game_scene() -> void:
 	GameState.start_game()
-	super.load_game_scene()
+	if OS.has_feature("web") and not visualizer_setup_scene_path.is_empty():
+		_load_visualizer_setup()
+	else:
+		super.load_game_scene()
 
 func new_game() -> void:
 	if confirm_new_game and continue_game_button.visible:

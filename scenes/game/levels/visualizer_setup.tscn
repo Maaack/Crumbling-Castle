@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bns8bnl621vbg"]
+
+[ext_resource type="PackedScene" uid="uid://cl416gdb1fgwr" path="res://addons/maaacks_game_template/base/nodes/menus/options_menu/option_control/slider_option_control.tscn" id="1_58pfp"]
+[ext_resource type="AudioStream" uid="uid://bpn46r2fqyhfu" path="res://assets/polygondwanaland/Crumbling_Castle.ogg" id="1_a2jvw"]
+[ext_resource type="Script" uid="uid://bp7wh4b58be42" path="res://scenes/game/levels/visualizer_setup.gd" id="1_pwwrf"]
+[ext_resource type="Shader" uid="uid://da72tp1d4qt7j" path="res://scenes/game/levels/opacity.gdshader" id="1_thl3s"]
+[ext_resource type="Script" uid="uid://c7j20v5pn1lms" path="res://scenes/game/levels/setup_visualizer_music_player.gd" id="2_pwwrf"]
+[ext_resource type="PackedScene" uid="uid://cqpl3pq0chs6t" path="res://scenes/game/scripts/music_visualizer.tscn" id="3_2njc5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gu67"]
+shader = ExtResource("1_thl3s")
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/opacity = 0.24800001178
+
+[node name="VisualizerSetup" type="Control" unique_id=1757769557]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pwwrf")
+
+[node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1282423410]
+process_mode = 3
+stream = ExtResource("1_a2jvw")
+autoplay = true
+bus = &"Music"
+script = ExtResource("2_pwwrf")
+repeat_from_position = 3.1
+repeat_delay = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1415084059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1901397131]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2115710429]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Adjust the slider until the 
+beat is synced to the glow:"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer" unique_id=1114778791]
+material = SubResource("ShaderMaterial_0gu67")
+custom_minimum_size = Vector2(64, 64)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VisualizerDelayOptionControl" parent="MarginContainer/VBoxContainer" unique_id=1557081957 instance=ExtResource("1_58pfp")]
+layout_mode = 2
+size_flags_horizontal = 4
+option_name = "Visualizer Delay"
+option_section = 3
+key = "VisualizerDelay"
+section = "VideoSettings"
+default_value = 0.0
+
+[node name="OptionLabel" parent="MarginContainer/VBoxContainer/VisualizerDelayOptionControl" index="0" unique_id=1854788461]
+text = "Visualizer Delay :"
+
+[node name="HSlider" parent="MarginContainer/VBoxContainer/VisualizerDelayOptionControl" index="1" unique_id=424108384]
+max_value = 2.0
+step = 0.01
+value = 0.0
+
+[node name="DoneButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2015200164]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Done"
+
+[node name="MusicVisualizer" parent="." unique_id=1893913173 node_paths=PackedStringArray("canvas") instance=ExtResource("3_2njc5")]
+unique_name_in_owner = true
+canvas = NodePath("../MarginContainer/VBoxContainer/ColorRect")
+mod_parameters = Array[StringName]([&"opacity"])
+mod_amount = 3.0
+shader_parameters_refresh_rate = 32.0
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/DoneButton" to="." method="_on_done_button_pressed"]
+
+[editable path="MarginContainer/VBoxContainer/VisualizerDelayOptionControl"]

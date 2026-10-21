@@ -332,6 +332,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_ixa71")
+visualizer_setup_scene_path = "uid://bns8bnl621vbg"
 options_packed_scene = ExtResource("3_2k5l7")
 credits_packed_scene = ExtResource("4_vsp5b")
 
@@ -944,7 +945,7 @@ offset_left = -88.0
 offset_top = -26.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v1.0.0-dev-2"
+text = "v1.0.1"
 horizontal_alignment = 2
 script = ExtResource("6_6xh1d")
 
