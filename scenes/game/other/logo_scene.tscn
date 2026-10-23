@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://cs5ave8372yre"]
+[gd_scene format=3 uid="uid://br4snjbb5e3n4"]
 
 [ext_resource type="Texture2D" uid="uid://cucjmnstjxw2t" path="res://assets/game-icons/tower-fall.svg" id="1_s56wt"]
+[ext_resource type="Shader" uid="uid://bjx8v44o1kjcq" path="res://scenes/game/other/depth_reflection.gdshader" id="2_8ra8b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s56wt"]
 content_margin_left = 4.0
@@ -19,6 +20,16 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 4
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n4y2n"]
+shader = ExtResource("2_8ra8b")
+shader_parameter/zoom_center = Vector2(0.5, 0.5)
+shader_parameter/layers = 5
+shader_parameter/opacity = 0.5
+shader_parameter/original_opacity_mod = 0.0
+shader_parameter/zoom = 0.1
+shader_parameter/normalization = 0.750000035625
+shader_parameter/normalized_scale = 0.015000048212499895
+
 [node name="LogoScene" type="Control" unique_id=805233258]
 layout_mode = 3
 anchors_preset = 15
@@ -28,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=449018182]
-custom_minimum_size = Vector2(502, 372)
+custom_minimum_size = Vector2(1024, 592)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,11 +61,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -128.0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_s56wt")
 expand_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=910674684]
+material = SubResource("ShaderMaterial_n4y2n")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
