@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bmp1rwp4f8adr"]
+
+[ext_resource type="Texture2D" uid="uid://cucjmnstjxw2t" path="res://assets/game-icons/tower-fall.svg" id="1_a07kb"]
+[ext_resource type="Shader" uid="uid://hrs2tl300ila" path="res://scenes/game/other/screen_colored_depth_reflection.gdshader" id="2_a07kb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s56wt"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.973535, 0.973535, 0.973535, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qc6is"]
+resource_local_to_scene = true
+shader = ExtResource("2_a07kb")
+shader_parameter/transparent_color = Color(0, 0, 0, 1)
+shader_parameter/transparent_color_threshold = 0.0
+shader_parameter/zoom_center = Vector2(0.5, 0.5)
+shader_parameter/layers = 6
+shader_parameter/opacity = 0.75
+shader_parameter/original_opacity_mod = 0.666
+shader_parameter/zoom = 0.1
+shader_parameter/normalization = 0.75
+shader_parameter/normalized_scale = 0.015
+shader_parameter/color_cycle_time = 12.0
+shader_parameter/colors = PackedColorArray(0.8096762, 0.72849953, 3.85046e-07, 1, 8.1822276e-07, 0.7168618, 0.34733137, 1, 0.2466355, 0.49731976, 1, 1, 0.76732856, 0.3066105, 0.99999934, 1, 1, 0.2952697, 0.57162875, 1, 0.99999994, 0.47800076, 0.17780825, 1)
+shader_parameter/color_layer_gap = 0.1
+
+[node name="LogoScene" type="Control" unique_id=805233258]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=449018182]
+custom_minimum_size = Vector2(592, 592)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -186.0
+offset_right = 251.0
+offset_bottom = 186.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_s56wt")
+
+[node name="TowerFall" type="TextureRect" parent="." unique_id=312860470]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a07kb")
+expand_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=910674684]
+material = SubResource("ShaderMaterial_qc6is")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
