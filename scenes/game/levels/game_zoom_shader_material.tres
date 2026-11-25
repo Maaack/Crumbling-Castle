@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://b61nmsmfhhiru"]
 
-[ext_resource type="Shader" uid="uid://bjgw5vgtlon0e" path="res://scenes/game/levels/zoom_2.gdshader" id="1_iv1xr"]
+[ext_resource type="Shader" uid="uid://bjgw5vgtlon0e" path="res://scenes/game/levels/colored_depth_reflection.gdshader" id="1_iv1xr"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_vaxfo"]
 viewport_path = NodePath("SubViewportContainer/LevelContainer")
