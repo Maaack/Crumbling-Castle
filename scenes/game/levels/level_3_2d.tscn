@@ -530,6 +530,45 @@ alpha_curve = SubResource("CurveTexture_bqago")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bryu"]
 size = Vector2(20, 512)
 
+[sub_resource type="Animation" id="Animation_4bmcq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractInputHint:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eagsg"]
+resource_name = "tap"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractInputHint:offset_transform_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 3), Vector2(0, 4), Vector2(0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p2tpg"]
+_data = {
+&"RESET": SubResource("Animation_4bmcq"),
+&"tap": SubResource("Animation_eagsg")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cqto"]
 size = Vector2(1112, 192)
 
@@ -2554,8 +2593,14 @@ offset_top = -2320.0
 offset_right = -201.0
 offset_bottom = -2272.0
 size_flags_horizontal = 3
+offset_transform_enabled = true
 action_name = &"interact"
 input_icon_mapper = NodePath("../../../InputIconMapper")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="World/Tower/InteractInputHint" unique_id=1939206598]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_p2tpg")
+autoplay = &"tap"
 
 [node name="MoveRightInputHint" parent="World/Tower" unique_id=1792660303 node_paths=PackedStringArray("input_icon_mapper") instance=ExtResource("18_xr372")]
 unique_name_in_owner = true

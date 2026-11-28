@@ -110,6 +110,7 @@ process_mode = 3
 stream = ExtResource("1_vaxfo")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="GameTimer" type="Node" parent="." unique_id=116840261]
 script = ExtResource("1_4j704")

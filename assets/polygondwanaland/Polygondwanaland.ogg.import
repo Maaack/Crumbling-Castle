@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Polygondwanaland.ogg-09a64af58213b1761128cfba
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

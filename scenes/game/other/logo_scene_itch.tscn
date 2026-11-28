@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cs5ave8372yre"]
 
 [ext_resource type="Texture2D" uid="uid://cucjmnstjxw2t" path="res://assets/game-icons/tower-fall.svg" id="1_s56wt"]
-[ext_resource type="Shader" uid="uid://bjx8v44o1kjcq" path="res://scenes/game/other/depth_reflection.gdshader" id="2_8ra8b"]
+[ext_resource type="Shader" uid="uid://bjx8v44o1kjcq" path="res://scenes/game/other/screen_depth_reflection.gdshader" id="2_8ra8b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s56wt"]
 content_margin_left = 4.0

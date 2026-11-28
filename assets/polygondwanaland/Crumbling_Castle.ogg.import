@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Crumbling_Castle.ogg-f94766b81abd64f25628c8c6
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

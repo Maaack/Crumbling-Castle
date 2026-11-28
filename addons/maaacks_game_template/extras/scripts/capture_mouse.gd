@@ -6,7 +6,7 @@ extends Control
 var prior_mouse_mode : Input.MouseMode
 
 func _gui_input(event):
-	if event is InputEventMouseButton and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+	if Input.mouse_mode != Input.MOUSE_MODE_CAPTURED and event is InputEventMouse:
 		prior_mouse_mode = Input.mouse_mode
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
